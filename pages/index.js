@@ -75,6 +75,19 @@ export default function Home() {
             <text className={styles.hashtag}>#danceyour##</text>
           </div>
           <text className={styles.views}>50k View</text>
+
+          <div className={styles.float1}>
+            <img className={styles.floatImg} src="/float1.png" />
+            <text className={styles.floatText}>Luke join your challenge</text>
+          </div>
+          <div className={styles.float2}>
+            <img className={styles.floatImg} src="/float2.png" />
+            <text className={styles.floatText}>Linda join your challenge</text>
+          </div>
+          <div className={styles.float3}>
+            <img className={styles.floatImg3} src="/float1.png" />
+            <text className={styles.floatText3}>Liza join your challenge</text>
+          </div>
         </div>
       </main>
 
@@ -83,6 +96,12 @@ export default function Home() {
           <div className={styles.col}>
             <text className={styles.views2}>@JefferyAfrane</text>
             <text className={styles.hashtag2}>24k Views</text>
+          </div>
+          <div className={styles.float4}>
+            <text className={styles.floatText4}>Living in the moment</text>
+          </div>
+          <div className={styles.float5}>
+            <text className={styles.floatText5}>See my view today</text>
           </div>
         </div>
         <div className={styles.content2Left} data-aos="zoom-in">
@@ -118,11 +137,11 @@ export default function Home() {
         </div>
 
         <div className={styles.circles}>
-          <div className={styles.circle1}></div>
-          <div className={styles.circle2}></div>
-          <div className={styles.circle3}></div>
-          <div className={styles.circle4}></div>
-          <div className={styles.circle5}></div>
+          <img src="/circle1.png" className={styles.circle1} />
+          <img src="/circle2.png" className={styles.circle2}></img>
+          <img src="/circle3.png" className={styles.circle3}></img>
+          <img src="/circle4.png" className={styles.circle4}></img>
+          <img src="/circle5.png" className={styles.circle5}></img>
         </div>
       </main>
 
@@ -132,6 +151,12 @@ export default function Home() {
           <div className={styles.col}>
             <text className={styles.views2}>@JefferyAfrane</text>
             <text className={styles.hashtag2}>24k Views</text>
+          </div>
+          <div className={styles.float4}>
+            <text className={styles.floatText4}>Coke Cole-$150,000</text>
+          </div>
+          <div className={styles.float5}>
+            <text className={styles.floatText5}>Adidas - $250,000</text>
           </div>
         </div>
         <div className={styles.content2Left} data-aos="zoom-in">
@@ -150,6 +175,21 @@ export default function Home() {
       <footer className={styles.footer}>
         <div className={styles.footContent}>
           <text className={`${styles.footerText}`} data-aos="zoom-in">
+            <div className={styles.float6}>
+              <text className={styles.floatText6}>Update</text>
+            </div>
+            <div className={styles.float7}>
+              <img className={styles.floatImg} src="/float2.png" />
+              <text className={styles.floatText7}>
+                Reaction
+              </text>
+            </div>
+            <div className={styles.float8}>
+              <img className={styles.floatImg} src="/float2.png" />
+              <text className={styles.floatText8}>
+                #Challenge
+              </text>
+            </div>
             Get ready for <br />
             the release
           </text>

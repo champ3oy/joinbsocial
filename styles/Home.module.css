@@ -10,6 +10,10 @@
 .hero {
   width: 100%;
   height: 1079px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
+    url("/hero1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .nav {
   display: flex;
@@ -178,6 +182,10 @@
   align-items: flex-start;
   padding: 30px;
   padding-top: 40px;
+  background: url(/screen1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
 }
 .bar {
   width: 100px;
@@ -262,6 +270,9 @@
   align-items: flex-start;
   padding: 30px;
   padding-top: 40px;
+  background: url(/screen2.png);
+  background-size: cover;
+  position: relative;
 }
 .col {
   display: flex;
@@ -278,7 +289,7 @@
   color: white;
   font-size: 17px;
   font-weight: 600;
-  margin-top: 5px
+  margin-top: 5px;
 }
 .views2 {
   color: white;
@@ -296,6 +307,7 @@
   letter-spacing: -5px;
   line-height: 130px;
   text-align: center;
+  position: relative;
 }
 .joinBtn5 {
   width: 293px;
@@ -358,14 +370,14 @@
   width: 294px;
   height: 294px;
   border-radius: 200px;
-  border: solid 6px white;
+  /* border: solid 6px white; */
   margin-left: 30px;
 }
 .circle2 {
   width: 182px;
   height: 182px;
   border-radius: 200px;
-  border: solid 6px white;
+  /* border: solid 6px white; */
   margin-left: 30px;
   position: absolute;
   left: 280px;
@@ -375,29 +387,181 @@
   width: 253px;
   height: 253px;
   border-radius: 200px;
-  border: solid 6px white;
+  /* border: solid 6px white; */
   margin-left: 30px;
   position: absolute;
-  left: 350px;
+  left: 360px;
   top: 80px;
 }
 .circle4 {
   width: 180px;
   height: 180px;
   border-radius: 200px;
-  border: solid 6px white;
+  /* border: solid 6px white; */
   margin-left: 30px;
   position: absolute;
-  left: 490px;
+  left: 530px;
   top: 400px;
 }
 .circle5 {
   width: 294px;
   height: 294px;
   border-radius: 200px;
-  border: solid 6px white;
+  /* border: solid 6px white; */
   margin-left: 30px;
   position: absolute;
   left: 700px;
   top: -80px;
+}
+.float1 {
+  width: 234px;
+  height: 58px;
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: -60px;
+}
+.float2 {
+  width: 234px;
+  height: 58px;
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 65%;
+  right: -120px;
+}
+.floatImg {
+  width: 41px;
+  height: 41px;
+  margin-right: 6px;
+}
+.floatText {
+  font-size: 13px;
+  font-weight: 400;
+}
+.float3 {
+  width: 183px;
+  height: 48px;
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 80%;
+  left: -100px;
+}
+.floatImg3 {
+  width: 34px;
+  height: 34px;
+  margin-right: 4px;
+}
+.floatText3 {
+  font-size: 10px;
+  font-weight: 400;
+}
+.float4 {
+  width: 227px;
+  height: 57px;
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10%;
+  right: -110px;
+}
+.floatText4 {
+  font-size: 15px;
+  font-weight: 800;
+}
+.float5 {
+  width: 227px;
+  height: 57px;
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 70%;
+  left: -110px;
+}
+.floatText5 {
+  font-size: 15px;
+  font-weight: 600;
+}
+.float6 {
+  width: 141px;
+  height: 48px;
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -21px;
+  left: -40px;
+  transform: rotate(-15deg);
+}
+.floatText6 {
+  font-size: 21px;
+  font-weight: 700;
+  color: #7f46ff;
+  letter-spacing: 0px;
+  
+}
+.float7 {
+  width: 173px;
+  height: 52px;
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -40px;
+  left: 54%;
+  transform: rotate(5deg);
+}
+.floatText7 {
+  font-size: 21px;
+  font-weight: 700;
+  color: #7f46ff;
+  letter-spacing: 0px;
+}
+.float8 {
+  width: 199px;
+  height: 52px;
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 90%;
+  right: 0px;
+  transform: rotate(-13deg);
+}
+.floatText8 {
+  font-size: 21px;
+  font-weight: 700;
+  color: #7f46ff;
+  letter-spacing: 0px;
 }
