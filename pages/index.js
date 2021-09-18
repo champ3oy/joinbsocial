@@ -41,7 +41,7 @@ export default function Home() {
 
       <main className={styles.banner}>
         <text className={`${styles.bannerHeader}`} data-aos="zoom-in">
-          Don't just post, like in your typical social media app
+          Don&apos;t just post, like in your typical social media app
         </text>
         <text className={`${styles.bannerText}`} data-aos="zoom-in">
           Create moments together
