@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 
 export default function Home() {
   return (
@@ -10,8 +12,7 @@ export default function Home() {
         <meta name="description" content="Be Social with us" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-
-      <main id="herotext" className={styles.hero}>
+      <div>
         <nav className={styles.nav}>
           <img src="/logo2x.png" className={styles.logo} />
 
@@ -22,23 +23,71 @@ export default function Home() {
             <div className={styles.joinBtn}>Join the Waitlist</div>
           </div>
         </nav>
-        <div className={styles.heroContent}>
-          <text className={`${styles.heroText}`} data-aos="zoom-in">
-            Be in the moment <br />
-            with your FRIENDS
-          </text>
-          <text className={`${styles.heroSubText}`} data-aos="zoom-in">
-            Not your typical app to post content just for fun. With B.Social you
-            build close relationships <br />
-            with your friends & followers through your interactions in the app
-            plus your participation in the <br />
-            challenges.
-          </text>
 
-          <div className={styles.joinBtn2}>Join the Waitlist</div>
-        </div>
-      </main>
+        <Carousel
+          autoPlay={true}
+          infiniteLoop={true}
+          showArrows={false}
+          showStatus={false}
+          interval={5000}
+        >
+          <main id="herotext" className={styles.hero}>
+            <div className={styles.heroContent}>
+              <text className={`${styles.heroText}`} data-aos="zoom-in">
+                Be in the moment <br />
+                with your FRIENDS
+              </text>
+              <text className={`${styles.heroSubText}`} data-aos="zoom-in">
+                Not your typical app to post content just for fun. With B.Social
+                you build close relationships <br />
+                with your friends & followers through your interactions in the
+                app plus your participation in the <br />
+                challenges.
+              </text>
 
+              <div className={styles.joinBtn2}>Join the Waitlist</div>
+            </div>
+          </main>
+          <main id="herotext" className={styles.hero2}>
+            <div className={styles.heroContent}>
+              <text className={`${styles.heroText}`} data-aos="zoom-in">
+                Get paid for promoting <br />
+                your favorite brands
+              </text>
+              <text className={`${styles.heroSubText}`} data-aos="zoom-in">
+                As a creator or influncer, you can make sustainable incomes from
+                promoting your products
+                <br />
+                and brands in the B.Social app & in other social app. The more
+                views your contact receives the higher the
+                <br />
+                revenue you get
+              </text>
+
+              <div className={styles.joinBtn2}>Join the Waitlist</div>
+            </div>
+          </main>
+          <main id="herotext" className={styles.hero3}>
+            <div className={styles.heroContent}>
+              <text className={`${styles.heroText}`} data-aos="zoom-in">
+                Get your superfans <br />
+                and influncers to promote <br />
+                your brand
+              </text>
+              <text className={`${styles.heroSubText}`} data-aos="zoom-in">
+                Get more engaged customers to your brand by setting up brand
+                challenges in <br />
+                B.Social. influncers and super fans create to promote your
+                products & brand.
+                <br />
+                Your brand could go viral on social media, you know!
+              </text>
+
+              <div className={styles.joinBtn2}>Sign up as brand</div>
+            </div>
+          </main>
+        </Carousel>
+      </div>
       <main className={styles.banner}>
         <text className={`${styles.bannerHeader}`} data-aos="zoom-in">
           Don&apos;t just post, like in your typical social media app
@@ -180,15 +229,11 @@ export default function Home() {
             </div>
             <div className={styles.float7}>
               <img className={styles.floatImg} src="/float2.png" />
-              <text className={styles.floatText7}>
-                Reaction
-              </text>
+              <text className={styles.floatText7}>Reaction</text>
             </div>
             <div className={styles.float8}>
               <img className={styles.floatImg} src="/float2.png" />
-              <text className={styles.floatText8}>
-                #Challenge
-              </text>
+              <text className={styles.floatText8}>#Challenge</text>
             </div>
             Get ready for <br />
             the release
@@ -208,7 +253,7 @@ export default function Home() {
           </div>
           {/* <img className={styles.fcenter} src="/california.png" /> */}
           <div className={styles.fcenter}>
-            &copy; 2021 Feels. All rights reserved. contact@joinb.social
+            &copy; 2021 BSocial. All rights reserved. contact@joinb.social
           </div>
           <div className={styles.fright}>
             <img src="/fb.png" className={styles.icon} />
