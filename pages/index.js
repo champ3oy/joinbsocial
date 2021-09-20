@@ -15,7 +15,7 @@ export default function Home() {
     AOS.init({
       offset: 60,
       // mirror: true,
-      delay: 350
+      delay: 350,
     });
   }, []);
 
@@ -54,11 +54,23 @@ export default function Home() {
         >
           <main id="herotext" className={styles.hero}>
             <div className={styles.heroContent}>
-              <text className={`${styles.heroText}`} data-aos="fade-up">
+              <text className={`${styles.heroText}`} >
                 Be in the moment <br />
                 with your FRIENDS
               </text>
-              <text className={`${styles.heroSubText}`} data-aos="fade-up">
+              <text className={`${styles.heroTextm}`} >
+                Be in the <br />
+                moment with <br />
+                your FRIENDS
+              </text>
+              <text className={`${styles.heroSubTextm}`} >
+                Not your typical app to post content just for fun. <br />
+                With B.Social you build close relationships with your <br />
+                friends & followers through your interactions in the
+                <br />
+                app plus your participation in the challenges.
+              </text>
+              <text className={`${styles.heroSubText}`} >
                 Not your typical app to post content just for fun. With B.Social
                 you build close relationships <br />
                 with your friends & followers through your interactions in the
@@ -78,16 +90,30 @@ export default function Home() {
           </main>
           <main id="herotext" className={styles.hero2}>
             <div className={styles.heroContent}>
-              <text className={`${styles.heroText}`} data-aos="fade-up">
+              <text className={`${styles.heroText}`} >
                 Get paid for promoting <br />
                 your favorite brands
               </text>
-              <text className={`${styles.heroSubText}`} data-aos="fade-up">
+              <text className={`${styles.heroTextm}`} >
+                Get paid for <br />
+                promoting your <br />
+                favorite brands
+              </text>
+              <text className={`${styles.heroSubText}`} >
                 As a creator or influncer, you can make sustainable incomes from
                 promoting your products
                 <br />
                 and brands in the B.Social app & in other social app. The more
                 views your contact receives the higher the
+                <br />
+                revenue you get
+              </text>
+              <text className={`${styles.heroSubTextm}`} >
+                As a creator or influncer, you can make <br />
+                sustainable incomes from promoting your products
+                <br />
+                and brands in the B.Social app & in other social app. <br />
+                The more views your contact receives the higher the
                 <br />
                 revenue you get
               </text>
@@ -104,16 +130,32 @@ export default function Home() {
           </main>
           <main id="herotext" className={styles.hero3}>
             <div className={styles.heroContent}>
-              <text className={`${styles.heroText}`} data-aos="fade-up">
+              <text className={`${styles.heroText}`} >
                 Get your superfans <br />
                 and influncers to promote <br />
                 your brand
               </text>
-              <text className={`${styles.heroSubText}`} data-aos="fade-up">
+              <text className={`${styles.heroTextm}`} >
+                Get your <br />
+                superfans and <br />
+                influncers to <br />
+                promote
+                <br />
+                your brand
+              </text>
+              <text className={`${styles.heroSubText}`} >
                 Get more engaged customers to your brand by setting up brand
                 challenges in <br />
                 B.Social. influncers and super fans create to promote your
                 products & brand.
+                <br />
+                Your brand could go viral on social media, you know!
+              </text>
+              <text className={`${styles.heroSubTextm}`} >
+                Get more engaged customers to your brand by setting up brand
+                <br />
+                challenges in B.Social. influncers and <br />
+                super fans create to promote your products & brand.
                 <br />
                 Your brand could go viral on social media, you know!
               </text>
@@ -123,26 +165,32 @@ export default function Home() {
           </main>
         </Carousel>
       </div>
-      
+
       <main className={`${styles.section} ${styles.banner}`}>
         <img className={styles.emoji1} src="/fire.png" />
         <img className={styles.emoji2} src="/hand.png" />
         <img className={styles.emoji3} src="/fireball.png" />
-        <text className={`${styles.bannerHeader}`} data-aos="fade-up" >
+        <text className={`${styles.bannerHeader}`} >
           Don&apos;t just post, like in your typical social media app
         </text>
-        <text className={`${styles.bannerText}`}  data-aos="fade-up">
+
+        <text className={`${styles.bannerText}`} >
           Create moments together
         </text>
-        <text className={`${styles.bannerFooter}`}  data-aos="fade-up">
-          Start a challenge with your friends, promote it on other social media{" "}
+        <text className={`${styles.bannerFooter}`} >
+          Start a challenge with your friends, promote it on other social media
           <br />
           and watch your fanbase in B.Social app grow
+        </text>
+        <text className={`${styles.bannerFooterm}`} >
+          Start a challenge with your friends, promote it on <br />
+          other social media and watch your fanbase <br />
+          in B.Social app grow
         </text>
       </main>
 
       <main className={`${styles.content1} ${styles.section}`}>
-        <div className={styles.content1Left} data-aos="fade-up">
+        <div className={styles.content1Left} >
           <img className={styles.emoji5} src="/hand.png" />
           <text className={styles.challenge}>#challenge</text>
           <text className={styles.content1Text}>
@@ -150,7 +198,7 @@ export default function Home() {
             moments <br />
             together
           </text>
-          <text className={`${styles.content1Subtext}`} data-aos="fade-up">
+          <text className={`${styles.content1Subtext}`} >
             Create a challenge with friends, invite <br />
             them to participate and watch their <br />
             creative juices flow
@@ -173,15 +221,15 @@ export default function Home() {
           </div>
           <text className={styles.views}>50k Views &#129310;</text>
 
-          <div className={styles.float1} data-aos="fade-up">
+          <div className={styles.float1} >
             <img className={styles.floatImg} src="/float1.png" />
             <text className={styles.floatText}>Luke join your challenge</text>
           </div>
-          <div className={styles.float2} data-aos="fade-up">
+          <div className={styles.float2} >
             <img className={styles.floatImg} src="/float2.png" />
             <text className={styles.floatText}>Linda join your challenge</text>
           </div>
-          <div className={styles.float3} data-aos="fade-up">
+          <div className={styles.float3} >
             <img className={styles.floatImg3} src="/float1.png" />
             <text className={styles.floatText3}>Liza join your challenge</text>
           </div>
@@ -196,25 +244,25 @@ export default function Home() {
             <text className={styles.views2}>@JefferyAfrane</text>
             <text className={styles.hashtag2}>24k Views &#129310;</text>
           </div>
-          <div className={styles.float4} data-aos="fade-up">
+          <div className={styles.float4} >
             <text className={styles.floatText4}>
               Living in the moment &#9975;
             </text>
           </div>
-          <div className={styles.float5} data-aos="fade-up">
+          <div className={styles.float5} >
             <text className={styles.floatText5}>
               See my view today &#128293;&#128293;&#128293;{" "}
             </text>
           </div>
         </div>
-        <div className={styles.content2Left} data-aos="fade-up">
+        <div className={styles.content2Left} >
           <text className={styles.challenge}>#Reaction</text>
           <text className={styles.content2Text}>
             Realtime <br />
             reaction to <br />
             moments
           </text>
-          <text className={`${styles.content2Subtext}`} data-aos="fade-up">
+          <text className={`${styles.content2Subtext}`} >
             Are you in an exciting moment or at an <br />
             incredibly exciting location with breathtaking <br />
             view? Then activate your reaction+ camera and <br />
@@ -233,13 +281,13 @@ export default function Home() {
 
       {/* homies */}
       <main className={`${styles.content1} ${styles.section}`}>
-        <div className={styles.content1Left} data-aos="fade-up">
+        <div className={styles.content1Left} >
           <text className={styles.challenge}>Updates</text>
           <text className={styles.content1Text}>
             Keep tabs on <br />
             your homies
           </text>
-          <text className={`${styles.content1Subtext}`} data-aos="fade-up">
+          <text className={`${styles.content1Subtext}`} >
             Let your friends know you got them, by checking <br />
             in with them
           </text>
@@ -274,23 +322,23 @@ export default function Home() {
             <text className={styles.views2}>@JefferyAfrane</text>
             <text className={styles.hashtag2}>24k Views &#129310;</text>
           </div>
-          <div className={styles.float4} data-aos="fade-up">
+          <div className={styles.float4} >
             <text className={styles.floatText4}>
               Coke Cole-$150,000 &#128184;
             </text>
           </div>
-          <div className={styles.float5} data-aos="fade-up">
+          <div className={styles.float5} >
             <text className={styles.floatText5}>
               Adidas - $250,000 &#128184;
             </text>
           </div>
         </div>
-        <div className={styles.content2Left} data-aos="fade-up">
+        <div className={styles.content2Left} >
           <text className={styles.challenge}>#Creator Revenue</text>
           <text className={styles.content2Text}>
             Promote <br />& Earn
           </text>
-          <text className={`${styles.content2Subtext}`} data-aos="fade-up">
+          <text className={`${styles.content2Subtext}`} >
             Select your favourite brand, create a #challenge <br />
             for it, promote across your social channels, amass <br />
             views and watch your revenue skyrocket!
@@ -305,10 +353,10 @@ export default function Home() {
           </div>
         </div>
       </main>
-     
+
       <footer className={`${styles.footer} ${styles.section}`}>
         <div className={styles.footContent}>
-          <text className={`${styles.footerText}`} data-aos="fade-up">
+          <text className={`${styles.footerText}`} >
             <img className={styles.emoji12} src="/crown.png" />
             <div className={styles.float6}>
               <text className={styles.floatText6}>Update</text>
@@ -338,7 +386,7 @@ export default function Home() {
         </div>
         <div
           className={styles.foot}
-          data-aos="fade-up"
+          
           data-aos-offset="50"
           data-aos-delay="10"
         >
@@ -361,9 +409,9 @@ export default function Home() {
 
       {showModal ? (
         <main
-          data-aos="zoom-in` "
-          data-aos-offset="50"
-          data-aos-delay="10"
+          // data-aos="zoom-in` "
+          // data-aos-offset="50"
+          // data-aos-delay="10"
           className={styles.modalcon}
         >
           <div className={styles.modal}>
