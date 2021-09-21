@@ -14,8 +14,6 @@ export default function Home() {
   useEffect(() => {
     AOS.init({
       offset: 60,
-      // mirror: true,
-      delay: 350,
     });
   }, []);
 
@@ -40,20 +38,20 @@ export default function Home() {
                 setShowModal(true);
               }}
             >
-              Join the Waitlist &#127881;{" "}
+              Join the Waitlist &#127881;
             </div>
           </div>
         </nav>
 
         <Carousel
-          // autoPlay={true}
+          autoPlay={true}
           infiniteLoop={true}
           showArrows={false}
           showStatus={false}
           interval={5000}
         >
-          <main id="herotext" className={styles.hero}>
-            <div className={styles.heroContent}>
+          <main id="herotext" className={styles.hero} >
+            <div className={styles.heroContent} data-aos="zoom-in">
               <text className={`${styles.heroText}`} >
                 Be in the moment <br />
                 with your FRIENDS
@@ -89,7 +87,7 @@ export default function Home() {
             </div>
           </main>
           <main id="herotext" className={styles.hero2}>
-            <div className={styles.heroContent}>
+            <div className={styles.heroContent} data-aos="zoom-in">
               <text className={`${styles.heroText}`} >
                 Get paid for promoting <br />
                 your favorite brands
@@ -129,7 +127,7 @@ export default function Home() {
             </div>
           </main>
           <main id="herotext" className={styles.hero3}>
-            <div className={styles.heroContent}>
+            <div className={styles.heroContent} data-aos="zoom-in">
               <text className={`${styles.heroText}`} >
                 Get your superfans <br />
                 and influncers to promote <br />
@@ -170,14 +168,14 @@ export default function Home() {
         <img className={styles.emoji1} src="/fire.png" />
         <img className={styles.emoji2} src="/hand.png" />
         <img className={styles.emoji3} src="/fireball.png" />
-        <text className={`${styles.bannerHeader}`} >
+        <text className={`${styles.bannerHeader}`} data-aos="fade-up">
           Don&apos;t just post, like in your typical social media app
         </text>
 
-        <text className={`${styles.bannerText}`} >
+        <text className={`${styles.bannerText}`} data-aos="fade-up">
           Create moments together
         </text>
-        <text className={`${styles.bannerFooter}`} >
+        <text className={`${styles.bannerFooter}`} data-aos="fade-up">
           Start a challenge with your friends, promote it on other social media
           <br />
           and watch your fanbase in B.Social app grow
@@ -190,10 +188,10 @@ export default function Home() {
       </main>
 
       <main className={`${styles.content1} ${styles.section}`}>
-        <div className={styles.content1Left} >
+        <div className={styles.content1Left} data-aos="fade-up">
           <img className={styles.emoji5} src="/hand.png" />
           <text className={styles.challenge}>#challenge</text>
-          <text className={styles.content1Text}>
+          <text className={styles.content1Text} >
             Create <br />
             moments <br />
             together
@@ -221,15 +219,15 @@ export default function Home() {
           </div>
           <text className={styles.views}>50k Views &#129310;</text>
 
-          <div className={styles.float1} >
+          <div className={styles.float1} data-aos="fade-up">
             <img className={styles.floatImg} src="/float1.png" />
             <text className={styles.floatText}>Luke join your challenge</text>
           </div>
-          <div className={styles.float2} >
+          <div className={styles.float2} data-aos="fade-up">
             <img className={styles.floatImg} src="/float2.png" />
             <text className={styles.floatText}>Linda join your challenge</text>
           </div>
-          <div className={styles.float3} >
+          <div className={styles.float3} data-aos="fade-up">
             <img className={styles.floatImg3} src="/float1.png" />
             <text className={styles.floatText3}>Liza join your challenge</text>
           </div>
@@ -244,18 +242,18 @@ export default function Home() {
             <text className={styles.views2}>@JefferyAfrane</text>
             <text className={styles.hashtag2}>24k Views &#129310;</text>
           </div>
-          <div className={styles.float4} >
+          <div className={styles.float4} data-aos="fade-up">
             <text className={styles.floatText4}>
               Living in the moment &#9975;
             </text>
           </div>
-          <div className={styles.float5} >
+          <div className={styles.float5} data-aos="fade-up">
             <text className={styles.floatText5}>
-              See my view today &#128293;&#128293;&#128293;{" "}
+              See my view today &#128293;&#128293;&#128293;
             </text>
           </div>
         </div>
-        <div className={styles.content2Left} >
+        <div className={styles.content2Left} data-aos="fade-up">
           <text className={styles.challenge}>#Reaction</text>
           <text className={styles.content2Text}>
             Realtime <br />
@@ -281,7 +279,7 @@ export default function Home() {
 
       {/* homies */}
       <main className={`${styles.content1} ${styles.section}`}>
-        <div className={styles.content1Left} >
+        <div className={styles.content1Left} data-aos="fade-up">
           <text className={styles.challenge}>Updates</text>
           <text className={styles.content1Text}>
             Keep tabs on <br />
@@ -302,14 +300,14 @@ export default function Home() {
         </div>
 
         <div className={styles.circles}>
-          <img className={styles.emoji9} src="/fire.png" />
-          <img className={styles.emoji10} src="/confeti.png" />
-          <img className={styles.emoji11} src="/crown.png" />
-          <img src="/circle1.png" className={styles.circle1} />
-          <img src="/circle2.png" className={styles.circle2}></img>
-          <img src="/circle3.png" className={styles.circle3}></img>
-          <img src="/circle4.png" className={styles.circle4}></img>
-          <img src="/circle5.png" className={styles.circle5}></img>
+          <img className={styles.emoji9} src="/fire.png" data-aos="zoom-in"/>
+          <img className={styles.emoji10} src="/confeti.png" data-aos="zoom-in"/>
+          <img className={styles.emoji11} src="/crown.png" data-aos="zoom-in"/>
+          <img src="/circle1.png" className={styles.circle1} data-aos="zoom-in"/>
+          <img src="/circle2.png" className={styles.circle2} data-aos="zoom-in"></img>
+          <img src="/circle3.png" className={styles.circle3} data-aos="zoom-in"></img>
+          <img src="/circle4.png" className={styles.circle4} data-aos="zoom-in"></img>
+          <img src="/circle5.png" className={styles.circle5} data-aos="zoom-in"></img>
         </div>
       </main>
 
@@ -322,18 +320,18 @@ export default function Home() {
             <text className={styles.views2}>@JefferyAfrane</text>
             <text className={styles.hashtag2}>24k Views &#129310;</text>
           </div>
-          <div className={styles.float4} >
+          <div className={styles.float4} data-aos="fade-up">
             <text className={styles.floatText4}>
               Coke Cole-$150,000 &#128184;
             </text>
           </div>
-          <div className={styles.float5} >
+          <div className={styles.float5} data-aos="fade-up">
             <text className={styles.floatText5}>
               Adidas - $250,000 &#128184;
             </text>
           </div>
         </div>
-        <div className={styles.content2Left} >
+        <div className={styles.content2Left} data-aos="fade-up">
           <text className={styles.challenge}>#Creator Revenue</text>
           <text className={styles.content2Text}>
             Promote <br />& Earn
@@ -356,7 +354,7 @@ export default function Home() {
 
       <footer className={`${styles.footer} ${styles.section}`}>
         <div className={styles.footContent}>
-          <text className={`${styles.footerText}`} >
+          <text className={`${styles.footerText}`} data-aos="zoom-in">
             <img className={styles.emoji12} src="/crown.png" />
             <div className={styles.float6}>
               <text className={styles.floatText6}>Update</text>
@@ -380,15 +378,14 @@ export default function Home() {
             onClick={() => {
               setShowModal(true);
             }}
+            data-aos="fade-up"
           >
             Join the Waitlist &#127881;
           </div>
         </div>
         <div
           className={styles.foot}
-          
-          data-aos-offset="50"
-          data-aos-delay="10"
+          data-aos="fade-up"
         >
           <div className={styles.fleft}>
             <text>Terms</text>
@@ -409,9 +406,9 @@ export default function Home() {
 
       {showModal ? (
         <main
-          // data-aos="zoom-in` "
-          // data-aos-offset="50"
-          // data-aos-delay="10"
+          data-aos="zoom-in"
+          data-aos-offset="50"
+          data-aos-delay="10"
           className={styles.modalcon}
         >
           <div className={styles.modal}>
