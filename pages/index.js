@@ -10,10 +10,12 @@ import $ from "jquery";
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
+  const [showModal2, setShowModal2] = useState(false);
+  const [page, setpage] = useState(1);
 
   useEffect(() => {
     AOS.init({
-      offset: 60,
+      offset: 100,
     });
   }, []);
 
@@ -31,7 +33,14 @@ export default function Home() {
 
           <div className={styles.right}>
             <text className={styles.textBtn}>About us</text>
-            <text className={styles.joinBtn}>Sign up as brand</text>
+            <text
+              onClick={() => {
+                setShowModal2(true);
+              }}
+              className={styles.joinBtn}
+            >
+              Sign up as brand &#127881;
+            </text>
             <div
               className={styles.joinBtn}
               onClick={() => {
@@ -49,26 +58,27 @@ export default function Home() {
           showArrows={false}
           showStatus={false}
           interval={5000}
+          // showThumbs={false}
         >
-          <main id="herotext" className={styles.hero} >
+          <main id="herotext" className={styles.hero}>
             <div className={styles.heroContent} data-aos="zoom-in">
-              <text className={`${styles.heroText}`} >
+              <text className={`${styles.heroText}`}>
                 Be in the moment <br />
                 with your FRIENDS
               </text>
-              <text className={`${styles.heroTextm}`} >
+              <text className={`${styles.heroTextm}`}>
                 Be in the <br />
                 moment with <br />
                 your FRIENDS
               </text>
-              <text className={`${styles.heroSubTextm}`} >
+              <text className={`${styles.heroSubTextm}`}>
                 Not your typical app to post content just for fun. <br />
                 With B.Social you build close relationships with your <br />
                 friends & followers through your interactions in the
                 <br />
                 app plus your participation in the challenges.
               </text>
-              <text className={`${styles.heroSubText}`} >
+              <text className={`${styles.heroSubText}`}>
                 Not your typical app to post content just for fun. With B.Social
                 you build close relationships <br />
                 with your friends & followers through your interactions in the
@@ -88,16 +98,16 @@ export default function Home() {
           </main>
           <main id="herotext" className={styles.hero2}>
             <div className={styles.heroContent} data-aos="zoom-in">
-              <text className={`${styles.heroText}`} >
+              <text className={`${styles.heroText}`}>
                 Get paid for promoting <br />
                 your favorite brands
               </text>
-              <text className={`${styles.heroTextm}`} >
+              <text className={`${styles.heroTextm}`}>
                 Get paid for <br />
                 promoting your <br />
                 favorite brands
               </text>
-              <text className={`${styles.heroSubText}`} >
+              <text className={`${styles.heroSubText}`}>
                 As a creator or influncer, you can make sustainable incomes from
                 promoting your products
                 <br />
@@ -106,7 +116,7 @@ export default function Home() {
                 <br />
                 revenue you get
               </text>
-              <text className={`${styles.heroSubTextm}`} >
+              <text className={`${styles.heroSubTextm}`}>
                 As a creator or influncer, you can make <br />
                 sustainable incomes from promoting your products
                 <br />
@@ -128,12 +138,18 @@ export default function Home() {
           </main>
           <main id="herotext" className={styles.hero3}>
             <div className={styles.heroContent} data-aos="zoom-in">
-              <text className={`${styles.heroText}`} >
+              <div
+                className={styles.brands}
+                onClick={() => {
+                  setShowModal(true);
+                }}
+              ></div>
+              <text className={`${styles.heroText}`}>
                 Get your superfans <br />
                 and influncers to promote <br />
                 your brand
               </text>
-              <text className={`${styles.heroTextm}`} >
+              <text className={`${styles.heroTextm}`}>
                 Get your <br />
                 superfans and <br />
                 influncers to <br />
@@ -141,7 +157,7 @@ export default function Home() {
                 <br />
                 your brand
               </text>
-              <text className={`${styles.heroSubText}`} >
+              <text className={`${styles.heroSubText}`}>
                 Get more engaged customers to your brand by setting up brand
                 challenges in <br />
                 B.Social. influncers and super fans create to promote your
@@ -149,7 +165,7 @@ export default function Home() {
                 <br />
                 Your brand could go viral on social media, you know!
               </text>
-              <text className={`${styles.heroSubTextm}`} >
+              <text className={`${styles.heroSubTextm}`}>
                 Get more engaged customers to your brand by setting up brand
                 <br />
                 challenges in B.Social. influncers and <br />
@@ -158,16 +174,23 @@ export default function Home() {
                 Your brand could go viral on social media, you know!
               </text>
 
-              <div className={styles.joinBtn2}>Sign up as brand</div>
+              <div
+                onClick={() => {
+                  setShowModal2(true);
+                }}
+                className={styles.joinBtn2}
+              >
+                Sign up as brand &#127881;
+              </div>
             </div>
           </main>
         </Carousel>
       </div>
 
-      <main className={`${styles.section} ${styles.banner}`}>
-        <img className={styles.emoji1} src="/fire.png" />
-        <img className={styles.emoji2} src="/hand.png" />
-        <img className={styles.emoji3} src="/fireball.png" />
+      {/* <main className={`${styles.section} ${styles.banner}`}>
+        <img className={styles.emoji1} src="/fire.png" data-aos="fade-up" />
+        <img className={styles.emoji2} src="/hand.png" data-aos="fade-up" />
+        <img className={styles.emoji3} src="/fireball.png" data-aos="zoom-in" />
         <text className={`${styles.bannerHeader}`} data-aos="fade-up">
           Don&apos;t just post, like in your typical social media app
         </text>
@@ -180,23 +203,23 @@ export default function Home() {
           <br />
           and watch your fanbase in B.Social app grow
         </text>
-        <text className={`${styles.bannerFooterm}`} >
+        <text className={`${styles.bannerFooterm}`}>
           Start a challenge with your friends, promote it on <br />
           other social media and watch your fanbase <br />
           in B.Social app grow
         </text>
-      </main>
+      </main> */}
 
       <main className={`${styles.content1} ${styles.section}`}>
         <div className={styles.content1Left} data-aos="fade-up">
           <img className={styles.emoji5} src="/hand.png" />
           <text className={styles.challenge}>#challenge</text>
-          <text className={styles.content1Text} >
+          <text className={styles.content1Text}>
             Create <br />
             moments <br />
             together
           </text>
-          <text className={`${styles.content1Subtext}`} >
+          <text className={`${styles.content1Subtext}`}>
             Create a challenge with friends, invite <br />
             them to participate and watch their <br />
             creative juices flow
@@ -211,7 +234,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.screen1}>
+        <div className={styles.screen1} data-aos="fade-up">
           <img className={styles.emoji4} src="/fire.png" />
           <div>
             <div className={styles.bar} />
@@ -235,7 +258,7 @@ export default function Home() {
       </main>
 
       <main className={`${styles.content2} ${styles.section}`}>
-        <div className={styles.screen2}>
+        <div className={styles.screen2} data-aos="fade-up">
           <img className={styles.emoji7} src="/crown.png" />
           <img className={styles.emoji8} src="/crown.png" />
           <div className={styles.col}>
@@ -260,7 +283,7 @@ export default function Home() {
             reaction to <br />
             moments
           </text>
-          <text className={`${styles.content2Subtext}`} >
+          <text className={`${styles.content2Subtext}`}>
             Are you in an exciting moment or at an <br />
             incredibly exciting location with breathtaking <br />
             view? Then activate your reaction+ camera and <br />
@@ -278,14 +301,19 @@ export default function Home() {
       </main>
 
       {/* homies */}
-      <main className={`${styles.content1} ${styles.section}`}>
-        <div className={styles.content1Left} data-aos="fade-up">
+      <main className={`${styles.content1} ${styles.section} `}>
+        <div
+          className={`${styles.content1Left} ${styles.homie}`}
+          data-aos="fade-up"
+        >
           <text className={styles.challenge}>Updates</text>
           <text className={styles.content1Text}>
             Keep tabs on <br />
             your homies
           </text>
-          <text className={`${styles.content1Subtext}`} >
+          <text
+            className={`${styles.content1Subtext} ${styles.content1Subtext2}`}
+          >
             Let your friends know you got them, by checking <br />
             in with them
           </text>
@@ -300,20 +328,49 @@ export default function Home() {
         </div>
 
         <div className={styles.circles}>
-          <img className={styles.emoji9} src="/fire.png" data-aos="zoom-in"/>
-          <img className={styles.emoji10} src="/confeti.png" data-aos="zoom-in"/>
-          <img className={styles.emoji11} src="/crown.png" data-aos="zoom-in"/>
-          <img src="/circle1.png" className={styles.circle1} data-aos="zoom-in"/>
-          <img src="/circle2.png" className={styles.circle2} data-aos="zoom-in"></img>
-          <img src="/circle3.png" className={styles.circle3} data-aos="zoom-in"></img>
-          <img src="/circle4.png" className={styles.circle4} data-aos="zoom-in"></img>
-          <img src="/circle5.png" className={styles.circle5} data-aos="zoom-in"></img>
+          <img className={styles.emoji9} src="/fire.png" data-aos="zoom-in" />
+          <img
+            className={styles.emoji10}
+            src="/confeti.png"
+            data-aos="zoom-in"
+          />
+          <img className={styles.emoji11} src="/crown.png" data-aos="zoom-in" />
+          <img
+            src="/circle1.png"
+            className={styles.circle1}
+            data-aos="zoom-in"
+          />
+          <img
+            src="/circle2.png"
+            className={styles.circle2}
+            data-aos="zoom-in"
+          ></img>
+          <img
+            src="/circle3.png"
+            className={styles.circle3}
+            data-aos="zoom-in"
+          ></img>
+          <img
+            src="/circle4.png"
+            className={styles.circle4}
+            data-aos="zoom-in"
+          ></img>
+          <img
+            src="/circle5.png"
+            className={styles.circle5}
+            data-aos="zoom-in"
+          ></img>
         </div>
       </main>
 
       {/* promote and earn */}
-      <main className={`${styles.content2} ${styles.section}`}>
-        <div className={styles.screen2}>
+      <main
+        className={`${styles.content2} ${styles.section} ${styles.promote}`}
+      >
+        <div
+          className={`${styles.screen2} ${styles.screen22}`}
+          data-aos="fade-up"
+        >
           <img className={styles.emoji7} src="/money.png" />
           <img className={styles.emoji8} src="/money.png" />
           <div className={styles.col}>
@@ -331,18 +388,21 @@ export default function Home() {
             </text>
           </div>
         </div>
-        <div className={styles.content2Left} data-aos="fade-up">
+        <div
+          className={`${styles.content2Left} ${styles.promote2}`}
+          data-aos="fade-up"
+        >
           <text className={styles.challenge}>#Creator Revenue</text>
           <text className={styles.content2Text}>
             Promote <br />& Earn
           </text>
-          <text className={`${styles.content2Subtext}`} >
-            Select your favourite brand, create a #challenge <br />
-            for it, promote across your social channels, amass <br />
-            views and watch your revenue skyrocket!
+          <text className={`${styles.content2Subtext}`}>
+            Create a challenge with friends, invite <br />
+            them to participate and watch their <br />
+            creative juice flow
           </text>
           <div
-            className={styles.joinBtn4}
+            className={`${styles.joinBtn4} ${styles.joinPromoteb}`}
             onClick={() => {
               setShowModal(true);
             }}
@@ -372,6 +432,25 @@ export default function Home() {
             Get ready for <br />
             the release
           </text>
+          <text className={`${styles.footerTextm}`} data-aos="zoom-in">
+            <div className={styles.float6}>
+              <img className={styles.emoji12} src="/crown.png" />
+              <text className={styles.floatText6}>Update</text>
+            </div>
+            <div className={styles.float7}>
+              <img className={styles.emoji13} src="/fire.png" />
+              <img className={styles.floatImg} src="/float2.png" />
+              <text className={styles.floatText7}>Reaction</text>
+            </div>
+            <div className={styles.float8}>
+              <img className={styles.emoji14} src="/fireball.png" />
+              <img className={styles.floatImg} src="/float2.png" />
+              <text className={styles.floatText8}>#Challenge</text>
+            </div>
+            Get <br />
+            ready for <br />
+            the release
+          </text>
 
           <div
             className={styles.joinBtn5}
@@ -383,10 +462,7 @@ export default function Home() {
             Join the Waitlist &#127881;
           </div>
         </div>
-        <div
-          className={styles.foot}
-          data-aos="fade-up"
-        >
+        <div className={styles.foot} data-aos="fade-up">
           <div className={styles.fleft}>
             <text>Terms</text>
             <text>Privacy</text>
@@ -466,6 +542,117 @@ export default function Home() {
                 close
               </text>
             </div>
+          </div>
+        </main>
+      ) : null}
+
+      {showModal2 ? (
+        <main
+          data-aos="zoom-in"
+          data-aos-offset="50"
+          data-aos-delay="10"
+          className={styles.modalcon}
+        >
+          <div className={styles.modalb}>
+            {/* <div className={styles.floatm1}>
+              <img className={styles.emoji122} src="/crown.png" />
+              <text className={styles.floatText61}>Update</text>
+            </div>
+            <div className={styles.floatm2}>
+              <img className={styles.emoji14} src="/fireball.png" />
+              <img className={styles.floatImg} src="/float2.png" />
+              <text className={styles.floatText71}>#Challenge</text>
+            </div> */}
+            <div className={styles.floatm1b} style={{ marginTop: -60 }}>
+              <img className={styles.emoji13} src="/fire.png" />
+              <img className={styles.floatImg} src="/float2.png" />
+              <text className={styles.floatText81}>#challenge</text>
+            </div>
+
+            <div className={styles.modalleftb}>
+              <text className={styles.modaltext}>
+                Get your <br />
+                superfans and <br />
+                influencers <br />
+                to promote <br />
+                your band.
+              </text>
+              <text className={styles.modaltext2}>
+                Get more engaged customers to your band <br />
+                by setting up brand challenge in B.Social. Influencers
+                <br />
+                and superfans create content to promote your products <br />
+                & brand. Your brand could go viral on social media, <br />
+                you know!
+              </text>
+            </div>
+
+            <img src="/line.svg" className={styles.line} />
+
+            {page == 1 ? (
+              <div className={styles.modalright}>
+                <input
+                  type="text"
+                  className={styles.input}
+                  placeholder="What is the name of your brand / product?"
+                />
+
+                <input
+                  type="text"
+                  className={styles.input}
+                  placeholder="What is your brand / product email?"
+                />
+                <input
+                  type="text"
+                  className={styles.input}
+                  placeholder="What is your brand / products phone number?"
+                />
+                <button
+                  onClick={() => {
+                    setpage(2);
+                  }}
+                  className={styles.btn}
+                >
+                  Next
+                </button>
+                <text
+                  onClick={() => {
+                    setShowModal2(false);
+                  }}
+                  className={styles.close}
+                >
+                  close
+                </text>
+              </div>
+            ) : (
+              <div className={styles.modalright}>
+                <input
+                  type="text"
+                  className={styles.input}
+                  placeholder="What is your budget per day?"
+                />
+
+                <input
+                  type="text"
+                  className={styles.input}
+                  placeholder="Your target CPV(cost per view)?"
+                />
+                <input
+                  type="text"
+                  className={styles.input}
+                  placeholder="What are some of the challenges you want to do for your brand?"
+                />
+                <button className={styles.btn}>Done</button>
+                <text
+                  onClick={() => {
+                    setShowModal2(false);
+                  }}
+                  className={styles.close}
+                >
+                  close
+                </text>
+              </div>
+            )}
           </div>
         </main>
       ) : null}
