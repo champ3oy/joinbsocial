@@ -263,7 +263,7 @@ export default function Leaderboard() {
             </div>
             <div className={styles.floatm3}>
               <img className={styles.emoji13} src="/fire.png" />
-              <img className={styles.floatImg} src="/float2.png" />
+              <img className={styles.floatImg} src="/float3.png" />
               <text className={styles.floatText81}>Reaction</text>
             </div>
 
@@ -424,7 +424,7 @@ export default function Leaderboard() {
         >
           <div className={styles.modalc}>
             <text className={styles.modaltextc2}>
-              <img className={styles.emojicrown} src="/crown.png" />
+              <img className={styles.emojicrown2r} src="/crown.png" />
               Your place on the waitlist
             </text>
             <text className={styles.modaltext2c}>
@@ -476,7 +476,7 @@ export default function Leaderboard() {
         >
           <div className={styles.modalc}>
             <text className={styles.modaltextc2r}>
-              <img className={styles.emojicrown2} src="/crown.png" />
+              <img className={styles.emojicrown2r2} src="/crown.png" />
               You are <span style={{ color: "#7f46ff" }}>35th</span> on <br />
               the waitlist
             </text>

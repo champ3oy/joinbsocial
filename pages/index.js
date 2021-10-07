@@ -375,7 +375,7 @@ export default function Home() {
             Let your friends know you got them, by checking <br />
             in with them. Follow your friends updates and do not
             <br />
-            miss out on your friends exciting life milestones &
+            miss out on their exciting life milestones &
             <br />
             celebration
           </text>
@@ -385,7 +385,7 @@ export default function Home() {
             Let your friends know you got them, <br />
             by checking in with them. Follow your <br />
             friendsupdates and do not miss out on <br />
-            your friends exciting life milestones <br />& celebration
+            their exciting life milestones <br />& celebration
           </text>
 
           <div

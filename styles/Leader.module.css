@@ -534,7 +534,7 @@
   align-items: center;
   font-size: 23px;
   color: #747883;
-  font-weight: 300;
+  font-weight: 600;
   position: relative;
 }
 .filter img {
@@ -791,6 +791,23 @@
   position: absolute;
   top: -50px;
   left: -40px;
+}
+.emojicrown2r {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -50px;
+  left: -40px;
+}
+.emojicrown2r2 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -50px;
+  left: -40px;
+}
+.filter text {
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 1600px) {
@@ -1303,7 +1320,7 @@
     align-items: center;
     font-size: 20px;
     color: #747883;
-    font-weight: 300;
+    font-weight: 600;
   }
   .filter img {
     width: 20px;
@@ -2001,7 +2018,7 @@
     height: 50px;
     position: absolute;
     top: -23px;
-    left: 5px;
+    left: -23px;
   }
   .emojicrown2 {
     width: 50px;
@@ -2009,6 +2026,20 @@
     position: absolute;
     top: -23px;
     left: -20px;
+  }
+  .emojicrown2r2 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -23px;
+    left: -20px;
+  }
+  .emojicrown2r {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -23px;
+    left: 5px;
   }
   .joinx2 {
     font-weight: 600;
@@ -2321,6 +2352,7 @@
     margin-top: 10px;
     text-align: center;
     display: flex;
+    flex-direction: column;
   }
   .modalright {
     display: flex;
@@ -2603,7 +2635,7 @@
     align-items: center;
     font-size: 13px;
     color: #747883;
-    font-weight: 300;
+    font-weight: 600;
   }
   .filter img {
     width: 13px;
@@ -2700,7 +2732,7 @@
     font-size: 17px;
     font-weight: 600;
     letter-spacing: -0.5px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     transform: scale(0.6);
   }
   .http {
@@ -2791,6 +2823,13 @@
   }
 }
 @media only screen and (max-width: 320px) {
+  .emojicrown2r2 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -25px;
+    left: 0px;
+  }
   .modal,
   .modalc {
     transform: scale(0.85);
