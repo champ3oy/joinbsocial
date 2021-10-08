@@ -7,13 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
 import UserForm from "../components/UserForm";
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  useQuery,
-  gql,
-} from "@apollo/client";
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
 const client = new ApolloClient({
   uri: "https://api.joinb.social/graphql",
@@ -25,6 +19,7 @@ export default function Home() {
   const [showModal2, setShowModal2] = useState(false);
   const [showModal3, setShowModal3] = useState(false);
   const [page, setpage] = useState(1);
+  const [refCode, setrefCode] = useState("");
 
   useEffect(() => {
     AOS.init({
@@ -635,7 +630,8 @@ export default function Home() {
               <img src="/line.svg" className={styles.line} />
 
               <UserForm
-                onDone={() => {
+                onDone={(data) => {
+                  setrefCode(data?.RegisterWaitListUser?.referralCode);
                   setShowModal(false);
                   setShowModal3(true);
                 }}
@@ -833,7 +829,7 @@ export default function Home() {
 
               <div className={styles.rlink}>
                 <div className={styles.http}>https://</div>
-                <text>join.social/invite/jeffery.afrane/other</text>
+                <text>join.social/invite/{refCode}</text>
                 <img className={styles.copy} src="/copy.png" />
               </div>
 
