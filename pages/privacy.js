@@ -17,6 +17,7 @@ export default function Privacy() {
   const [showModal2, setShowModal2] = useState(false);
   const [showModal3, setShowModal3] = useState(false);
   const [page, setpage] = useState(1);
+  const [refCode, setrefCode] = useState("");
 
   useEffect(() => {
     AOS.init({
@@ -894,7 +895,8 @@ export default function Privacy() {
               </div>
               <img src="/line.svg" className={styles.line} />
               <UserForm
-                onDone={() => {
+                 onDone={(data) => {
+                  setrefCode(data?.RegisterWaitListUser?.referralCode);
                   setShowModal(false);
                   setShowModal3(true);
                 }}
@@ -1091,8 +1093,16 @@ export default function Privacy() {
               </text>
               <div className={styles.rlink}>
                 <div className={styles.http}>https://</div>
-                <text>join.social/invite/jeffery.afrane/other</text>
-                <img className={styles.copy} src="/copy.png" />
+                <text>join.social/invite/{refCode}</text>
+                <img
+                  onClick={() => {
+                    navigator.clipboard.writeText(
+                      "https://joinb.social/invite/" + refCode
+                    );
+                  }}
+                  className={styles.copy}
+                  src="/copy.png"
+                />
               </div>
 
               <button

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
 import modal from "../styles/Modal.module.css";
 import { useMutation } from "@apollo/client";
@@ -13,6 +13,19 @@ export default function UserForm(props) {
 
   const [RegisterWaitListUser, { data, loading, error }] =
     useMutation(REGISTER_USER);
+
+  useEffect(() => {
+    if (data) {
+      props.onDone(data);
+    }
+    if (error) {
+      seterr(error?.message);
+      setmodal(true);
+      console.log(error.message);
+    } else {
+      setmodal(false);
+    }
+  }, [data, error]);
 
   return (
     <div className={styles.modalright}>
@@ -58,26 +71,24 @@ export default function UserForm(props) {
         }}
       />
       <button
-        onClick={async () => {
-          console.log(fullName, email, phoneNumber);
-
+        onClick={() => {
           try {
-            await RegisterWaitListUser({
+            RegisterWaitListUser({
               variables: {
                 name: fullName,
                 email: email,
                 phone: phoneNumber,
+                referralCode: props.pid ? props.pid : "",
               },
             }).catch(() => {
-              seterr(error.message);
-              setmodal(true);
-              console.log(error.message);
+              if (error) {
+                seterr(error?.message);
+                setmodal(true);
+                console.log(error.message);
+              } else {
+                setmodal(false);
+              }
             });
-
-            console.log(data);
-            if (data) {
-              props.onDone(data);
-            }
           } catch {
             (e) => {
               console.log("error");

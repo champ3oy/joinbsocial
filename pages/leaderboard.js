@@ -14,6 +14,7 @@ import Top10 from "../components/Top10";
 import UserForm from "../components/UserForm";
 import PositionModals from "../components/PositionModals";
 
+
 const client = new ApolloClient({
   uri: "https://api.joinb.social/graphql",
   cache: new InMemoryCache(),
@@ -27,6 +28,7 @@ export default function Leaderboard() {
   const [showModal5, setShowModal5] = useState(false);
   const [showModal6, setShowModal6] = useState(false);
   const [position, setposition] = useState("");
+  const [refCode, setrefCode] = useState("");
 
   useEffect(() => {
     AOS.init({
@@ -146,7 +148,8 @@ export default function Leaderboard() {
               </div>
               <img src="/line.svg" className={styles.line} />
               <UserForm
-                onDone={() => {
+                 onDone={(data) => {
+                  setrefCode(data?.RegisterWaitListUser?.referralCode);
                   setShowModal(false);
                   setShowModal3(true);
                 }}
@@ -206,8 +209,16 @@ export default function Leaderboard() {
 
               <div className={styles.rlink}>
                 <div className={styles.http}>https://</div>
-                <text>join.social/invite/jeffery.afrane/other</text>
-                <img className={styles.copy} src="/copy.png" />
+                <text>join.social/invite/{refCode}</text>
+                <img
+                  onClick={() => {
+                    navigator.clipboard.writeText(
+                      "https://joinb.social/invite/" + refCode
+                    );
+                  }}
+                  className={styles.copy}
+                  src="/copy.png"
+                />
               </div>
 
               <button

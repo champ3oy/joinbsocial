@@ -22,7 +22,6 @@ export default function Top10(props) {
   });
 
   useEffect(() => {
-    console.log(data);
     if (data) {
       setTopTen(data.ListRankedUsers.slice(0, 10));
     }
@@ -33,7 +32,6 @@ export default function Top10(props) {
       {props.screen == "waitlist" ? (
         <main className={styles.waitlist}>
           <text className={styles.number}>
-            {" "}
             {Query2?.data?.ListRankedUsers?.length}
           </text>
           <text className={styles.subText}>Total Number on Waitlist</text>
@@ -196,14 +194,14 @@ export default function Top10(props) {
                             ? "2nd"
                             : index + 1 == 3
                             ? "3rd"
-                            : index + 1 + "th"}{" "}
+                            : index + 1 + "th"}
                           on the rank
                         </text>
                       </div>
                     </div>
                     <div className={styles.rank}>
                       <img src="/arrow-up2.png" />
-                      <text>{index + 1}</text>
+                      <text>{item.invitedUsers ? item.invitedUsers : 0}</text>
                     </div>
                   </div>
                 );

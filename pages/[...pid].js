@@ -8,6 +8,7 @@ import "aos/dist/aos.css";
 import Link from "next/link";
 import UserForm from "../components/UserForm";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { useRouter } from "next/router";
 
 const client = new ApolloClient({
   uri: "https://api.joinb.social/graphql",
@@ -15,16 +16,23 @@ const client = new ApolloClient({
 });
 
 export default function Home() {
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(true);
   const [showModal2, setShowModal2] = useState(false);
   const [showModal3, setShowModal3] = useState(false);
   const [page, setpage] = useState(1);
   const [refCode, setrefCode] = useState("");
+  const router = useRouter();
+  const { pid } = router.query;
 
   useEffect(() => {
     AOS.init({
       offset: 100,
     });
+    if (pid) {
+      if (pid[1]) {
+        setShowModal(true);
+      }
+    }
   }, []);
 
   const responsive = {
@@ -630,6 +638,7 @@ export default function Home() {
               <img src="/line.svg" className={styles.line} />
 
               <UserForm
+                pid={pid? pid[1] : ''}
                 onDone={(data) => {
                   setrefCode(data?.RegisterWaitListUser?.referralCode);
                   setShowModal(false);
@@ -855,7 +864,7 @@ export default function Home() {
                       .catch(console.error);
                   } else {
                     // fallback
-                    console.log(share)
+                    console.log(share);
                   }
                 }}
                 className={styles.btn}
