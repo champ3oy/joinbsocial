@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/Leader.module.css";
 import { useQuery } from "@apollo/client";
-import { RANKED_USERS } from "../GraphQL/queries";
+import { RANKED_USERS, GET_TOTAL_NUMBER } from "../GraphQL/queries";
 
 export default function Top10(props) {
   const [showModalfilter, setShowModalfilter] = useState(false);
@@ -23,6 +23,8 @@ export default function Top10(props) {
     },
   });
 
+  const Query3 = useQuery(GET_TOTAL_NUMBER);
+
   useEffect(() => {
     if (data) {
       setTopTen(data.ListRankedUsers.slice(0, 10));
@@ -34,7 +36,7 @@ export default function Top10(props) {
       {props.screen == "waitlist" ? (
         <main className={styles.waitlist}>
           <text className={styles.number}>
-            {Query2?.data?.ListRankedUsers?.length}
+            {Query3?.data?.CountTotalWaitListUsers?.message}
           </text>
           <text className={styles.subText}>Total Number on Waitlist</text>
           <div
@@ -60,7 +62,7 @@ export default function Top10(props) {
         <main className={styles.referral}>
           <div className={styles.rleft}>
             <text className={styles.number2}>
-              {Query2?.data?.ListRankedUsers?.length}
+              {Query3?.data?.CountTotalWaitListUsers?.message}
             </text>
             <text className={styles.subtext2}>Total Number of Referral</text>
             <div
@@ -181,7 +183,7 @@ export default function Top10(props) {
             <div className={styles.ranklist}>
               {Query2?.data?.ListRankedUsers?.map((item, index) => {
                 return (
-                  <div className={styles.listitem} key={item}>
+                  <div className={styles.listitem} key={item._id}>
                     <div className={styles.listitemleft}>
                       <div className={styles.imgborder}>
                         <img />
