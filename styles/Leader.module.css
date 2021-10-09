@@ -110,6 +110,7 @@
   background: linear-gradient(to right, #7f46ff 0%, #7f46ff 40%, #ff46b1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  padding: 0 10px 0 10px;
 }
 .subText {
   font-size: 53px;

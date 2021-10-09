@@ -1,8 +1,8 @@
 import { gql } from "@apollo/client";
 
 export const RANKED_USERS = gql`
-  query ($orderBy: String!) {
-    ListRankedUsers(orderBy: $orderBy) {
+  query ($orderBy: String! $limit: Int) {
+    ListRankedUsers(orderBy: $orderBy limit: $limit) {
       _id
       name
       invitedUsers

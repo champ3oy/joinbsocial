@@ -17,7 +17,6 @@ export default function PositionModals(props) {
   });
 
   useEffect(() => {
-    console.log(data);
     if (data) {
       setposition(data.getMyRankNumberforWaitList.message);
     }

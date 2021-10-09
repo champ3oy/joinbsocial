@@ -12,12 +12,14 @@ export default function Top10(props) {
   const { loading, error, data } = useQuery(RANKED_USERS, {
     variables: {
       orderBy: filter.toLocaleLowerCase(),
+      limit: 10
     },
   });
 
   const Query2 = useQuery(RANKED_USERS, {
     variables: {
       orderBy: "monthly",
+      limit: 50
     },
   });
 
@@ -189,12 +191,12 @@ export default function Top10(props) {
                         <text className={styles.emojis}>
                           {" "}
                           {index + 1 == 1
-                            ? "1st"
+                            ? "1st "
                             : index + 1 == 2
-                            ? "2nd"
+                            ? "2nd "
                             : index + 1 == 3
-                            ? "3rd"
-                            : index + 1 + "th"}
+                            ? "3rd "
+                            : index + 1 + "th "}
                           on the rank
                         </text>
                       </div>
