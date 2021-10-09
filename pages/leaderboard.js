@@ -48,11 +48,11 @@ export default function Leaderboard() {
         <nav className={styles.nav}>
           <div className={styles.brand}>
             <Link href="/">
-              <img src="/back.png" className={styles.back} />
+              <img alt="image" src="/back.png" className={styles.back} />
             </Link>
-            <img src="/logo2.png" className={styles.logo} />
+            <img alt="image" src="/logo2.png" className={styles.logo} />
           </div>
-          <img
+          <img alt="image"
             onClick={() => {
               setShowModal4(true);
             }}
@@ -119,17 +119,17 @@ export default function Leaderboard() {
           >
             <div className={styles.modal}>
               <div className={styles.floatm1}>
-                <img className={styles.emoji122} src="/crown.png" />
+                <img alt="image" className={styles.emoji122} src="/crown.png" />
                 <text className={styles.floatText61}>Update</text>
               </div>
               <div className={styles.floatm2}>
-                <img className={styles.emoji14} src="/fireball.png" />
-                <img className={styles.floatImg} src="/float2.png" />
+                <img alt="image" className={styles.emoji14} src="/fireball.png" />
+                <img alt="image" className={styles.floatImg} src="/float2.png" />
                 <text className={styles.floatText71}>#Challenge</text>
               </div>
               <div className={styles.floatm3}>
-                <img className={styles.emoji13} src="/fire.png" />
-                <img className={styles.floatImg} src="/float3.png" />
+                <img alt="image" className={styles.emoji13} src="/fire.png" />
+                <img alt="image" className={styles.floatImg} src="/float3.png" />
                 <text className={styles.floatText81}>Reaction</text>
               </div>
               <div className={styles.modalleft}>
@@ -146,7 +146,7 @@ export default function Leaderboard() {
                   winning souvenirs and other goodies from the BSocial team.
                 </text>
               </div>
-              <img src="/line.svg" className={styles.line} />
+              <img alt="image" src="/line.svg" className={styles.line} />
               <UserForm
                  onDone={(data) => {
                   setrefCode(data?.RegisterWaitListUser?.referralCode);
@@ -170,12 +170,12 @@ export default function Leaderboard() {
           >
             <div className={styles.modalc}>
               {/* <div className={styles.floatm1}>
-              <img className={styles.emoji122} src="/crown.png" />
+              <img alt="image" className={styles.emoji122} src="/crown.png" />
               <text className={styles.floatText61}>Update</text>
             </div> */}
 
               <text className={styles.modaltextc}>
-                <img className={styles.emojicrown} src="/crown.png" />
+                <img alt="image" className={styles.emojicrown} src="/crown.png" />
                 Congratulations &#127881;
               </text>
               <text className={styles.modaltext2c}>
@@ -210,7 +210,7 @@ export default function Leaderboard() {
               <div className={styles.rlink}>
                 <div className={styles.http}>https://</div>
                 <text>join.social/invite/{refCode}</text>
-                <img
+                <img alt="image"
                   onClick={() => {
                     navigator.clipboard.writeText(
                       "https://joinb.social/invite/" + refCode
@@ -221,7 +221,7 @@ export default function Leaderboard() {
                 />
               </div>
 
-              <button
+              <button name="btn"
                 onClick={() => {
                   setpage(2);
                 }}
@@ -244,7 +244,7 @@ export default function Leaderboard() {
 
         {showModal4 ? (
           <main className={styles.menumodal}>
-            <img
+            <img alt="image"
               onClick={() => {
                 setShowModal4(false);
               }}
@@ -274,7 +274,7 @@ export default function Leaderboard() {
           >
             <div className={styles.modalc}>
               <text className={styles.modaltextc2}>
-                <img className={styles.emojicrown2r} src="/crown.png" />
+                <img alt="image" className={styles.emojicrown2r} src="/crown.png" />
                 Your place on the waitlist
               </text>
               <text className={styles.modaltext2c}>
@@ -317,7 +317,7 @@ export default function Leaderboard() {
           >
             <div className={styles.modalc}>
               <text className={styles.modaltextc2r}>
-                <img className={styles.emojicrown2r2} src="/crown.png" />
+                <img alt="image" className={styles.emojicrown2r2} src="/crown.png" />
                 You are{" "}
                 <span style={{ color: "#7f46ff" }}>
                   {position == 1
@@ -339,7 +339,7 @@ export default function Leaderboard() {
                 the waitlist!
               </text>
 
-              <button className={styles.btn}>Share</button>
+              <button name="btn" className={styles.btn}>Share</button>
               <text
                 onClick={() => {
                   setShowModal6(false);

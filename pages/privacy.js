@@ -36,7 +36,7 @@ export default function Privacy() {
 
         <nav className={styles.nav}>
           <Link href="/">
-            <img src="/logo2x.png" className={styles.logo} />
+            <img alt="image" src="/logo2x.png" className={styles.logo} />
           </Link>
           <div className={styles.right}>
             <Link href="/leaderboard">
@@ -780,18 +780,18 @@ export default function Privacy() {
         <footer className={`${styles.footer} ${styles.section}`}>
           <div className={styles.footContent}>
             <text className={`${styles.footerText}`} data-aos="zoom-in">
-              <img className={styles.emoji12} src="/crown.png" />
+              <img alt="image" className={styles.emoji12} src="/crown.png" />
               <div className={styles.float6}>
                 <text className={styles.floatText6}>Update</text>
               </div>
               <div className={styles.float7}>
-                <img className={styles.emoji13} src="/fire.png" />
-                <img className={styles.floatImg} src="/float2.png" />
+                <img alt="image" className={styles.emoji13} src="/fire.png" />
+                <img alt="image" className={styles.floatImg} src="/float2.png" />
                 <text className={styles.floatText7}>Reaction</text>
               </div>
               <div className={styles.float8}>
-                <img className={styles.emoji14} src="/fireball.png" />
-                <img className={styles.floatImg} src="/float3.png" />
+                <img alt="image" className={styles.emoji14} src="/fireball.png" />
+                <img alt="image" className={styles.floatImg} src="/float3.png" />
                 <text className={styles.floatText8}>#Challenge</text>
               </div>
               Get ready for <br />
@@ -799,17 +799,17 @@ export default function Privacy() {
             </text>
             <text className={`${styles.footerTextm}`} data-aos="zoom-in">
               <div className={styles.float6}>
-                <img className={styles.emoji12} src="/crown.png" />
+                <img alt="image" className={styles.emoji12} src="/crown.png" />
                 <text className={styles.floatText6}>Update</text>
               </div>
               <div className={styles.float7}>
-                <img className={styles.emoji13} src="/fire.png" />
-                <img className={styles.floatImg} src="/float2.png" />
+                <img alt="image" className={styles.emoji13} src="/fire.png" />
+                <img alt="image" className={styles.floatImg} src="/float2.png" />
                 <text className={styles.floatText7}>Reaction</text>
               </div>
               <div className={styles.float8}>
-                <img className={styles.emoji14} src="/fireball.png" />
-                <img className={styles.floatImg} src="/float3.png" />
+                <img alt="image" className={styles.emoji14} src="/fireball.png" />
+                <img alt="image" className={styles.floatImg} src="/float3.png" />
                 <text className={styles.floatText8}>#Challenge</text>
               </div>
               Get <br />
@@ -835,23 +835,23 @@ export default function Privacy() {
                 <text>Privacy</text>
               </Link>
             </div>
-            {/* <img className={styles.fcenter} src="/california.png" /> */}
+            {/* <img alt="image" className={styles.fcenter} src="/california.png" /> */}
             <div className={styles.fcenter}>
               &copy; 2021 BB.Social Inc. All rights reserved.
               contactus@joinb.social
             </div>
             <div className={styles.fright}>
               <a href="https://www.facebook.com/JoinBSocial">
-                <img src="/fb.png" className={styles.icon} />
+                <img alt="image" src="/fb.png" className={styles.icon} />
               </a>
               <a href="https://twitter.com/BeSocia14814345">
-                <img src="/twitter.svg" className={styles.icon} />
+                <img alt="image" src="/twitter.svg" className={styles.icon} />
               </a>
               <a href="https://www.instagram.com/bsocial_inc/">
-                <img src="/ig.png" className={styles.icon} />
+                <img alt="image" src="/ig.png" className={styles.icon} />
               </a>
               <a href="https://www.tiktok.com/@bsocial_inc">
-                <img src="/tk.png" className={styles.icon} />
+                <img alt="image" src="/tk.png" className={styles.icon} />
               </a>
             </div>
           </div>
@@ -866,17 +866,17 @@ export default function Privacy() {
           >
             <div className={styles.modal}>
               <div className={styles.floatm1}>
-                <img className={styles.emoji122} src="/crown.png" />
+                <img alt="image" className={styles.emoji122} src="/crown.png" />
                 <text className={styles.floatText61}>Update</text>
               </div>
               <div className={styles.floatm2}>
-                <img className={styles.emoji14} src="/fireball.png" />
-                <img className={styles.floatImg} src="/float2.png" />
+                <img alt="image" className={styles.emoji14} src="/fireball.png" />
+                <img alt="image" className={styles.floatImg} src="/float2.png" />
                 <text className={styles.floatText71}>#Challenge</text>
               </div>
               <div className={styles.floatm3}>
-                <img className={styles.emoji13} src="/fire.png" />
-                <img className={styles.floatImg} src="/float2.png" />
+                <img alt="image" className={styles.emoji13} src="/fire.png" />
+                <img alt="image" className={styles.floatImg} src="/float2.png" />
                 <text className={styles.floatText81}>Reaction</text>
               </div>
               <div className={styles.modalleft}>
@@ -893,7 +893,7 @@ export default function Privacy() {
                   winning souvenirs and other goodies from the BSocial team.
                 </text>
               </div>
-              <img src="/line.svg" className={styles.line} />
+              <img alt="image" src="/line.svg" className={styles.line} />
               <UserForm
                  onDone={(data) => {
                   setrefCode(data?.RegisterWaitListUser?.referralCode);
@@ -917,8 +917,8 @@ export default function Privacy() {
           >
             <div className={styles.modalb}>
               <div className={styles.floatm1b} style={{ marginTop: -60 }}>
-                <img className={styles.emoji13} src="/fire.png" />
-                <img className={styles.floatImg} src="/float2.png" />
+                <img alt="image" className={styles.emoji13} src="/fire.png" />
+                <img alt="image" className={styles.floatImg} src="/float2.png" />
                 <text className={styles.floatText81}>#challenge</text>
               </div>
 
@@ -940,7 +940,7 @@ export default function Privacy() {
                 </text>
               </div>
 
-              <img src="/line.svg" className={styles.line} />
+              <img alt="image" src="/line.svg" className={styles.line} />
 
               {page == 1 ? (
                 <div className={styles.modalright}>
@@ -962,7 +962,7 @@ export default function Privacy() {
                     className={styles.input}
                     placeholder="What is your brand / products phone number?"
                   />
-                  <button
+                  <button name="btn"
                     onClick={() => {
                       setpage(2);
                     }}
@@ -988,7 +988,7 @@ export default function Privacy() {
                       setpage(1);
                     }}
                   >
-                    <img src="/back2.png" />2 of 2
+                    <img alt="image" src="/back2.png" />2 of 2
                   </div>
                   <div className={styles.infocon}>
                     <input
@@ -997,8 +997,8 @@ export default function Privacy() {
                       className={styles.input}
                       placeholder="What is your budget per day?"
                     />
-                    <img src="/info.png" className={styles.info} />
-                    <img src="/tooltip1.png" className={styles.tooltip1} />
+                    <img alt="image" src="/info.png" className={styles.info} />
+                    <img alt="image" src="/tooltip1.png" className={styles.tooltip1} />
                   </div>
 
                   <div className={styles.infocon}>
@@ -1008,8 +1008,8 @@ export default function Privacy() {
                       className={styles.input}
                       placeholder="Your target CPV(cost per view)?"
                     />
-                    <img src="/info.png" className={styles.info2} />
-                    <img src="/tooltip2.png" className={styles.tooltip2} />
+                    <img alt="image" src="/info.png" className={styles.info2} />
+                    <img alt="image" src="/tooltip2.png" className={styles.tooltip2} />
                   </div>
                   <div className={styles.infocon}>
                     <input
@@ -1018,10 +1018,10 @@ export default function Privacy() {
                       className={styles.input}
                       placeholder="What are some of the challenges you want to do for your brand?"
                     />
-                    <img src="/info.png" className={styles.info} />
+                    <img alt="image" src="/info.png" className={styles.info} />
                   </div>
 
-                  <button
+                  <button name="btn"
                     onClick={() => {
                       setpage(1);
                       setShowModal2(false);
@@ -1060,7 +1060,7 @@ export default function Privacy() {
             </div> */}
 
               <text className={styles.modaltextc}>
-                <img className={styles.emojicrown} src="/crown.png" />
+                <img alt="image" className={styles.emojicrown} src="/crown.png" />
                 Congratulations &#127881;
               </text>
               <text className={styles.modaltext2c}>
@@ -1094,7 +1094,7 @@ export default function Privacy() {
               <div className={styles.rlink}>
                 <div className={styles.http}>https://</div>
                 <text>join.social/invite/{refCode}</text>
-                <img
+                <img alt="image"
                   onClick={() => {
                     navigator.clipboard.writeText(
                       "https://joinb.social/invite/" + refCode
@@ -1105,7 +1105,7 @@ export default function Privacy() {
                 />
               </div>
 
-              <button
+              <button name="btn"
                 onClick={() => {
                   setpage(2);
                 }}

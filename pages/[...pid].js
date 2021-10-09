@@ -63,7 +63,7 @@ export default function Home() {
     } = rest;
     const carouselItems = ["", "", ""];
     return (
-      <button
+      <button name="btn"
         className={active ? styles.active : styles.inactive}
         onClick={() => onClick()}
       />
@@ -81,7 +81,7 @@ export default function Home() {
 
         <div className={`${styles.section}`}>
           <nav className={styles.nav}>
-            <img src="/logo2x.png" className={styles.logo} />
+            <img alt="image" src="/logo2x.png" className={styles.logo} />
 
             <div className={styles.right}>
               <Link href="/leaderboard">
@@ -271,7 +271,7 @@ export default function Home() {
 
         <main className={`${styles.content1} ${styles.section}`}>
           <div className={styles.content1Left} data-aos="fade-up">
-            <img className={styles.emoji5} src="/hand.png" />
+            <img alt="image" className={styles.emoji5} src="/hand.png" />
             <text className={styles.challenge}>#challenge</text>
             <text className={styles.content1Text}>
               Create <br />
@@ -300,7 +300,7 @@ export default function Home() {
           </div>
 
           <div className={styles.screen1} data-aos="fade-up">
-            <img className={styles.emoji4} src="/fire.png" />
+            <img alt="image" className={styles.emoji4} src="/fire.png" />
             <div>
               <div className={styles.bar} />
               <text className={styles.hashtag}>#danceyour##</text>
@@ -308,17 +308,17 @@ export default function Home() {
             <text className={styles.views}>50k Views &#129310;</text>
 
             <div className={styles.float1} data-aos="fade-up">
-              <img className={styles.floatImg} src="/float1.png" />
+              <img alt="image" className={styles.floatImg} src="/float1.png" />
               <text className={styles.floatText}>Luke join your challenge</text>
             </div>
             <div className={styles.float2} data-aos="fade-up">
-              <img className={styles.floatImg} src="/float2.png" />
+              <img alt="image" className={styles.floatImg} src="/float2.png" />
               <text className={styles.floatText}>
                 Linda join your challenge
               </text>
             </div>
             <div className={styles.float3} data-aos="fade-up">
-              <img className={styles.floatImg3} src="/float3.png" />
+              <img alt="image" className={styles.floatImg3} src="/float3.png" />
               <text className={styles.floatText3}>
                 Liza join your challenge
               </text>
@@ -328,8 +328,8 @@ export default function Home() {
 
         <main className={`${styles.content2} ${styles.section}`}>
           <div className={styles.screen2} data-aos="fade-up">
-            <img className={styles.emoji7} src="/crown.png" />
-            <img className={styles.emoji8} src="/crown.png" />
+            <img alt="image" className={styles.emoji7} src="/crown.png" />
+            <img alt="image" className={styles.emoji8} src="/crown.png" />
             <div className={styles.col}>
               <text className={styles.views2}>@Hanrtx</text>
               <text className={styles.hashtag2}>24k Views &#129310;</text>
@@ -421,41 +421,41 @@ export default function Home() {
           </div>
 
           <div className={styles.circles}>
-            <img className={styles.emoji9} src="/fire.png" data-aos="zoom-in" />
+            <img alt="image" className={styles.emoji9} src="/fire.png" data-aos="zoom-in" />
 
-            <img
+            <img alt="image"
               className={styles.emoji11}
               src="/crown.png"
               data-aos="zoom-in"
             />
-            <img
+            <img alt="image"
               src="/circle1.png"
               className={styles.circle1}
               data-aos="zoom-in"
             />
-            <img
+            <img alt="image"
               src="/circle2.png"
               className={styles.circle2}
               data-aos="zoom-in"
             ></img>
-            <img
+            <img alt="image"
               src="/circle3.png"
               className={styles.circle3}
               data-aos="zoom-in"
             ></img>
             <div>
-              <img
+              <img alt="image"
                 src="/circle4.png"
                 className={styles.circle4}
                 data-aos="zoom-in"
               />
-              <img
+              <img alt="image"
                 className={styles.emoji10}
                 src="/confeti.png"
                 data-aos="zoom-in"
               />
             </div>
-            <img
+            <img alt="image"
               src="/circle5.png"
               className={styles.circle5}
               data-aos="zoom-in"
@@ -471,8 +471,8 @@ export default function Home() {
             className={`${styles.screen2} ${styles.screen22}`}
             data-aos="fade-up"
           >
-            <img className={styles.emoji7} src="/money.png" />
-            <img className={styles.emoji8} src="/money.png" />
+            <img alt="image" className={styles.emoji7} src="/money.png" />
+            <img alt="image" className={styles.emoji8} src="/money.png" />
             <div className={styles.col}>
               <text className={styles.views2}>@JefferyAfrane</text>
               <text className={styles.hashtag2}>24k Views &#129310;</text>
@@ -521,18 +521,18 @@ export default function Home() {
         <footer className={`${styles.footer} ${styles.section}`}>
           <div className={styles.footContent}>
             <text className={`${styles.footerText}`} data-aos="zoom-in">
-              <img className={styles.emoji12} src="/crown.png" />
+              <img alt="image" className={styles.emoji12} src="/crown.png" />
               <div className={styles.float6}>
                 <text className={styles.floatText6}>Update</text>
               </div>
               <div className={styles.float7}>
-                <img className={styles.emoji13} src="/fire.png" />
-                <img className={styles.floatImg} src="/float2.png" />
+                <img alt="image" className={styles.emoji13} src="/fire.png" />
+                <img alt="image" className={styles.floatImg} src="/float2.png" />
                 <text className={styles.floatText7}>Reaction</text>
               </div>
               <div className={styles.float8}>
-                <img className={styles.emoji14} src="/fireball.png" />
-                <img className={styles.floatImg} src="/float2.png" />
+                <img alt="image" className={styles.emoji14} src="/fireball.png" />
+                <img alt="image" className={styles.floatImg} src="/float2.png" />
                 <text className={styles.floatText8}>#Challenge</text>
               </div>
               Get ready for <br />
@@ -540,17 +540,17 @@ export default function Home() {
             </text>
             <text className={`${styles.footerTextm}`} data-aos="zoom-in">
               <div className={styles.float6}>
-                <img className={styles.emoji12} src="/crown.png" />
+                <img alt="image" className={styles.emoji12} src="/crown.png" />
                 <text className={styles.floatText6}>Update</text>
               </div>
               <div className={styles.float7}>
-                <img className={styles.emoji13} src="/fire.png" />
-                <img className={styles.floatImg} src="/float2.png" />
+                <img alt="image" className={styles.emoji13} src="/fire.png" />
+                <img alt="image" className={styles.floatImg} src="/float2.png" />
                 <text className={styles.floatText7}>Reaction</text>
               </div>
               <div className={styles.float8}>
-                <img className={styles.emoji14} src="/fireball.png" />
-                <img className={styles.floatImg} src="/float3.png" />
+                <img alt="image" className={styles.emoji14} src="/fireball.png" />
+                <img alt="image" className={styles.floatImg} src="/float3.png" />
                 <text className={styles.floatText8}>#Challenge</text>
               </div>
               Get <br />
@@ -576,23 +576,23 @@ export default function Home() {
                 <text>Privacy</text>
               </Link>
             </div>
-            {/* <img className={styles.fcenter} src="/california.png" /> */}
+            {/* <img alt="image" className={styles.fcenter} src="/california.png" /> */}
             <div className={styles.fcenter}>
               &copy; 2021 BB.Social Inc. All rights reserved.
               contactus@joinb.social
             </div>
             <div className={styles.fright}>
               <a href="https://www.facebook.com/JoinBSocial">
-                <img src="/fb.png" className={styles.icon} />
+                <img alt="image" src="/fb.png" className={styles.icon} />
               </a>
               <a href="https://twitter.com/BeSocia14814345">
-                <img src="/twitter.svg" className={styles.icon} />
+                <img alt="image" src="/twitter.svg" className={styles.icon} />
               </a>
               <a href="https://www.instagram.com/bsocial_inc/">
-                <img src="/ig.png" className={styles.icon} />
+                <img alt="image" src="/ig.png" className={styles.icon} />
               </a>
               <a href="https://www.tiktok.com/@bsocial_inc">
-                <img src="/tk.png" className={styles.icon} />
+                <img alt="image" src="/tk.png" className={styles.icon} />
               </a>
             </div>
           </div>
@@ -607,17 +607,17 @@ export default function Home() {
           >
             <div className={styles.modal}>
               <div className={styles.floatm1}>
-                <img className={styles.emoji122} src="/crown.png" />
+                <img alt="image" className={styles.emoji122} src="/crown.png" />
                 <text className={styles.floatText61}>Update</text>
               </div>
               <div className={styles.floatm2}>
-                <img className={styles.emoji14} src="/fireball.png" />
-                <img className={styles.floatImg} src="/float2.png" />
+                <img alt="image" className={styles.emoji14} src="/fireball.png" />
+                <img alt="image" className={styles.floatImg} src="/float2.png" />
                 <text className={styles.floatText71}>#Challenge</text>
               </div>
               <div className={styles.floatm3}>
-                <img className={styles.emoji13} src="/fire.png" />
-                <img className={styles.floatImg} src="/float3.png" />
+                <img alt="image" className={styles.emoji13} src="/fire.png" />
+                <img alt="image" className={styles.floatImg} src="/float3.png" />
                 <text className={styles.floatText81}>Reaction</text>
               </div>
               <div className={styles.modalleft}>
@@ -635,7 +635,7 @@ export default function Home() {
                 </text>
               </div>
 
-              <img src="/line.svg" className={styles.line} />
+              <img alt="image" src="/line.svg" className={styles.line} />
 
               <UserForm
                 pid={pid? pid[1] : ''}
@@ -661,8 +661,8 @@ export default function Home() {
           >
             <div className={styles.modalb}>
               <div className={styles.floatm1b} style={{ marginTop: -60 }}>
-                <img className={styles.emoji13} src="/fire.png" />
-                <img className={styles.floatImg} src="/float2.png" />
+                <img alt="image" className={styles.emoji13} src="/fire.png" />
+                <img alt="image" className={styles.floatImg} src="/float2.png" />
                 <text className={styles.floatText81}>#challenge</text>
               </div>
 
@@ -684,7 +684,7 @@ export default function Home() {
                 </text>
               </div>
 
-              <img src="/line.svg" className={styles.line} />
+              <img alt="image" src="/line.svg" className={styles.line} />
 
               {page == 1 ? (
                 <div className={styles.modalright}>
@@ -706,7 +706,7 @@ export default function Home() {
                     className={styles.input}
                     placeholder="What is your brand / products phone number?"
                   />
-                  <button
+                  <button name="btn"
                     onClick={() => {
                       setpage(2);
                     }}
@@ -732,7 +732,7 @@ export default function Home() {
                       setpage(1);
                     }}
                   >
-                    <img src="/back2.png" />2 of 2
+                    <img alt="image" src="/back2.png" />2 of 2
                   </div>
                   <div className={styles.infocon}>
                     <input
@@ -741,8 +741,8 @@ export default function Home() {
                       className={styles.input}
                       placeholder="What is your budget per day?"
                     />
-                    <img src="/info.png" className={styles.info} />
-                    <img src="/tooltip1.png" className={styles.tooltip1} />
+                    <img alt="image" src="/info.png" className={styles.info} />
+                    <img alt="image" src="/tooltip1.png" className={styles.tooltip1} />
                   </div>
 
                   <div className={styles.infocon}>
@@ -752,8 +752,8 @@ export default function Home() {
                       className={styles.input}
                       placeholder="Your target CPV(cost per view)?"
                     />
-                    <img src="/info.png" className={styles.info2} />
-                    <img src="/tooltip2.png" className={styles.tooltip2} />
+                    <img alt="image" src="/info.png" className={styles.info2} />
+                    <img alt="image" src="/tooltip2.png" className={styles.tooltip2} />
                   </div>
                   <div className={styles.infocon}>
                     <input
@@ -762,10 +762,10 @@ export default function Home() {
                       className={styles.input}
                       placeholder="What are some of the challenges you want to do for your brand?"
                     />
-                    <img src="/info.png" className={styles.info} />
+                    <img alt="image" src="/info.png" className={styles.info} />
                   </div>
 
-                  <button
+                  <button name="btn"
                     onClick={() => {
                       setpage(1);
                       setShowModal2(false);
@@ -804,7 +804,7 @@ export default function Home() {
             </div> */}
 
               <text className={styles.modaltextc}>
-                <img className={styles.emojicrown} src="/crown.png" />
+                <img alt="image" className={styles.emojicrown} src="/crown.png" />
                 Congratulations &#127881;
               </text>
               <text className={styles.modaltext2c}>
@@ -839,7 +839,7 @@ export default function Home() {
               <div className={styles.rlink}>
                 <div className={styles.http}>https://</div>
                 <text>join.social/invite/{refCode}</text>
-                <img
+                <img alt="image"
                   onClick={() => {
                     navigator.clipboard.writeText(
                       "https://joinb.social/invite/" + refCode
@@ -850,7 +850,7 @@ export default function Home() {
                 />
               </div>
 
-              <button
+              <button name="btn"
                 onClick={() => {
                   if (navigator.share) {
                     navigator
