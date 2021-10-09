@@ -19,7 +19,7 @@ export default function Top10(props) {
   const Query2 = useQuery(RANKED_USERS, {
     variables: {
       orderBy: "monthly",
-      limit: 50
+      limit: 100
     },
   });
 

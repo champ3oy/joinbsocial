@@ -21,7 +21,6 @@ export default function UserForm(props) {
     if (error) {
       seterr(error?.message);
       setmodal(true);
-      console.log(error.message);
     } else {
       setmodal(false);
     }
@@ -78,13 +77,12 @@ export default function UserForm(props) {
                 name: fullName,
                 email: email,
                 phone: phoneNumber,
-                referralCode: props.pid ? props.pid : "",
+                referredByCode: props.pid ? props.pid : null,
               },
             }).catch(() => {
               if (error) {
                 seterr(error?.message);
                 setmodal(true);
-                console.log(error.message);
               } else {
                 setmodal(false);
               }
