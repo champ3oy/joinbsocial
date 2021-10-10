@@ -105,7 +105,7 @@ export default function Home() {
 
           <Carousel
             responsive={responsive}
-            autoPlay={false}
+            autoPlay={true}
             infinite={true}
             showArrows={false}
             showStatus={false}
