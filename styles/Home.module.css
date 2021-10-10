@@ -1252,31 +1252,75 @@
   display: none;
 }
 .Rcontainer {
-  width: 500px;
-  height: 500px;
-  margin: 10px auto;
-  border: 1px solid #000;
+  width: 100%;
+  height: 100vh;
   position: absolute;
-  border-radius: 50%;
-  animation: spin 10s linear infinite;
-  background: pink;
-  z-index: 999;
+  /* background: pink; */
+  display: flex;
 }
-.item {
-  width: 80px;
-  height: 80px;
-  line-height: 30px;
-  text-align: center;
-  border-radius: 50%;
+.amazon {
   position: absolute;
-  background: #f00;
-  z-index: 9999;
-  animation: spin 10s linear infinite reverse;
+  top: 15%;
+  left: 10%;
+  width: 100px;
+  height: 100px;
+  animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
 }
-@keyframes spin {
-  100% {
-    transform: rotate(1turn);
-  }
+.vans {
+  position: absolute;
+  top: 10%;
+  left: 38%;
+  width: 120px;
+  height: 120px;
+  animation: grow 7s ease-in-out infinite;
+}
+.adidas2 {
+  position: absolute;
+  top: 15%;
+  left: 60%;
+  width: 100px;
+  height: 100px;
+  animation: grow 7s ease-in-out infinite;
+}
+.coke2 {
+  position: absolute;
+  top: 18%;
+  right: 12%;
+  width: 100px;
+  height: 100px;
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+}
+.pepsi {
+  position: absolute;
+  top: 55%;
+  right: 8%;
+  width: 120px;
+  height: 120px;
+  animation: grow 7s ease-in-out infinite;
+}
+.pizzahut {
+  position: absolute;
+  bottom: 25%;
+  right: 25%;
+  width: 100px;
+  height: 100px;
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+}
+.yezzy {
+  position: absolute;
+  bottom: 20%;
+  left: 25%;
+  width: 100px;
+  height: 100px;
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+}
+.nike2 {
+  position: absolute;
+  top: 55%;
+  left: 7%;
+  width: 125px;
+  height: 125px;
+  animation: grow 7s ease-in-out infinite;
 }
 .nike {
   width: 90px;
@@ -1343,15 +1387,15 @@
   align-items: flex-start;
 }
 .promotepopbar {
-width: 90px;
-height: 10px;
-border-radius: 50px;
-background-color: rgba(0, 0, 0, 0.2);
-margin: 10px 0 10px 0;
+  width: 90px;
+  height: 10px;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 10px 0 10px 0;
 }
 .pptext1 {
   color: black;
-  font-size: 10px
+  font-size: 10px;
 }
 .pptext2 {
   color: black;
@@ -1375,11 +1419,100 @@ margin: 10px 0 10px 0;
   font-weight: 600;
 }
 .marquee {
-  display: none
+  display: none;
+}
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* 1600 screen */
 @media only screen and (max-width: 1600px) {
+  .amazon {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 80px;
+    height: 80px;
+  }
+  .vans {
+    position: absolute;
+    top: 8%;
+    left: 38%;
+    width: 100px;
+    height: 100px;
+  }
+  .adidas2 {
+    position: absolute;
+    top: 12%;
+    left: 60%;
+    width: 80px;
+    height: 80px;
+  }
+  .coke2 {
+    position: absolute;
+    top: 18%;
+    right: 12%;
+    width: 80px;
+    height: 80px;
+  }
+  .pepsi {
+    position: absolute;
+    top: 55%;
+    right: 8%;
+    width: 100px;
+    height: 100px;
+  }
+  .pizzahut {
+    position: absolute;
+    bottom: 25%;
+    right: 25%;
+    width: 80px;
+    height: 80px;
+  }
+  .yezzy {
+    position: absolute;
+    bottom: 20%;
+    left: 25%;
+    width: 90px;
+    height: 90px;
+  }
+  .nike2 {
+    position: absolute;
+    top: 55%;
+    left: 7%;
+    width: 100px;
+    height: 100px;
+  }
   .nike {
     width: 80px;
     height: 80px;
@@ -3534,6 +3667,62 @@ margin: 10px 0 10px 0;
 
 /* 1350 screen */
 @media only screen and (max-width: 1400px) {
+  .amazon {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 60px;
+    height: 60px;
+  }
+  .vans {
+    position: absolute;
+    top: 5%;
+    left: 38%;
+    width: 80px;
+    height: 80px;
+  }
+  .adidas2 {
+    position: absolute;
+    top: 8%;
+    left: 60%;
+    width: 60px;
+    height: 60px;
+  }
+  .coke2 {
+    position: absolute;
+    top: 18%;
+    right: 8%;
+    width: 70px;
+    height: 70px;
+  }
+  .pepsi {
+    position: absolute;
+    top: 55%;
+    right: 8%;
+    width: 80px;
+    height: 80px;
+  }
+  .pizzahut {
+    position: absolute;
+    bottom: 25%;
+    right: 25%;
+    width: 60px;
+    height: 60px;
+  }
+  .yezzy {
+    position: absolute;
+    bottom: 20%;
+    left: 25%;
+    width: 80px;
+    height: 80px;
+  }
+  .nike2 {
+    position: absolute;
+    top: 55%;
+    left: 7%;
+    width: 80px;
+    height: 80px;
+  }
   .nike {
     width: 70px;
     height: 70px;
@@ -3603,6 +3792,7 @@ margin: 10px 0 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
   .nav {
     display: flex;
@@ -4613,6 +4803,13 @@ margin: 10px 0 10px 0;
 
 /* MOBILE IphoneX */
 @media only screen and (max-width: 550px) {
+  .Rcontainer {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    /* background: pink; */
+    display: none;
+  }
   .outCircle {
     display: none;
   }
@@ -4622,12 +4819,12 @@ margin: 10px 0 10px 0;
     flex-direction: row;
     left: 0;
     top: 150px;
-    width: 100%
+    width: 100%;
   }
   .marqueeitem {
     width: 60px;
     height: 60px;
-    margin-right: 15px
+    margin-right: 15px;
   }
   .promotepop {
     position: absolute;
@@ -5890,12 +6087,12 @@ margin: 10px 0 10px 0;
     flex-direction: row;
     left: 0;
     top: 120px;
-    width: 100%
+    width: 100%;
   }
   .marqueeitem {
     width: 60px;
     height: 60px;
-    margin-right: 15px
+    margin-right: 15px;
   }
   .heroText {
     display: none;
@@ -7480,12 +7677,12 @@ margin: 10px 0 10px 0;
     flex-direction: row;
     left: 0;
     top: 90px;
-    width: 100%
+    width: 100%;
   }
   .marqueeitem {
     width: 50px;
     height: 50px;
-    margin-right: 15px
+    margin-right: 15px;
   }
   .promotepop {
     position: absolute;
@@ -7625,12 +7822,12 @@ margin: 10px 0 10px 0;
     flex-direction: row;
     left: 0;
     top: 70px;
-    width: 100%
+    width: 100%;
   }
   .marqueeitem {
     width: 40px;
     height: 40px;
-    margin-right: 10px
+    margin-right: 10px;
   }
   .content1Textm {
     width: 100%;

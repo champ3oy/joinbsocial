@@ -6,6 +6,8 @@ import "aos/dist/aos.css";
 import Link from "next/link";
 import UserForm from "../components/UserForm";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import Verify from "../components/Verify";
+import { useRouter } from "next/router";
 
 const client = new ApolloClient({
   uri: "https://api.joinb.social/graphql",
@@ -18,18 +20,22 @@ export default function VerifyUser() {
   const [showModal3, setShowModal3] = useState(false);
   const [page, setpage] = useState(1);
   const [refCode, setrefCode] = useState("");
+  const router = useRouter();
+  const { verifyToken } = router.query;
 
   useEffect(() => {
     AOS.init({
       offset: 100,
     });
+
+    console.log(verifyToken);
   }, []);
 
   return (
     <ApolloProvider client={client}>
       <div className={styles.container}>
         <Head>
-          <title>Terms & Conditions - BSocial</title>
+          <title>Verified - BSocial</title>
           <meta name="description" content="Be Social with us" />
           <link rel="icon" href="/favicon.svg" />
         </Head>
@@ -65,94 +71,7 @@ export default function VerifyUser() {
           </div>
         </nav>
 
-        <main className={styles.header}>
-          Successfully <br />
-          Verified
-
-          <Link href="/leaderboard">
-              <a className={styles.joinBtnl2}>Leaderboard</a>
-            </Link>
-        </main>
-
-        
-        {/* <footer className={`${styles.footer} ${styles.section}`}>
-          <div className={styles.footContent}>
-            <text className={`${styles.footerText}`} data-aos="zoom-in">
-              <img alt="image" className={styles.emoji12} src="/crown.png" />
-              <div className={styles.float6}>
-                <text className={styles.floatText6}>Update</text>
-              </div>
-              <div className={styles.float7}>
-                <img alt="image" className={styles.emoji13} src="/fire.png" />
-                <img alt="image" className={styles.floatImg} src="/float2.png" />
-                <text className={styles.floatText7}>Reaction</text>
-              </div>
-              <div className={styles.float8}>
-                <img alt="image" className={styles.emoji14} src="/fireball.png" />
-                <img alt="image" className={styles.floatImg} src="/float2.png" />
-                <text className={styles.floatText8}>#Challenge</text>
-              </div>
-              Get ready for <br />
-              the release
-            </text>
-            <text className={`${styles.footerTextm}`} data-aos="zoom-in">
-              <div className={styles.float6}>
-                <img alt="image" className={styles.emoji12} src="/crown.png" />
-                <text className={styles.floatText6}>Update</text>
-              </div>
-              <div className={styles.float7}>
-                <img alt="image" className={styles.emoji13} src="/fire.png" />
-                <img alt="image" className={styles.floatImg} src="/float2.png" />
-                <text className={styles.floatText7}>Reaction</text>
-              </div>
-              <div className={styles.float8}>
-                <img alt="image" className={styles.emoji14} src="/fireball.png" />
-                <img alt="image" className={styles.floatImg} src="/float3.png" />
-                <text className={styles.floatText8}>#Challenge</text>
-              </div>
-              Get <br />
-              ready for <br />
-              the release
-            </text>
-
-            <div
-              className={styles.joinBtn5}
-              onClick={() => {
-                setShowModal(true);
-              }}
-            >
-              Join the Waitlist &#127881;
-            </div>
-          </div>
-          <div className={styles.foot}>
-            <div className={styles.fleft}>
-              <Link href="/terms">
-                <text>Terms</text>
-              </Link>
-              <Link href="/privacy">
-                <text>Privacy</text>
-              </Link>
-            </div>
-            <div className={styles.fcenter}>
-              &copy; 2021 BB.Social Inc. All rights reserved.
-              contactus@joinb.social
-            </div>
-            <div className={styles.fright}>
-              <a href="https://www.facebook.com/JoinBSocial">
-                <img alt="image" src="/fb.png" className={styles.icon} />
-              </a>
-              <a href="https://twitter.com/BeSocia14814345">
-                <img alt="image" src="/twitter.svg" className={styles.icon} />
-              </a>
-              <a href="https://www.instagram.com/bsocial_inc/">
-                <img alt="image" src="/ig.png" className={styles.icon} />
-              </a>
-              <a href="https://www.tiktok.com/@bsocial_inc">
-                <img alt="image" src="/tk.png" className={styles.icon} />
-              </a>
-            </div>
-          </div>
-        </footer> */}
+        {verifyToken ? <Verify token={verifyToken} /> : "l"}
 
         {showModal ? (
           <main
@@ -167,13 +86,25 @@ export default function VerifyUser() {
                 <text className={styles.floatText61}>Update</text>
               </div>
               <div className={styles.floatm2}>
-                <img alt="image" className={styles.emoji14} src="/fireball.png" />
-                <img alt="image" className={styles.floatImg} src="/float2.png" />
+                <img
+                  alt="image"
+                  className={styles.emoji14}
+                  src="/fireball.png"
+                />
+                <img
+                  alt="image"
+                  className={styles.floatImg}
+                  src="/float2.png"
+                />
                 <text className={styles.floatText71}>#Challenge</text>
               </div>
               <div className={styles.floatm3}>
                 <img alt="image" className={styles.emoji13} src="/fire.png" />
-                <img alt="image" className={styles.floatImg} src="/float2.png" />
+                <img
+                  alt="image"
+                  className={styles.floatImg}
+                  src="/float2.png"
+                />
                 <text className={styles.floatText81}>Reaction</text>
               </div>
 
@@ -195,7 +126,7 @@ export default function VerifyUser() {
               <img alt="image" src="/line.svg" className={styles.line} />
 
               <UserForm
-                 onDone={(data) => {
+                onDone={(data) => {
                   setrefCode(data?.RegisterWaitListUser?.referralCode);
                   setShowModal(false);
                   setShowModal3(true);
@@ -218,7 +149,11 @@ export default function VerifyUser() {
             <div className={styles.modalb}>
               <div className={styles.floatm1b} style={{ marginTop: -60 }}>
                 <img alt="image" className={styles.emoji13} src="/fire.png" />
-                <img alt="image" className={styles.floatImg} src="/float2.png" />
+                <img
+                  alt="image"
+                  className={styles.floatImg}
+                  src="/float2.png"
+                />
                 <text className={styles.floatText81}>#challenge</text>
               </div>
 
@@ -262,7 +197,8 @@ export default function VerifyUser() {
                     className={styles.input}
                     placeholder="What is your brand / products phone number?"
                   />
-                  <button name="btn"
+                  <button
+                    name="btn"
                     onClick={() => {
                       setpage(2);
                     }}
@@ -298,7 +234,11 @@ export default function VerifyUser() {
                       placeholder="What is your budget per day?"
                     />
                     <img alt="image" src="/info.png" className={styles.info} />
-                    <img alt="image" src="/tooltip1.png" className={styles.tooltip1} />
+                    <img
+                      alt="image"
+                      src="/tooltip1.png"
+                      className={styles.tooltip1}
+                    />
                   </div>
 
                   <div className={styles.infocon}>
@@ -309,7 +249,11 @@ export default function VerifyUser() {
                       placeholder="Your target CPV(cost per view)?"
                     />
                     <img alt="image" src="/info.png" className={styles.info2} />
-                    <img alt="image" src="/tooltip2.png" className={styles.tooltip2} />
+                    <img
+                      alt="image"
+                      src="/tooltip2.png"
+                      className={styles.tooltip2}
+                    />
                   </div>
                   <div className={styles.infocon}>
                     <input
@@ -321,7 +265,8 @@ export default function VerifyUser() {
                     <img alt="image" src="/info.png" className={styles.info} />
                   </div>
 
-                  <button name="btn"
+                  <button
+                    name="btn"
                     onClick={() => {
                       setpage(1);
                       setShowModal2(false);
@@ -360,7 +305,11 @@ export default function VerifyUser() {
             </div> */}
 
               <text className={styles.modaltextc}>
-                <img alt="image" className={styles.emojicrown} src="/crown.png" />
+                <img
+                  alt="image"
+                  className={styles.emojicrown}
+                  src="/crown.png"
+                />
                 Congratulations &#127881;
               </text>
               <text className={styles.modaltext2c}>
@@ -395,7 +344,8 @@ export default function VerifyUser() {
               <div className={styles.rlink}>
                 <div className={styles.http}>https://</div>
                 <text>joinb.social/invite/{refCode}</text>
-                <img alt="image"
+                <img
+                  alt="image"
                   onClick={() => {
                     navigator.clipboard.writeText(
                       "https://joinb.social/invite/" + refCode
@@ -406,7 +356,8 @@ export default function VerifyUser() {
                 />
               </div>
 
-              <button name="btn"
+              <button
+                name="btn"
                 onClick={() => {
                   setpage(2);
                 }}

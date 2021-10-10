@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 import Link from "next/link";
 import UserForm from "../components/UserForm";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
-import $ from "jquery";
+import Marquee from "react-fast-marquee";
 
 const client = new ApolloClient({
   uri: "https://api.joinb.social/graphql",
@@ -25,30 +25,6 @@ export default function Home() {
   useEffect(() => {
     AOS.init({
       offset: 100,
-    });
-
-    var radius = 500; // adjust to move out items in and out
-    var fields = $(".item"),
-      container = $("#container"),
-      width = container.width(),
-      height = container.height();
-    var angle = 0,
-      step = (2 * Math.PI) / fields.length;
-    fields.each(function () {
-      var x = Math.round(
-        width / 2 + radius * Math.cos(angle) - $(this).width() / 2
-      );
-      var y = Math.round(
-        height / 2 + radius * Math.sin(angle) - $(this).height() / 2
-      );
-      if (window.console) {
-        console.log($(this).text(), x, y);
-      }
-      $(this).css({
-        left: x + "px",
-        top: y + "px",
-      });
-      angle += step;
     });
   }, []);
 
@@ -233,211 +209,247 @@ export default function Home() {
               </div>
             </main>
             <main id="herotext" className={styles.hero3}>
-              <marquee className={styles.marquee}>
+              <div className={styles.marquee}>
+                <Marquee gradient={false}>
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/amazon.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/vans.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/adidas2.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/coke.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/pepsi.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/pizzahut.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/yezzy.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/nike.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/vans.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/adidas2.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/coke.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/amazon.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/pepsi.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/pizzahut.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/yezzy.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/nike.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/vans.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/adidas2.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/coke.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/pepsi.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/pizzahut.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/yezzy.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/nike.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/amazon.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/vans.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/adidas2.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/coke.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/pepsi.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/pizzahut.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/yezzy.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/nike.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/vans.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/adidas2.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/coke.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/amazon.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/pepsi.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/pizzahut.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/yezzy.png"
+                  />
+                  <img
+                    className={styles.marqueeitem}
+                    alt="image"
+                    src="/nike.png"
+                  />
+                </Marquee>
+              </div>
+              <div className={styles.Rcontainer}>
                 <img
-                  className={styles.marqueeitem}
+                  className={styles.amazon}
                   alt="image"
                   src="/amazon.png"
                 />
                 <img
-                  className={styles.marqueeitem}
+                  className={styles.vans}
                   alt="image"
                   src="/vans.png"
                 />
                 <img
-                  className={styles.marqueeitem}
+                  className={styles.adidas2}
                   alt="image"
                   src="/adidas2.png"
                 />
                 <img
-                  className={styles.marqueeitem}
+                  className={styles.coke2}
                   alt="image"
-                  src="/coke.png"
+                  src="/coke2.png"
                 />
                 <img
-                  className={styles.marqueeitem}
+                  className={styles.pepsi}
                   alt="image"
                   src="/pepsi.png"
                 />
                 <img
-                  className={styles.marqueeitem}
+                  className={styles.pizzahut}
                   alt="image"
                   src="/pizzahut.png"
                 />
                 <img
-                  className={styles.marqueeitem}
+                  className={styles.yezzy}
                   alt="image"
                   src="/yezzy.png"
                 />
                 <img
-                  className={styles.marqueeitem}
+                  className={styles.nike2}
                   alt="image"
-                  src="/nike.png"
+                  src="/nike2.png"
                 />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/vans.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/adidas2.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/coke.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/amazon.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/pepsi.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/pizzahut.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/yezzy.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/nike.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/vans.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/adidas2.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/coke.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/pepsi.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/pizzahut.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/yezzy.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/nike.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/amazon.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/vans.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/adidas2.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/coke.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/pepsi.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/pizzahut.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/yezzy.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/nike.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/vans.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/adidas2.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/coke.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/amazon.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/pepsi.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/pizzahut.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/yezzy.png"
-                />
-                <img
-                  className={styles.marqueeitem}
-                  alt="image"
-                  src="/nike.png"
-                />
-              </marquee>
-              {/* <div id="container" className={styles.Rcontainer}>
-                <div class="item">1</div>
-                <div class="item">2</div>
-                <div class="item">3</div>
-                <div class="item">4</div>
-                <div class="item">5</div>
-                <div class="item">6</div>
-              </div> */}
+              </div>
               <div className={styles.heroContent} data-aos="zoom-in">
                 <div
                   className={styles.brands}
@@ -919,15 +931,15 @@ export default function Home() {
                   winning souvenirs and other goodies from the BSocial team.
                 </text>
               </div>
-
               <img alt="image" src="/line.svg" className={styles.line} />
-
+              null
               <UserForm
                 onDone={(data) => {
                   setrefCode(data?.RegisterWaitListUser?.referralCode);
                   setShowModal(false);
                   setShowModal3(true);
                 }}
+                nullnull
                 onClose={() => {
                   setShowModal(false);
                 }}
