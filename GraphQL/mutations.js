@@ -19,3 +19,11 @@ export const REGISTER_USER = gql`
     }
   }
 `;
+
+export const VERIFY_USER = gql`
+  mutation($verifyToken: String!) {
+    VerifyWaitListUserEmail(verifyToken: $verifyToken) {
+      message
+    }
+  }
+`

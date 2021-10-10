@@ -209,7 +209,7 @@ export default function Leaderboard() {
 
               <div className={styles.rlink}>
                 <div className={styles.http}>https://</div>
-                <text>join.social/invite/{refCode}</text>
+                <text>joinb.social/invite/{refCode}</text>
                 <img alt="image"
                   onClick={() => {
                     navigator.clipboard.writeText(

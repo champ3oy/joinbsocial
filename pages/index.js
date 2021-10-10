@@ -8,6 +8,7 @@ import "aos/dist/aos.css";
 import Link from "next/link";
 import UserForm from "../components/UserForm";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import $ from "jquery";
 
 const client = new ApolloClient({
   uri: "https://api.joinb.social/graphql",
@@ -24,6 +25,30 @@ export default function Home() {
   useEffect(() => {
     AOS.init({
       offset: 100,
+    });
+
+    var radius = 500; // adjust to move out items in and out
+    var fields = $(".item"),
+      container = $("#container"),
+      width = container.width(),
+      height = container.height();
+    var angle = 0,
+      step = (2 * Math.PI) / fields.length;
+    fields.each(function () {
+      var x = Math.round(
+        width / 2 + radius * Math.cos(angle) - $(this).width() / 2
+      );
+      var y = Math.round(
+        height / 2 + radius * Math.sin(angle) - $(this).height() / 2
+      );
+      if (window.console) {
+        console.log($(this).text(), x, y);
+      }
+      $(this).css({
+        left: x + "px",
+        top: y + "px",
+      });
+      angle += step;
     });
   }, []);
 
@@ -55,7 +80,8 @@ export default function Home() {
     } = rest;
     const carouselItems = ["", "", ""];
     return (
-      <button name="btn"
+      <button
+        name="btn"
         className={active ? styles.active : styles.inactive}
         onClick={() => onClick()}
       />
@@ -207,16 +233,211 @@ export default function Home() {
               </div>
             </main>
             <main id="herotext" className={styles.hero3}>
-              <div className={styles.circular}>
-                <img className={styles.circularItem} alt='image' src='/amazon.png' />
-                <img className={styles.circularItem}  alt='image' src='/vans.png' />
-                <img className={styles.circularItem}  alt='image' src='/adidas2.png' />
-                <img className={styles.circularItem}  alt='image' src='/coke.png' />
-                <img className={styles.circularItem}  alt='image' src='/pepsi.png' />
-                <img className={styles.circularItem}  alt='image' src='/pizzahut.png' />
-                <img className={styles.circularItem}  alt='image' src='/yezzy.png' />
-                <img className={styles.circularItem}  alt='image' src='/nike.png' />
-              </div>
+              <marquee className={styles.marquee}>
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/amazon.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/vans.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/adidas2.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/coke.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/pepsi.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/pizzahut.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/yezzy.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/nike.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/vans.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/adidas2.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/coke.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/amazon.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/pepsi.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/pizzahut.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/yezzy.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/nike.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/vans.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/adidas2.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/coke.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/pepsi.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/pizzahut.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/yezzy.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/nike.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/amazon.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/vans.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/adidas2.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/coke.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/pepsi.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/pizzahut.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/yezzy.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/nike.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/vans.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/adidas2.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/coke.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/amazon.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/pepsi.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/pizzahut.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/yezzy.png"
+                />
+                <img
+                  className={styles.marqueeitem}
+                  alt="image"
+                  src="/nike.png"
+                />
+              </marquee>
+              {/* <div id="container" className={styles.Rcontainer}>
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+              </div> */}
               <div className={styles.heroContent} data-aos="zoom-in">
                 <div
                   className={styles.brands}
@@ -423,41 +644,53 @@ export default function Home() {
           </div>
 
           <div className={styles.circles}>
-            <img alt="image" className={styles.emoji9} src="/fire.png" data-aos="zoom-in" />
+            <img
+              alt="image"
+              className={styles.emoji9}
+              src="/fire.png"
+              data-aos="zoom-in"
+            />
 
-            <img alt="image"
+            <img
+              alt="image"
               className={styles.emoji11}
               src="/crown.png"
               data-aos="zoom-in"
             />
-            <img alt="image"
+            <img
+              alt="image"
               src="/circle1.png"
               className={styles.circle1}
               data-aos="zoom-in"
             />
-            <img alt="image"
+            <img
+              alt="image"
               src="/circle2.png"
               className={styles.circle2}
               data-aos="zoom-in"
             ></img>
-            <img alt="image"
+            <img
+              alt="image"
               src="/circle3.png"
               className={styles.circle3}
               data-aos="zoom-in"
             ></img>
             <div>
-              <img alt="image"
+              <img
+                alt="image"
                 src="/circle4.png"
                 className={styles.circle4}
                 data-aos="zoom-in"
               />
-              <img alt="image"
+              <img
+                alt="image"
                 className={styles.emoji10}
                 src="/confeti.png"
                 data-aos="zoom-in"
               />
             </div>
-            <img alt="image"
+            <img
+              alt="image"
               src="/circle5.png"
               className={styles.circle5}
               data-aos="zoom-in"
@@ -473,20 +706,34 @@ export default function Home() {
             className={`${styles.screen2} ${styles.screen22}`}
             data-aos="fade-up"
           >
-            <img alt="image" className={styles.emoji7} src="/money.png" />
-            <img alt="image" className={styles.emoji8} src="/money.png" />
+            {/* <img alt="image" className={styles.emoji7} src="/money.png" /> */}
+
+            <div className={styles.promotepop}>
+              <img alt="image" className={styles.coke} src="/coke.png" />
+              <div className={styles.promotepoptop}>
+                <div className={styles.promotepopbar} />
+                <text className={styles.pptext1}>200 Videos</text>
+                <text className={styles.pptext2}>24K Views</text>
+                <text className={styles.pptext3}>Quenchymythirstchallenge</text>
+              </div>
+              <div className={styles.promotepopbottom}>
+                <text className={styles.pptext4}>$150,000&#128184;</text>
+                <text className={styles.pptext5}>By Coke Cola</text>
+                <div className={styles.promotepopbar} />
+              </div>
+            </div>
+            <img alt="image" className={styles.nike} src="/adidas.png" />
+            <img alt="image" className={styles.adidas} src="/nike.png" />
             <div className={styles.col}>
               <text className={styles.views2}>@JefferyAfrane</text>
               <text className={styles.hashtag2}>24k Views &#129310;</text>
             </div>
             <div className={styles.float4} data-aos="fade-up">
-              <text className={styles.floatText4}>
-                Coke Cole-$150,000 &#128184;
-              </text>
+              <text className={styles.floatText4}>$150,000 &#128184;</text>
             </div>
             <div className={styles.float5} data-aos="fade-up">
               <text className={styles.floatText5}>
-                Adidas - $250,000 &#128184;
+                Paid - $250,000 &#128184;
               </text>
             </div>
           </div>
@@ -529,12 +776,24 @@ export default function Home() {
               </div>
               <div className={styles.float7}>
                 <img alt="image" className={styles.emoji13} src="/fire.png" />
-                <img alt="image" className={styles.floatImg} src="/float2.png" />
+                <img
+                  alt="image"
+                  className={styles.floatImg}
+                  src="/float2.png"
+                />
                 <text className={styles.floatText7}>Reaction</text>
               </div>
               <div className={styles.float8}>
-                <img alt="image" className={styles.emoji14} src="/fireball.png" />
-                <img alt="image" className={styles.floatImg} src="/float2.png" />
+                <img
+                  alt="image"
+                  className={styles.emoji14}
+                  src="/fireball.png"
+                />
+                <img
+                  alt="image"
+                  className={styles.floatImg}
+                  src="/float2.png"
+                />
                 <text className={styles.floatText8}>#Challenge</text>
               </div>
               Get ready for <br />
@@ -547,12 +806,24 @@ export default function Home() {
               </div>
               <div className={styles.float7}>
                 <img alt="image" className={styles.emoji13} src="/fire.png" />
-                <img alt="image" className={styles.floatImg} src="/float2.png" />
+                <img
+                  alt="image"
+                  className={styles.floatImg}
+                  src="/float2.png"
+                />
                 <text className={styles.floatText7}>Reaction</text>
               </div>
               <div className={styles.float8}>
-                <img alt="image" className={styles.emoji14} src="/fireball.png" />
-                <img alt="image" className={styles.floatImg} src="/float3.png" />
+                <img
+                  alt="image"
+                  className={styles.emoji14}
+                  src="/fireball.png"
+                />
+                <img
+                  alt="image"
+                  className={styles.floatImg}
+                  src="/float3.png"
+                />
                 <text className={styles.floatText8}>#Challenge</text>
               </div>
               Get <br />
@@ -613,13 +884,25 @@ export default function Home() {
                 <text className={styles.floatText61}>Update</text>
               </div>
               <div className={styles.floatm2}>
-                <img alt="image" className={styles.emoji14} src="/fireball.png" />
-                <img alt="image" className={styles.floatImg} src="/float2.png" />
+                <img
+                  alt="image"
+                  className={styles.emoji14}
+                  src="/fireball.png"
+                />
+                <img
+                  alt="image"
+                  className={styles.floatImg}
+                  src="/float2.png"
+                />
                 <text className={styles.floatText71}>#Challenge</text>
               </div>
               <div className={styles.floatm3}>
                 <img alt="image" className={styles.emoji13} src="/fire.png" />
-                <img alt="image" className={styles.floatImg} src="/float3.png" />
+                <img
+                  alt="image"
+                  className={styles.floatImg}
+                  src="/float3.png"
+                />
                 <text className={styles.floatText81}>Reaction</text>
               </div>
               <div className={styles.modalleft}>
@@ -663,7 +946,11 @@ export default function Home() {
             <div className={styles.modalb}>
               <div className={styles.floatm1b} style={{ marginTop: -60 }}>
                 <img alt="image" className={styles.emoji13} src="/fire.png" />
-                <img alt="image" className={styles.floatImg} src="/float2.png" />
+                <img
+                  alt="image"
+                  className={styles.floatImg}
+                  src="/float2.png"
+                />
                 <text className={styles.floatText81}>#challenge</text>
               </div>
 
@@ -707,7 +994,8 @@ export default function Home() {
                     className={styles.input}
                     placeholder="What is your brand / products phone number?"
                   />
-                  <button name="btn"
+                  <button
+                    name="btn"
                     onClick={() => {
                       setpage(2);
                     }}
@@ -743,7 +1031,11 @@ export default function Home() {
                       placeholder="What is your budget per day?"
                     />
                     <img alt="image" src="/info.png" className={styles.info} />
-                    <img alt="image" src="/tooltip1.png" className={styles.tooltip1} />
+                    <img
+                      alt="image"
+                      src="/tooltip1.png"
+                      className={styles.tooltip1}
+                    />
                   </div>
 
                   <div className={styles.infocon}>
@@ -754,7 +1046,11 @@ export default function Home() {
                       placeholder="Your target CPV(cost per view)?"
                     />
                     <img alt="image" src="/info.png" className={styles.info2} />
-                    <img alt="image" src="/tooltip2.png" className={styles.tooltip2} />
+                    <img
+                      alt="image"
+                      src="/tooltip2.png"
+                      className={styles.tooltip2}
+                    />
                   </div>
                   <div className={styles.infocon}>
                     <input
@@ -766,7 +1062,8 @@ export default function Home() {
                     <img alt="image" src="/info.png" className={styles.info} />
                   </div>
 
-                  <button name="btn"
+                  <button
+                    name="btn"
                     onClick={() => {
                       setpage(1);
                       setShowModal2(false);
@@ -805,7 +1102,11 @@ export default function Home() {
             </div> */}
 
               <text className={styles.modaltextc}>
-                <img alt="image" className={styles.emojicrown} src="/crown.png" />
+                <img
+                  alt="image"
+                  className={styles.emojicrown}
+                  src="/crown.png"
+                />
                 Congratulations &#127881;
               </text>
               <text className={styles.modaltext2c}>
@@ -839,8 +1140,9 @@ export default function Home() {
 
               <div className={styles.rlink}>
                 <div className={styles.http}>https://</div>
-                <text>join.social/invite/{refCode}</text>
-                <img alt="image"
+                <text>joinb.ssocial/invite/{refCode}</text>
+                <img
+                  alt="image"
                   onClick={() => {
                     navigator.clipboard.writeText(
                       "https://joinb.social/invite/" + refCode
@@ -851,7 +1153,8 @@ export default function Home() {
                 />
               </div>
 
-              <button name="btn"
+              <button
+                name="btn"
                 onClick={() => {
                   if (navigator.share) {
                     navigator
@@ -865,7 +1168,7 @@ export default function Home() {
                       .catch(console.error);
                   } else {
                     // fallback
-                    console.log(share)
+                    console.log(share);
                   }
                 }}
                 className={styles.btn}
