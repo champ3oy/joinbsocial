@@ -103,7 +103,7 @@ export default function Home() {
 
           <Carousel
             responsive={responsive}
-            autoPlay={true}
+            autoPlay={false}
             infinite={true}
             showArrows={false}
             showStatus={false}
@@ -207,6 +207,16 @@ export default function Home() {
               </div>
             </main>
             <main id="herotext" className={styles.hero3}>
+              <div className={styles.circular}>
+                <img className={styles.circularItem} alt='image' src='/amazon.png' />
+                <img className={styles.circularItem}  alt='image' src='/vans.png' />
+                <img className={styles.circularItem}  alt='image' src='/adidas2.png' />
+                <img className={styles.circularItem}  alt='image' src='/coke.png' />
+                <img className={styles.circularItem}  alt='image' src='/pepsi.png' />
+                <img className={styles.circularItem}  alt='image' src='/pizzahut.png' />
+                <img className={styles.circularItem}  alt='image' src='/yezzy.png' />
+                <img className={styles.circularItem}  alt='image' src='/nike.png' />
+              </div>
               <div className={styles.heroContent} data-aos="zoom-in">
                 <div
                   className={styles.brands}

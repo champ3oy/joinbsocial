@@ -40,8 +40,7 @@
 .hero3 {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-    url("/hero3.jpeg");
+  background: black;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -1107,29 +1106,8 @@
 .brands {
   width: 382px;
   height: 79px;
-  border-radius: 56px;
-  font-size: 37px;
-  border: solid white 5px;
-  position: relative;
 }
-.brands::before {
-  content: "Brands & Products";
-  width: 370px;
-  height: 75px;
-  border-radius: 56px;
-  background-color: #ffcd00;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 27px;
-  border: solid white 5px;
-  font-weight: 800;
-  position: absolute;
-  top: -20px;
-  left: -12px;
-}
+
 .active,
 .inactive {
   width: 20px;
@@ -1259,6 +1237,33 @@
 .content1Textm {
   display: none;
 }
+.circular {
+  width: 100%;
+  height: 80vh;
+  margin: 40px auto;
+  border: 1px solid #000;
+  display:grid;
+  grid-template-columns:30px;
+  grid-template-rows:30px;
+  place-content: center;
+  border-radius: 50%;
+  position: absolute;
+  background-color: blueviolet;
+}
+.circularItem {
+  grid-area:1/1;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  background: #f00;
+  animation: spin 12s var(--d,0s) linear infinite; /* duration = 12s, numbor of item = 6 so a delay of 12/6 = 2s */
+  transform:rotate(0) translate(100px) rotate(0);
+}
+@keyframes spin {
+  100% {
+    transform:rotate(1turn) translate(100px) rotate(-1turn);
+  }
+}
 
 /* 1600 screen */
 @media only screen and (max-width: 1600px) {
@@ -1305,8 +1310,7 @@
   .hero3 {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-      url("/hero3.jpeg");
+    background: black;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -2300,29 +2304,8 @@
   .brands {
     width: 255px;
     height: 50px;
-    border-radius: 56px;
-    font-size: 37px;
-    border: solid white 4px;
-    position: relative;
   }
-  .brands::before {
-    content: "Brands & Products";
-    width: 250px;
-    height: 50px;
-    border-radius: 56px;
-    background-color: #ffcd00;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 18px;
-    border: solid white 4px;
-    font-weight: 800;
-    position: absolute;
-    top: -20px;
-    left: -12px;
-  }
+
   .active,
   .inactive {
     width: 15px;
@@ -2390,8 +2373,7 @@
   .hero3 {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-      url("/hero3.jpeg");
+    background: black;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -3389,28 +3371,6 @@
   .brands {
     width: 255px;
     height: 50px;
-    border-radius: 56px;
-    font-size: 37px;
-    border: solid white 4px;
-    position: relative;
-  }
-  .brands::before {
-    content: "Brands & Products";
-    width: 250px;
-    height: 50px;
-    border-radius: 56px;
-    background-color: #ffcd00;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 18px;
-    border: solid white 4px;
-    font-weight: 800;
-    position: absolute;
-    top: -20px;
-    left: -12px;
   }
   .active,
   .inactive {
@@ -3479,8 +3439,7 @@
   .hero3 {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-      url("/hero3.jpeg");
+    background: black;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -4477,28 +4436,7 @@
   .brands {
     width: 235px;
     height: 45px;
-    border-radius: 56px;
-    font-size: 37px;
-    border: solid white 3.5px;
-    position: relative;
-  }
-  .brands::before {
-    content: "Brands & Products";
-    width: 230px;
-    height: 45px;
-    border-radius: 56px;
-    background-color: #ffcd00;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 18px;
-    border: solid white 3.5px;
-    font-weight: 800;
-    position: absolute;
-    top: -17px;
-    left: -9px;
+
   }
   .active,
   .inactive {
@@ -4554,8 +4492,7 @@
   .hero3 {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-      url("/hero3.jpeg");
+    background: black;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -5600,29 +5537,7 @@
   .brands {
     width: 128px;
     height: 25px;
-    border-radius: 56px;
-    font-size: 30px;
-    border: solid white 3px;
-    position: relative;
-    margin-bottom: 20px;
-  }
-  .brands::before {
-    content: "Brands & Products";
-    width: 125px;
-    height: 25px;
-    border-radius: 56px;
-    background-color: #ffcd00;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 10px;
-    border: solid white 3px;
-    font-weight: 800;
-    position: absolute;
-    top: -13px;
-    left: -9px;
+
   }
   .floatm1b {
     width: 89px;
@@ -6174,8 +6089,7 @@
   .hero3 {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-      url("/hero3.jpeg");
+    background: black;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -7206,30 +7120,6 @@
   .brands {
     width: 128px;
     height: 25px;
-    border-radius: 56px;
-    font-size: 30px;
-    border: solid white 3px;
-    position: relative;
-    margin-bottom: 20px;
-    display: none;
-  }
-  .brands::before {
-    content: "Brands & Products";
-    width: 125px;
-    height: 25px;
-    border-radius: 56px;
-    background-color: #ffcd00;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 10px;
-    border: solid white 3px;
-    font-weight: 800;
-    position: absolute;
-    top: -13px;
-    left: -9px;
   }
   .floatm1b {
     width: 89px;
