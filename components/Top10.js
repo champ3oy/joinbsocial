@@ -6,20 +6,20 @@ import { RANKED_USERS, GET_TOTAL_NUMBER } from "../GraphQL/queries";
 export default function Top10(props) {
   const [showModalfilter, setShowModalfilter] = useState(false);
   const [page, setpage] = useState(1);
-  const [filter, setfilter] = useState("Daily");
+  const [filter, setfilter] = useState("Monthly");
   const [topTen, setTopTen] = useState([]);
 
   const { loading, error, data } = useQuery(RANKED_USERS, {
     variables: {
       orderBy: filter.toLocaleLowerCase(),
-      limit: 10
+      limit: 10,
     },
   });
 
   const Query2 = useQuery(RANKED_USERS, {
     variables: {
       orderBy: "monthly",
-      limit: 100
+      limit: 100,
     },
   });
 
@@ -27,8 +27,11 @@ export default function Top10(props) {
 
   useEffect(() => {
     if (data) {
+      console.log(data)
       setTopTen(data.ListRankedUsers.slice(0, 10));
     }
+
+    console.log(Query3.data.CountTotalReferredUsers.message)
   }, [data]);
 
   return (
@@ -36,13 +39,15 @@ export default function Top10(props) {
       {props.screen == "waitlist" ? (
         <main className={styles.waitlist}>
           <text className={styles.number}>
-            {Query3?.data?.CountTotalWaitListUsers?.message}
+            {Query3.data
+              ? Query3.data.CountTotalReferredUsers.message
+              : "00"}
           </text>
           <text className={styles.subText}>Total Number on Waitlist</text>
           <div
             className={styles.joinBtn}
             onClick={() => {
-              props.modal1()
+              props.modal1();
             }}
           >
             Join the waitlist &#127881;
@@ -50,7 +55,7 @@ export default function Top10(props) {
           <div
             style={{ marginTop: 20 }}
             onClick={() => {
-              props.modal5()
+              props.modal5();
             }}
           >
             <a className={styles.textBtnw}>
@@ -62,12 +67,14 @@ export default function Top10(props) {
         <main className={styles.referral}>
           <div className={styles.rleft}>
             <text className={styles.number2}>
-              {Query3?.data?.CountTotalWaitListUsers?.message}
+            {Query3.data
+              ? Query3.data.CountTotalReferredUsers.message
+              : "00"}
             </text>
             <text className={styles.subtext2}>Total Number of Referral</text>
             <div
               onClick={() => {
-                props.modal1()
+                props.modal1();
               }}
               className={styles.joinx}
             >
@@ -169,7 +176,7 @@ export default function Top10(props) {
               <text className={styles.ranking}>Ranking</text>
               <div
                 onClick={() => {
-                    props.modal1()
+                  props.modal1();
                 }}
                 className={styles.joinx2}
               >
