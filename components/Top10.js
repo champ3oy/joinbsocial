@@ -31,7 +31,7 @@ export default function Top10(props) {
       setTopTen(data.ListRankedUsers.slice(0, 10));
     }
 
-    console.log(Query3.data.CountTotalReferredUsers.message)
+    // console.log(Query3.data.CountTotalReferredUsers.message)
   }, [data]);
 
   return (
@@ -40,7 +40,7 @@ export default function Top10(props) {
         <main className={styles.waitlist}>
           <text className={styles.number}>
             {Query3.data
-              ? Query3.data.CountTotalReferredUsers.message
+              ? Query3?.data?.CountTotalReferredUsers?.message
               : "00"}
           </text>
           <text className={styles.subText}>Total Number on Waitlist</text>
@@ -68,7 +68,7 @@ export default function Top10(props) {
           <div className={styles.rleft}>
             <text className={styles.number2}>
             {Query3.data
-              ? Query3.data.CountTotalReferredUsers.message
+              ? Query3?.data?.CountTotalReferredUsers?.message
               : "00"}
             </text>
             <text className={styles.subtext2}>Total Number of Referral</text>

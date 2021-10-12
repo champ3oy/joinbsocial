@@ -713,7 +713,7 @@ export default function Home() {
             <img alt="image" className={styles.nike} src="/adidas.png" />
             <img alt="image" className={styles.adidas} src="/nike.png" />
             <div className={styles.col}>
-              <text className={styles.views2}>@JefferyAfrane</text>
+              <text className={styles.views2}>@allisk8s_</text>
               <text className={styles.hashtag2}>24k Views &#129310;</text>
             </div>
             <div className={styles.float4} data-aos="fade-up">
@@ -1057,7 +1057,7 @@ export default function Home() {
                       <option value="audi">Target Cost per View (CPV)</option>
                     </select>
 
-                    <img alt="image" src="/info.png" className={styles.info} />
+                    {/* <img alt="image" src="/info.png" className={styles.info} /> */}
                   </div>
 
                   <button
