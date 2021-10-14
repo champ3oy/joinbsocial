@@ -610,8 +610,23 @@
   font-weight: 600;
   outline: none;
   color: #b5b1b1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .input::placeholder {
+  color: #b5b1b1;
+}
+.textarea {
+  background: none;
+  width: 100%;
+  height: fit-content;
+  border: none;
+  font-family: "Rubik";
+  font-size: 15px;
+  font-weight: 600;
+  resize: none;
   color: #b5b1b1;
 }
 .input::-webkit-input-placeholder:after {

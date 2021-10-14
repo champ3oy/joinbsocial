@@ -961,24 +961,28 @@ export default function Home() {
               {page == 1 ? (
                 <div className={styles.modalright}>
                   <div className={styles.pagination}>1 of 3</div>
-                  <textarea
-                    type="text"
-                    multiple={true}
-                    className={styles.input}
-                    placeholder={`What is the name of the product or \nbrand you want to promote?`}
-                  />
+                  <div className={styles.input}>
+                    <textarea
+                      type="text"
+                      className={styles.textarea}
+                      placeholder={`What is the name of the product or brand \nyou want to promote?`}
+                    />
+                  </div>
 
-                  <textarea
-                    type="text"
-                    className={styles.input}
-                    placeholder={`What is your name or the name of your \nmarketing director or company representative for this promotion?`}
-                  />
-
-                  <textarea
-                    type="text"
-                    className={styles.input}
-                    placeholder={`What is your email address? or Email address \nto be associated to this brand promotion.`}
-                  />
+                  <div className={styles.input}>
+                    <textarea
+                      type="text"
+                      className={styles.textarea}
+                      placeholder={`What is your name or the name of your \nmarketing director or company representative for this promotion?`}
+                    />
+                  </div>
+                  <div className={styles.input}>
+                    <textarea
+                      type="text"
+                      className={styles.textarea}
+                      placeholder={`What is your email address? or Email address \nto be associated to this brand promotion.`}
+                    />
+                  </div>
                   <input
                     type="text"
                     className={styles.input}
@@ -1014,18 +1018,24 @@ export default function Home() {
                     <img alt="image" src="/back2.png" />2 of 3
                   </div>
                   <div className={styles.infocon}>
-                    <textarea
-                      required
-                      type="text"
-                      className={styles.input}
-                      placeholder={`What is your total budget for this \nbrand challenge?`}
-                    />
-                    <img alt="image" src="/info.png" className={styles.info} />
-                    <img
-                      alt="image"
-                      src="/tooltip1.png"
-                      className={styles.tooltip1}
-                    />
+                    <div className={styles.input}>
+                      <textarea
+                        required
+                        type="text"
+                        className={styles.textarea}
+                        placeholder={`What is your total budget for this \nbrand challenge?`}
+                      />
+                      <img
+                        alt="image"
+                        src="/info.png"
+                        className={styles.info}
+                      />
+                      <img
+                        alt="image"
+                        src="/tooltip1.png"
+                        className={styles.tooltip1}
+                      />
+                    </div>
                   </div>
 
                   <div className={styles.infocon}>
@@ -1043,20 +1053,25 @@ export default function Home() {
                     />
                   </div>
                   <div className={styles.infocon}>
-                    <select className={styles.input} name="clicks" id="clicks">
-                      <option value="default">
-                        {`We charge based on the number of video \nresponses, Clicks
+                    <div className={styles.input}>
+                      <select
+                        className={styles.textarea}
+                        name="clicks"
+                        id="clicks"
+                      >
+                        <option value="default">
+                          {`We charge based on the number of video \nresponses, Clicks
                         and views your \nbrand challenge receives.`}
-                      </option>
-                      <option value="saab">
-                        Target Cost Per Video Created (CPVC)
-                      </option>
-                      <option value="mercedes">
-                        Target Cost Per Click (CPC)
-                      </option>
-                      <option value="audi">Target Cost per View (CPV)</option>
-                    </select>
-
+                        </option>
+                        <option value="saab">
+                          Target Cost Per Video Created (CPVC)
+                        </option>
+                        <option value="mercedes">
+                          Target Cost Per Click (CPC)
+                        </option>
+                        <option value="audi">Target Cost per View (CPV)</option>
+                      </select>
+                    </div>
                     {/* <img alt="image" src="/info.png" className={styles.info} /> */}
                   </div>
 
@@ -1090,42 +1105,60 @@ export default function Home() {
                     <img alt="image" src="/back2.png" />3 of 3
                   </div>
                   <div className={styles.infocon}>
-                    <textarea
-                      required
-                      type="text"
-                      className={styles.input}
-                      placeholder={`Share requirements for your brand challenge. What are your must include items for the challenge?`}
-                    />
-                    <img alt="image" src="/info.png" className={styles.info} />
-                    <img
-                      alt="image"
-                      src="/tooltip1.png"
-                      className={styles.tooltip1}
-                    />
+                    <div className={styles.input}>
+                      <textarea
+                        required
+                        type="text"
+                        className={styles.textarea}
+                        placeholder={`Share requirements for your brand challenge. What are your must include items for the challenge?`}
+                      />
+                      <img
+                        alt="image"
+                        src="/info.png"
+                        className={styles.info}
+                      />
+                      <img
+                        alt="image"
+                        src="/tooltip1.png"
+                        className={styles.tooltip1}
+                      />
+                    </div>
                   </div>
 
                   <div className={styles.infocon}>
-                    <textarea
-                      required
-                      type="text"
-                      className={styles.input}
-                      placeholder={`Can you share example of other challenges you have liked in the past?`}
-                    />
-                    <img alt="image" src="/info.png" className={styles.info2} />
-                    <img
-                      alt="image"
-                      src="/tooltip2.png"
-                      className={styles.tooltip2}
-                    />
+                    <div className={styles.input}>
+                      <textarea
+                        required
+                        type="text"
+                        className={styles.textarea}
+                        placeholder={`Can you share example of other challenges you have liked in the past?`}
+                      />
+                      <img
+                        alt="image"
+                        src="/info.png"
+                        className={styles.info2}
+                      />
+                      <img
+                        alt="image"
+                        src="/tooltip2.png"
+                        className={styles.tooltip2}
+                      />
+                    </div>
                   </div>
                   <div className={styles.infocon}>
-                    <input
-                      required
-                      type="text"
-                      className={styles.input}
-                      placeholder="How did you hear about BSocial?"
-                    />
-                    <img alt="image" src="/info.png" className={styles.info} />
+                    <div className={styles.input}>
+                      <input
+                        required
+                        type="text"
+                        className={styles.textarea}
+                        placeholder="How did you hear about BSocial?"
+                      />
+                      <img
+                        alt="image"
+                        src="/info.png"
+                        className={styles.info}
+                      />
+                    </div>
                   </div>
 
                   <button

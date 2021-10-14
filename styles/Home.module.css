@@ -992,9 +992,23 @@
   outline: none;
   color: #b5b1b1;
   resize: none;
-  display: table-cell; vertical-align: middle
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .input::placeholder {
+  color: #b5b1b1;
+}
+.textarea {
+  background: none;
+  width: 100%;
+  height: fit-content;
+  border: none;
+  font-family: "Rubik";
+  font-size: 15px;
+  font-weight: 600;
+  resize: none;
   color: #b5b1b1;
 }
 .input::-webkit-input-placeholder:after {
@@ -1447,6 +1461,7 @@
 
 /* 1600 screen */
 @media only screen and (max-width: 1600px) {
+  
   .amazon {
     position: absolute;
     top: 15%;
@@ -1932,6 +1947,7 @@
     width: 100%;
     height: 100vh;
     background-color: #ffcd00;
+    margin-top: 100px;
   }
   .footerText {
     font-size: 120px;
@@ -2454,8 +2470,25 @@
     font-weight: 600;
     outline: none;
     color: #b5b1b1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .input::placeholder {
+    color: #b5b1b1;
+  }
+  .textarea {
+    background: none;
+    width: 100%;
+    height: fit-content;
+    border: none;
+    font-family: "Rubik";
+    font-size: 15px;
+    font-weight: 600;
+    resize: none;
+  }
+  .textarea::placeholder {
     color: #b5b1b1;
   }
   .btn {

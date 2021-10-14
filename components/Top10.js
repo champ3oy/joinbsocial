@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/Leader.module.css";
 import { useQuery } from "@apollo/client";
-import { RANKED_USERS, GET_TOTAL_NUMBER } from "../GraphQL/queries";
+import { RANKED_USERS, GET_TOTAL_NUMBER, GET_WAITLIST_NUMBER } from "../GraphQL/queries";
 
 export default function Top10(props) {
   const [showModalfilter, setShowModalfilter] = useState(false);
@@ -25,9 +25,11 @@ export default function Top10(props) {
 
   const Query3 = useQuery(GET_TOTAL_NUMBER);
 
+  const Query4 = useQuery(GET_WAITLIST_NUMBER);
+
   useEffect(() => {
     if (data) {
-      console.log(data)
+      // console.log(data)
       setTopTen(data.ListRankedUsers.slice(0, 10));
     }
 
@@ -40,7 +42,7 @@ export default function Top10(props) {
         <main className={styles.waitlist}>
           <text className={styles.number}>
             {Query3.data
-              ? Query3?.data?.CountTotalReferredUsers?.message
+              ? Query4?.data?.CountTotalWaitListUsers?.message
               : "00"}
           </text>
           <text className={styles.subText}>Total Number on Waitlist</text>

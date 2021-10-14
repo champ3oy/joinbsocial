@@ -25,3 +25,11 @@ export const GET_TOTAL_NUMBER = gql`
     }
   }
 `;
+
+export const GET_WAITLIST_NUMBER = gql`
+  query {
+    CountTotalWaitListUsers {
+      message
+    }
+  }
+`;
