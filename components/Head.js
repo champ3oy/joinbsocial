@@ -31,7 +31,6 @@ Come join and become BSocial famous!"
         property="twitter:description"
       ></meta>
       <meta content="/cover.jpeg" property="twitter:image"></meta>
-      <meta content="/cover.jpeg" property="image"></meta>
     </Head>
   );
 }
