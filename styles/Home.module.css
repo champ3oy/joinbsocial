@@ -1344,18 +1344,18 @@
   animation: grow 7s ease-in-out infinite;
 }
 .nike {
-  width: 90px;
-  height: 90px;
+  width: 105px;
+  height: 105px;
   position: absolute;
   bottom: 280px;
-  left: -55px;
+  left: -65px;
 }
 .adidas {
-  width: 90px;
-  height: 90px;
+  width: 105px;
+  height: 105px;
   position: absolute;
   top: 45px;
-  right: -50px;
+  right: -55px;
 }
 .promotepop {
   position: absolute;
@@ -4870,11 +4870,42 @@
     width: 60px;
     height: 60px;
     margin-right: 15px;
-    image-rendering: -moz-crisp-edges; /* Firefox */
-    image-rendering: -o-crisp-edges; /* Opera */
-    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
-    image-rendering: crisp-edges;
-    -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -moz-animation: bouncing-text 5s linear infinite alternate;
+    -webkit-animation: bouncing-text 5s linear infinite alternate;
+    animation: bouncing-text 10s linear infinite alternate;
+  }
+  @-moz-keyframes bouncing-text {
+    0% {
+      -moz-transform: translateX(100%);
+    }
+    100% {
+      -moz-transform: translateX(-100%);
+    }
+  }
+
+  @-webkit-keyframes bouncing-text {
+    0% {
+      -webkit-transform: translateX(100%);
+    }
+    100% {
+      -webkit-transform: translateX(-100%);
+    }
+  }
+
+  @keyframes bouncing-text {
+    0% {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    100% {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
   }
   .promotepop {
     position: absolute;
@@ -4891,15 +4922,15 @@
     transform: scale(0.5);
   }
   .nike {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     position: absolute;
     bottom: 140px;
     left: -25px;
   }
   .adidas {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     position: absolute;
     top: 40px;
     right: -25px;

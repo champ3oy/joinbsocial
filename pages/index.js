@@ -206,7 +206,7 @@ export default function Home() {
             </main>
             <main id="herotext" className={styles.hero3}>
               <div className={styles.marquee}>
-                <marquee gradient={false}>
+                {/* <marquee gradient={false}> */}
                   <img
                     className={styles.marqueeitem}
                     alt="image"
@@ -402,7 +402,7 @@ export default function Home() {
                     alt="image"
                     srcSet="/nike.png"
                   />
-                </marquee>
+                {/* </marquee> */}
               </div>
               <div className={styles.Rcontainer}>
                 <img className={styles.amazon} alt="image" src="/amazon.png" />
