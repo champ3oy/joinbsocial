@@ -1,4 +1,3 @@
-
 import styles from "../styles/Home.module.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -9,7 +8,7 @@ import Link from "next/link";
 import UserForm from "../components/UserForm";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import Marquee from "react-fast-marquee";
-import Head from "../components/Head"
+import Head from "../components/Head";
 
 const client = new ApolloClient({
   uri: "https://api.joinb.social/graphql",
@@ -69,7 +68,7 @@ export default function Home() {
     <ApolloProvider client={client}>
       <div className={styles.container}>
         <Head title="BSocial" />
-        
+
         <div className={`${styles.section}`}>
           <nav className={styles.nav}>
             <img alt="image" src="/logo2x.png" className={styles.logo} />
@@ -207,203 +206,203 @@ export default function Home() {
             </main>
             <main id="herotext" className={styles.hero3}>
               <div className={styles.marquee}>
-                <Marquee gradient={false}>
+                <marquee gradient={false}>
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/amazon.png"
+                    srcSet="/amazon.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/vans.png"
+                    srcSet="/vans.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/adidas2.png"
+                    srcSet="/adidas2.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/coke.png"
+                    srcSet="/coke.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/pepsi.png"
+                    srcSet="/pepsi.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/pizzahut.png"
+                    srcSet="/pizzahut.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/yezzy.png"
+                    srcSet="/yezzy.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/nike.png"
+                    srcSet="/nike.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/vans.png"
+                    srcSet="/vans.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/adidas2.png"
+                    srcSet="/adidas2.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/coke.png"
+                    srcSet="/coke.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/amazon.png"
+                    srcSet="/amazon.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/pepsi.png"
+                    srcSet="/pepsi.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/pizzahut.png"
+                    srcSet="/pizzahut.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/yezzy.png"
+                    srcSet="/yezzy.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/nike.png"
+                    srcSet="/nike.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/vans.png"
+                    srcSet="/vans.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/adidas2.png"
+                    srcSet="/adidas2.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/coke.png"
+                    srcSet="/coke.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/pepsi.png"
+                    srcSet="/pepsi.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/pizzahut.png"
+                    srcSet="/pizzahut.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/yezzy.png"
+                    srcSet="/yezzy.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/nike.png"
+                    srcSet="/nike.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/amazon.png"
+                    srcSet="/amazon.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/vans.png"
+                    srcSet="/vans.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/adidas2.png"
+                    srcSet="/adidas2.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/coke.png"
+                    srcSet="/coke.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/pepsi.png"
+                    srcSet="/pepsi.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/pizzahut.png"
+                    srcSet="/pizzahut.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/yezzy.png"
+                    srcSet="/yezzy.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/nike.png"
+                    srcSet="/nike.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/vans.png"
+                    srcSet="/vans.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/adidas2.png"
+                    srcSet="/adidas2.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/coke.png"
+                    srcSet="/coke.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/amazon.png"
+                    srcSet="/amazon.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/pepsi.png"
+                    srcSet="/pepsi.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/pizzahut.png"
+                    srcSet="/pizzahut.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/yezzy.png"
+                    srcSet="/yezzy.png"
                   />
                   <img
                     className={styles.marqueeitem}
                     alt="image"
-                    src="/nike.png"
+                    srcSet="/nike.png"
                   />
-                </Marquee>
+                </marquee>
               </div>
               <div className={styles.Rcontainer}>
                 <img className={styles.amazon} alt="image" src="/amazon.png" />

@@ -397,7 +397,7 @@
   font-size: 17px;
   font-weight: 600;
   margin-top: 5px;
-  text-align: left
+  text-align: left;
 }
 .views2 {
   color: white;
@@ -1465,7 +1465,6 @@
 
 /* 1600 screen */
 @media only screen and (max-width: 1600px) {
-  
   .amazon {
     position: absolute;
     top: 15%;
@@ -1940,7 +1939,7 @@
     font-size: 15px;
     font-weight: 600;
     margin-top: 0px;
-    text-align: left
+    text-align: left;
   }
   .views2 {
     color: white;
@@ -1951,7 +1950,6 @@
     width: 100%;
     height: 100vh;
     background-color: #ffcd00;
-
   }
   .footerText {
     font-size: 120px;
@@ -3024,7 +3022,7 @@
     font-size: 15px;
     font-weight: 600;
     margin-top: 0px;
-    text-align: left
+    text-align: left;
   }
   .views2 {
     color: white;
@@ -4176,7 +4174,7 @@
     font-size: 15px;
     font-weight: 600;
     margin-top: 0px;
-    text-align: left
+    text-align: left;
   }
   .views2 {
     color: white;
@@ -4872,6 +4870,11 @@
     width: 60px;
     height: 60px;
     margin-right: 15px;
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: -o-crisp-edges; /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
   }
   .promotepop {
     position: absolute;
@@ -5298,7 +5301,7 @@
     font-size: 9px;
     font-weight: 600;
     margin-top: 0px;
-    text-align: left
+    text-align: left;
   }
   .views2 {
     color: white;
@@ -5857,7 +5860,7 @@
     z-index: 9999;
     transform: scale(1);
     overflow-y: scroll;
-    padding-top: 100px
+    padding-top: 100px;
   }
   .modalleft {
     display: flex;
@@ -5905,7 +5908,7 @@
     margin-top: 60px;
     margin-bottom: 30px;
   }
-  
+
   .modaltextc {
     color: #7f46ff;
     font-size: "Rubik";
@@ -7827,7 +7830,7 @@
 /* G4 and S6 */
 @media only screen and (max-width: 360px) and (max-height: 640px) {
   .modalb {
-    padding-top: 110px
+    padding-top: 110px;
   }
   .hero3,
   .hero2 {
