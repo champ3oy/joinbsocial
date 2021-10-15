@@ -20,7 +20,7 @@ Come join and become BSocial famous!"
 Come join and become BSocial famous!"
         proterty="og:description"
       ></meta>
-      <meta content="/cover.png" property="og:image"></meta>
+      <meta content="/cover.jpeg" property="og:image"></meta>
       <meta
         content="BSocial - Endless Entertainment"
         property="twitter:title"
@@ -30,8 +30,8 @@ Come join and become BSocial famous!"
 Come join and become BSocial famous!"
         property="twitter:description"
       ></meta>
-      <meta content="/cover.png" property="twitter:image"></meta>
-      <meta content="/cover.png" property="image"></meta>
+      <meta content="/cover.jpeg" property="twitter:image"></meta>
+      <meta content="/cover.jpeg" property="image"></meta>
     </Head>
   );
 }
