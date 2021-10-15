@@ -9,6 +9,7 @@ import Link from "next/link";
 import UserForm from "../components/UserForm";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { useRouter } from "next/router";
+import Marquee from "react-fast-marquee";
 
 const client = new ApolloClient({
   uri: "https://api.joinb.social/graphql",
