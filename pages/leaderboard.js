@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from "../components/Head"
 import styles from "../styles/Leader.module.css";
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
@@ -39,11 +39,7 @@ export default function Leaderboard() {
   return (
     <ApolloProvider client={client}>
       <div className={styles.container}>
-        <Head>
-          <title>Leaderboard - BSocial</title>
-          <meta name="description" content="Be Social with us" />
-          <link rel="icon" href="/favicon.svg" />
-        </Head>
+      <Head title="Leaderboard" />
 
         <nav className={styles.nav}>
           <div className={styles.brand}>

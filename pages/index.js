@@ -1,4 +1,4 @@
-import Head from "next/head";
+
 import styles from "../styles/Home.module.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -9,6 +9,7 @@ import Link from "next/link";
 import UserForm from "../components/UserForm";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import Marquee from "react-fast-marquee";
+import Head from "../components/Head"
 
 const client = new ApolloClient({
   uri: "https://api.joinb.social/graphql",
@@ -67,12 +68,8 @@ export default function Home() {
   return (
     <ApolloProvider client={client}>
       <div className={styles.container}>
-        <Head>
-          <title>BSocial</title>
-          <meta name="description" content="Be Social with us" />
-          <link rel="icon" href="/favicon.svg" />
-        </Head>
-
+        <Head title="BSocial" />
+        
         <div className={`${styles.section}`}>
           <nav className={styles.nav}>
             <img alt="image" src="/logo2x.png" className={styles.logo} />

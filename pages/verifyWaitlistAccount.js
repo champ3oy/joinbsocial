@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from "../components/Head"
 import styles from "../styles/Verify.module.css";
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
@@ -28,17 +28,13 @@ export default function VerifyUser() {
       offset: 100,
     });
 
-    console.log(verifyToken);
+    // console.log(verifyToken);
   }, []);
 
   return (
     <ApolloProvider client={client}>
       <div className={styles.container}>
-        <Head>
-          <title>Verified - BSocial</title>
-          <meta name="description" content="Be Social with us" />
-          <link rel="icon" href="/favicon.svg" />
-        </Head>
+      <Head title="Welcome" />
 
         <nav className={styles.nav}>
           <Link href="/">

@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from "../components/Head"
 import styles from "../styles/Terms.module.css";
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
@@ -28,11 +28,7 @@ export default function Privacy() {
   return (
     <ApolloProvider client={client}>
       <div className={styles.container}>
-        <Head>
-          <title>Privacy Policy - BSocial</title>
-          <meta name="description" content="Be Social with us" />
-          <link rel="icon" href="/favicon.svg" />
-        </Head>
+      <Head title="Privacy" />
 
         <nav className={styles.nav}>
           <Link href="/">

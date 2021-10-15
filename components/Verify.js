@@ -13,7 +13,7 @@ export default function Verify(props) {
 
   useEffect(() => {
     if (props.token) {
-      console.log(props.token);
+      // console.log(props.token);
       try {
         VerifyWaitListUserEmail({
           variables: {
@@ -26,7 +26,7 @@ export default function Verify(props) {
         };
       }
       setmessage(data?.VerifyWaitListUserEmail?.message);
-      console.log(data?.VerifyWaitListUserEmail?.message);
+      // console.log(data?.VerifyWaitListUserEmail?.message);
     }
 
     if (data) {
