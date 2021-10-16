@@ -702,7 +702,7 @@ export default function Home() {
               </div>
               <div className={styles.promotepopbottom}>
                 <text className={styles.pptext4}>$150,000&#128184;</text>
-                <text className={styles.pptext5}>By Coke Cola</text>
+                <text className={styles.pptext5}>By Coca Cola</text>
                 <div className={styles.promotepopbar} />
               </div>
             </div>

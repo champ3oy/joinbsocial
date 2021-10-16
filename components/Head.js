@@ -4,7 +4,9 @@ import Head from "next/head";
 export default function Head_(props) {
   return (
     <Head>
-      <title>{props.title ? props.title : "BSocial "} - Endless Entertainment</title>
+      <title>
+        {props.title ? props.title : "BSocial "} - Endless Entertainment
+      </title>
       <meta
         name="description"
         content="BSocial is a short form video super app where users build new friendships and connect with old friends in a fun and gamified way. Post a fun challenge and invite your friends to interact with you and your content. Build a bigger fanbase as people interact with your content. Whatever your talent is, there is a place and an audience for you in the BSocial Super app. Engage with content that you like and see an endless stream of personalized content that will make your day!
@@ -31,6 +33,21 @@ Come join and become BSocial famous!"
         property="twitter:description"
       ></meta>
       <meta content="/cover.jpeg" property="twitter:image"></meta>
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-191424621-1"
+      ></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+              window.dataLayer = window.dataLayer || []; function gtag()
+              {dataLayer.push(arguments)}
+              gtag('js', new Date()); gtag('config', 'UA-191424621-1');
+
+              const cirlorm = null;
+              `,
+        }}
+      />
     </Head>
   );
 }
