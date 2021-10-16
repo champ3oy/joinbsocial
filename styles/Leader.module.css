@@ -544,6 +544,7 @@
   color: #747883;
   font-weight: 600;
   padding: 0 15px 0 20px;
+  position: "relative"
 }
 .filter img {
   width: 23.28px;
@@ -2647,6 +2648,7 @@
     font-size: 13px;
     color: #747883;
     font-weight: 600;
+    position: "relative"
   }
   .filter img {
     width: 13px;
