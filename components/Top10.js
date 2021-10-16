@@ -123,6 +123,22 @@ export default function Top10(props) {
                     >
                       Monthly
                     </text>
+                    <text
+                      onClick={() => {
+                        setfilter("Monthly");
+                        setShowModalfilter(false);
+                      }}
+                    >
+                      Yearly
+                    </text>
+                    <text
+                      onClick={() => {
+                        setfilter("Monthly");
+                        setShowModalfilter(false);
+                      }}
+                    >
+                      All time
+                    </text>
                   </div>
                 ) : null}
               </div>

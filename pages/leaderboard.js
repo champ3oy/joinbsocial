@@ -45,8 +45,12 @@ export default function Leaderboard() {
             <Link href="/">
               <img alt="image" src="/back.png" className={styles.back} />
             </Link>
-            <img alt="image" src="/logo2.png" className={styles.logo} />
+            <div className={styles.brandcon}>
+              <img alt="image" src="/favicon.svg" className={styles.logo} />
+              <text className={styles.brandname}>B.Social Leaderboard</text>
+            </div>
           </div>
+
           <img
             alt="image"
             onClick={() => {
@@ -55,10 +59,11 @@ export default function Leaderboard() {
             className={styles.menu}
             src="/bar.png"
           />
+
           <div className={styles.right}>
-            <Link href="/leaderboard">
+            {/* <Link href="/leaderboard">
               <a className={styles.textBtn}>Checkout the record &#127881;</a>
-            </Link>
+            </Link> */}
             <div
               className={styles.joinBtn}
               onClick={() => {

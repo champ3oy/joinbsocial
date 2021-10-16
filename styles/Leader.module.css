@@ -24,8 +24,9 @@
   align-items: center;
 }
 .logo {
-  width: 318px;
+  width: 97.85px;
   height: 97.85px;
+  /* background-color: #f3ff46; */
 }
 .back {
   width: 29px;
@@ -722,16 +723,17 @@
 
 .filtepopup {
   position: absolute;
-  bottom: -200px;
+  bottom: -280px;
   right: -5px;
-  width: 190px;
-  height: 180px;
+  width: 205px;
+  height: fit-content;
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
+  padding: 15px 0 15px 0;
 }
 .filtepopup text {
   color: #7f46ff;
@@ -818,6 +820,18 @@
 .filter text {
   font-weight: 600;
 }
+.brandcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+.brandname {
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+}
 
 @media only screen and (max-width: 1600px) {
   .modalc {
@@ -849,8 +863,12 @@
     align-items: center;
   }
   .logo {
-    width: 240px;
+    width: 75px;
     height: 75px;
+    /* background-color: #f3ff46; */
+  }
+  .brandname {
+    font-size: 18px;
   }
   .back {
     width: 25px;
@@ -1438,7 +1456,7 @@
     align-items: center;
   }
   .logo {
-    width: 240px;
+    width: 75px;
     height: 75px;
   }
   .back {
@@ -2004,6 +2022,9 @@
 }
 
 @media only screen and (max-width: 550px) {
+  .brandname {
+    font-size: 14px;
+  }
   .rankinput {
     width: 270px;
     height: 50px;
@@ -2067,16 +2088,17 @@
   }
   .filtepopup {
     position: absolute;
-    bottom: -120px;
+    bottom: -180px;
     right: -5px;
     width: 120px;
-    height: 110px;
+    height: fit-content;
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 15px;
+    padding: 15px 0 15px 0;
   }
   .filtepopup text {
     color: #7f46ff;
@@ -2126,7 +2148,7 @@
     align-items: center;
   }
   .logo {
-    width: 230px;
+    width: 72px;
     height: 72px;
   }
   .back {
@@ -2848,7 +2870,7 @@
     transform: scale(0.85);
   }
   .logo {
-    width: 150px;
+    width: 50px;
     height: 50px;
   }
   .back {
