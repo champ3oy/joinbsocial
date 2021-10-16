@@ -423,7 +423,6 @@
   color: white;
   display: flex;
   flex-direction: column;
-
 }
 .rright {
   width: 591px;
@@ -534,7 +533,7 @@
   font-size: 23px;
 }
 .filter {
-  width: 173px;
+  /* width: auto; */
   height: 62px;
   border: 1px solid #747883;
   border-radius: 20px;
@@ -544,11 +543,11 @@
   font-size: 23px;
   color: #747883;
   font-weight: 600;
-  position: relative;
+  padding: 0 15px 0 20px;
 }
 .filter img {
-  width: 24.28px;
-  height: 27.75;
+  width: 23.28px;
+  height: 26.75;
   margin-right: 10px;
 }
 .ad {
@@ -1320,7 +1319,6 @@
     font-size: 20px;
   }
   .filter {
-    width: 173px;
     height: 62px;
     border: 1px solid #747883;
     border-radius: 20px;
@@ -1330,6 +1328,7 @@
     font-size: 20px;
     color: #747883;
     font-weight: 600;
+    padding: 0 10px 0 20px;
   }
   .filter img {
     width: 20px;
@@ -1912,7 +1911,6 @@
     font-size: 20px;
   }
   .filter {
-    width: 160px;
     height: 55px;
     border: 1px solid #747883;
     border-radius: 20px;
@@ -1922,6 +1920,7 @@
     font-size: 20px;
     color: #747883;
     font-weight: 300;
+    padding: 0 10px 0 20px;
   }
   .filter img {
     width: 20px;
