@@ -10,6 +10,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import Marquee from "react-fast-marquee";
 import Head from "../components/Head";
 import BrandModal from "../components/BrandModal";
+import * as ga from "../lib/ga";
 
 const client = new ApolloClient({
   uri: "https://api.joinb.social/graphql",
@@ -84,6 +85,10 @@ export default function Home() {
               <text
                 onClick={() => {
                   setShowModal2(true);
+                  ga.event({
+                    action: "open popup",
+                    params: "sign up as brand",
+                  });
                 }}
                 className={styles.joinBtn}
               >
@@ -92,6 +97,10 @@ export default function Home() {
               <div
                 className={styles.joinBtn}
                 onClick={() => {
+                  ga.event({
+                    action: "open popup",
+                    params: "join waitlist",
+                  });
                   setShowModal(true);
                 }}
               >
@@ -147,6 +156,10 @@ export default function Home() {
                   className={styles.joinBtn2}
                   onClick={() => {
                     setShowModal(true);
+                    ga.event({
+                      action: "open popup",
+                      params: "join waitlist",
+                    });
                   }}
                 >
                   Join the Waitlist &#127881;
@@ -194,6 +207,10 @@ export default function Home() {
                   className={styles.joinBtn2}
                   onClick={() => {
                     setShowModal(true);
+                    ga.event({
+                      action: "open popup",
+                      params: "join waitlist",
+                    });
                   }}
                 >
                   Join the Waitlist &#127881;
@@ -428,6 +445,10 @@ export default function Home() {
                   className={styles.brands}
                   onClick={() => {
                     setShowModal(true);
+                    ga.event({
+                      action: "open popup",
+                      params: "join waitlist",
+                    });
                   }}
                 ></div>
                 <text className={`${styles.heroText}`}>
@@ -462,6 +483,10 @@ export default function Home() {
                 <div
                   onClick={() => {
                     setShowModal2(true);
+                    ga.event({
+                      action: "open popup",
+                      params: "sign up as brand",
+                    });
                   }}
                   className={styles.joinBtn2}
                 >
@@ -501,6 +526,10 @@ export default function Home() {
               className={styles.joinBtn3}
               onClick={() => {
                 setShowModal(true);
+                ga.event({
+                  action: "open popup",
+                  params: "join waitlist",
+                });
               }}
             >
               Join the Waitlist &#127881;
@@ -577,6 +606,10 @@ export default function Home() {
               className={styles.joinBtn4}
               onClick={() => {
                 setShowModal(true);
+                ga.event({
+                  action: "open popup",
+                  params: "join waitlist",
+                });
               }}
             >
               Join the Waitlist &#127881;
@@ -622,6 +655,10 @@ export default function Home() {
               className={styles.joinBtn3}
               onClick={() => {
                 setShowModal(true);
+                ga.event({
+                  action: "open popup",
+                  params: "join waitlist",
+                });
               }}
             >
               Join the Waitlist &#127881;
@@ -745,6 +782,10 @@ export default function Home() {
               className={`${styles.joinBtn4} ${styles.joinPromoteb}`}
               onClick={() => {
                 setShowModal(true);
+                ga.event({
+                  action: "open popup",
+                  params: "join waitlist",
+                });
               }}
             >
               Join the Waitlist &#127881;
@@ -820,6 +861,10 @@ export default function Home() {
               className={styles.joinBtn5}
               onClick={() => {
                 setShowModal(true);
+                ga.event({
+                  action: "open popup",
+                  params: "join waitlist",
+                });
               }}
             >
               Join the Waitlist &#127881;

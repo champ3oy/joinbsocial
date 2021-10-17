@@ -13,6 +13,7 @@ import {
 import Top10 from "../components/Top10";
 import UserForm from "../components/UserForm";
 import PositionModals from "../components/PositionModals";
+import * as ga from "../lib/ga";
 
 const client = new ApolloClient({
   uri: "https://api.joinb.social/graphql",
@@ -68,6 +69,10 @@ export default function Leaderboard() {
               className={styles.joinBtn}
               onClick={() => {
                 setShowModal(true);
+                ga.event({
+                  action: "open popup",
+                  params: "join waitlist",
+                });
               }}
             >
               Get on the leaderboard &#127881;
@@ -103,9 +108,17 @@ export default function Leaderboard() {
           screen={screen}
           modal5={() => {
             setShowModal5(true);
+            ga.event({
+              action: "open popup",
+              params: "check position",
+            });
           }}
           modal1={() => {
             setShowModal(true);
+            ga.event({
+              action: "open popup",
+              params: "join waitlist",
+            });
           }}
         />
 

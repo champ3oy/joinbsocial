@@ -8,6 +8,7 @@ import UserForm from "../components/UserForm";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import Verify from "../components/Verify";
 import { useRouter } from "next/router";
+import * as ga from "../lib/ga";
 
 const client = new ApolloClient({
   uri: "https://api.joinb.social/graphql",
@@ -51,6 +52,10 @@ export default function VerifyUser() {
             <text
               onClick={() => {
                 setShowModal2(true);
+                ga.event({
+                  action: "open popup",
+                  params: "sign up as brand",
+                });
               }}
               className={styles.joinBtn}
             >
@@ -60,6 +65,10 @@ export default function VerifyUser() {
               className={styles.joinBtn}
               onClick={() => {
                 setShowModal(true);
+                ga.event({
+                  action: "open popup",
+                  params: "join waitlist",
+                });
               }}
             >
               Join the Waitlist &#127881;

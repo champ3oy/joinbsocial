@@ -32,26 +32,9 @@ export default function BrandSignup({ page, onClose, onNext, onDone, onBack }) {
             </text>
           </div>
 
-          <div className={styles.modalrightm}>
-            <div className={styles.pagination}>1 of 3</div>
-
-            <button
-              name="btn"
-              onClick={() => {
-                onDone();
-                setShowModal3(true);
-              }}
-              className={styles.btn}
-            >
-              Done
-            </button>
-            <text
-              onClick={() => {
-                onClose();
-              }}
-              className={styles.close}
-            >
-              close
+          <div className={styles.modalleftm}>
+            <text className={` ${styles.modaltext} ${styles.modaltextb}`}>
+              Use a computer to complete this step
             </text>
           </div>
 
@@ -60,7 +43,12 @@ export default function BrandSignup({ page, onClose, onNext, onDone, onBack }) {
               <div className={styles.pagination}>1 of 3</div>
               <label className={styles.label}>
                 What is the name of the product or brand you want to promote?
-              </label>
+              <span style={{
+                fontSize: 13,
+                color: 'red',
+                marginLeft: 3,
+                marginTop: -3
+              }}> *</span></label>
               <input
                 type="text"
                 className={styles.input}
@@ -70,14 +58,24 @@ export default function BrandSignup({ page, onClose, onNext, onDone, onBack }) {
               <label className={styles.label}>
                 What is your email address? or Email address to be associated to
                 this brand promotion?
-              </label>
+              <span style={{
+                fontSize: 13,
+                color: 'red',
+                marginLeft: 3,
+                marginTop: -3
+              }}> *</span></label>
               <input
                 type="text"
                 className={styles.input}
                 placeholder={`Type email here`}
               />
 
-              <label className={styles.label}>What is your phone number?</label>
+              <label className={styles.label}>What is your phone number?<span style={{
+                fontSize: 13,
+                color: 'red',
+                marginLeft: 3,
+                marginTop: -3
+              }}> *</span></label>
               <input
                 type="text"
                 className={styles.input}
@@ -86,7 +84,12 @@ export default function BrandSignup({ page, onClose, onNext, onDone, onBack }) {
 
               <label className={styles.label}>
                 What is your total budget for this brand challenge?
-              </label>
+              <span style={{
+                fontSize: 13,
+                color: 'red',
+                marginLeft: 3,
+                marginTop: -3
+              }}> *</span></label>
               <input
                 type="text"
                 className={styles.input}
@@ -103,6 +106,7 @@ export default function BrandSignup({ page, onClose, onNext, onDone, onBack }) {
               </button>
               <text
                 onClick={() => {
+                  
                   onClose();
                 }}
                 className={styles.close}
@@ -121,8 +125,13 @@ export default function BrandSignup({ page, onClose, onNext, onDone, onBack }) {
                 <img alt="image" src="/back2.png" />2 of 3
               </div>
               <label className={styles.label}>
-                What is the name of the product or brand you want to promote?
-              </label>
+                How much do you want to spend per day?
+              <span style={{
+                fontSize: 13,
+                color: 'red',
+                marginLeft: 3,
+                marginTop: -3
+              }}> *</span></label>
               <input
                 type="text"
                 className={styles.input}
@@ -130,29 +139,59 @@ export default function BrandSignup({ page, onClose, onNext, onDone, onBack }) {
               />
 
               <label className={styles.label}>
-                What is your email address? or Email address to be associated to
-                this brand promotion?
-              </label>
-              <input
-                type="text"
-                className={styles.input}
-                placeholder={`Type email here`}
-              />
-
-              <label className={styles.label}>What is your phone number?</label>
-              <input
-                type="text"
-                className={styles.input}
-                placeholder={`Type your phone number`}
-              />
+                We charge based on the number of video responses, Clicks and
+                views your brand challenge receives. How much do you want to pay
+                for each method?
+              <span style={{
+                fontSize: 13,
+                color: 'red',
+                marginLeft: 3,
+                marginTop: -3
+              }}> *</span></label>
+              <div className={styles.options}>
+                <text className={styles.optiontext}>
+                  A. Target Cost Per Video Created(CPVC)
+                </text>
+                <input
+                  type="text"
+                  className={styles.inputoption}
+                  placeholder={`Type amount here`}
+                />
+              </div>
+              <div className={styles.options}>
+                <text className={styles.optiontext}>
+                  B. Target Cost Per Click (CPC)
+                </text>
+                <input
+                  type="text"
+                  className={styles.inputoption}
+                  placeholder={`Type amount here`}
+                />
+              </div>
+              <div className={styles.options}>
+                <text className={styles.optiontext}>
+                  C. Target Cost Per View (CPV)
+                </text>
+                <input
+                  type="text"
+                  className={styles.inputoption}
+                  placeholder={`Type amount here`}
+                />
+              </div>
 
               <label className={styles.label}>
-                What is your total budget for this brand challenge?
-              </label>
-              <input
+                Share requirements for your brand challenge. What are your
+                must-include (non-negotiable) items for the challenge?
+              <span style={{
+                fontSize: 13,
+                color: 'red',
+                marginLeft: 3,
+                marginTop: -3
+              }}> *</span></label>
+              <textarea
                 type="text"
-                className={styles.input}
-                placeholder={`Type email here`}
+                className={styles.textarea}
+                placeholder={`Type some challenge`}
               />
 
               <button
@@ -186,7 +225,12 @@ export default function BrandSignup({ page, onClose, onNext, onDone, onBack }) {
               <label className={styles.label}>
                 Can you share examples of other challenges you liked in the
                 past?
-              </label>
+              <span style={{
+                fontSize: 13,
+                color: 'red',
+                marginLeft: 3,
+                marginTop: -3
+              }}> *</span></label>
               <input
                 type="text"
                 className={styles.input}
@@ -196,7 +240,12 @@ export default function BrandSignup({ page, onClose, onNext, onDone, onBack }) {
               <label className={styles.label}>
                 Would you want to approve all entries from superfans and
                 influencers?
-              </label>
+              <span style={{
+                fontSize: 13,
+                color: 'red',
+                marginLeft: 3,
+                marginTop: -3
+              }}> *</span></label>
               <input
                 type="text"
                 className={styles.input}
@@ -205,7 +254,12 @@ export default function BrandSignup({ page, onClose, onNext, onDone, onBack }) {
 
               <label className={styles.label}>
                 How did you hear about BSocial?
-              </label>
+              <span style={{
+                fontSize: 13,
+                color: 'red',
+                marginLeft: 3,
+                marginTop: -3
+              }}> *</span></label>
               <input
                 type="text"
                 className={styles.input}

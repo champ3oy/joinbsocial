@@ -7,6 +7,7 @@ import Link from "next/link";
 import UserForm from "../components/UserForm";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import BrandModal from "../components/BrandModal";
+import * as ga from "../lib/ga";
 
 const client = new ApolloClient({
   uri: "https://api.joinb.social/graphql",
@@ -46,6 +47,10 @@ export default function Leaderboard() {
             <text
               onClick={() => {
                 setShowModal2(true);
+                ga.event({
+                  action: "open popup",
+                  params: "sign up as brand",
+                });
               }}
               className={styles.joinBtn}
             >
@@ -55,6 +60,10 @@ export default function Leaderboard() {
               className={styles.joinBtn}
               onClick={() => {
                 setShowModal(true);
+                ga.event({
+                  action: "open popup",
+                  params: "join waitlist",
+                });
               }}
             >
               Join the Waitlist &#127881;
