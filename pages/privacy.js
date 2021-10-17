@@ -1,4 +1,4 @@
-import Head from "../components/Head"
+import Head from "../components/Head";
 import styles from "../styles/Terms.module.css";
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 import Link from "next/link";
 import UserForm from "../components/UserForm";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import BrandModal from "../components/BrandModal";
 
 const client = new ApolloClient({
   uri: "https://api.joinb.social/graphql",
@@ -28,7 +29,7 @@ export default function Privacy() {
   return (
     <ApolloProvider client={client}>
       <div className={styles.container}>
-      <Head title="Privacy" />
+        <Head title="Privacy" />
 
         <nav className={styles.nav}>
           <Link href="/">
@@ -782,12 +783,24 @@ export default function Privacy() {
               </div>
               <div className={styles.float7}>
                 <img alt="image" className={styles.emoji13} src="/fire.png" />
-                <img alt="image" className={styles.floatImg} src="/float2.png" />
+                <img
+                  alt="image"
+                  className={styles.floatImg}
+                  src="/float2.png"
+                />
                 <text className={styles.floatText7}>Reaction</text>
               </div>
               <div className={styles.float8}>
-                <img alt="image" className={styles.emoji14} src="/fireball.png" />
-                <img alt="image" className={styles.floatImg} src="/float3.png" />
+                <img
+                  alt="image"
+                  className={styles.emoji14}
+                  src="/fireball.png"
+                />
+                <img
+                  alt="image"
+                  className={styles.floatImg}
+                  src="/float3.png"
+                />
                 <text className={styles.floatText8}>#Challenge</text>
               </div>
               Get ready for <br />
@@ -800,12 +813,24 @@ export default function Privacy() {
               </div>
               <div className={styles.float7}>
                 <img alt="image" className={styles.emoji13} src="/fire.png" />
-                <img alt="image" className={styles.floatImg} src="/float2.png" />
+                <img
+                  alt="image"
+                  className={styles.floatImg}
+                  src="/float2.png"
+                />
                 <text className={styles.floatText7}>Reaction</text>
               </div>
               <div className={styles.float8}>
-                <img alt="image" className={styles.emoji14} src="/fireball.png" />
-                <img alt="image" className={styles.floatImg} src="/float3.png" />
+                <img
+                  alt="image"
+                  className={styles.emoji14}
+                  src="/fireball.png"
+                />
+                <img
+                  alt="image"
+                  className={styles.floatImg}
+                  src="/float3.png"
+                />
                 <text className={styles.floatText8}>#Challenge</text>
               </div>
               Get <br />
@@ -866,13 +891,25 @@ export default function Privacy() {
                 <text className={styles.floatText61}>Update</text>
               </div>
               <div className={styles.floatm2}>
-                <img alt="image" className={styles.emoji14} src="/fireball.png" />
-                <img alt="image" className={styles.floatImg} src="/float2.png" />
+                <img
+                  alt="image"
+                  className={styles.emoji14}
+                  src="/fireball.png"
+                />
+                <img
+                  alt="image"
+                  className={styles.floatImg}
+                  src="/float2.png"
+                />
                 <text className={styles.floatText71}>#Challenge</text>
               </div>
               <div className={styles.floatm3}>
                 <img alt="image" className={styles.emoji13} src="/fire.png" />
-                <img alt="image" className={styles.floatImg} src="/float2.png" />
+                <img
+                  alt="image"
+                  className={styles.floatImg}
+                  src="/float2.png"
+                />
                 <text className={styles.floatText81}>Reaction</text>
               </div>
               <div className={styles.modalleft}>
@@ -891,7 +928,7 @@ export default function Privacy() {
               </div>
               <img alt="image" src="/line.svg" className={styles.line} />
               <UserForm
-                 onDone={(data) => {
+                onDone={(data) => {
                   setrefCode(data?.RegisterWaitListUser?.referralCode);
                   setShowModal(false);
                   setShowModal3(true);
@@ -905,266 +942,22 @@ export default function Privacy() {
         ) : null}
 
         {showModal2 ? (
-          <main
-            data-aos="zoom-in"
-            data-aos-offset="50"
-            data-aos-delay="10"
-            className={styles.modalcon}
-          >
-            <div className={styles.modalb}>
-              <div className={styles.floatm1b} style={{ marginTop: -60 }}>
-                <img alt="image" className={styles.emoji13} src="/fire.png" />
-                <img alt="image" className={styles.floatImg} src="/float2.png" />
-                <text className={styles.floatText81}>#challenge</text>
-              </div>
-
-              <div className={styles.modalleftb}>
-                <text className={styles.modaltext}>
-                  Get your <br />
-                  superfans and <br />
-                  influencers <br />
-                  to promote <br />
-                  your band.
-                </text>
-                <text className={styles.modaltext2}>
-                  Get more engaged customers to your brand by setting up <br />
-                  brand challenge in B.Social. Influencers and superfans create
-                  <br />
-                  content to promote your products & brand. Your brand could
-                  <br />
-                  go viral on social media, you know!
-                </text>
-              </div>
-
-              <img alt="image" src="/line.svg" className={styles.line} />
-
-              {page == 1 ? (
-                <div className={styles.modalright}>
-                  <div className={styles.pagination}>1 of 3</div>
-                  <div className={styles.input}>
-                    <textarea
-                      type="text"
-                      className={styles.textarea}
-                      placeholder={`What is the name of the product or brand \nyou want to promote?`}
-                    />
-                  </div>
-
-                  <div className={styles.input}>
-                    <textarea
-                      type="text"
-                      className={styles.textarea}
-                      placeholder={`What is your name or the name of your \nmarketing director or company representative for this promotion?`}
-                    />
-                  </div>
-                  <div className={styles.input}>
-                    <textarea
-                      type="text"
-                      className={styles.textarea}
-                      placeholder={`What is your email address? or Email address \nto be associated to this brand promotion.`}
-                    />
-                  </div>
-                  <input
-                    type="text"
-                    className={styles.input}
-                    placeholder="What is your phone number?"
-                  />
-                  <button
-                    name="btn"
-                    onClick={() => {
-                      setpage(2);
-                    }}
-                    className={styles.btn}
-                  >
-                    Next
-                  </button>
-                  <text
-                    onClick={() => {
-                      setpage(1);
-                      setShowModal2(false);
-                    }}
-                    className={styles.close}
-                  >
-                    close
-                  </text>
-                </div>
-              ) : page == 2 ? (
-                <div className={styles.modalright}>
-                  <div
-                    className={styles.pagination}
-                    onClick={() => {
-                      setpage(1);
-                    }}
-                  >
-                    <img alt="image" src="/back2.png" />2 of 3
-                  </div>
-                  <div className={styles.infocon}>
-                    <div className={styles.input}>
-                      <textarea
-                        required
-                        type="text"
-                        className={styles.textarea}
-                        placeholder={`What is your total budget for this \nbrand challenge?`}
-                      />
-                      <img
-                        alt="image"
-                        src="/info.png"
-                        className={styles.info}
-                      />
-                      <img
-                        alt="image"
-                        src="/tooltip1.png"
-                        className={styles.tooltip1}
-                      />
-                    </div>
-                  </div>
-
-                  <div className={styles.infocon}>
-                    <input
-                      required
-                      type="text"
-                      className={styles.input}
-                      placeholder="How much do you want to spend per day?"
-                    />
-                    <img alt="image" src="/info.png" className={styles.info2} />
-                    <img
-                      alt="image"
-                      src="/tooltip2.png"
-                      className={styles.tooltip2}
-                    />
-                  </div>
-                  <div className={styles.infocon}>
-                    <div className={styles.input}>
-                      <select
-                        className={styles.textarea}
-                        name="clicks"
-                        id="clicks"
-                      >
-                        <option value="default">
-                          {`We charge based on the number of video \nresponses, Clicks
-                        and views your \nbrand challenge receives.`}
-                        </option>
-                        <option value="saab">
-                          Target Cost Per Video Created (CPVC)
-                        </option>
-                        <option value="mercedes">
-                          Target Cost Per Click (CPC)
-                        </option>
-                        <option value="audi">Target Cost per View (CPV)</option>
-                      </select>
-                    </div>
-                    {/* <img alt="image" src="/info.png" className={styles.info} /> */}
-                  </div>
-
-                  <button
-                    name="btn"
-                    onClick={() => {
-                      setpage(3);
-                    }}
-                    className={styles.btn}
-                  >
-                    Next
-                  </button>
-                  <text
-                    onClick={() => {
-                      setpage(1);
-                      setShowModal2(false);
-                    }}
-                    className={styles.close}
-                  >
-                    close
-                  </text>
-                </div>
-              ) : (
-                <div className={styles.modalright}>
-                  <div
-                    className={styles.pagination}
-                    onClick={() => {
-                      setpage(2);
-                    }}
-                  >
-                    <img alt="image" src="/back2.png" />3 of 3
-                  </div>
-                  <div className={styles.infocon}>
-                    <div className={styles.input}>
-                      <textarea
-                        required
-                        type="text"
-                        className={styles.textarea}
-                        placeholder={`Share requirements for your brand challenge. What are your must include items for the challenge?`}
-                      />
-                      <img
-                        alt="image"
-                        src="/info.png"
-                        className={styles.info}
-                      />
-                      <img
-                        alt="image"
-                        src="/tooltip1.png"
-                        className={styles.tooltip1}
-                      />
-                    </div>
-                  </div>
-
-                  <div className={styles.infocon}>
-                    <div className={styles.input}>
-                      <textarea
-                        required
-                        type="text"
-                        className={styles.textarea}
-                        placeholder={`Can you share example of other challenges you have liked in the past?`}
-                      />
-                      <img
-                        alt="image"
-                        src="/info.png"
-                        className={styles.info2}
-                      />
-                      <img
-                        alt="image"
-                        src="/tooltip2.png"
-                        className={styles.tooltip2}
-                      />
-                    </div>
-                  </div>
-                  <div className={styles.infocon}>
-                    <div className={styles.input}>
-                      <input
-                        required
-                        type="text"
-                        className={styles.textarea}
-                        placeholder="How did you hear about BSocial?"
-                      />
-                      <img
-                        alt="image"
-                        src="/info.png"
-                        className={styles.info}
-                      />
-                    </div>
-                  </div>
-
-                  <button
-                    name="btn"
-                    onClick={() => {
-                      setpage(1);
-                      setShowModal2(false);
-                      setShowModal3(true);
-                    }}
-                    className={styles.btn}
-                  >
-                    Done
-                  </button>
-                  <text
-                    onClick={() => {
-                      setpage(1);
-                      setShowModal2(false);
-                    }}
-                    className={styles.close}
-                  >
-                    close
-                  </text>
-                </div>
-              )}
-            </div>
-          </main>
+          <BrandModal
+            page={page}
+            onClose={() => {
+              setpage(1);
+              setShowModal2(false);
+            }}
+            onNext={() => {
+              setpage(page + 1);
+            }}
+            onBack={() => {
+              setpage(page - 1);
+            }}
+            onDone={() => {
+              setpage(1);
+            }}
+          />
         ) : null}
 
         {showModal3 ? (
@@ -1181,7 +974,11 @@ export default function Privacy() {
             </div> */}
 
               <text className={styles.modaltextc}>
-                <img alt="image" className={styles.emojicrown} src="/crown.png" />
+                <img
+                  alt="image"
+                  className={styles.emojicrown}
+                  src="/crown.png"
+                />
                 Congratulations &#127881;
               </text>
               <text className={styles.modaltext2c}>
@@ -1215,7 +1012,8 @@ export default function Privacy() {
               <div className={styles.rlink}>
                 <div className={styles.http}>https://</div>
                 <text>joinb.social/invite/{refCode}</text>
-                <img alt="image"
+                <img
+                  alt="image"
                   onClick={() => {
                     navigator.clipboard.writeText(
                       "https://joinb.social/invite/" + refCode
@@ -1226,7 +1024,8 @@ export default function Privacy() {
                 />
               </div>
 
-              <button name="btn"
+              <button
+                name="btn"
                 onClick={() => {
                   setpage(2);
                 }}

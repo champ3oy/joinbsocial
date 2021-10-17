@@ -979,6 +979,9 @@
   /* background-color: #16f5ca; */
   padding-top: 120px;
 }
+.modalrightm {
+  display: none;
+}
 .input {
   width: 404px;
   height: 78px;
@@ -5981,12 +5984,16 @@
     display: flex;
     flex-direction: column;
   }
-  .modalright {
+
+  .modalrightm,  .modalright {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     padding-top: 10px;
+  }
+  .modalright {
+    display: none
   }
   .input {
     width: 100%;
@@ -7535,7 +7542,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-top: 90px;
+    padding-top: 190px;
   }
   .p3 {
     width: 100px;
@@ -7598,6 +7605,9 @@
     text-align: center;
   }
   .modalright {
+    display: none
+  }
+  .modalrightm {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7861,7 +7871,7 @@
 /* G4 and S6 */
 @media only screen and (max-width: 360px) and (max-height: 640px) {
   .modalb {
-    padding-top: 110px;
+    padding-top: 40px;
   }
   .hero3,
   .hero2 {
