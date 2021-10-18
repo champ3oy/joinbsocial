@@ -16,7 +16,7 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
             <text className={` ${styles.modaltext} ${styles.modaltextb}`}>
               Get your superfans and <br />
               other influencers to promote <br />
-              your band.
+              your brand.
             </text>
             <text className={` ${styles.modaltextm} ${styles.modaltextbm}`}>
               Get your <br />

@@ -22,7 +22,7 @@ export default function BrandSignup({ page, onClose, onNext, onDone, onBack }) {
             <text className={` ${styles.modaltext} ${styles.modaltextb}`}>
               Get your superfans and <br />
               other influencers to promote <br />
-              your band.
+              your brand.
             </text>
             <text className={styles.modaltext2}>
               Increase your brand equity by setting up brand challenges in
@@ -411,45 +411,3 @@ export default function BrandSignup({ page, onClose, onNext, onDone, onBack }) {
     </>
   );
 }
-
-<div className={styles.modalrightm}>
-  {/* <div className={styles.pagination}>1 of 3</div> */}
-  <input type="text" className={styles.input} placeholder={`Your name`} />
-  <div className={styles.input}>
-    <textarea
-      type="text"
-      className={styles.textarea}
-      placeholder={`What is the name of the product or brand you \nwant to promote? `}
-    />
-  </div>
-
-  <input
-    type="text"
-    className={styles.input}
-    placeholder={`What is your email address? `}
-  />
-
-  <input
-    type="text"
-    className={styles.input}
-    placeholder="What is your phone number?"
-  />
-  <button
-    name="btn"
-    onClick={() => {
-      onDone();
-      setShowModal3(true);
-    }}
-    className={styles.btn}
-  >
-    Done
-  </button>
-  <text
-    onClick={() => {
-      onClose();
-    }}
-    className={styles.close}
-  >
-    close
-  </text>
-</div>;
