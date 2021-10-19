@@ -103,7 +103,7 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
               />
 
               <label className={styles.label}>
-                What is your email address? or Email address to be associated to
+                What is your email address? or email address to be associated to
                 this brand promotion?
                 <span
                   style={{
@@ -211,7 +211,7 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
               />
 
               <label className={styles.label}>
-                We charge based on the number of video responses, Clicks and
+                We charge based on the number of video responses, clicks and
                 views your brand challenge receives. How much do you want to pay
                 for each method?
                 <span

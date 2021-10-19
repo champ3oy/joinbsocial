@@ -87,12 +87,12 @@ export default function Home() {
                   setShowModal2(true);
                   ga.event({
                     action: "open popup",
-                    params: "sign up as brand",
+                    params: "Sign up as a brand",
                   });
                 }}
                 className={styles.joinBtn}
               >
-                Sign up as brand &#127881;
+                Sign up as a brand &#127881;
               </text>
               <div
                 className={styles.joinBtn}
@@ -193,14 +193,14 @@ export default function Home() {
                   and brands in the B.Social app & in other social apps. The
                   more views your content receives the higher the
                   <br />
-                  revenue you get.
+                  revenues you get.
                 </text>
                 <text className={`${styles.heroSubTextm}`}>
                   As a creator or influencer, you can make <br />
                   sustainable incomes from promoting your favorite <br />
                   products and brands in the B.Social app & in other <br />
                   social apps. The more views your contact receives the <br />
-                  higher the revenue you get.
+                  higher the revenues you get.
                 </text>
 
                 <div
@@ -467,15 +467,15 @@ export default function Home() {
                 </text>
                 <text className={`${styles.heroSubText}`}>
                   Get more engaged customers to your brand by setting up brand
-                  challenges in <br />
-                  B.Social. Influencers and superfans create content to promote
+                  challenges. In <br />
+                  B.Social influencers and superfans create content to promote
                   your products & brand.
                   <br />
                   Your brand could go viral on social media, you know!
                 </text>
                 <text className={`${styles.heroSubTextm}`}>
                   Get more engaged customers to your brand by <br />
-                  setting up brand challenges in B.Social. Influencers <br />
+                  setting up brand challenges. In B.Social influencers <br />
                   and superfans create content to promote your products & <br />
                   brand. Your brand could go viral on social media, you know!
                 </text>
@@ -485,12 +485,12 @@ export default function Home() {
                     setShowModal2(true);
                     ga.event({
                       action: "open popup",
-                      params: "sign up as brand",
+                      params: "Sign up as a brand",
                     });
                   }}
                   className={styles.joinBtn2}
                 >
-                  Sign up as brand &#127881;
+                  Sign up as a brand &#127881;
                 </div>
                 <Link href="/leaderboard">
                   <a className={styles.lblink}>
@@ -505,7 +505,7 @@ export default function Home() {
         <main className={`${styles.content1} ${styles.section}`}>
           <div className={styles.content1Left} data-aos="fade-up">
             <img alt="image" className={styles.emoji5} src="/hand.png" />
-            <text className={styles.challenge}>#challenge</text>
+            <text className={styles.challenge}>#BattleChallenge</text>
             <text className={styles.content1Text}>
               Create <br />
               moments <br />
@@ -635,20 +635,20 @@ export default function Home() {
             <text
               className={`${styles.content2Subtext} ${styles.content1Subtext2}`}
             >
-              Let your friends know you got them, by checking <br />
+              Let your friends know you got them by checking <br />
               in with them. Follow your friends updates and do not
               <br />
               miss out on their exciting life milestones &
               <br />
-              celebration
+              celebrations
             </text>
             <text
               className={`${styles.content2Subtextm} ${styles.content1Subtext2}`}
             >
-              Let your friends know you got them, <br />
+              Let your friends know you got them <br />
               by checking in with them. Follow your <br />
               friendsupdates and do not miss out on <br />
-              their exciting life milestones <br />& celebration
+              their exciting life milestones <br />& celebrations
             </text>
 
             <div

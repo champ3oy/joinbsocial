@@ -211,7 +211,7 @@ export default function Top10(props) {
                   <div className={styles.listitem} key={item._id}>
                     <div className={styles.listitemleft}>
                       <div className={styles.imgborder}>
-                        <img />
+                        <img src={item.avatar} alt="avata" />
                       </div>
                       <div className={styles.midtext}>
                         <text className={styles.name}>{item.name}</text>

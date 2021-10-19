@@ -54,12 +54,12 @@ export default function VerifyUser() {
                 setShowModal2(true);
                 ga.event({
                   action: "open popup",
-                  params: "sign up as brand",
+                  params: "Sign up as a brand",
                 });
               }}
               className={styles.joinBtn}
             >
-              Sign up as brand &#127881;
+              Sign up as a brand &#127881;
             </text>
             <div
               className={styles.joinBtn}

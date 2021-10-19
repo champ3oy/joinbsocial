@@ -292,9 +292,16 @@ export default function Leaderboard() {
             >
               Get on the leaderboard &#127881;
             </div>
-            <Link href="/leaderboard">
-              <a className={styles.textBtnm}>Checkout the record &#127881;</a>
-            </Link>
+            <div
+              style={{ marginTop: 20 }}
+              onClick={() => {
+                setShowModal5(true)
+              }}
+            >
+              <a className={styles.textBtnw}>
+                Check where you are on the waitlist &#127881;
+              </a>
+            </div>
           </main>
         ) : null}
 

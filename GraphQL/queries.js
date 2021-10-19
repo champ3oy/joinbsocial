@@ -6,6 +6,7 @@ export const RANKED_USERS = gql`
       _id
       name
       invitedUsers
+      avatar
     }
   }
 `;
