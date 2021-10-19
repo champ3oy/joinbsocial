@@ -43,7 +43,7 @@ export default function PositionModals(props) {
       <input
         className={styles.rankinput}
         type="text"
-        placeholder="Enter your name or email here"
+        placeholder="Enter your email"
         onChange={(e) => {
           setEmail(e.target.value);
         }}

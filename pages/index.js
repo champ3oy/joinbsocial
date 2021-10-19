@@ -747,7 +747,7 @@ export default function Home() {
             <img alt="image" className={styles.nike} src="/adidas.png" />
             <img alt="image" className={styles.adidas} src="/nike.png" />
             <div className={styles.col}>
-              <text className={styles.views2}>@allisk8s_</text>
+              <text className={styles.views2}>@thatboyhailu</text>
               <text className={styles.hashtag2}>24k Views &#129310;</text>
             </div>
             <div className={styles.float4} data-aos="fade-up">

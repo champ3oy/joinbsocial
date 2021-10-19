@@ -1,4 +1,4 @@
-import Head from "../components/Head"
+import Head from "../components/Head";
 import styles from "../styles/Verify.module.css";
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
@@ -35,7 +35,7 @@ export default function VerifyUser() {
   return (
     <ApolloProvider client={client}>
       <div className={styles.container}>
-      <Head title="Welcome" />
+        <Head title="Welcome" />
 
         <nav className={styles.nav}>
           <Link href="/">
