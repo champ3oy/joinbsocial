@@ -128,7 +128,7 @@ export default function VerifyUser() {
                 </text>
               </div>
 
-              <img alt="image" src="/line.svg" className={styles.line} />
+              <img alt="image" src="/line.png" className={styles.line} />
 
               <UserForm
                 onDone={(data) => {
@@ -180,7 +180,7 @@ export default function VerifyUser() {
                 </text>
               </div>
 
-              <img alt="image" src="/line.svg" className={styles.line} />
+              <img alt="image" src="/line.png" className={styles.line} />
 
               {page == 1 ? (
                 <div className={styles.modalright}>

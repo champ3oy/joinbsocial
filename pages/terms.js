@@ -680,7 +680,7 @@ export default function Leaderboard() {
                 </text>
               </div>
 
-              <img alt="image" src="/line.svg" className={styles.line} />
+              <img alt="image" src="/line.png" className={styles.line} />
 
               <UserForm
                 onDone={(data) => {

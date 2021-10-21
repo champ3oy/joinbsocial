@@ -935,7 +935,7 @@ export default function Privacy() {
                   winning souvenirs and other goodies from the BSocial team.
                 </text>
               </div>
-              <img alt="image" src="/line.svg" className={styles.line} />
+              <img alt="image" src="/line.png" className={styles.line} />
               <UserForm
                 onDone={(data) => {
                   setrefCode(data?.RegisterWaitListUser?.referralCode);

@@ -5165,7 +5165,7 @@
     font-weight: 500;
     margin-top: 20px;
     line-height: 18px;
-    text-align: justify;
+    text-align: center;
     letter-spacing: 0px;
     /* background-color: red; */
     width: 100%;
@@ -5341,7 +5341,7 @@
   }
   .views2 {
     color: white;
-    font-size: 19px;
+    font-size: 15px;
     font-weight: 900;
   }
   .homie {

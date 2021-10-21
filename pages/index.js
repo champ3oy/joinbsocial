@@ -115,7 +115,7 @@ export default function Home() {
             infinite={true}
             showArrows={false}
             showStatus={false}
-            autoPlaySpeed={10000}
+            autoPlaySpeed={15000}
             showDots={true}
             swipeable={true}
             arrows={false}
@@ -949,7 +949,7 @@ export default function Home() {
                   winning souvenirs and other goodies from the BSocial team.
                 </text>
               </div>
-              <img alt="image" src="/line.svg" className={styles.line} />
+              <img alt="image" src="/line.png" className={styles.line} />
               <UserForm
                 onDone={(data) => {
                   setrefCode(data?.RegisterWaitListUser?.referralCode);
