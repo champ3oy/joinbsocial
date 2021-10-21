@@ -5995,7 +5995,7 @@
     padding-top: 10px;
   }
   .modalright {
-    display: none
+    /* display: none */
   }
   .input {
     width: 100%;
@@ -7607,7 +7607,7 @@
     text-align: center;
   }
   .modalright {
-    display: none
+    /* display: none */
   }
   .modalrightm {
     display: flex;
