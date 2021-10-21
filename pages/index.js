@@ -115,7 +115,7 @@ export default function Home() {
             infinite={true}
             showArrows={false}
             showStatus={false}
-            autoPlaySpeed={5000}
+            autoPlaySpeed={10000}
             showDots={true}
             swipeable={true}
             arrows={false}
@@ -818,7 +818,7 @@ export default function Home() {
                 <img
                   alt="image"
                   className={styles.floatImg}
-                  src="/float2.png"
+                  src="/float3.png"
                 />
                 <text className={styles.floatText8}>#Challenge</text>
               </div>
@@ -937,9 +937,9 @@ export default function Home() {
               </div>
               <div className={styles.modalleft}>
                 <text className={styles.modaltext}>
-                  Let&apos;s be in <br />
-                  the moment <br />
-                  together
+                  Sign up, <br />
+                  Refer and <br />
+                  Win
                 </text>
                 <text className={styles.modaltext2}>
                   Sign up to be on the exclusive group of early access users.

@@ -5052,7 +5052,7 @@
     color: white;
     letter-spacing: -2px;
     line-height: 44px;
-    text-align: center;
+
   }
   .heroSubText {
     display: none;
@@ -5063,7 +5063,7 @@
     color: white;
     letter-spacing: 0px;
     line-height: 18px;
-    text-align: center;
+    text-align: justify;
     font-weight: 500;
     margin-top: 20px;
   }
@@ -5165,8 +5165,10 @@
     font-weight: 500;
     margin-top: 20px;
     line-height: 18px;
-    text-align: center;
+    text-align: justify;
     letter-spacing: 0px;
+    /* background-color: red; */
+    width: 100%;
   }
   .joinBtn3 {
     width: 170px;

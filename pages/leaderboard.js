@@ -160,9 +160,9 @@ export default function Leaderboard() {
               </div>
               <div className={styles.modalleft}>
                 <text className={styles.modaltext}>
-                  Let&apos;s be in <br />
-                  the moment <br />
-                  together
+                 Sign up, <br />
+                  Refer and <br />
+                  win
                 </text>
                 <text className={styles.modaltext2}>
                   Sign up to be on the exclusive group of early access users.
