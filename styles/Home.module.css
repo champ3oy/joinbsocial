@@ -1465,6 +1465,10 @@
     transform: scale(1);
   }
 }
+.more {
+  color: #7f46ff;
+  cursor: pointer
+}
 
 /* 1600 screen */
 @media only screen and (max-width: 1600px) {
@@ -5983,8 +5987,8 @@
     z-index: 999;
     margin-top: 10px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
+    display: inline;
+    /* flex-direction: row; */
   }
 
   .modalrightm,  .modalright {
