@@ -21,7 +21,7 @@ const client = new ApolloClient({
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
-  const [showModal3, setShowModal3] = useState(true);
+  const [showModal3, setShowModal3] = useState(false);
   const [page, setpage] = useState(1);
   const [refCode, setrefCode] = useState("");
   const router = useRouter();
