@@ -1025,7 +1025,7 @@ export default function Privacy() {
                   alt="image"
                   onClick={() => {
                     navigator.clipboard.writeText(
-                      "https://joinb.social/invite/" + refCode
+                     "https://joinb.social/?referralCode=" + refCode
                     );
                   }}
                   className={styles.copy}

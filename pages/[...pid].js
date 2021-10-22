@@ -28,7 +28,7 @@ export default function Home() {
   const [page2, setpage2] = useState(1);
   const [refCode, setrefCode] = useState("");
   const router = useRouter();
-  const { pid } = router.query;
+  const { referralCode, pid } = router.query;
 
   useEffect(() => {
     AOS.init({
@@ -36,11 +36,12 @@ export default function Home() {
     });
 
     if (pid) {
-      console.log(pid[0], pid[1]);
+      console.log(pid[0], referralCode);
       if (pid[0] == "brand") {
         setShowModal4(true);
       }
-      if (pid[1] !== undefined) {
+      if (referralCode !== undefined) {
+        console.log(referralCode)
         setShowModal(true);
         ga.event({
           action: "open popup",
@@ -1051,12 +1052,12 @@ export default function Home() {
 
               <div className={styles.rlink}>
                 <div className={styles.http}>https://</div>
-                <text>joinb.ssocial/invite/{refCode}</text>
+                <text>https://joinb.social/?referralCode={refCode}</text>
                 <img
                   alt="image"
                   onClick={() => {
                     navigator.clipboard.writeText(
-                      "https://joinb.social/invite/" + refCode
+                     "https://joinb.social/?referralCode=" + refCode
                     );
                   }}
                   className={styles.copy}
@@ -1071,7 +1072,7 @@ export default function Home() {
                     navigator
                       .share({
                         title: "B.Social",
-                        url: "https://joinb.social/invite/" + refCode,
+                        url:"https://joinb.social/?referralCode=" + refCode,
                       })
                       .then(() => {
                         console.log("Thanks for sharing!");

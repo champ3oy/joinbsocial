@@ -11,6 +11,7 @@ import Marquee from "react-fast-marquee";
 import Head from "../components/Head";
 import BrandModal from "../components/BrandModal";
 import * as ga from "../lib/ga";
+import { useRouter } from "next/router";
 
 const client = new ApolloClient({
   uri: "https://api.joinb.social/graphql",
@@ -23,12 +24,25 @@ export default function Home() {
   const [showModal3, setShowModal3] = useState(false);
   const [page, setpage] = useState(1);
   const [refCode, setrefCode] = useState("");
+  const router = useRouter();
+  const { referralCode, pid } = router.query;
 
   useEffect(() => {
     AOS.init({
       offset: 100,
     });
-  }, []);
+    // console.log("hey", referralCode);
+
+    if (referralCode !== undefined) {
+      // console.log(referralCode);
+      setrefCode(referralCode)
+      setShowModal(true);
+      ga.event({
+        action: "open popup",
+        params: "join waitlist",
+      });
+    }
+  }, [referralCode]);
 
   const responsive = {
     superLargeDesktop: {
@@ -959,6 +973,7 @@ export default function Home() {
                 onClose={() => {
                   setShowModal(false);
                 }}
+                refs={refCode}
               />
             </div>
           </main>
@@ -1035,12 +1050,12 @@ export default function Home() {
 
               <div className={styles.rlink}>
                 <div className={styles.http}>https://</div>
-                <text>joinb.ssocial/invite/{refCode}</text>
+                <text>https://joinb.social/?referralCode={refCode}</text>
                 <img
                   alt="image"
                   onClick={() => {
                     navigator.clipboard.writeText(
-                      "https://joinb.social/invite/" + refCode
+                     "https://joinb.social/?referralCode=" + refCode
                     );
                   }}
                   className={styles.copy}
@@ -1055,7 +1070,7 @@ export default function Home() {
                     navigator
                       .share({
                         title: "B.Social",
-                        url: "https://joinb.social/invite/" + refCode,
+                        url:"https://joinb.social/?referralCode=" + refCode,
                       })
                       .then(() => {
                         console.log("Thanks for sharing!");

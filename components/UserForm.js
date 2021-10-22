@@ -77,7 +77,7 @@ export default function UserForm(props) {
                 name: fullName,
                 email: email,
                 phone: phoneNumber,
-                referredByCode: props.pid ? props.pid : null,
+                referredByCode: props.refs ? props.refs : null,
               },
             }).catch(() => {
               if (error) {
