@@ -24,6 +24,7 @@ export default function VerifyUser() {
   const router = useRouter();
   const { verifyToken } = router.query;
   const [hide, setHide] = useState(false);
+  const [copied, setcopied] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -397,17 +398,34 @@ export default function VerifyUser() {
 
               <div className={styles.rlink}>
                 <div className={styles.http}>https://</div>
-                <text>https://joinb.social/?referralCode={refCode}</text>
-                <img
-                  alt="image"
-                  onClick={() => {
-                    navigator.clipboard.writeText(
-                     "https://joinb.social/?referralCode=" + refCode
-                    );
-                  }}
-                  className={styles.copy}
-                  src="/copy.png"
-                />
+                <text>joinb.social/?referralCode={refCode}</text>
+                {copied ? (
+                  <img
+                    alt="image"
+                    onClick={() => {
+                      navigator.clipboard.writeText(
+                        "https://joinb.social/?referralCode=" + refCode
+                      );
+                    }}
+                    className={styles.copied}
+                    src="/copied.png"
+                  />
+                ) : (
+                  <img
+                    alt="image"
+                    onClick={() => {
+                      setcopied(true)
+                      setTimeout(() => {
+                        setcopied(false)
+                      }, 5000)
+                      navigator.clipboard.writeText(
+                        "https://joinb.social/?referralCode=" + refCode
+                      );
+                    }}
+                    className={styles.copy}
+                    src="/copy.png"
+                  />
+                )}
               </div>
 
               <button

@@ -1259,6 +1259,11 @@
   height: 17px;
   margin-right: 15px;
 }
+.copied {
+  width: 17px;
+  height: 17px;
+  margin-right: 15px;
+}
 .modaltext2cm {
   display: none;
 }

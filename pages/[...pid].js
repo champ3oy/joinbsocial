@@ -30,6 +30,7 @@ export default function Home() {
   const [conToken, setconToken] = useState("");
   const router = useRouter();
   const { referralCode, pid } = router.query;
+  const [copied, setcopied] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -1057,17 +1058,34 @@ export default function Home() {
 
               <div className={styles.rlink}>
                 <div className={styles.http}>https://</div>
-                <text>https://joinb.social/?referralCode={refCode}</text>
-                <img
-                  alt="image"
-                  onClick={() => {
-                    navigator.clipboard.writeText(
-                      "https://joinb.social/?referralCode=" + refCode
-                    );
-                  }}
-                  className={styles.copy}
-                  src="/copy.png"
-                />
+                <text>joinb.social/?referralCode={refCode}</text>
+                {copied ? (
+                  <img
+                    alt="image"
+                    onClick={() => {
+                      navigator.clipboard.writeText(
+                        "https://joinb.social/?referralCode=" + refCode
+                      );
+                    }}
+                    className={styles.copied}
+                    src="/copied.png"
+                  />
+                ) : (
+                  <img
+                    alt="image"
+                    onClick={() => {
+                      setcopied(true)
+                      setTimeout(() => {
+                        setcopied(false)
+                      }, 5000)
+                      navigator.clipboard.writeText(
+                        "https://joinb.social/?referralCode=" + refCode
+                      );
+                    }}
+                    className={styles.copy}
+                    src="/copy.png"
+                  />
+                )}
               </div>
 
               <button
