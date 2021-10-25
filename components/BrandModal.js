@@ -6,19 +6,19 @@ import { BRAND_SIGNUP } from "../GraphQL/mutations";
 
 export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
   const [showModal3, setShowModal3] = useState(false);
-  const [productName, setproductName] = useState(null);
-  const [name, setname] = useState(null);
-  const [email, setemail] = useState(null);
-  const [phone, setphone] = useState(null);
-  const [totalBudget, settotalBudget] = useState(null);
-  const [spendPerDay, setspendPerDay] = useState(null);
-  const [cpvc, setcpvc] = useState(null);
-  const [cpc, setcpc] = useState(null);
-  const [cpv, setcpv] = useState(null);
-  const [requirements, setrequirements] = useState(null);
-  const [challengeExample, setchallengeExample] = useState(null);
+  const [productName, setproductName] = useState("");
+  const [name, setname] = useState("");
+  const [email, setemail] = useState("");
+  const [phone, setphone] = useState("");
+  const [totalBudget, settotalBudget] = useState("");
+  const [spendPerDay, setspendPerDay] = useState("");
+  const [cpvc, setcpvc] = useState("");
+  const [cpc, setcpc] = useState("");
+  const [cpv, setcpv] = useState("");
+  const [requirements, setrequirements] = useState("");
+  const [challengeExample, setchallengeExample] = useState("");
   const [approveAllEntires, setapproveAllEntires] = useState(true);
-  const [bsocialReferralSource, setbsocialReferralSource] = useState(null);
+  const [bsocialReferralSource, setbsocialReferralSource] = useState("");
   const [err, seterr] = useState("");
   const [showmodal, setmodal] = useState(false);
   const [BrandSignup, { data, loading, error }] = useMutation(BRAND_SIGNUP);
@@ -35,7 +35,7 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
       }
     }
     if (error) {
-      console.log(error)
+      console.log(error);
       seterr(error?.message);
       setmodal(true);
     } else {
@@ -145,7 +145,7 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
               }}
               className={styles.btn}
             >
-               {loading ? "Loading" : "Done"}
+              {loading ? "Loading" : "Done"}
             </button>
             <text
               onClick={() => {
@@ -237,7 +237,7 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
               />
 
               <label className={styles.label}>
-                What is your total budget for this brand challenge?
+                What is your total budget for this brand challenge?(USD)
                 <span
                   style={{
                     fontSize: 13,
@@ -252,9 +252,9 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
               </label>
               <input
                 required={true}
-                type="number"
+                type="text"
                 className={styles.input}
-                placeholder={`Type entry here`}
+                placeholder={`Type amount here`}
                 onChange={(e) => {
                   settotalBudget(e.target.value);
                 }}
@@ -290,7 +290,7 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
                 <img alt="image" src="/back2.png" />2 of 3
               </div>
               <label className={styles.label}>
-                How much do you want to spend per day?
+                How much do you want to spend per day?(USD)
                 <span
                   style={{
                     fontSize: 13,
@@ -305,9 +305,9 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
               </label>
               <input
                 required={true}
-                type="number"
+                type="text"
                 className={styles.input}
-                placeholder={`Type entry here`}
+                placeholder={`Type amount here`}
                 onChange={(e) => {
                   setspendPerDay(e.target.value);
                 }}
@@ -336,9 +336,9 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
                 </text>
                 <input
                   required={true}
-                  type="number"
+                  type="text"
                   className={styles.inputoption}
-                  placeholder={`Type amount here`}
+                  placeholder={`Type amount here(USD)`}
                   onChange={(e) => {
                     setcpvc(e.target.value);
                   }}
@@ -351,9 +351,9 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
                 </text>
                 <input
                   required={true}
-                  type="number"
+                  type="text"
                   className={styles.inputoption}
-                  placeholder={`Type amount here`}
+                  placeholder={`Type amount here(USD)`}
                   onChange={(e) => {
                     setcpc(e.target.value);
                   }}
@@ -366,9 +366,9 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
                 </text>
                 <input
                   required={true}
-                  type="number"
+                  type="text"
                   className={styles.inputoption}
-                  placeholder={`Type amount here`}
+                  placeholder={`Type amount here(USD)`}
                   onChange={(e) => {
                     setcpv(e.target.value);
                   }}
@@ -435,7 +435,7 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
               <label className={styles.label}>
                 Can you share examples of other challenges you liked in the
                 past?
-                <span
+                {/* <span
                   style={{
                     fontSize: 13,
                     color: "red",
@@ -445,13 +445,13 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
                 >
                   {" "}
                   *
-                </span>
+                </span> */}
               </label>
               <input
-                required={true}
+                // required={true}
                 type="text"
                 className={styles.input}
-                placeholder={`Type entry here`}
+                placeholder={`Type amount here`}
                 onChange={(e) => {
                   setchallengeExample(e.target.value);
                 }}
@@ -461,7 +461,7 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
               <label className={styles.label}>
                 Would you want to approve all entries from superfans and
                 influencers?
-                <span
+                {/* <span
                   style={{
                     fontSize: 13,
                     color: "red",
@@ -471,21 +471,29 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
                 >
                   {" "}
                   *
-                </span>
+                </span> */}
               </label>
-              <input
-                required={true}
-                type="text"
-                className={styles.input}
-                placeholder={`Yes/No`}
+              <select
+              style={{
+                paddingTop: 30
+              }}
+                className={`${styles.input}`}
+                name="approval"
                 onChange={(e) => {
                   setapproveAllEntires(e.target.value == "yes" ? true : false);
                 }}
-              />
+              >
+                <option className={`${styles.optionstext}`} value="yes">
+                  Yes
+                </option>
+                <option className={`${styles.optionstext}`} value="no">
+                  No
+                </option>
+              </select>
 
               <label className={styles.label}>
                 How did you hear about BSocial?
-                <span
+                {/* <span
                   style={{
                     fontSize: 13,
                     color: "red",
@@ -495,13 +503,13 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
                 >
                   {" "}
                   *
-                </span>
+                </span> */}
               </label>
               <input
-                required={true}
+                // required={true}
                 type="text"
                 className={styles.input}
-                placeholder={`Type entry here`}
+                placeholder={`Type amount here`}
                 onChange={(e) => {
                   setbsocialReferralSource(e.target.value);
                 }}

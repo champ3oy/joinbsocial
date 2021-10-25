@@ -189,7 +189,7 @@ export default function BrandSignup_({
                 required={true}
                 type="number"
                 className={styles.input}
-                placeholder={`Type entry here`}
+                placeholder={`Type amount here(USD)`}
                 onChange={(e) => {
                   settotalBudget(e.target.value);
                 }}
@@ -236,7 +236,7 @@ export default function BrandSignup_({
                 required={true}
                 type="number"
                 className={styles.input}
-                placeholder={`Type entry here`}
+                placeholder={`Type amount here(USD)`}
                 onChange={(e) => {
                   setspendPerDay(e.target.value);
                 }}
@@ -379,7 +379,7 @@ export default function BrandSignup_({
                 required={true}
                 type="number"
                 className={styles.input}
-                placeholder={`Type entry here`}
+                placeholder={`Type amount here(USD)`}
                 onChange={(e) => {
                   settotalBudget(e.target.value);
                 }}
@@ -388,7 +388,7 @@ export default function BrandSignup_({
               <label className={styles.label}>
                 Can you share examples of other challenges you liked in the
                 past?
-                <span
+                {/* <span
                   style={{
                     fontSize: 13,
                     color: "red",
@@ -398,13 +398,13 @@ export default function BrandSignup_({
                 >
                   {" "}
                   *
-                </span>
+                </span> */}
               </label>
               <input
-                required={true}
+                // required={true}
                 type="text"
                 className={styles.input}
-                placeholder={`Type entry here`}
+                placeholder={`Type amount here(USD)`}
                 onChange={(e) => {
                   setchallengeExample(e.target.value);
                 }}
@@ -414,7 +414,7 @@ export default function BrandSignup_({
               <label className={styles.label}>
                 Would you want to approve all entries from superfans and
                 influencers?
-                <span
+                {/* <span
                   style={{
                     fontSize: 13,
                     color: "red",
@@ -424,21 +424,29 @@ export default function BrandSignup_({
                 >
                   {" "}
                   *
-                </span>
+                </span> */}
               </label>
-              <input
-                required={true}
-                type="text"
-                className={styles.input}
-                placeholder={`Yes/No`}
+              <select
+              style={{
+                paddingTop: 30
+              }}
+                className={`${styles.input}`}
+                name="approval"
                 onChange={(e) => {
                   setapproveAllEntires(e.target.value == "yes" ? true : false);
                 }}
-              />
+              >
+                <option className={`${styles.optionstext}`} value="yes">
+                  Yes
+                </option>
+                <option className={`${styles.optionstext}`} value="no">
+                  No
+                </option>
+              </select>
 
               <label className={styles.label}>
                 How did you hear about BSocial?
-                <span
+                {/* <span
                   style={{
                     fontSize: 13,
                     color: "red",
@@ -448,13 +456,13 @@ export default function BrandSignup_({
                 >
                   {" "}
                   *
-                </span>
+                </span> */}
               </label>
               <input
-                required={true}
+                // required={true}
                 type="text"
                 className={styles.input}
-                placeholder={`Type entry here`}
+                placeholder={`Type amount here(USD)`}
                 onChange={(e) => {
                   setbsocialReferralSource(e.target.value);
                 }}

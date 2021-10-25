@@ -144,7 +144,6 @@
   margin-top: 20px;
   width: 83%;
 }
-
 .modalright {
   display: flex;
   flex-direction: column;
@@ -166,7 +165,7 @@
   font-size: 15px;
   font-weight: 800;
   outline: none;
-  color: #b5b1b1;
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -491,14 +490,16 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 20px;
+  padding-right: 20px;
 }
 .optiontext {
   color: #7f46ff;
   font-size: 15px;
   font-weight: 800;
   width: 40%;
+  height: 40px;
 }
 .inputoption {
   width: 60%;
@@ -623,7 +624,7 @@
     font-size: 15px;
     font-weight: 800;
     outline: none;
-    color: #b5b1b1;
+    color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -650,7 +651,7 @@
     font-size: 15px;
     font-weight: 800;
     outline: none;
-    color: #b5b1b1;
+    color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -886,7 +887,6 @@
     margin-top: 20px;
     width: 83%;
   }
-
   .modalright {
     display: flex;
     flex-direction: column;
@@ -908,7 +908,7 @@
     font-size: 15px;
     font-weight: 800;
     outline: none;
-    color: #b5b1b1;
+    color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -935,7 +935,7 @@
     font-size: 15px;
     font-weight: 800;
     outline: none;
-    color: #b5b1b1;
+    color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
