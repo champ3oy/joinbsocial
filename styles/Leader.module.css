@@ -832,6 +832,10 @@
   font-size: 22px;
   font-weight: 600;
 }
+.more {
+  color: #7f46ff;
+  cursor: pointer
+}
 
 @media only screen and (max-width: 1600px) {
   .modalc {

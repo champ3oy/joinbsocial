@@ -1,8 +1,48 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/Brand.module.css";
+import modal from "../styles/Modal.module.css";
+import { useMutation } from "@apollo/client";
+import { BRAND_SIGNUP } from "../GraphQL/mutations";
 
 export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
   const [showModal3, setShowModal3] = useState(false);
+  const [productName, setproductName] = useState(null);
+  const [name, setname] = useState(null);
+  const [email, setemail] = useState(null);
+  const [phone, setphone] = useState(null);
+  const [totalBudget, settotalBudget] = useState(null);
+  const [spendPerDay, setspendPerDay] = useState(null);
+  const [cpvc, setcpvc] = useState(null);
+  const [cpc, setcpc] = useState(null);
+  const [cpv, setcpv] = useState(null);
+  const [requirements, setrequirements] = useState(null);
+  const [challengeExample, setchallengeExample] = useState(null);
+  const [approveAllEntires, setapproveAllEntires] = useState(true);
+  const [bsocialReferralSource, setbsocialReferralSource] = useState(null);
+  const [err, seterr] = useState("");
+  const [showmodal, setmodal] = useState(false);
+  const [BrandSignup, { data, loading, error }] = useMutation(BRAND_SIGNUP);
+
+  useEffect(() => {
+    if (data) {
+      console.log(data);
+      if (data.BrandSignup.status == "success") {
+        onDone(data);
+        setShowModal3(true);
+      } else {
+        seterr("Sorry an error occured, Please try again");
+        setmodal(true);
+      }
+    }
+    if (error) {
+      console.log(error)
+      seterr(error?.message);
+      setmodal(true);
+    } else {
+      setmodal(false);
+    }
+  }, [data, error]);
+
   return (
     <>
       <main
@@ -36,38 +76,76 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
           <div className={styles.modalrightm}>
             {/* <div className={styles.pagination}>1 of 3</div> */}
             <input
+              required={true}
               type="text"
               className={styles.input}
               placeholder={`Your name`}
+              onChange={(e) => {
+                setname(e.target.value);
+              }}
+              value={name}
             />
             <div className={styles.input}>
               <textarea
                 type="text"
                 className={styles.textaream}
                 placeholder={`What is the name of the product or brand you \nwant to promote? `}
+                onChange={(e) => {
+                  setproductName(e.target.value);
+                }}
+                value={productName}
               />
             </div>
 
             <input
-              type="text"
+              required={true}
+              type="email"
               className={styles.input}
               placeholder={`What is your email address? `}
+              onChange={(e) => {
+                setemail(e.target.value);
+              }}
+              value={email}
             />
 
             <input
-              type="text"
+              required={true}
+              type="tel"
               className={styles.input}
               placeholder="What is your phone number?"
+              onChange={(e) => {
+                setphone(e.target.value);
+              }}
+              value={phone}
             />
             <button
               name="btn"
               onClick={() => {
-                onDone();
-                setShowModal3(true);
+                try {
+                  BrandSignup({
+                    variables: {
+                      email: email,
+                      phone: phone,
+                      device: "mobile",
+                      productName: productName,
+                    },
+                  }).catch(() => {
+                    if (error) {
+                      seterr(error?.message);
+                      setmodal(true);
+                    } else {
+                      setmodal(false);
+                    }
+                  });
+                } catch {
+                  (e) => {
+                    console.log("error", e);
+                  };
+                }
               }}
               className={styles.btn}
             >
-              Done
+               {loading ? "Loading" : "Done"}
             </button>
             <text
               onClick={() => {
@@ -97,9 +175,14 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
                 </span>
               </label>
               <input
+                required={true}
                 type="text"
                 className={styles.input}
                 placeholder={`Type name here`}
+                onChange={(e) => {
+                  setproductName(e.target.value);
+                }}
+                value={productName}
               />
 
               <label className={styles.label}>
@@ -118,9 +201,14 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
                 </span>
               </label>
               <input
-                type="text"
+                required={true}
+                type="email"
                 className={styles.input}
                 placeholder={`Type email here`}
+                onChange={(e) => {
+                  setemail(e.target.value);
+                }}
+                value={email}
               />
 
               <label className={styles.label}>
@@ -138,9 +226,14 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
                 </span>
               </label>
               <input
-                type="text"
+                required={true}
+                type="tel"
                 className={styles.input}
                 placeholder={`Type your phone number`}
+                onChange={(e) => {
+                  setphone(e.target.value);
+                }}
+                value={phone}
               />
 
               <label className={styles.label}>
@@ -158,12 +251,18 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
                 </span>
               </label>
               <input
-                type="text"
+                required={true}
+                type="number"
                 className={styles.input}
-                placeholder={`Type email here`}
+                placeholder={`Type entry here`}
+                onChange={(e) => {
+                  settotalBudget(e.target.value);
+                }}
+                value={totalBudget}
               />
               <button
                 name="btn"
+                disabled={!productName && !email && !phone && !totalBudget}
                 onClick={() => {
                   onNext();
                 }}
@@ -205,9 +304,14 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
                 </span>
               </label>
               <input
-                type="text"
+                required={true}
+                type="number"
                 className={styles.input}
-                placeholder={`Type name here`}
+                placeholder={`Type entry here`}
+                onChange={(e) => {
+                  setspendPerDay(e.target.value);
+                }}
+                value={spendPerDay}
               />
 
               <label className={styles.label}>
@@ -231,9 +335,14 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
                   A. Target Cost Per Video Created(CPVC)
                 </text>
                 <input
-                  type="text"
+                  required={true}
+                  type="number"
                   className={styles.inputoption}
                   placeholder={`Type amount here`}
+                  onChange={(e) => {
+                    setcpvc(e.target.value);
+                  }}
+                  value={cpvc}
                 />
               </div>
               <div className={styles.options}>
@@ -241,9 +350,14 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
                   B. Target Cost Per Click (CPC)
                 </text>
                 <input
-                  type="text"
+                  required={true}
+                  type="number"
                   className={styles.inputoption}
                   placeholder={`Type amount here`}
+                  onChange={(e) => {
+                    setcpc(e.target.value);
+                  }}
+                  value={cpc}
                 />
               </div>
               <div className={styles.options}>
@@ -251,9 +365,14 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
                   C. Target Cost Per View (CPV)
                 </text>
                 <input
-                  type="text"
+                  required={true}
+                  type="number"
                   className={styles.inputoption}
                   placeholder={`Type amount here`}
+                  onChange={(e) => {
+                    setcpv(e.target.value);
+                  }}
+                  value={cpv}
                 />
               </div>
 
@@ -276,10 +395,17 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
                 type="text"
                 className={styles.textarea}
                 placeholder={`Type some challenge`}
+                onChange={(e) => {
+                  setrequirements(e.target.value);
+                }}
+                value={requirements}
               />
 
               <button
                 name="btn"
+                disabled={
+                  !spendPerDay && !cpvc && !cpc && !cpv && !requirements
+                }
                 onClick={() => {
                   onNext();
                 }}
@@ -322,9 +448,14 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
                 </span>
               </label>
               <input
+                required={true}
                 type="text"
                 className={styles.input}
-                placeholder={`Type here`}
+                placeholder={`Type entry here`}
+                onChange={(e) => {
+                  setchallengeExample(e.target.value);
+                }}
+                // value={challengeExample}
               />
 
               <label className={styles.label}>
@@ -343,9 +474,13 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
                 </span>
               </label>
               <input
+                required={true}
                 type="text"
                 className={styles.input}
-                placeholder={`Type here`}
+                placeholder={`Yes/No`}
+                onChange={(e) => {
+                  setapproveAllEntires(e.target.value == "yes" ? true : false);
+                }}
               />
 
               <label className={styles.label}>
@@ -363,20 +498,58 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
                 </span>
               </label>
               <input
+                required={true}
                 type="text"
                 className={styles.input}
-                placeholder={`Type here`}
+                placeholder={`Type entry here`}
+                onChange={(e) => {
+                  setbsocialReferralSource(e.target.value);
+                }}
+                // value={bsocialReferralSource}
               />
 
               <button
                 name="btn"
+                disabled={
+                  !challengeExample &&
+                  !bsocialReferralSource &&
+                  !approveAllEntires
+                }
                 onClick={() => {
-                  onDone();
-                  setShowModal3(true);
+                  try {
+                    BrandSignup({
+                      variables: {
+                        email: email,
+                        phone: phone,
+                        device: "web",
+                        productName: productName,
+                        totalBudget: totalBudget,
+                        spendPerDay: spendPerDay,
+                        cpvc: cpvc,
+                        cpc: cpc,
+                        cpv: cpv,
+                        requirements: requirements,
+                        challengeExample: challengeExample,
+                        bsocialReferralSource: bsocialReferralSource,
+                        approveAllEntires: approveAllEntires,
+                      },
+                    }).catch(() => {
+                      if (error) {
+                        seterr(error?.message);
+                        setmodal(true);
+                      } else {
+                        setmodal(false);
+                      }
+                    });
+                  } catch {
+                    (e) => {
+                      console.log("error", e);
+                    };
+                  }
                 }}
                 className={styles.btn}
               >
-                Done
+                {loading ? "Loading" : "Done"}
               </button>
               <text
                 onClick={() => {
@@ -391,6 +564,22 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
         </div>
       </main>
 
+      {showmodal ? (
+        <div className={modal.con}>
+          <div className={modal.modal}>
+            <text className={modal.title}>Error</text>
+            {/* <text className={modal.subtitle}>{err}</text> */}
+            <text
+              onClick={() => {
+                setmodal(false);
+              }}
+              className={modal.close}
+            >
+              close
+            </text>
+          </div>
+        </div>
+      ) : null}
       {showModal3 ? (
         <main
           data-aos="zoom-in"

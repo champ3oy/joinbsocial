@@ -20,6 +20,7 @@ export default function Leaderboard() {
   const [showModal3, setShowModal3] = useState(false);
   const [page, setpage] = useState(1);
   const [refCode, setrefCode] = useState("");
+  const [hide, setHide] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -740,34 +741,82 @@ export default function Leaderboard() {
                 Thank you for joining the BSocial Waitlist and Referral program.
                 You are in an exclusive group of users who will be among the
                 first to be invited into this awesome app when ready. BSocial
-                app is more fun when you have your friends in the app and so we
-                have created a unique link for you to invite your friends into
-                the Waitlist and Referral program. The more users you bring into
-                the program the higher you rank on the leaderboard.{" "}
-                <span style={{ color: "#939393" }}>
-                  You may earn many goodies from the BSocial team including
-                  swags, souvenirs and getting promoted and verified in the
-                  BSocial app and on BSocial’s social channels.
-                </span>
+                app is more fun when you have your friends in the app
+                {!hide ? <span className={styles.dots}>...</span> : null}{" "}
+                {!hide ? (
+                  <span
+                    onClick={() => {
+                      setHide(true);
+                    }}
+                    className={styles.more}
+                  >
+                    Learn More
+                  </span>
+                ) : null}
+                {hide ? (
+                  <span className={styles.hide}>
+                    and so we have created a unique link for you to invite your
+                    friends into the Waitlist and Referral program. The more
+                    users you bring into the program the higher you rank on the
+                    leaderboard.{" "}
+                    <span style={{ color: "#939393" }}>
+                      You may earn many goodies from the BSocial team including
+                      swags, souvenirs and getting promoted and verified in the
+                      BSocial app and on BSocial’s social channels.
+                    </span>
+                    <span
+                      onClick={() => {
+                        setHide(false);
+                      }}
+                      className={styles.more}
+                    >
+                      Learn Less
+                    </span>
+                  </span>
+                ) : null}
               </text>
               <text className={styles.modaltext2cm}>
                 Thank you for joining the BSocial Waitlist and Referral program.
                 You are in an exclusive group of users who will be among the
                 first to be invited into this awesome app when ready. BSocial
-                app is more fun when you have your friends in the app and so we
-                have created a unique link for you to invite your friends into
-                the Waitlist and Referral program. The more users you bring into
-                the program the higher you rank on the leaderboard.{" "}
-                <span style={{ color: "#939393" }}>
-                  You may earn many goodies from the BSocial team including
-                  swags, souvenirs and getting promoted and verified in the
-                  BSocial app and on BSocial’s social channels.
-                </span>
+                app is more fun when you have your friends in the app
+                {!hide ? <span className={styles.dots}>...</span> : null}{" "}
+                {!hide ? (
+                  <span
+                    onClick={() => {
+                      setHide(true);
+                    }}
+                    className={styles.more}
+                  >
+                    Learn More
+                  </span>
+                ) : null}
+                {hide ? (
+                  <span className={styles.hide}>
+                    and so we have created a unique link for you to invite your
+                    friends into the Waitlist and Referral program. The more
+                    users you bring into the program the higher you rank on the
+                    leaderboard.{" "}
+                    <span style={{ color: "#939393" }}>
+                      You may earn many goodies from the BSocial team including
+                      swags, souvenirs and getting promoted and verified in the
+                      BSocial app and on BSocial’s social channels.
+                    </span>
+                    <span
+                      onClick={() => {
+                        setHide(false);
+                      }}
+                      className={styles.more}
+                    >
+                      Learn Less
+                    </span>
+                  </span>
+                ) : null}
               </text>
 
               <div className={styles.rlink}>
                 <div className={styles.http}>https://</div>
-                <text>joinb.social/invite/{refCode}</text>
+                <text>https://joinb.social/?referralCode={refCode}</text>
                 <img
                   alt="image"
                   onClick={() => {

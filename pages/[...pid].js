@@ -27,6 +27,7 @@ export default function Home() {
   const [page, setpage] = useState(1);
   const [page2, setpage2] = useState(1);
   const [refCode, setrefCode] = useState("");
+  const [conToken, setconToken] = useState("");
   const router = useRouter();
   const { referralCode, pid } = router.query;
 
@@ -37,11 +38,15 @@ export default function Home() {
 
     if (pid) {
       console.log(pid[0], referralCode);
-      if (pid[0] == "brand") {
+      if (pid[0] == "brand-signup") {
+        if (pid[1]) {
+          console.log(pid[1])
+          setconToken(pid[1]);
+        }
         setShowModal4(true);
       }
       if (referralCode !== undefined) {
-        console.log(referralCode)
+        console.log(referralCode);
         setShowModal(true);
         ga.event({
           action: "open popup",
@@ -954,7 +959,7 @@ export default function Home() {
               </div>
               <div className={styles.modalleft}>
                 <text className={styles.modaltext}>
-                Sign up, <br />
+                  Sign up, <br />
                   Refer and <br />
                   Win
                 </text>
@@ -1057,7 +1062,7 @@ export default function Home() {
                   alt="image"
                   onClick={() => {
                     navigator.clipboard.writeText(
-                     "https://joinb.social/?referralCode=" + refCode
+                      "https://joinb.social/?referralCode=" + refCode
                     );
                   }}
                   className={styles.copy}
@@ -1072,7 +1077,7 @@ export default function Home() {
                     navigator
                       .share({
                         title: "B.Social",
-                        url:"https://joinb.social/?referralCode=" + refCode,
+                        url: "https://joinb.social/?referralCode=" + refCode,
                       })
                       .then(() => {
                         console.log("Thanks for sharing!");
@@ -1101,6 +1106,7 @@ export default function Home() {
 
         {showModal4 ? (
           <BrandSignup
+            conToken={conToken}
             page={page2}
             onClose={() => {
               setpage2(1);
