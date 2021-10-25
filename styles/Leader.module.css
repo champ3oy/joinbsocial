@@ -1066,7 +1066,7 @@
     font-size: 15px;
     font-weight: 600;
     outline: none;
-    color: #b5b1b1;
+    color: black;
   }
   .input::placeholder {
     color: #b5b1b1;
@@ -1655,7 +1655,7 @@
     font-size: 15px;
     font-weight: 600;
     outline: none;
-    color: #b5b1b1;
+    color: black;
   }
   .input::placeholder {
     color: #b5b1b1;
