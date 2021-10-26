@@ -73,6 +73,27 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
               social media, you know!
             </text>
           </div>
+          <div className={styles.modalleftbm}>
+            <text className={` ${styles.modaltext} ${styles.modaltextb}`}>
+              Get your superfans and <br />
+              other influencers to promote <br />
+              your brand.
+            </text>
+            <text className={` ${styles.modaltextm} ${styles.modaltextbm}`}>
+              Get your <br />
+              superfans <br />
+              and other <br />
+              influencers <br />
+              to promote <br />
+              your band.
+            </text>
+            <text className={styles.modaltext2}>
+              Increase your brand equity by setting up brand challenges in
+              BSocial. Pay influencers and your brand’s superfans to create
+              content to promote your products. Your brand could go viral on
+              social media, you know!
+            </text>
+          </div>
           <div className={styles.modalrightm}>
             {/* <div className={styles.pagination}>1 of 3</div> */}
             <input
