@@ -18,7 +18,7 @@ export default function Top10(props) {
 
   const Query2 = useQuery(RANKED_USERS, {
     variables: {
-      orderBy: "monthly",
+      orderBy: "alltime",
       limit: 100,
     },
   });
@@ -125,7 +125,7 @@ export default function Top10(props) {
                     </text>
                     <text
                       onClick={() => {
-                        setfilter("Monthly");
+                        setfilter("Yearly");
                         setShowModalfilter(false);
                       }}
                     >
@@ -133,7 +133,7 @@ export default function Top10(props) {
                     </text>
                     <text
                       onClick={() => {
-                        setfilter("Monthly");
+                        setfilter("Alltime");
                         setShowModalfilter(false);
                       }}
                     >
