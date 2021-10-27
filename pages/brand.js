@@ -29,22 +29,21 @@ export default function Home() {
   const [refCode, setrefCode] = useState("");
   const [conToken, setconToken] = useState("");
   const router = useRouter();
-  const { pid, brandToken } = router.query;
+  const { brandToken } = router.query;
   const [copied, setcopied] = useState(false);
 
   useEffect(() => {
     AOS.init({
       offset: 100,
     });
-    if (pid) {
-      // console.log(brandToken, pid[0]);
-      if (brandToken) {
-        // console.log(brandToken);
-        setconToken(brandToken);
-        setShowModal4(true);
-      }
+
+    // console.log(brandToken, pid[0]);
+    if (brandToken) {
+      // console.log(brandToken);
+      setconToken(brandToken);
+      setShowModal4(true);
     }
-  }, [brandToken, pid]);
+  }, [brandToken]);
 
   const responsive = {
     superLargeDesktop: {
