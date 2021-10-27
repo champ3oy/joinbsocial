@@ -29,33 +29,22 @@ export default function Home() {
   const [refCode, setrefCode] = useState("");
   const [conToken, setconToken] = useState("");
   const router = useRouter();
-  const { referralCode, pid } = router.query;
+  const { pid, brandToken } = router.query;
   const [copied, setcopied] = useState(false);
 
   useEffect(() => {
     AOS.init({
       offset: 100,
     });
-
     if (pid) {
-      console.log(pid[0], referralCode);
-      if (pid[0] == "brand-signup") {
-        if (pid[1]) {
-          console.log(pid[1])
-          setconToken(pid[1]);
-        }
+      // console.log(brandToken, pid[0]);
+      if (brandToken) {
+        // console.log(brandToken);
+        setconToken(brandToken);
         setShowModal4(true);
       }
-      if (referralCode !== undefined) {
-        console.log(referralCode);
-        setShowModal(true);
-        ga.event({
-          action: "open popup",
-          params: "join waitlist",
-        });
-      }
     }
-  }, [pid]);
+  }, [brandToken, pid]);
 
   const responsive = {
     superLargeDesktop: {
@@ -1074,10 +1063,10 @@ export default function Home() {
                   <img
                     alt="image"
                     onClick={() => {
-                      setcopied(true)
+                      setcopied(true);
                       setTimeout(() => {
-                        setcopied(false)
-                      }, 5000)
+                        setcopied(false);
+                      }, 5000);
                       navigator.clipboard.writeText(
                         "https://joinb.social/?referralCode=" + refCode
                       );
