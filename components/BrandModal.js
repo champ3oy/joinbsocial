@@ -530,7 +530,7 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
                 // required={true}
                 type="text"
                 className={styles.input}
-                placeholder={`Type amount here`}
+                placeholder={`Type entry here`}
                 onChange={(e) => {
                   setbsocialReferralSource(e.target.value);
                 }}

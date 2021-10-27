@@ -273,6 +273,9 @@
   color: red;
   z-index: 9999;
 }
+.btn2 {
+  display: none
+}
 .btn {
   width: 185px;
   height: 77px;
@@ -835,6 +838,11 @@
 .more {
   color: #7f46ff;
   cursor: pointer
+}
+.copied {
+  width: 17px;
+  height: 17px;
+  margin-right: 15px;
 }
 
 @media only screen and (max-width: 1600px) {
@@ -2426,6 +2434,21 @@
     cursor: pointer;
     margin-top: 10px;
   }
+  .btn2 {
+    width: 108px;
+    height: 45px;
+    border: 4px solid black;
+    border-radius: 50px;
+    background-color: #7f46ff;
+    color: white;
+    font-family: "Rubik";
+    font-weight: 900;
+    font-size: 16px;
+    box-shadow: black -5px 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+  }
   .close {
     color: #7f46ff;
     font-size: 16px;
@@ -2773,6 +2796,7 @@
     letter-spacing: -0.5px;
     margin-bottom: 20px;
     transform: scale(0.6);
+    display: none;
   }
   .http {
     color: white;

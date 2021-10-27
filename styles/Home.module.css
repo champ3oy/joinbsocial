@@ -5061,7 +5061,7 @@
     color: white;
     letter-spacing: -2px;
     line-height: 44px;
-
+    text-align: center;
   }
   .heroSubText {
     display: none;
@@ -5072,7 +5072,7 @@
     color: white;
     letter-spacing: 0px;
     line-height: 18px;
-    text-align: justify;
+    text-align: center;
     font-weight: 500;
     margin-top: 20px;
   }

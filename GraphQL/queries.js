@@ -15,6 +15,7 @@ export const GET_POSTION = gql`
   query ($id: String) {
     getMyRankNumberforWaitList(id: $id) {
       message
+      json
     }
   }
 `;

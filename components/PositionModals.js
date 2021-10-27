@@ -7,6 +7,7 @@ import { GET_POSTION } from "../GraphQL/queries";
 export default function PositionModals(props) {
   const [email, setEmail] = useState("");
   const [position, setposition] = useState("");
+  const [referral, setreferral] = useState("");
   const [showmodal, setmodal] = useState(false);
   const [err, seterr] = useState("");
 
@@ -19,6 +20,7 @@ export default function PositionModals(props) {
   useEffect(() => {
     if (data) {
       setposition(data.getMyRankNumberforWaitList.message);
+      setreferral(data.getMyRankNumberforWaitList.json.referralCode);
     }
   }, [data]);
 
@@ -51,7 +53,7 @@ export default function PositionModals(props) {
       <button
         onClick={() => {
           if (data && position) {
-            props.onDone(position);
+            props.onDone(position, referral);
           } else if (error) {
             seterr(error.message);
             setmodal(true);

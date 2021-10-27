@@ -162,7 +162,7 @@ export default function Leaderboard() {
               </div>
               <div className={styles.modalleft}>
                 <text className={styles.modaltext}>
-                 Sign up, <br />
+                  Sign up, <br />
                   Refer and <br />
                   win
                 </text>
@@ -305,10 +305,10 @@ export default function Leaderboard() {
                   <img
                     alt="image"
                     onClick={() => {
-                      setcopied(true)
+                      setcopied(true);
                       setTimeout(() => {
-                        setcopied(false)
-                      }, 5000)
+                        setcopied(false);
+                      }, 5000);
                       navigator.clipboard.writeText(
                         "https://joinb.social/?referralCode=" + refCode
                       );
@@ -321,8 +321,17 @@ export default function Leaderboard() {
 
               <button
                 name="btn"
-                onClick={() => {
-                  setpage(2);
+                onClick={async () => {
+                  const shareData = {
+                    title: "B.Social",
+                    text: "Join B.Social Waitlist",
+                    url: "https://joinb.social/?referralCode=" + refCode,
+                  };
+                  try {
+                    await navigator.share(shareData);
+                  } catch (err) {
+                    console.log(err);
+                  }
                 }}
                 className={styles.btn}
               >
@@ -362,7 +371,7 @@ export default function Leaderboard() {
             <div
               style={{ marginTop: 20 }}
               onClick={() => {
-                setShowModal5(true)
+                setShowModal5(true);
               }}
             >
               <a className={styles.textBtnw}>
@@ -400,8 +409,9 @@ export default function Leaderboard() {
               </text>
 
               <PositionModals
-                onDone={(position) => {
+                onDone={(position, referral) => {
                   setposition(position);
+                  setrefCode(referral);
                   setShowModal5(false);
                   setShowModal6(true);
                 }}
@@ -454,9 +464,55 @@ export default function Leaderboard() {
                 the waitlist!
               </text>
 
-              <button name="btn" className={styles.btn}>
+              <button
+                onClick={async () => {
+                  const shareData = {
+                    title: "B.Social",
+                    text: "Join B.Social Waitlist",
+                    url: "https://joinb.social/?referralCode=" + refCode,
+                  };
+                  try {
+                    await navigator.share(shareData);
+                  } catch (err) {
+                    console.log(err);
+                  }
+                }}
+                name="btn"
+                className={styles.btn2}
+              >
                 Share
               </button>
+              <div className={styles.rlink}>
+                <div className={styles.http}>https://</div>
+                <text>joinb.social/?referralCode={refCode}</text>
+                {copied ? (
+                  <img
+                    alt="image"
+                    onClick={() => {
+                      navigator.clipboard.writeText(
+                        "https://joinb.social/?referralCode=" + refCode
+                      );
+                    }}
+                    className={styles.copied}
+                    src="/copied.png"
+                  />
+                ) : (
+                  <img
+                    alt="image"
+                    onClick={() => {
+                      setcopied(true);
+                      setTimeout(() => {
+                        setcopied(false);
+                      }, 5000);
+                      navigator.clipboard.writeText(
+                        "https://joinb.social/?referralCode=" + refCode
+                      );
+                    }}
+                    className={styles.copy}
+                    src="/copy.png"
+                  />
+                )}
+              </div>
               <text
                 onClick={() => {
                   setShowModal6(false);

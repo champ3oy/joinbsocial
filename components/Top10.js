@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/Leader.module.css";
 import { useQuery } from "@apollo/client";
-import { RANKED_USERS, GET_TOTAL_NUMBER, GET_WAITLIST_NUMBER } from "../GraphQL/queries";
+import {
+  RANKED_USERS,
+  GET_TOTAL_NUMBER,
+  GET_WAITLIST_NUMBER,
+} from "../GraphQL/queries";
 
 export default function Top10(props) {
   const [showModalfilter, setShowModalfilter] = useState(false);
@@ -69,9 +73,9 @@ export default function Top10(props) {
         <main className={styles.referral}>
           <div className={styles.rleft}>
             <text className={styles.number2}>
-            {Query3.data
-              ? Query3?.data?.CountTotalReferredUsers?.message
-              : "00"}
+              {Query3.data
+                ? Query3?.data?.CountTotalReferredUsers?.message
+                : "00"}
             </text>
             <text className={styles.subtext2}>Total Number of Referral</text>
             <div
@@ -159,7 +163,9 @@ export default function Top10(props) {
                 ];
                 return (
                   <div
-                    className={`${styles.stick} ${colors[index]}`}
+                    className={`${styles.stick} ${
+                      colors[Math.floor(Math.random() * topTen.length)]
+                    }`}
                     key={item._id}
                   >
                     <div className={styles.stickleft}>
