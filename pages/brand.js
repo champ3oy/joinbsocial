@@ -482,15 +482,15 @@ export default function Home() {
                 </text>
                 <text className={`${styles.heroSubText}`}>
                   Get more engaged customers to your brand by setting up brand
-                  challenges in <br />
-                  B.Social. Influencers and superfans create content to promote
+                  challenges. In <br />
+                  B.Social, influencers and superfans create content to promote
                   your products & brand.
                   <br />
                   Your brand could go viral on social media, you know!
                 </text>
                 <text className={`${styles.heroSubTextm}`}>
                   Get more engaged customers to your brand by <br />
-                  setting up brand challenges in B.Social. Influencers <br />
+                  setting up brand challenges. In B.Social, influencers <br />
                   and superfans create content to promote your products & <br />
                   brand. Your brand could go viral on social media, you know!
                 </text>
