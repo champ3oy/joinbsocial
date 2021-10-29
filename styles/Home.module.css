@@ -2627,6 +2627,8 @@
     height: 500px;
     display: flex;
     position: relative;
+    transform: scale(1);
+    margin-left: 0;
   }
   .circle1 {
     width: 169px;
