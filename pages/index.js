@@ -47,9 +47,7 @@ export default function Home() {
       <button
         className={active ? styles.active : styles.inactive}
         onClick={() => onClick()}
-      >
-        {/* {React.Children.toArray(carouselItems)[index]} */}
-      </button>
+      />
     );
   };
 
@@ -66,7 +64,7 @@ export default function Home() {
           <img src="/logo2x.png" className={styles.logo} />
 
           <div className={styles.right}>
-            <text className={styles.textBtn}>Leaderboard</text>
+            <text href='/leaderboard' className={styles.textBtn}>Leaderboard</text>
             <text className={styles.textBtn}>About us</text>
             <text
               onClick={() => {
@@ -671,17 +669,20 @@ export default function Home() {
                   <img src="/arrow.svg" />2 of 2
                 </div>
                 <input
+                  required
                   type="text"
                   className={styles.input}
                   placeholder="What is your budget per day?"
                 />
 
                 <input
+                  required
                   type="text"
                   className={styles.input}
                   placeholder="Your target CPV(cost per view)?"
                 />
                 <input
+                  required
                   type="text"
                   className={styles.input}
                   placeholder="What are some of the challenges you want to do for your brand?"
