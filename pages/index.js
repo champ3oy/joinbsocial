@@ -1,12 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import $ from "jquery";
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -18,6 +16,42 @@ export default function Home() {
       offset: 100,
     });
   }, []);
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 1,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+
+  const CustomDot = ({ onClick, ...rest }) => {
+    const {
+      onMove,
+      index,
+      active,
+      carouselState: { currentSlide, deviceType },
+    } = rest;
+    const carouselItems = ["", "", ""];
+    return (
+      <button
+        className={active ? styles.active : styles.inactive}
+        onClick={() => onClick()}
+      >
+        {React.Children.toArray(carouselItems)[index]}
+      </button>
+    );
+  };
 
   return (
     <div className={styles.container}>
@@ -32,6 +66,7 @@ export default function Home() {
           <img src="/logo2x.png" className={styles.logo} />
 
           <div className={styles.right}>
+            <text className={styles.textBtn}>Leaderboard</text>
             <text className={styles.textBtn}>About us</text>
             <text
               onClick={() => {
@@ -53,12 +88,16 @@ export default function Home() {
         </nav>
 
         <Carousel
+          responsive={responsive}
           autoPlay={true}
-          infiniteLoop={true}
+          infinite={true}
           showArrows={false}
           showStatus={false}
-          interval={5000}
-          // showThumbs={false}
+          autoPlaySpeed={5000}
+          showDots={true}
+          swipeable={true}
+          arrows={false}
+          customDot={<CustomDot />}
         >
           <main id="herotext" className={styles.hero}>
             <div className={styles.heroContent} data-aos="zoom-in">
@@ -287,7 +326,7 @@ export default function Home() {
             Are you in an exciting moment or at an <br />
             incredibly exciting location with breathtaking <br />
             view? Then activate your reaction+ camera and <br />
-            share the excitement with your friends & followers
+            share the excitement with friends & followers
           </text>
           <div
             className={styles.joinBtn4}
@@ -329,11 +368,7 @@ export default function Home() {
 
         <div className={styles.circles}>
           <img className={styles.emoji9} src="/fire.png" data-aos="zoom-in" />
-          <img
-            className={styles.emoji10}
-            src="/confeti.png"
-            data-aos="zoom-in"
-          />
+
           <img className={styles.emoji11} src="/crown.png" data-aos="zoom-in" />
           <img
             src="/circle1.png"
@@ -350,11 +385,18 @@ export default function Home() {
             className={styles.circle3}
             data-aos="zoom-in"
           ></img>
-          <img
-            src="/circle4.png"
-            className={styles.circle4}
-            data-aos="zoom-in"
-          ></img>
+          <div>
+            <img
+              src="/circle4.png"
+              className={styles.circle4}
+              data-aos="zoom-in"
+            />
+            <img
+              className={styles.emoji10}
+              src="/confeti.png"
+              data-aos="zoom-in"
+            />
+          </div>
           <img
             src="/circle5.png"
             className={styles.circle5}
@@ -462,14 +504,15 @@ export default function Home() {
             Join the Waitlist &#127881;
           </div>
         </div>
-        <div className={styles.foot} data-aos="fade-up">
+        <div className={styles.foot}>
           <div className={styles.fleft}>
             <text>Terms</text>
             <text>Privacy</text>
           </div>
           {/* <img className={styles.fcenter} src="/california.png" /> */}
           <div className={styles.fcenter}>
-            &copy; 2021 BSocial. All rights reserved. contact@joinb.social
+            &copy; 2021 B.Social Inc. All rights reserved.
+            contactus@joinb.social
           </div>
           <div className={styles.fright}>
             <img src="/fb.png" className={styles.icon} />
@@ -554,15 +597,6 @@ export default function Home() {
           className={styles.modalcon}
         >
           <div className={styles.modalb}>
-            {/* <div className={styles.floatm1}>
-              <img className={styles.emoji122} src="/crown.png" />
-              <text className={styles.floatText61}>Update</text>
-            </div>
-            <div className={styles.floatm2}>
-              <img className={styles.emoji14} src="/fireball.png" />
-              <img className={styles.floatImg} src="/float2.png" />
-              <text className={styles.floatText71}>#Challenge</text>
-            </div> */}
             <div className={styles.floatm1b} style={{ marginTop: -60 }}>
               <img className={styles.emoji13} src="/fire.png" />
               <img className={styles.floatImg} src="/float2.png" />
@@ -578,12 +612,12 @@ export default function Home() {
                 your band.
               </text>
               <text className={styles.modaltext2}>
-                Get more engaged customers to your band <br />
-                by setting up brand challenge in B.Social. Influencers
+                Get more engaged customers to your brand by setting up <br />
+                brand challenge in B.Social. Influencers and superfans create
                 <br />
-                and superfans create content to promote your products <br />
-                & brand. Your brand could go viral on social media, <br />
-                you know!
+                content to promote your products & brand. Your brand could
+                <br />
+                go viral on social media, you know!
               </text>
             </div>
 
@@ -591,6 +625,7 @@ export default function Home() {
 
             {page == 1 ? (
               <div className={styles.modalright}>
+                <div className={styles.pagination}>1 of 2</div>
                 <input
                   type="text"
                   className={styles.input}
@@ -617,6 +652,7 @@ export default function Home() {
                 </button>
                 <text
                   onClick={() => {
+                    setpage(1);
                     setShowModal2(false);
                   }}
                   className={styles.close}
@@ -626,6 +662,14 @@ export default function Home() {
               </div>
             ) : (
               <div className={styles.modalright}>
+                <div
+                  className={styles.pagination}
+                  onClick={() => {
+                    setpage(1);
+                  }}
+                >
+                  <img src="/arrow.svg" />2 of 2
+                </div>
                 <input
                   type="text"
                   className={styles.input}
@@ -645,6 +689,7 @@ export default function Home() {
                 <button className={styles.btn}>Done</button>
                 <text
                   onClick={() => {
+                    setpage(1);
                     setShowModal2(false);
                   }}
                   className={styles.close}
