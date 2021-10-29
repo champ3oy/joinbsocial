@@ -48,7 +48,7 @@ export default function Home() {
         className={active ? styles.active : styles.inactive}
         onClick={() => onClick()}
       >
-        {React.Children.toArray(carouselItems)[index]}
+        {/* {React.Children.toArray(carouselItems)[index]} */}
       </button>
     );
   };
