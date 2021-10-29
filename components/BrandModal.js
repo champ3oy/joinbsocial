@@ -456,27 +456,15 @@ export default function BrandModal({ page, onClose, onNext, onDone, onBack }) {
               <label className={styles.label}>
                 Can you share examples of other challenges you liked in the
                 past?
-                {/* <span
-                  style={{
-                    fontSize: 13,
-                    color: "red",
-                    marginLeft: 3,
-                    marginTop: -3,
-                  }}
-                >
-                  {" "}
-                  *
-                </span> */}
               </label>
               <input
-                // required={true}
                 type="text"
                 className={styles.input}
-                placeholder={`Type amount here`}
+                placeholder={`Type entry here`}
                 onChange={(e) => {
                   setchallengeExample(e.target.value);
                 }}
-                // value={challengeExample}
+                value={challengeExample}
               />
 
               <label className={styles.label}>

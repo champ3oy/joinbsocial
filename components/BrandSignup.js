@@ -408,7 +408,7 @@ export default function BrandSignup_({
                 onChange={(e) => {
                   setchallengeExample(e.target.value);
                 }}
-                // value={challengeExample}
+                value={challengeExample}
               />
 
               <label className={styles.label}>
@@ -462,7 +462,7 @@ export default function BrandSignup_({
                 // required={true}
                 type="text"
                 className={styles.input}
-                placeholder={`Type amount here(USD)`}
+                placeholder={`Type entry here`}
                 onChange={(e) => {
                   setbsocialReferralSource(e.target.value);
                 }}
