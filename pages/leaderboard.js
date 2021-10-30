@@ -25,7 +25,12 @@ export default function Leaderboard() {
       </Head>
 
       <nav className={styles.nav}>
-        <img src="/logo2x.png" className={styles.logo} />
+        <div className={styles.brand}>
+          <Link href="/">
+            <img src="/back.png" className={styles.back} />
+          </Link>
+          <img src="/logo2.png" className={styles.logo} />
+        </div>
 
         <div className={styles.right}>
           <Link href="/leaderboard">
@@ -87,20 +92,27 @@ export default function Leaderboard() {
             <div className={styles.head}>
               <text className={styles.head1}>Top 5</text>
               <div className={styles.filter}>
-                <img />
+                <img src="/calender.png" />
                 <text>Weekly</text>
-                <img />
+                <img src="/arrow-down.png" className={styles.ad} />
               </div>
             </div>
-
-            <div className={styles.stick}>
-              <text className={styles.position}>1</text>
-              <div className={styles.midtext1}>
-                <text className={styles.name1}>Jeffery Afrane Adu-Donkor</text>
-                <text className={styles.emojis1}>1st on the rank</text>
-              </div>
-              <text className={styles.signups}>800 Sign ups</text>
-              <img />
+            <div className={styles.top5}>
+              {[1, 2, 3, 4, 5].map((item) => {
+                return (
+                  <div className={styles.stick}>
+                    <text className={styles.position}>{item}</text>
+                    <div className={styles.midtext1}>
+                      <text className={styles.name1}>
+                        Jeffery Afrane Adu-Donkor
+                      </text>
+                      <text className={styles.emojis1}>1st on the rank</text>
+                    </div>
+                    <text className={styles.signups}>800 Sign ups</text>
+                    <img src="/arrow-up.png" />
+                  </div>
+                );
+              })}
             </div>
           </div>
           <div className={styles.rright}>
@@ -109,19 +121,26 @@ export default function Leaderboard() {
             <div className={styles.tab}>
               <text>Everyone on ranking</text>
             </div>
-
-            <div className={styles.listitem}>
-              <div className={styles.imgborder}>
-                <img />
-              </div>
-              <div className={styles.midtext}>
-                <text className={styles.name}>Jeffery Afrane Adu-Donkor</text>
-                <text className={styles.emojis}>1st on the rank</text>
-              </div>
-              <div className={styles.rank}>
-                <img />
-                <text>70</text>
-              </div>
+            <div className={styles.ranklist}>
+              {[1, 2, 3, 4, 5, 6, 7, 8].map(() => {
+                return (
+                  <div className={styles.listitem}>
+                    <div className={styles.imgborder}>
+                      <img />
+                    </div>
+                    <div className={styles.midtext}>
+                      <text className={styles.name}>
+                        Jeffery Afrane Adu-Donkor
+                      </text>
+                      <text className={styles.emojis}>1st on the rank</text>
+                    </div>
+                    <div className={styles.rank}>
+                      <img src="/arrow-up2.png" />
+                      <text>70</text>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </main>
