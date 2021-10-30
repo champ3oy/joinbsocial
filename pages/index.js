@@ -64,8 +64,8 @@ export default function Home() {
           <img src="/logo2x.png" className={styles.logo} />
 
           <div className={styles.right}>
-            <text href='/leaderboard' className={styles.textBtn}>Leaderboard</text>
-            <text className={styles.textBtn}>About us</text>
+            <a href='/leaderboard' className={styles.textBtn}>Leaderboard</a>
+            <a className={styles.textBtn}>About us</a>
             <text
               onClick={() => {
                 setShowModal2(true);

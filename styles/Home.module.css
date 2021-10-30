@@ -83,6 +83,7 @@
   font-weight: 900;
   color: white;
   margin-right: 30px;
+  cursor: pointer;
 }
 .joinBtn {
   width: 243px;
