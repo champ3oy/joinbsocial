@@ -3,6 +3,7 @@ import styles from "../styles/Leader.module.css";
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from "next/link";
 
 export default function Leaderboard() {
   const [showModal, setShowModal] = useState(false);
@@ -27,10 +28,9 @@ export default function Leaderboard() {
         <img src="/logo2x.png" className={styles.logo} />
 
         <div className={styles.right}>
-          <a href="/leaderboard" className={styles.textBtn}>
-            Checkout the leaderboard &#127881;
-          </a>
-
+          <Link href="/leaderboard">
+            <a className={styles.textBtn}>Checkout the leaderboard &#127881;</a>
+          </Link>
           <div
             className={styles.joinBtn}
             onClick={() => {

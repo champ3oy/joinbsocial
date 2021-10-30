@@ -5,7 +5,7 @@ import "react-multi-carousel/lib/styles.css";
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Link from 'next/link'
+import Link from "next/link";
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -65,8 +65,12 @@ export default function Home() {
           <img src="/logo2x.png" className={styles.logo} />
 
           <div className={styles.right}>
-            <Link href='/leaderboard' className={styles.textBtn}>Leaderboard</Link>
-            <Link className={styles.textBtn}>About us</Link>
+            <Link href="/leaderboard" className={styles.textBtn}>
+              <a>Leaderboard</a>
+            </Link>
+            <Link href="/" className={styles.textBtn}>
+              <a>About us</a>
+            </Link>
             <text
               onClick={() => {
                 setShowModal2(true);
