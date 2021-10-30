@@ -65,11 +65,11 @@ export default function Home() {
           <img src="/logo2x.png" className={styles.logo} />
 
           <div className={styles.right}>
-            <Link href="/leaderboard" className={styles.textBtn}>
-              <a>Leaderboard</a>
+            <Link href="/leaderboard">
+              <a className={styles.textBtn}>Leaderboard</a>
             </Link>
-            <Link href="/" className={styles.textBtn}>
-              <a>About us</a>
+            <Link href="/">
+              <a className={styles.textBtn}>About us</a>
             </Link>
             <text
               onClick={() => {
