@@ -4393,10 +4393,10 @@
   }
   .heroTextm {
     display: flex;
-    font-size: 41px;
+    font-size: 50px;
     color: white;
     letter-spacing: -2px;
-    line-height: 41px;
+    line-height: 49px;
     text-align: center;
   }
   .heroSubText {
@@ -4404,12 +4404,12 @@
   }
   .heroSubTextm {
     display: flex;
-    font-size: 11px;
+    font-size: 15px;
     color: white;
     letter-spacing: 0px;
     line-height: 18px;
     text-align: center;
-    font-weight: 600;
+    font-weight: 400;
     margin-top: 20px;
   }
   .joinBtn2 {
@@ -4493,18 +4493,18 @@
     color: #ffcd00;
   }
   .content1Text {
-    font-size: 45px;
+    font-size: 59px;
     color: white;
-    line-height: 45px;
+    line-height: 55px;
     letter-spacing: -2px;
     text-align: center;
   }
   .content1Subtext {
-    font-size: 12px;
+    font-size: 16px;
     color: white;
-    font-weight: 500;
+    font-weight: 400;
     margin-top: 20px;
-    line-height: 15px;
+    line-height: 16px;
     text-align: center;
     letter-spacing: 0px;
   }
@@ -4606,13 +4606,13 @@
     margin-bottom: 10px;
   }
   .content2Text {
-    font-size: 45px;
+    font-size: 59px;
     color: white;
-    line-height: 45px;
+    line-height: 55px;
     letter-spacing: -2px;
   }
   .content2Subtext {
-    font-size: 12px;
+    font-size: 16px;
     color: white;
     font-weight: 400;
     margin-top: 20px;
@@ -4700,7 +4700,7 @@
     display: none;
   }
   .footerTextm {
-    font-size: 55px;
+    font-size: 59px;
     color: black;
     letter-spacing: -2px;
     line-height: 55px;
