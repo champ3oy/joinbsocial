@@ -459,9 +459,9 @@ export default function Home() {
             Promote <br />& Earn
           </text>
           <text className={`${styles.content2Subtext}`}>
-            Create a challenge with friends, invite <br />
-            them to participate and watch their <br />
-            creative juice flow
+            Select your favorite brand, create a #challenge <br/>
+            for it, promote across your social channels, amass <br/>
+            views and watch your revenue skyrocket!
           </text>
           <div
             className={`${styles.joinBtn4} ${styles.joinPromoteb}`}
