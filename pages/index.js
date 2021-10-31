@@ -10,6 +10,7 @@ import Link from "next/link";
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
+  const [showModal3, setShowModal3] = useState(false);
   const [page, setpage] = useState(1);
 
   useEffect(() => {
@@ -136,6 +137,12 @@ export default function Home() {
               >
                 Join the Waitlist &#127881;
               </div>
+
+              <Link href="/leaderboard">
+                <a className={styles.lblink}>
+                  Checkout the Waitlist Leaderboard
+                </a>
+              </Link>
             </div>
           </main>
           <main id="herotext" className={styles.hero2}>
@@ -176,6 +183,11 @@ export default function Home() {
               >
                 Join the Waitlist &#127881;
               </div>
+              <Link href="/leaderboard">
+                <a className={styles.lblink}>
+                  Checkout the Waitlist Leaderboard
+                </a>
+              </Link>
             </div>
           </main>
           <main id="herotext" className={styles.hero3}>
@@ -224,6 +236,11 @@ export default function Home() {
               >
                 Sign up as brand &#127881;
               </div>
+              <Link href="/leaderboard">
+                <a className={styles.lblink}>
+                  Checkout the Waitlist Leaderboard
+                </a>
+              </Link>
             </div>
           </main>
         </Carousel>
@@ -578,7 +595,15 @@ export default function Home() {
                 className={styles.input}
                 placeholder="Phone Number"
               />
-              <button className={styles.btn}>Done</button>
+              <button
+                onClick={() => {
+                  setShowModal(false);
+                  setShowModal3(true);
+                }}
+                className={styles.btn}
+              >
+                Done
+              </button>
               <text
                 onClick={() => {
                   setShowModal(false);
@@ -640,6 +665,7 @@ export default function Home() {
                   className={styles.input}
                   placeholder="What is your brand / product email?"
                 />
+
                 <input
                   type="text"
                   className={styles.input}
@@ -671,28 +697,49 @@ export default function Home() {
                     setpage(1);
                   }}
                 >
-                  <img src="/arrow.svg" />2 of 2
+                  <img src="/back2.png" />2 of 2
                 </div>
-                <input
-                  required
-                  type="text"
-                  className={styles.input}
-                  placeholder="What is your budget per day?"
-                />
+                <div className={styles.infocon}>
+                  <input
+                    required
+                    type="text"
+                    className={styles.input}
+                    placeholder="What is your budget per day?"
+                  />
+                  <img src="/info.png" className={styles.info} />
+                  <img src="/tooltip1.png" className={styles.tooltip1} />
+                </div>
 
-                <input
-                  required
-                  type="text"
-                  className={styles.input}
-                  placeholder="Your target CPV(cost per view)?"
-                />
-                <input
-                  required
-                  type="text"
-                  className={styles.input}
-                  placeholder="What are some of the challenges you want to do for your brand?"
-                />
-                <button className={styles.btn}>Done</button>
+                <div className={styles.infocon}>
+                  <input
+                    required
+                    type="text"
+                    className={styles.input}
+                    placeholder="Your target CPV(cost per view)?"
+                  />
+                  <img src="/info.png" className={styles.info2} />
+                  <img src="/tooltip2.png" className={styles.tooltip2} />
+                </div>
+                <div className={styles.infocon}>
+                  <input
+                    required
+                    type="text"
+                    className={styles.input}
+                    placeholder="What are some of the challenges you want to do for your brand?"
+                  />
+                  <img src="/info.png" className={styles.info} />
+                </div>
+
+                <button
+                  onClick={() => {
+                    setpage(1);
+                    setShowModal2(false);
+                    setShowModal3(true);
+                  }}
+                  className={styles.btn}
+                >
+                  Done
+                </button>
                 <text
                   onClick={() => {
                     setpage(1);
@@ -704,6 +751,70 @@ export default function Home() {
                 </text>
               </div>
             )}
+          </div>
+        </main>
+      ) : null}
+
+      {showModal3 ? (
+        <main
+          data-aos="zoom-in"
+          data-aos-offset="50"
+          data-aos-delay="10"
+          className={styles.modalcon}
+        >
+          <div className={styles.modalc}>
+            {/* <div className={styles.floatm1}>
+              <img className={styles.emoji122} src="/crown.png" />
+              <text className={styles.floatText61}>Update</text>
+            </div> */}
+
+            <text className={styles.modaltextc}>Congratulations &#127881;</text>
+            <text className={styles.modaltext2c}>
+              Thank you for joing the B.Social waitlist to the first people to
+              use an awesome app design and craft for you <br />
+              by you. To make it more funWe have created a unique for you to
+              help you invite more friends. The more <br />
+              you invite people you stand a chance to B.Social swags, promoted
+              in the app and on our your socials, get verified <br />
+              in the appAnd potential gain equities in B.Social App company
+            </text>
+            <text className={styles.modaltext2cm}>
+              Thank you for joing the B.Social waitlist to the <br />
+              first people to use an awesome app design and craft for you
+              <br />
+              by you. To make it more funWe have created a unique <br />
+              for you to help you invite more friends. The more
+              <br />
+              you invite people you stand a chance to B.Social swags, <br />
+              promoted in the app and on our your socials, get verified
+              <br />
+              in the appAnd potential gain equities in <br />
+              B.Social App company
+            </text>
+
+            <div className={styles.rlink}>
+              <div className={styles.http}>https://</div>
+              <text>join.social/invite/jeffery.afrane/other</text>
+              <img className={styles.copy} src="/copy.png" />
+            </div>
+
+            <button
+              onClick={() => {
+                setpage(2);
+              }}
+              className={styles.btn}
+            >
+              Share
+            </button>
+            <text
+              onClick={() => {
+                setpage(1);
+                setShowModal3(false);
+              }}
+              className={styles.close}
+            >
+              close
+            </text>
           </div>
         </main>
       ) : null}
