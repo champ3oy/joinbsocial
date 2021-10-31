@@ -1842,7 +1842,7 @@
     height: 83px;
     position: absolute;
     bottom: 60px;
-    right: -230px;
+    right: -160px;
     transform: rotate(0deg);
     z-index: 9;
   }
@@ -1850,8 +1850,8 @@
     width: 112px;
     height: 107px;
     position: absolute;
-    top: 130px;
-    right: -360px;
+    top: 140px;
+    right: -350px;
     transform: rotate(0deg);
     z-index: 9;
   }
