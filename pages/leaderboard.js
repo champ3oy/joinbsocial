@@ -9,7 +9,7 @@ export default function Leaderboard() {
   const [showModal, setShowModal] = useState(false);
   const [screen, setscreen] = useState("referral");
   const [showModal3, setShowModal3] = useState(false);
-  const [showModal4, setShowModal4] = useState(true);
+  const [showModal4, setShowModal4] = useState(false);
   const [page, setpage] = useState(1);
 
   useEffect(() => {
