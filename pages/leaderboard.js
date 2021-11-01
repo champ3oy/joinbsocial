@@ -115,7 +115,7 @@ export default function Leaderboard() {
             <div className={styles.top5}>
               {[1, 2, 3, 4, 5].map((item) => {
                 return (
-                  <div className={styles.stick}>
+                  <div className={styles.stick} key={item}>
                     <text className={styles.position}>{item}</text>
                     <div className={styles.midtext1}>
                       <text className={styles.name1}>
@@ -136,7 +136,7 @@ export default function Leaderboard() {
             <div className={styles.tab}>
               <text>Everyone on ranking</text>
             </div>
-            <div className={styles.ranklist}>
+            <div className={styles.ranklist} key={item}>
               {[1, 2, 3, 4, 5, 6, 7, 8].map(() => {
                 return (
                   <div className={styles.listitem}>
