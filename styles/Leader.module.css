@@ -619,6 +619,12 @@
   margin-right: 15px;
   visibility: hidden;
 }
+.menu {
+  display: none;
+}
+.menumodal {
+  display: none;
+}
 
 @media only screen and (max-width: 1600px) {
   .container {
@@ -1309,7 +1315,12 @@
     color: white;
     letter-spacing: -10px;
     margin-top: -70px;
-    background: linear-gradient(to right, #7f46ff 0%, #7f46ff 40%, #ff46b1 100%);
+    background: linear-gradient(
+      to right,
+      #7f46ff 0%,
+      #7f46ff 40%,
+      #ff46b1 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -1319,7 +1330,7 @@
     color: white;
     margin-bottom: 50px;
   }
-  
+
   .modalcon {
     width: 100vw;
     height: 100vh;
@@ -1331,7 +1342,6 @@
     justify-content: center;
     align-items: center;
     z-index: 9999;
-   
   }
   .modal {
     background-color: white;
@@ -1482,7 +1492,7 @@
   .close:hover {
     transform: scale(1.05);
   }
-  
+
   .emoji122 {
     width: 112px;
     height: 107px;
@@ -1510,7 +1520,7 @@
     transform: rotate(30deg);
     z-index: 9;
   }
-  
+
   .floatm1 {
     width: 141px;
     height: 48px;
@@ -1775,8 +1785,8 @@
     display: none;
   }
   .top5 {
-    -ms-overflow-style: none; 
-    scrollbar-width: none;  
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
   .ranklist {
     height: 70vh;
@@ -1787,8 +1797,8 @@
     display: none;
   }
   .ranklist {
-    -ms-overflow-style: none; 
-    scrollbar-width: none;  
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
 
@@ -1803,6 +1813,12 @@
     position: relative;
     overflow: scroll;
     overflow-y: scroll;
+  }
+  .menu {
+    display: flex;
+    width: 23px;
+    height: 16px;
+    cursor: pointer;
   }
   .nav {
     display: flex;
@@ -2435,4 +2451,49 @@
     width: 100%;
     background-color: rgba(0, 0, 0, 0.418);
   }
+  .menumodal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+.textBtnm {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  margin-right: 0px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.joinBtnm {
+  width: 254.9px;
+  height: 68.6px;
+  border-radius: 56px;
+  background-color: #7f46ff;
+  border: solid white 3px;
+  box-shadow: white -7px 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.x {
+  width: 34px;
+  height: 34px;
+  position: fixed;
+  top: 50px;
+  right: 15px
+}
 }
