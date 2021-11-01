@@ -360,13 +360,13 @@ export default function Home() {
       </main>
 
       {/* homies */}
-      <main className={`${styles.content1} ${styles.section} `}>
+      <main className={`${styles.content1} ${styles.section}`}>
         <div
           className={`${styles.content1Left} ${styles.homie}`}
           data-aos="fade-up"
         >
           <text className={styles.challenge}>Updates</text>
-          <text className={styles.content1Text}>
+          <text className={`${styles.content1Text} ${styles.hometext}`}>
             Keep tabs on <br />
             your homies
           </text>

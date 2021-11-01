@@ -4808,7 +4808,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-left: -25px;
+    margin-left: 0px;
   }
   .content1Subtext2 {
     text-align: left;
@@ -5631,5 +5631,8 @@
     height: 17px;
     margin-right: 15px;
     visibility: hidden;
+  }
+  .hometext {
+    text-align: left;
   }
 }
