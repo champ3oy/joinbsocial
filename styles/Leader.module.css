@@ -138,7 +138,7 @@
   /* background-color: #ff468d; */
   transform: scale(1.1);
 }
-.modalb {
+.modalc {
   background-color: white;
   width: 1131px;
   height: 713px;
@@ -146,13 +146,14 @@
   position: relative;
   display: flex;
   flex: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-left: 70px;
   padding-right: 70px;
   padding-top: 70px;
   z-index: 9999;
   transition: all 0.2s ease-in-out;
-  /* background-color: #ff468d; */
 }
 .modalleft {
   display: flex;
@@ -194,6 +195,29 @@
   text-align: left;
   z-index: 999;
   margin-top: 20px;
+}
+
+.modaltextc {
+  color: #7f46ff;
+  font-size: "Rubik";
+  font-weight: 900;
+  font-size: 77px;
+  text-align: center;
+  line-height: 74px;
+  letter-spacing: -2px;
+  z-index: 999;
+  margin-top: 20px;
+}
+.modaltext2c {
+  color: #939393;
+  font-weight: 600;
+  font-size: 17px;
+  text-align: center;
+  z-index: 999;
+  margin-top: 40px;
+}
+.modaltext2cm {
+  display: none;
 }
 .modalright {
   display: flex;
@@ -443,7 +467,7 @@
 .midtext {
   display: flex;
   flex-direction: column;
-  margin-left: -60px;
+  margin-left: 20px;
   color: white;
 }
 .name {
@@ -531,7 +555,7 @@
 .midtext1 {
   display: flex;
   flex-direction: column;
-  margin-left: -100px;
+  margin-left: 40px;
   color: white;
 }
 .name1 {
@@ -545,7 +569,7 @@
 }
 .signups {
   font-size: 56px;
-  margin-right: -100px;
+  margin-right: 40px;
 }
 .stick img {
   width: 29px;
@@ -582,7 +606,12 @@
 .joinx {
   display: none;
 }
-
+.menu {
+  display: none;
+}
+.menumodal {
+  display: none;
+}
 .rlink {
   width: 490px;
   height: 57px;
@@ -597,8 +626,6 @@
   font-size: 17px;
   font-weight: 600;
   letter-spacing: -0.5px;
-  margin-bottom: 50px;
-  transform: scale(0.6);
 }
 .http {
   color: white;
@@ -617,16 +644,30 @@
   width: 14px;
   height: 17px;
   margin-right: 15px;
-  visibility: hidden;
 }
-.menu {
-  display: none;
+.stickleft {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
-.menumodal {
-  display: none;
+.stickright {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.listitemleft {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 @media only screen and (max-width: 1600px) {
+  .modalc {
+    transform: scale(0.9);
+  }
   .container {
     height: 100vh;
     background-color: #000000;
@@ -1664,7 +1705,7 @@
   .midtext {
     display: flex;
     flex-direction: column;
-    margin-left: -20px;
+    margin-left: 20px;
     color: white;
   }
   .name {
@@ -1752,7 +1793,7 @@
   .midtext1 {
     display: flex;
     flex-direction: column;
-    margin-left: -70px;
+    margin-left: 30px;
     color: white;
   }
   .name1 {
@@ -1766,7 +1807,7 @@
   }
   .signups {
     font-size: 38px;
-    margin-right: -100px;
+    margin-right: 40px;
   }
   .stick img {
     width: 29px;
@@ -2268,7 +2309,7 @@
   .midtext {
     display: flex;
     flex-direction: column;
-    margin-left: -20px;
+    margin-left: 20px;
     color: white;
   }
   .name {
@@ -2297,7 +2338,7 @@
   .number2 {
     font-size: 65px;
     font-weight: 600;
-    margin: 0px 0 0px -20px;
+    margin: 0px 0 0px -0px;
     letter-spacing: -4px;
   }
   .subtext2 {
@@ -2361,7 +2402,7 @@
   .midtext1 {
     display: flex;
     flex-direction: column;
-    margin-left: -20px;
+    margin-left: 15px;
     color: white;
   }
   .name1 {
@@ -2375,7 +2416,7 @@
   }
   .signups {
     font-size: 15px;
-    margin-right: -40px;
+    margin-right: 0px;
   }
   .stick img {
     width: 10.29px;
@@ -2464,36 +2505,54 @@
     left: 0;
   }
 
-.textBtnm {
-  font-size: 16px;
-  font-weight: 600;
-  color: white;
-  margin-right: 0px;
-  cursor: pointer;
-  text-decoration: underline;
-}
-.joinBtnm {
-  width: 254.9px;
-  height: 68.6px;
-  border-radius: 56px;
-  background-color: #7f46ff;
-  border: solid white 3px;
-  box-shadow: white -7px 3px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 30px;
-  cursor: pointer;
-}
-.x {
-  width: 34px;
-  height: 34px;
-  position: fixed;
-  top: 50px;
-  right: 15px
-}
+  .textBtnm {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    margin-right: 0px;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .joinBtnm {
+    width: 254.9px;
+    height: 68.6px;
+    border-radius: 56px;
+    background-color: #7f46ff;
+    border: solid white 3px;
+    box-shadow: white -7px 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+  .x {
+    width: 34px;
+    height: 34px;
+    position: fixed;
+    top: 50px;
+    right: 15px;
+  }
+  .stickleft {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .stickright {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .listitemleft {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }

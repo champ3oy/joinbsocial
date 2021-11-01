@@ -116,15 +116,19 @@ export default function Leaderboard() {
               {[1, 2, 3, 4, 5].map((item) => {
                 return (
                   <div className={styles.stick} key={item}>
-                    <text className={styles.position}>{item}</text>
-                    <div className={styles.midtext1}>
-                      <text className={styles.name1}>
-                        Jeffery Afrane Adu-Donkor
-                      </text>
-                      <text className={styles.emojis1}>1st on the rank</text>
+                    <div className={styles.stickleft}>
+                      <text className={styles.position}>{item}</text>
+                      <div className={styles.midtext1}>
+                        <text className={styles.name1}>
+                          Jeffery Afrane Adu-Donkor
+                        </text>
+                        <text className={styles.emojis1}>1st on the rank</text>
+                      </div>
                     </div>
-                    <text className={styles.signups}>800 Sign ups</text>
-                    <img src="/arrow-up.png" />
+                    <div className={styles.stickright}>
+                      <text className={styles.signups}>800 Sign ups</text>
+                      <img src="/arrow-up.png" />
+                    </div>
                   </div>
                 );
               })}
@@ -136,18 +140,20 @@ export default function Leaderboard() {
             <div className={styles.tab}>
               <text>Everyone on ranking</text>
             </div>
-            <div className={styles.ranklist} >
+            <div className={styles.ranklist}>
               {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => {
                 return (
                   <div className={styles.listitem} key={item}>
-                    <div className={styles.imgborder}>
-                      <img />
-                    </div>
-                    <div className={styles.midtext}>
-                      <text className={styles.name}>
-                        Jeffery Afrane Adu-Donkor
-                      </text>
-                      <text className={styles.emojis}>1st on the rank</text>
+                    <div className={styles.listitemleft}>
+                      <div className={styles.imgborder}>
+                        <img />
+                      </div>
+                      <div className={styles.midtext}>
+                        <text className={styles.name}>
+                          Jeffery Afrane Adu-Donkor
+                        </text>
+                        <text className={styles.emojis}>1st on the rank</text>
+                      </div>
                     </div>
                     <div className={styles.rank}>
                       <img src="/arrow-up2.png" />
@@ -318,9 +324,7 @@ export default function Leaderboard() {
             Get on the leaderboard &#127881;
           </div>
           <Link href="/leaderboard">
-            <a className={styles.textBtnm}>
-              Checkout the record &#127881;
-            </a>
+            <a className={styles.textBtnm}>Checkout the record &#127881;</a>
           </Link>
         </main>
       ) : null}
