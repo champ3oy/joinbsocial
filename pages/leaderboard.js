@@ -137,7 +137,7 @@ export default function Leaderboard() {
               <text>Everyone on ranking</text>
             </div>
             <div className={styles.ranklist} >
-              {[1, 2, 3, 4, 5, 6, 7, 8].map(() => {
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => {
                 return (
                   <div className={styles.listitem} key={item}>
                     <div className={styles.imgborder}>
