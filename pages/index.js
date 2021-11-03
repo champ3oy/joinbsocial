@@ -67,11 +67,11 @@ export default function Home() {
 
           <div className={styles.right}>
             <Link href="/leaderboard">
-              <a className={styles.textBtn}>Leaderboard</a>
+              <a className={styles.joinBtnl}>Leaderboard</a>
             </Link>
-            <Link href="/">
+            {/* <Link href="/">
               <a className={styles.textBtn}>About us</a>
-            </Link>
+            </Link> */}
             <text
               onClick={() => {
                 setShowModal2(true);
@@ -122,11 +122,15 @@ export default function Home() {
                 app plus your participation in the challenges.
               </text>
               <text className={`${styles.heroSubText}`}>
-                Not your typical app to post content just for fun. With B.Social
-                you build close relationships <br />
-                with your friends & followers through your interactions in the
-                app plus your participation in the <br />
-                challenges.
+                Not your typical app to post content just
+                <br />
+                for fun. With B.Social you build close
+                <br />
+                relationships with your friends & followers
+                <br />
+                through your interactions in the app plus
+                <br />
+                your participation in the challenges.
               </text>
 
               <div
@@ -153,20 +157,23 @@ export default function Home() {
               </text>
               <text className={`${styles.heroTextm}`}>
                 Get paid for <br />
-                promoting your <br />
-                favorite brands
+                promoting
+                <br />
+                your favorite
+                <br />
+                brands
               </text>
               <text className={`${styles.heroSubText}`}>
-                As a creator or influncer, you can make sustainable incomes from
-                promoting your products
+                As a creator or influencer, you can make sustainable incomes
+                from promoting your products
                 <br />
                 and brands in the B.Social app & in other social app. The more
-                views your contact receives the higher the
+                views your content receives the higher the
                 <br />
                 revenue you get
               </text>
               <text className={`${styles.heroSubTextm}`}>
-                As a creator or influncer, you can make <br />
+                As a creator or influencer, you can make <br />
                 sustainable incomes from promoting your products
                 <br />
                 and brands in the B.Social app & in other social app. <br />
@@ -200,32 +207,31 @@ export default function Home() {
               ></div>
               <text className={`${styles.heroText}`}>
                 Get your superfans <br />
-                and influncers to promote <br />
+                and influencers to promote <br />
                 your brand
               </text>
               <text className={`${styles.heroTextm}`}>
                 Get your <br />
-                superfans and <br />
-                influncers to <br />
-                promote
+                superfans <br /> and <br />
+                influencers
+                <br />
+                to promote
                 <br />
                 your brand
               </text>
               <text className={`${styles.heroSubText}`}>
                 Get more engaged customers to your brand by setting up brand
                 challenges in <br />
-                B.Social. influncers and super fans create to promote your
+                B.Social. Influencers and superfans create to promote your
                 products & brand.
                 <br />
                 Your brand could go viral on social media, you know!
               </text>
               <text className={`${styles.heroSubTextm}`}>
-                Get more engaged customers to your brand by setting up brand
-                <br />
-                challenges in B.Social. influncers and <br />
-                super fans create to promote your products & brand.
-                <br />
-                Your brand could go viral on social media, you know!
+                Get more engaged customers to your brand by <br />
+                setting up brand challenges in B.Social. Influencers <br />
+                and superfans create to promote your products & <br />
+                brand. Your brand could go viral on social media, you know!
               </text>
 
               <div
@@ -246,29 +252,6 @@ export default function Home() {
         </Carousel>
       </div>
 
-      {/* <main className={`${styles.section} ${styles.banner}`}>
-        <img className={styles.emoji1} src="/fire.png" data-aos="fade-up" />
-        <img className={styles.emoji2} src="/hand.png" data-aos="fade-up" />
-        <img className={styles.emoji3} src="/fireball.png" data-aos="zoom-in" />
-        <text className={`${styles.bannerHeader}`} data-aos="fade-up">
-          Don&apos;t just post, like in your typical social media app
-        </text>
-
-        <text className={`${styles.bannerText}`} data-aos="fade-up">
-          Create moments together
-        </text>
-        <text className={`${styles.bannerFooter}`} data-aos="fade-up">
-          Start a challenge with your friends, promote it on other social media
-          <br />
-          and watch your fanbase in B.Social app grow
-        </text>
-        <text className={`${styles.bannerFooterm}`}>
-          Start a challenge with your friends, promote it on <br />
-          other social media and watch your fanbase <br />
-          in B.Social app grow
-        </text>
-      </main> */}
-
       <main className={`${styles.content1} ${styles.section}`}>
         <div className={styles.content1Left} data-aos="fade-up">
           <img className={styles.emoji5} src="/hand.png" />
@@ -278,11 +261,17 @@ export default function Home() {
             moments <br />
             together
           </text>
+          <text className={styles.content1Textm}>
+            Create <br />
+            moments <br />
+            together
+          </text>
           <text className={`${styles.content1Subtext}`}>
             Create a challenge with friends, invite <br />
             them to participate and watch their <br />
             creative juices flow
           </text>
+
           <div
             className={styles.joinBtn3}
             onClick={() => {
@@ -310,7 +299,7 @@ export default function Home() {
             <text className={styles.floatText}>Linda join your challenge</text>
           </div>
           <div className={styles.float3} data-aos="fade-up">
-            <img className={styles.floatImg3} src="/float1.png" />
+            <img className={styles.floatImg3} src="/float3.png" />
             <text className={styles.floatText3}>Liza join your challenge</text>
           </div>
         </div>
@@ -321,7 +310,7 @@ export default function Home() {
           <img className={styles.emoji7} src="/crown.png" />
           <img className={styles.emoji8} src="/crown.png" />
           <div className={styles.col}>
-            <text className={styles.views2}>@JefferyAfrane</text>
+            <text className={styles.views2}>@Hanrtx</text>
             <text className={styles.hashtag2}>24k Views &#129310;</text>
           </div>
           <div className={styles.float4} data-aos="fade-up">
@@ -348,6 +337,13 @@ export default function Home() {
             view? Then activate your reaction+ camera and <br />
             share the excitement with friends & followers
           </text>
+          <text className={`${styles.content2Subtextm}`}>
+            Are you in an exciting moment or at an <br />
+            incredibly exciting location with <br />
+            breathtaking view? Then activate your <br />
+            reaction+ camera and share the <br />
+            excitement with friends & followers
+          </text>
           <div
             className={styles.joinBtn4}
             onClick={() => {
@@ -370,12 +366,23 @@ export default function Home() {
             Keep tabs on <br />
             your homies
           </text>
+          <text className={`${styles.content1Textm} ${styles.hometext}`}>
+            Keep tabs on your <br />
+            homies
+          </text>
           <text
-            className={`${styles.content1Subtext} ${styles.content1Subtext2}`}
+            className={`${styles.content2Subtext} ${styles.content1Subtext2}`}
           >
             Let your friends know you got them, by checking <br />
             in with them
           </text>
+          <text
+            className={`${styles.content2Subtextm} ${styles.content1Subtext2}`}
+          >
+            Let your friends know you got them, <br />
+            by checking in with them
+          </text>
+
           <div
             className={styles.joinBtn3}
             onClick={() => {
@@ -459,8 +466,8 @@ export default function Home() {
             Promote <br />& Earn
           </text>
           <text className={`${styles.content2Subtext}`}>
-            Select your favorite brand, create a #challenge <br/>
-            for it, promote across your social channels, amass <br/>
+            Select your favorite brand, create a #challenge <br />
+            for it, promote across your social channels, amass <br />
             views and watch your revenue skyrocket!
           </text>
           <div
@@ -506,7 +513,7 @@ export default function Home() {
             </div>
             <div className={styles.float8}>
               <img className={styles.emoji14} src="/fireball.png" />
-              <img className={styles.floatImg} src="/float2.png" />
+              <img className={styles.floatImg} src="/float3.png" />
               <text className={styles.floatText8}>#Challenge</text>
             </div>
             Get <br />
@@ -519,26 +526,37 @@ export default function Home() {
             onClick={() => {
               setShowModal(true);
             }}
-            data-aos="fade-up"
           >
             Join the Waitlist &#127881;
           </div>
         </div>
         <div className={styles.foot}>
           <div className={styles.fleft}>
-            <text>Terms</text>
-            <text>Privacy</text>
+            <Link href="/terms">
+              <text>Terms</text>
+            </Link>
+            <Link href="/privacy">
+              <text>Privacy</text>
+            </Link>
           </div>
           {/* <img className={styles.fcenter} src="/california.png" /> */}
           <div className={styles.fcenter}>
-            &copy; 2021 B.Social Inc. All rights reserved.
+            &copy; 2021 BB.Social Inc. All rights reserved.
             contactus@joinb.social
           </div>
           <div className={styles.fright}>
-            <img src="/fb.png" className={styles.icon} />
-            <img src="/ink.png" className={styles.icon} />
-            <img src="/ig.png" className={styles.icon} />
-            <img src="/tk.png" className={styles.icon} />
+            <a href="https://www.facebook.com/JoinBSocial">
+              <img src="/fb.png" className={styles.icon} />
+            </a>
+            <a href="https://twitter.com/BeSocia14814345">
+              <img src="/twitter.svg" className={styles.icon} />
+            </a>
+            <a href="https://www.instagram.com/bsocial_inc/">
+              <img src="/ig.png" className={styles.icon} />
+            </a>
+            <a href="https://www.tiktok.com/@bsocial_inc">
+              <img src="/tk.png" className={styles.icon} />
+            </a>
           </div>
         </div>
       </footer>
@@ -764,32 +782,41 @@ export default function Home() {
         >
           <div className={styles.modalc}>
             {/* <div className={styles.floatm1}>
-              <img className={styles.emoji122} src="/crown.png" />
+              
               <text className={styles.floatText61}>Update</text>
             </div> */}
 
-            <text className={styles.modaltextc}>Congratulations &#127881;</text>
+            <text className={styles.modaltextc}>
+              <img className={styles.emojicrown} src="/crown.png" />
+              Congratulations &#127881;
+            </text>
             <text className={styles.modaltext2c}>
-              Thank you for joing the B.Social waitlist to the first people to
+              Thank you for joining the B.Social waitlist to the first people to
               use an awesome app design and craft for you <br />
-              by you. To make it more funWe have created a unique for you to
+              by you. To make it more fun we have created a unique for you to
               help you invite more friends. The more <br />
-              you invite people you stand a chance to B.Social swags, promoted
-              in the app and on our your socials, get verified <br />
-              in the appAnd potential gain equities in B.Social App company
+              you invite people
+              <span style={{ color: "#939393" }}>
+                you stand a chance to B.Social swags, promoted in the app and on
+                our your socials, get verified <br />
+                in the app and potential gain equities in B.Social App company
+              </span>
             </text>
             <text className={styles.modaltext2cm}>
-              Thank you for joing the B.Social waitlist to the <br />
+              Thank you for joining the B.Social waitlist to the <br />
               first people to use an awesome app design and craft for you
               <br />
-              by you. To make it more funWe have created a unique <br />
+              by you. To make it more fun we have created a unique <br />
               for you to help you invite more friends. The more
               <br />
-              you invite people you stand a chance to B.Social swags, <br />
-              promoted in the app and on our your socials, get verified
-              <br />
-              in the appAnd potential gain equities in <br />
-              B.Social App company
+              you invite people{" "}
+              <span style={{ color: "#939393" }}>
+                you stand a chance to B.Social swags, <br />
+                promoted in the app and on our your socials, get verified
+                <br />
+                in the app and potential gain equities in <br />
+                B.Social App company
+              </span>
             </text>
 
             <div className={styles.rlink}>

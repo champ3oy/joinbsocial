@@ -1,6 +1,6 @@
 .container {
   min-height: 100vh;
-  background-color: #000000;
+  background-color: #7f46ff;
   margin: 0;
   overflow: hidden;
   font-family: "Rubik";
@@ -9,15 +9,11 @@
   /* overflow-y: scroll;
   scroll-snap-type: y mandatory; */
 }
-/* .section {
-  scroll-snap-align: start;
-  height: 100vh;
-} */
 .hero {
   width: 100%;
   height: 100vh;
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-    url("/hero1.png");
+    url("/hero1.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -31,7 +27,7 @@
   width: 100%;
   height: 100vh;
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-    url("/hero2.png");
+    url("/hero2.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -45,11 +41,11 @@
   width: 100%;
   height: 100vh;
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-    url("/hero3.png");
+    url("/hero3.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  padding-top: 122px;
+  padding-top: 130px;
   background-position: center;
   display: flex;
   justify-content: center;
@@ -99,6 +95,20 @@
   margin-left: 20px;
   cursor: pointer;
 }
+.joinBtnl {
+  width: 243px;
+  height: 75px;
+  border-radius: 56px;
+  background-color: #ffcd00;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  margin-left: 20px;
+  cursor: pointer;
+}
 .heroContent {
   width: 100%;
   /* height: 90%; */
@@ -113,7 +123,7 @@
   font-size: 115px;
   color: white;
   letter-spacing: -2px;
-  line-height: 118px;
+  line-height: 113px;
   text-align: center;
 }
 .heroSubText {
@@ -187,6 +197,7 @@
   background-color: #7f46ff;
   padding-left: 295px;
   padding-right: 295px;
+  border: none;
 }
 .content1Left {
   display: flex;
@@ -238,7 +249,7 @@
   height: 900px;
   border-radius: 48px;
   border: solid 11px black;
-  background-color: darkslategrey;
+  background-color: #7f46ff;
   margin-right: 50px;
   display: flex;
   flex-direction: column;
@@ -281,6 +292,7 @@
   background-color: #7f46ff;
   padding-left: 295px;
   padding-right: 295px;
+  border: none;
 }
 .content2Left {
   display: flex;
@@ -327,15 +339,15 @@
   transition: 0.5s ease;
 }
 .joinBtn4:hover {
-  box-shadow: white -9px 8px;
+  box-shadow: white -7px 6px;
   transition: 0.5s ease;
 }
 .screen2 {
   width: 481px;
   height: 900px;
   border-radius: 48px;
-  border: solid 11px white;
-  background-color: darkslategrey;
+  border: solid 10.5px white;
+  background-color: white;
   margin-left: 50px;
   display: flex;
   flex-direction: column;
@@ -343,16 +355,20 @@
   align-items: flex-start;
   padding: 30px;
   padding-top: 40px;
-  background: url(/giphy.gif);
-  background-size: cover;
+  background: url(/hanx.jpeg);
+  background-size: 485px 905px;
+  /* background-origin: content-box; */
   position: relative;
+  background-position-y: -5px;
+  background-position-x: -0px;
+  box-shadow: none;
 }
 .screen22 {
   width: 481px;
   height: 900px;
   border-radius: 48px;
   border: solid 11px white;
-  background-color: darkslategrey;
+  background-color: white;
   margin-left: 50px;
   display: flex;
   flex-direction: column;
@@ -390,6 +406,7 @@
   width: 100%;
   height: 1079px;
   background-color: #ffcd00;
+  border: none;
 }
 .footerText {
   font-size: 150px;
@@ -418,11 +435,11 @@
   margin-top: 40px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.5s ease;
+  /* transition: 1s ease; */
 }
 .joinBtn5:hover {
   box-shadow: black 9px 8px;
-  transition: 0.5s ease;
+  transition: 1s ease;
 }
 .footContent {
   width: 100%;
@@ -453,6 +470,7 @@
   font-size: 24;
   color: black;
   margin: 0 10px 0 10px;
+  cursor: pointer;
 }
 .fcenter {
   font-family: "Rubik";
@@ -528,7 +546,7 @@
   align-items: center;
   position: absolute;
   top: 50%;
-  left: -10px;
+  left: -100px;
 }
 .floatm1b {
   width: 215px;
@@ -549,7 +567,7 @@
 .float2 {
   width: 234px;
   height: 58px;
-  background-color: rgb(145, 33, 33);
+  background-color: white;
   border-radius: 50px;
   display: flex;
   flex-direction: row;
@@ -646,7 +664,7 @@
 }
 .float7 {
   width: 173px;
-  height: 52px;
+  height: 58px;
   background-color: white;
   border-radius: 50px;
   display: flex;
@@ -668,7 +686,7 @@
 }
 .float8 {
   width: 199px;
-  height: 52px;
+  height: 58px;
   background-color: white;
   border-radius: 50px;
   display: flex;
@@ -676,7 +694,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 170px;
+  top: 260px;
   right: -30px;
   margin-top: -30px;
   margin-right: -10px;
@@ -725,7 +743,7 @@
   width: 84px;
   height: 102px;
   position: absolute;
-  top: 10px;
+  top: 45px;
   right: 30px;
   transform: rotate(15deg);
   z-index: 9999;
@@ -760,8 +778,8 @@
   width: 75px;
   height: 83px;
   position: absolute;
-  bottom: 60px;
-  right: -130px;
+  bottom: 50px;
+  right: -110px;
   margin-right: -30px;
   transform: rotate(0deg);
   z-index: 9;
@@ -926,9 +944,10 @@
   letter-spacing: -2px;
   z-index: 999;
   margin-top: 20px;
+  position: relative;
 }
 .modaltext2c {
-  color: #939393;
+  color: #b5b1b1;
   font-weight: 600;
   font-size: 17px;
   text-align: center;
@@ -1225,12 +1244,25 @@
 .modaltext2cm {
   display: none;
 }
+.emojicrown {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -50px;
+  left: -40px;
+}
+.content2Subtextm {
+  display: none;
+}
+.content1Textm {
+  display: none
+}
 
 /* 1600 screen */
 @media only screen and (max-width: 1600px) {
   .container {
     min-height: 100vh;
-    background-color: #000000;
+    background-color: #7f46ff;
     margin: 0;
     overflow: hidden;
     font-family: "Rubik";
@@ -1247,7 +1279,7 @@
     width: 100%;
     max-height: 100vh;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-      url("/hero1.png");
+      url("/hero1.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -1261,7 +1293,7 @@
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-      url("/hero2.png");
+      url("/hero2.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -1275,7 +1307,7 @@
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-      url("/hero3.png");
+      url("/hero3.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -1319,6 +1351,20 @@
     height: 55px;
     border-radius: 56px;
     background-color: #7f46ff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 13px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  .joinBtnl {
+    width: 180px;
+    height: 55px;
+    border-radius: 56px;
+    background-color: #ffcd00;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1412,8 +1458,8 @@
     align-items: center;
     justify-content: space-between;
     background-color: #7f46ff;
-    padding-left: 230px;
-    padding-right: 230px;
+    padding-left: 240px;
+    padding-right: 240px;
   }
   .content1Left {
     display: flex;
@@ -1465,7 +1511,7 @@
     height: 730px;
     border-radius: 24px;
     border: solid 6px black;
-    background-color: darkslategrey;
+    background-color: #7f46ff;
     margin-right: 50px;
     display: flex;
     flex-direction: column;
@@ -1506,14 +1552,14 @@
     align-items: center;
     justify-content: space-between;
     background-color: #7f46ff;
-    padding-left: 230px;
-    padding-right: 230px;
+    padding-left: 250px;
+    padding-right: 250px;
   }
   .content2Left {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-right: -100px;
+    margin-right: -30px;
     /* background-color: #b5b1b1; */
     /* width: 50%; */
   }
@@ -1562,7 +1608,7 @@
     height: 730px;
     border-radius: 24px;
     border: solid 6px white;
-    background-color: darkslategrey;
+    background-color: #7f46ff;
     margin-left: 50px;
     display: flex;
     flex-direction: column;
@@ -1570,7 +1616,7 @@
     align-items: flex-start;
     padding: 15px;
     padding-top: 40px;
-    background: url(/giphy.gif);
+    background: url(/hanx.jpeg);
     background-size: cover;
     position: relative;
   }
@@ -1579,7 +1625,7 @@
     height: 680px;
     border-radius: 24px;
     border: solid 6px white;
-    background-color: darkslategrey;
+    background-color: white;
     margin-left: 50px;
     display: flex;
     flex-direction: column;
@@ -1634,7 +1680,7 @@
     height: 65px;
     border-radius: 56px;
     background-color: #7f46ff;
-    box-shadow: black -5px 4 px;
+    box-shadow: black -5px 4px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1648,7 +1694,7 @@
     transition: 0.5s ease;
   }
   .joinBtn5:hover {
-    box-shadow: black 7px 6px;
+    box-shadow: black 5px 4px;
     transition: 0.5s ease;
   }
   .footContent {
@@ -1794,7 +1840,7 @@
   }
   .float3 {
     width: 135px;
-    height: 30px;
+    height: 37px;
     background-color: white;
     border-radius: 50px;
     display: flex;
@@ -1870,7 +1916,7 @@
   }
   .float7 {
     width: 130px;
-    height: 35px;
+    height: 45px;
     background-color: white;
     border-radius: 50px;
     display: flex;
@@ -1890,7 +1936,7 @@
   }
   .float8 {
     width: 150px;
-    height: 35px;
+    height: 45px;
     background-color: white;
     border-radius: 50px;
     display: flex;
@@ -1898,7 +1944,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 180px;
+    top: 210px;
     right: -20px;
     transform: rotate(-13deg);
   }
@@ -1944,8 +1990,8 @@
     width: 84px;
     height: 102px;
     position: absolute;
-    top: 25px;
-    right: 5px;
+    top: 45px;
+    right: 25px;
     transform: rotate(15deg) scale(0.8);
     z-index: 9999;
   }
@@ -2300,7 +2346,7 @@
 @media only screen and (max-width: 1450px) {
   .container {
     min-height: 100vh;
-    background-color: #000000;
+    background-color: #7f46ff;
     margin: 0;
     overflow: hidden;
     font-family: "Rubik";
@@ -2317,7 +2363,7 @@
     width: 100%;
     max-height: 100vh;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-      url("/hero1.png");
+      url("/hero1.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -2331,7 +2377,7 @@
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-      url("/hero2.png");
+      url("/hero2.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -2345,7 +2391,7 @@
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-      url("/hero3.png");
+      url("/hero3.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -2389,6 +2435,20 @@
     height: 50px;
     border-radius: 56px;
     background-color: #7f46ff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 11px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  .joinBtnl {
+    width: 160px;
+    height: 50px;
+    border-radius: 56px;
+    background-color: #ffcd00;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -2536,7 +2596,7 @@
     height: 680px;
     border-radius: 24px;
     border: solid 6px black;
-    background-color: darkslategrey;
+    background-color: #7f46ff;
     margin-right: 50px;
     display: flex;
     flex-direction: column;
@@ -2633,7 +2693,7 @@
     height: 680px;
     border-radius: 24px;
     border: solid 6px white;
-    background-color: darkslategrey;
+    background-color: white;
     margin-left: 50px;
     display: flex;
     flex-direction: column;
@@ -2641,7 +2701,7 @@
     align-items: flex-start;
     padding: 15px;
     padding-top: 40px;
-    background: url(/giphy.gif);
+    background: url(/hanx.jpeg);
     background-size: cover;
     position: relative;
   }
@@ -2650,7 +2710,7 @@
     height: 680px;
     border-radius: 24px;
     border: solid 6px white;
-    background-color: darkslategrey;
+    background-color: #7f46ff;
     margin-left: 50px;
     display: flex;
     flex-direction: column;
@@ -2705,13 +2765,13 @@
     height: 65px;
     border-radius: 56px;
     background-color: #7f46ff;
-    box-shadow: black -5px 4 px;
+    box-shadow: black -5px 4px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 12px;
+    font-size: 16px;
     border: solid black 3px;
     margin-top: 20px;
     font-weight: 600;
@@ -2719,7 +2779,7 @@
     transition: 0.5s ease;
   }
   .joinBtn5:hover {
-    box-shadow: black 7px 6px;
+    box-shadow: black 5px 4px;
     transition: 0.5s ease;
   }
   .footContent {
@@ -2865,7 +2925,7 @@
   }
   .float3 {
     width: 135px;
-    height: 30px;
+    height: 35px;
     background-color: white;
     border-radius: 50px;
     display: flex;
@@ -2941,7 +3001,7 @@
   }
   .float7 {
     width: 130px;
-    height: 35px;
+    height: 43px;
     background-color: white;
     border-radius: 50px;
     display: flex;
@@ -2949,7 +3009,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: -25px;
+    top: -15px;
     left: 54%;
     transform: rotate(5deg);
   }
@@ -2961,7 +3021,7 @@
   }
   .float8 {
     width: 150px;
-    height: 35px;
+    height: 43px;
     background-color: white;
     border-radius: 50px;
     display: flex;
@@ -2969,7 +3029,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 180px;
+    top: 200px;
     right: -20px;
     transform: rotate(-13deg);
   }
@@ -3374,7 +3434,7 @@
 @media only screen and (max-width: 1400px) {
   .container {
     min-height: 100vh;
-    background-color: #000000;
+    background-color: #7f46ff;
     margin: 0;
     overflow: hidden;
     font-family: "Rubik";
@@ -3391,7 +3451,7 @@
     width: 100%;
     max-height: 100vh;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-      url("/hero1.png");
+      url("/hero1.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -3405,7 +3465,7 @@
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-      url("/hero2.png");
+      url("/hero2.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -3419,7 +3479,7 @@
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-      url("/hero3.png");
+      url("/hero3.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -3463,6 +3523,20 @@
     height: 50px;
     border-radius: 56px;
     background-color: #7f46ff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 11px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  .joinBtnl {
+    width: 160px;
+    height: 50px;
+    border-radius: 56px;
+    background-color: #ffcd00;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -3610,7 +3684,7 @@
     height: 640px;
     border-radius: 24px;
     border: solid 6px black;
-    background-color: darkslategrey;
+    background-color: #7f46ff;
     margin-right: 50px;
     display: flex;
     flex-direction: column;
@@ -3707,7 +3781,7 @@
     height: 640px;
     border-radius: 24px;
     border: solid 6px white;
-    background-color: darkslategrey;
+    background-color: white;
     margin-left: 50px;
     display: flex;
     flex-direction: column;
@@ -3715,7 +3789,7 @@
     align-items: flex-start;
     padding: 15px;
     padding-top: 40px;
-    background: url(/giphy.gif);
+    background: url(/hanx.jpeg);
     background-size: cover;
     position: relative;
   }
@@ -3724,7 +3798,7 @@
     height: 640px;
     border-radius: 24px;
     border: solid 6px white;
-    background-color: darkslategrey;
+    background-color: white;
     margin-left: 50px;
     display: flex;
     flex-direction: column;
@@ -4448,7 +4522,7 @@
 @media only screen and (max-width: 550px) {
   .container {
     min-height: 100vh;
-    background-color: #000000;
+    background-color: #7f46ff;
     margin: 0;
     overflow: hidden;
     font-family: "Rubik";
@@ -4460,7 +4534,7 @@
     height: fit-content;
     min-height: 100vh;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-      url("/hero1.png");
+      url("/hero1.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -4470,7 +4544,7 @@
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-      url("/hero2.png");
+      url("/hero2.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -4480,7 +4554,7 @@
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-      url("/hero3.png");
+      url("/hero3.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -4494,7 +4568,7 @@
     align-items: center;
     padding-left: 57px;
     padding-right: 57px;
-    padding-top: 31px;
+    padding-top: 20px;
     position: absolute;
     top: 0;
     left: 0;
@@ -4529,6 +4603,18 @@
     color: white;
     font-size: 18px;
   }
+  .joinBtnl {
+    width: 243px;
+    height: 75px;
+    border-radius: 56px;
+    background-color: #ffcd00;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+  }
   .heroContent {
     width: 100%;
     height: 83vh;
@@ -4536,8 +4622,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 35px;
   }
   .heroText {
     display: none;
@@ -4547,7 +4634,7 @@
     font-size: 50px;
     color: white;
     letter-spacing: -2px;
-    line-height: 49px;
+    line-height: 44px;
     text-align: center;
   }
   .heroSubText {
@@ -4555,17 +4642,17 @@
   }
   .heroSubTextm {
     display: flex;
-    font-size: 15px;
+    font-size: 14px;
     color: white;
     letter-spacing: 0px;
     line-height: 18px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 20px;
   }
   .joinBtn2 {
-    width: 149px;
-    height: 44px;
+    width: 170px;
+    height: 55px;
     border-radius: 56px;
     background-color: white;
     box-shadow: #7f46ff 4px 3px;
@@ -4574,7 +4661,7 @@
     align-items: center;
     justify-content: center;
     color: black;
-    font-size: 12px;
+    font-size: 13.5px;
     border: solid #7f46ff 3px;
     margin-top: 30px;
     font-weight: 600;
@@ -4644,6 +4731,10 @@
     color: #ffcd00;
   }
   .content1Text {
+    display: none
+  }
+  .content1Textm {
+    display: flex;
     font-size: 59px;
     color: white;
     line-height: 55px;
@@ -4653,15 +4744,15 @@
   .content1Subtext {
     font-size: 16px;
     color: white;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 20px;
-    line-height: 16px;
+    line-height: 18px;
     text-align: center;
     letter-spacing: 0px;
   }
   .joinBtn3 {
-    width: 149px;
-    height: 44px;
+    width: 170px;
+    height: 55px;
     border-radius: 56px;
     background-color: #7f46ff;
     box-shadow: white -5px 4px;
@@ -4670,7 +4761,7 @@
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 12px;
+    font-size: 13.5px;
     border: solid white 3px;
     margin-top: 30px;
     font-weight: 600;
@@ -4680,7 +4771,7 @@
     height: 450px;
     border-radius: 16px;
     border: solid 5px black;
-    background-color: darkslategrey;
+    background-color: #7f46ff;
     margin-right: 0px;
     display: flex;
     flex-direction: column;
@@ -4737,9 +4828,8 @@
     display: flex;
     flex-direction: column;
     margin-right: 0px;
-    margin-left: 75px;
+    margin-left: 40px;
     margin-bottom: 50px;
-    /* background-color: rosybrown; */
     width: 100%;
   }
   .promote2 {
@@ -4763,15 +4853,19 @@
     letter-spacing: -2px;
   }
   .content2Subtext {
+    display: none;
+  }
+  .content2Subtextm {
+    display: flex;
     font-size: 16px;
     color: white;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 20px;
     line-height: 18px;
   }
   .joinBtn4 {
-    width: 149px;
-    height: 44px;
+    width: 170px;
+    height: 55px;
     border-radius: 56px;
     background-color: #7f46ff;
     box-shadow: white -4px 3px;
@@ -4780,7 +4874,7 @@
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 12px;
+    font-size: 13.5px;
     border: solid white 3px;
     margin-top: 30px;
     font-weight: 600;
@@ -4791,7 +4885,7 @@
     height: 450px;
     border-radius: 16px;
     border: solid 5px white;
-    background-color: darkslategrey;
+    background-color: white;
     margin-left: 0px;
     display: flex;
     flex-direction: column;
@@ -4799,7 +4893,7 @@
     align-items: flex-start;
     padding: 10px;
     padding-top: 40px;
-    background: url(/giphy.gif);
+    background: url(/hanx.jpeg);
     background-size: cover;
     position: relative;
   }
@@ -5121,7 +5215,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 157px;
+    top: 170px;
     right: 220px;
     transform: rotate(10deg);
     margin: 0;
@@ -5267,7 +5361,6 @@
     left: -25px;
     transform: rotate(25deg);
     z-index: 99;
-
   }
   .emoji10 {
     width: 46px;
@@ -5425,6 +5518,7 @@
     z-index: 999;
     text-align: center;
     margin-top: 0px;
+    position: relative;
   }
   .line {
     display: none;
@@ -5451,6 +5545,8 @@
     z-index: 999;
     margin-top: 10px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
   }
   .modalright {
     display: flex;
@@ -5664,13 +5760,20 @@
   .hometext {
     text-align: left;
   }
+  .emojicrown {
+    width: 50px;
+    height:50px;
+    position: absolute;
+    top: -20px;
+    left: -22px;
+  }
 }
 
-/* MOBILE */
+/* MOBILE 2 */
 @media only screen and (max-width: 375px) and (max-height: 750px) {
   .container {
     min-height: 100vh;
-    background-color: #000000;
+    background-color: #7f46ff;
     margin: 0;
     overflow: hidden;
     font-family: "Rubik";
@@ -5682,7 +5785,7 @@
     height: fit-content;
     min-height: 100vh;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-      url("/hero1.png");
+      url("/hero1.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -5692,7 +5795,7 @@
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-      url("/hero2.png");
+      url("/hero2.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -5702,7 +5805,7 @@
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), black),
-      url("/hero3.png");
+      url("/hero3.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -5744,6 +5847,18 @@
     height: 75px;
     border-radius: 56px;
     background-color: #7f46ff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+  }
+  .joinBtnl {
+    width: 243px;
+    height: 75px;
+    border-radius: 56px;
+    background-color: #ffcd00;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -5902,7 +6017,7 @@
     height: 450px;
     border-radius: 16px;
     border: solid 5px black;
-    background-color: darkslategrey;
+    background-color: #7f46ff;
     margin-right: 0px;
     display: flex;
     flex-direction: column;
@@ -6013,7 +6128,7 @@
     height: 450px;
     border-radius: 16px;
     border: solid 5px white;
-    background-color: darkslategrey;
+    background-color: white;
     margin-left: 0px;
     display: flex;
     flex-direction: column;
@@ -6021,7 +6136,7 @@
     align-items: flex-start;
     padding: 10px;
     padding-top: 40px;
-    background: url(/giphy.gif);
+    background: url(/hanx.jpeg);
     background-size: cover;
     position: relative;
   }
@@ -6644,6 +6759,7 @@
     z-index: 999;
     text-align: center;
     margin-top: 0px;
+    position: relative;
   }
   .line {
     display: none;
