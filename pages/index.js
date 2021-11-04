@@ -114,14 +114,13 @@ export default function Home() {
                 moment with <br />
                 your FRIENDS
               </text>
-              <text className={`${styles.heroSubTextm}`}>
-                Not your typical app to post content just for fun. <br />
-                With B.Social you build close relationships with your <br />
-                friends & followers through your interactions in the
-                <br />
-                app plus your participation in the challenges.
-              </text>
               <text className={`${styles.heroSubText}`}>
+                Not your typical app to post content just for fun. 
+                With B.Social you build close relationships <br />with your 
+                friends & followers through your interactions in the
+                app plus your participation in the <br />challenges.
+              </text>
+              <text className={`${styles.heroSubTextm}`}>
                 Not your typical app to post content just
                 <br />
                 for fun. With B.Social you build close
@@ -470,6 +469,11 @@ export default function Home() {
             for it, promote across your social channels, amass <br />
             views and watch your revenue skyrocket!
           </text>
+          <text className={`${styles.content2Subtextm}`}>
+            Select your favorite brand, create a <br />#challenge 
+            for it, promote across your <br />social channels, amass 
+            views and <br />watch your revenue skyrocket!
+          </text>
           <div
             className={`${styles.joinBtn4} ${styles.joinPromoteb}`}
             onClick={() => {
@@ -583,7 +587,6 @@ export default function Home() {
               <img className={styles.floatImg} src="/float2.png" />
               <text className={styles.floatText81}>Reaction</text>
             </div>
-
             <div className={styles.modalleft}>
               <text className={styles.modaltext}>
                 Lets be in <br />

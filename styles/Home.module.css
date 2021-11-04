@@ -132,8 +132,10 @@
   letter-spacing: 0px;
   line-height: 35px;
   text-align: center;
-  font-weight: 400;
+  font-weight: 500;
   margin-top: 30px;
+  display: flex;
+  font-weight: 500;
 }
 .joinBtn2 {
   width: 335px;
@@ -218,7 +220,7 @@
 .content1Subtext {
   font-size: 25px;
   color: white;
-  font-weight: 400;
+  font-weight: 500;
   margin-top: 40px;
   line-height: 33px;
 }
@@ -316,7 +318,7 @@
 .content2Subtext {
   font-size: 25px;
   color: white;
-  font-weight: 400;
+  font-weight: 500;
   margin-top: 40px;
   line-height: 33px;
 }
@@ -1255,7 +1257,7 @@
   display: none;
 }
 .content1Textm {
-  display: none
+  display: none;
 }
 
 /* 1600 screen */
@@ -1268,11 +1270,8 @@
     font-family: "Rubik";
     font-weight: 900;
     position: relative;
-    /* overflow-y: scroll;
-    scroll-snap-type: y mandatory; */
   }
   .section {
-    /* scroll-snap-align: start; */
     height: 100vh;
   }
   .hero {
@@ -1395,8 +1394,9 @@
     letter-spacing: 0.5px;
     line-height: 23px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 35px;
+    display: flex;
   }
   .joinBtn2 {
     width: 240px;
@@ -1480,7 +1480,7 @@
   .content1Subtext {
     font-size: 22px;
     color: white;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 40px;
     line-height: 23px;
   }
@@ -1577,7 +1577,7 @@
   .content2Subtext {
     font-size: 19px;
     color: white;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 20px;
     line-height: 23px;
   }
@@ -2480,8 +2480,9 @@
     letter-spacing: 0.5px;
     line-height: 23px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 20px;
+    display: flex;
   }
   .joinBtn2 {
     width: 210px;
@@ -2565,7 +2566,7 @@
   .content1Subtext {
     font-size: 19px;
     color: white;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 30px;
     line-height: 23px;
   }
@@ -2662,7 +2663,7 @@
   .content2Subtext {
     font-size: 19px;
     color: white;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 20px;
     line-height: 23px;
   }
@@ -2925,7 +2926,7 @@
   }
   .float3 {
     width: 135px;
-    height: 35px;
+    height: 40px;
     background-color: white;
     border-radius: 50px;
     display: flex;
@@ -3568,7 +3569,7 @@
     letter-spacing: 0.5px;
     line-height: 23px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 20px;
   }
   .joinBtn2 {
@@ -3653,7 +3654,7 @@
   .content1Subtext {
     font-size: 16px;
     color: white;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 30px;
     line-height: 23px;
   }
@@ -3750,7 +3751,7 @@
   .content2Subtext {
     font-size: 16px;
     color: white;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 20px;
     line-height: 23px;
   }
@@ -4013,7 +4014,7 @@
   }
   .float3 {
     width: 135px;
-    height: 30px;
+    height: 40px;
     background-color: white;
     border-radius: 50px;
     display: flex;
@@ -4089,7 +4090,7 @@
   }
   .float7 {
     width: 130px;
-    height: 35px;
+    height: 45px;
     background-color: white;
     border-radius: 50px;
     display: flex;
@@ -4109,7 +4110,7 @@
   }
   .float8 {
     width: 150px;
-    height: 35px;
+    height: 45px;
     background-color: white;
     border-radius: 50px;
     display: flex;
@@ -4117,7 +4118,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 180px;
+    top: 200px;
     right: -20px;
     transform: rotate(-13deg);
   }
@@ -4518,7 +4519,7 @@
   }
 }
 
-/* MOBILE */
+/* MOBILE IphoneX */
 @media only screen and (max-width: 550px) {
   .container {
     min-height: 100vh;
@@ -4731,7 +4732,7 @@
     color: #ffcd00;
   }
   .content1Text {
-    display: none
+    display: none;
   }
   .content1Textm {
     display: flex;
@@ -4740,6 +4741,7 @@
     line-height: 55px;
     letter-spacing: -2px;
     text-align: center;
+    width: 90%;
   }
   .content1Subtext {
     font-size: 16px;
@@ -5175,8 +5177,8 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: -5px;
-    left: 70px;
+    top: -8px;
+    left: 90px;
     transform: rotate(-15deg);
   }
   .floatText6 {
@@ -5186,8 +5188,8 @@
     letter-spacing: 0px;
   }
   .float7 {
-    width: 59px;
-    height: 18px;
+    width: 64px;
+    height: 25px;
     background-color: white;
     border-radius: 50px;
     display: flex;
@@ -5195,7 +5197,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 54px;
+    top: 57px;
     left: 83%;
     transform: rotate(15deg);
   }
@@ -5207,7 +5209,7 @@
   }
   .float8 {
     width: 89px;
-    height: 23px;
+    height: 27px;
     background-color: white;
     border-radius: 50px;
     display: flex;
@@ -5215,7 +5217,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 170px;
+    top: 155px;
     right: 220px;
     transform: rotate(10deg);
     margin: 0;
@@ -5259,7 +5261,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 202px;
+    top: 180px;
     left: 57%;
     transform: rotate(-5deg);
     z-index: 9999;
@@ -5280,7 +5282,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 75px;
+    top: 65px;
     right: 50px;
     transform: rotate(15deg);
     z-index: 9999;
@@ -5505,7 +5507,8 @@
     letter-spacing: -2px;
     z-index: 999;
     text-align: center;
-    margin-top: -90px;
+    margin-top: -60px;
+    margin-bottom: 30px;
   }
   .modaltextc {
     color: #7f46ff;
@@ -5530,7 +5533,7 @@
     font-size: 10px;
     text-align: left;
     z-index: 999;
-    margin-top: 0px;
+    margin-top: 20px;
     text-align: center;
   }
   .modaltext2c {
@@ -5699,7 +5702,6 @@
     top: 52px;
     z-index: 999;
   }
-
   .info2 {
     position: absolute;
     right: 15px;
@@ -5720,7 +5722,6 @@
     top: 52px;
     z-index: 999;
   }
-
   .rlink {
     width: 490px;
     height: 57px;
@@ -5762,10 +5763,447 @@
   }
   .emojicrown {
     width: 50px;
-    height:50px;
+    height: 50px;
     position: absolute;
     top: -20px;
     left: -22px;
+  }
+}
+
+/* Iphone Plus*/
+@media only screen and (max-width: 414px) and (max-height: 736px) {
+  .heroText {
+    display: none;
+  }
+  .heroTextm {
+    display: flex;
+    font-size: 40px;
+    color: white;
+    letter-spacing: -2px;
+    line-height: 35px;
+    text-align: center;
+  }
+  .heroSubText {
+    display: none;
+  }
+  .heroSubTextm {
+    display: flex;
+    font-size: 11px;
+    color: white;
+    letter-spacing: 0px;
+    line-height: 16px;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  .float7 {
+    width: 65px;
+    height: 23px;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 55px;
+    left: 83%;
+    transform: rotate(15deg);
+  }
+  .floatText7 {
+    font-size: 7px;
+    font-weight: 700;
+    color: #7f46ff;
+    letter-spacing: 0px;
+  }
+  .float8 {
+    width: 89px;
+    height: 27px;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 160px;
+    right: 220px;
+    transform: rotate(10deg);
+  }
+  .floatm2 {
+    top: 200px
+  }
+  .modaltext {
+    color: #7f46ff;
+    font-size: "Rubik";
+    font-weight: 900;
+    font-size: 74px;
+    text-align: left;
+    line-height: 74px;
+    letter-spacing: -2px;
+    z-index: 999;
+    margin-top: 20px;
+  }
+  .modaltext {
+    color: #7f46ff;
+    font-size: "Rubik";
+    font-weight: 900;
+    font-size: 41px;
+    text-align: left;
+    line-height: 41px;
+    letter-spacing: -2px;
+    z-index: 999;
+    text-align: center;
+    margin-top: -90px;
+  }
+  .modaltextc {
+    color: #7f46ff;
+    font-size: "Rubik";
+    font-weight: 900;
+    font-size: 30px;
+    text-align: left;
+    line-height: 41px;
+    letter-spacing: -2px;
+    z-index: 999;
+    text-align: center;
+    margin-top: 0px;
+    position: relative;
+  }
+  .line {
+    display: none;
+  }
+  .modaltext2 {
+    color: #b5b1b1;
+    font-size: 11px;
+    font-weight: 700;
+    font-size: 10px;
+    text-align: left;
+    z-index: 999;
+    margin-top: 0px;
+    text-align: center;
+  }
+  .emoji10 {
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    bottom: 74px;
+    right: 29%;
+    transform: rotate(0deg);
+    z-index: 9;
+  }
+}
+
+/* Pixel Plus*/
+@media only screen and (max-width: 411px) and (max-height: 823px) {
+  .heroText {
+    display: none;
+  }
+  .heroTextm {
+    display: flex;
+    font-size: 40px;
+    color: white;
+    letter-spacing: -2px;
+    line-height: 35px;
+    text-align: center;
+  }
+  .heroSubText {
+    display: none;
+  }
+  .heroSubTextm {
+    display: flex;
+    font-size: 11px;
+    color: white;
+    letter-spacing: 0px;
+    line-height: 16px;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  .float7 {
+    width: 65px;
+    height: 23px;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 55px;
+    left: 83%;
+    transform: rotate(15deg);
+  }
+  .floatText7 {
+    font-size: 7px;
+    font-weight: 700;
+    color: #7f46ff;
+    letter-spacing: 0px;
+  }
+  .float8 {
+    width: 89px;
+    height: 27px;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 160px;
+    right: 220px;
+    transform: rotate(10deg);
+  }
+  .floatm2 {
+    top: 200px
+  }
+  .modaltext {
+    color: #7f46ff;
+    font-size: "Rubik";
+    font-weight: 900;
+    font-size: 74px;
+    text-align: left;
+    line-height: 74px;
+    letter-spacing: -2px;
+    z-index: 999;
+    margin-top: 20px;
+  }
+  .modaltext {
+    color: #7f46ff;
+    font-size: "Rubik";
+    font-weight: 900;
+    font-size: 41px;
+    text-align: left;
+    line-height: 41px;
+    letter-spacing: -2px;
+    z-index: 999;
+    text-align: center;
+    margin-top: -90px;
+  }
+  .modaltextc {
+    color: #7f46ff;
+    font-size: "Rubik";
+    font-weight: 900;
+    font-size: 30px;
+    text-align: left;
+    line-height: 41px;
+    letter-spacing: -2px;
+    z-index: 999;
+    text-align: center;
+    margin-top: 0px;
+    position: relative;
+  }
+  .line {
+    display: none;
+  }
+  .modaltext2 {
+    color: #b5b1b1;
+    font-size: 11px;
+    font-weight: 700;
+    font-size: 10px;
+    text-align: left;
+    z-index: 999;
+    margin-top: 0px;
+    text-align: center;
+  }
+  .emoji10 {
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    bottom: 74px;
+    right: 29%;
+    transform: rotate(0deg);
+    z-index: 9;
+  }
+}
+
+/* Pixel*/
+@media only screen and (max-width: 411px) and (max-height: 731px) {
+  .heroText {
+    display: none;
+  }
+  .heroTextm {
+    display: flex;
+    font-size: 40px;
+    color: white;
+    letter-spacing: -2px;
+    line-height: 35px;
+    text-align: center;
+  }
+  .heroSubText {
+    display: none;
+  }
+  .heroSubTextm {
+    display: flex;
+    font-size: 11px;
+    color: white;
+    letter-spacing: 0px;
+    line-height: 16px;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  .float7 {
+    width: 65px;
+    height: 23px;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 55px;
+    left: 83%;
+    transform: rotate(15deg);
+  }
+  .floatText7 {
+    font-size: 7px;
+    font-weight: 700;
+    color: #7f46ff;
+    letter-spacing: 0px;
+  }
+  .float8 {
+    width: 89px;
+    height: 27px;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 155px;
+    right: 220px;
+    transform: rotate(10deg);
+  }
+  .floatm2 {
+    top: 200px
+  }
+  .modaltext {
+    color: #7f46ff;
+    font-size: "Rubik";
+    font-weight: 900;
+    font-size: 74px;
+    text-align: left;
+    line-height: 74px;
+    letter-spacing: -2px;
+    z-index: 999;
+    margin-top: 20px;
+  }
+  .modaltext {
+    color: #7f46ff;
+    font-size: "Rubik";
+    font-weight: 900;
+    font-size: 41px;
+    text-align: left;
+    line-height: 41px;
+    letter-spacing: -2px;
+    z-index: 999;
+    text-align: center;
+    margin-top: -90px;
+  }
+  .modaltextc {
+    color: #7f46ff;
+    font-size: "Rubik";
+    font-weight: 900;
+    font-size: 30px;
+    text-align: left;
+    line-height: 41px;
+    letter-spacing: -2px;
+    z-index: 999;
+    text-align: center;
+    margin-top: 0px;
+    position: relative;
+  }
+  .line {
+    display: none;
+  }
+  .modaltext2 {
+    color: #b5b1b1;
+    font-size: 11px;
+    font-weight: 700;
+    font-size: 10px;
+    text-align: left;
+    z-index: 999;
+    margin-top: 0px;
+    text-align: center;
+  }
+  .emoji10 {
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    bottom: 74px;
+    right: 29%;
+    transform: rotate(0deg);
+    z-index: 9;
+  }
+}
+
+/* G4 and S6 */
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  .heroText {
+    display: none;
+  }
+  .heroTextm {
+    display: flex;
+    font-size: 40px;
+    color: white;
+    letter-spacing: -2px;
+    line-height: 35px;
+    text-align: center;
+  }
+  .heroSubText {
+    display: none;
+  }
+  .heroSubTextm {
+    display: flex;
+    font-size: 11px;
+    color: white;
+    letter-spacing: 0px;
+    line-height: 16px;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  .float7 {
+    width: 65px;
+    height: 23px;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    left: 83%;
+    transform: rotate(15deg);
+  }
+  .floatText7 {
+    font-size: 7px;
+    font-weight: 700;
+    color: #7f46ff;
+    letter-spacing: 0px;
+  }
+  .float8 {
+    width: 89px;
+    height: 27px;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 125px;
+    right: 220px;
+    transform: rotate(10deg);
+  }
+  .floatText8 {
+    font-size: 9px;
+    font-weight: 700;
+    color: #7f46ff;
+    letter-spacing: 0px;
   }
 }
 
@@ -5897,7 +6335,7 @@
     letter-spacing: 0px;
     line-height: 16px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 10px;
   }
   .joinBtn2 {
@@ -5990,7 +6428,7 @@
   .content1Subtext {
     font-size: 14px;
     color: white;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 20px;
     line-height: 16px;
     text-align: center;
@@ -6102,7 +6540,7 @@
   .content2Subtext {
     font-size: 12px;
     color: white;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 20px;
     line-height: 18px;
   }
@@ -6458,8 +6896,8 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 157px;
-    right: 220px;
+    top: 127px;
+    right: 200px;
     transform: rotate(10deg);
   }
   .floatText8 {
@@ -6470,7 +6908,7 @@
   }
   .floatm1 {
     width: 63px;
-    height: 21px;
+    height: 28px;
     background-color: black;
     border-radius: 50px;
     display: flex;
@@ -6478,7 +6916,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 80px;
+    top: 60px;
     left: 40px;
     transform: rotate(-15deg);
     z-index: 9999;
@@ -6492,7 +6930,7 @@
   }
   .floatm2 {
     width: 89px;
-    height: 23px;
+    height: 29px;
     background-color: black;
     border-radius: 50px;
     display: flex;
@@ -6500,7 +6938,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 202px;
+    top: 195px;
     left: 57%;
     transform: rotate(-5deg);
     z-index: 9999;
@@ -6513,7 +6951,7 @@
   }
   .floatm3 {
     width: 75px;
-    height: 20px;
+    height: 28px;
     background-color: black;
     border-radius: 50px;
     display: flex;
@@ -6521,7 +6959,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 75px;
+    top: 65px;
     right: 50px;
     transform: rotate(15deg);
     z-index: 9999;
@@ -7000,4 +7438,18 @@
   .hometext {
     text-align: left;
   }
+ 
+}
+
+/* ihpne 568 */
+@media only screen and (max-width: 375px) and (max-height: 750px) {
+.emoji10 {
+  width: 46px;
+  height: 46px;
+  position: absolute;
+  bottom: 74px;
+  right: 29%;
+  transform: rotate(0deg);
+  z-index: 9;
+}
 }

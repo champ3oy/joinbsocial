@@ -58,9 +58,9 @@ export default function Privacy() {
       <main className={styles.header}>Privacy Policy</main>
 
       <main className={styles.main}>
-        <strong>Privacy Policy </strong>
+        <strong>Last Updated on 9/23/2021</strong>
         <br />
-        Last Updated on 9/23/2021 <br />
+       <br />
         <br />
         NOTICE: Please read the Privacy Policy set forth below carefully, as it
         is designed to provide important information on how and why we collect,
@@ -763,7 +763,7 @@ export default function Privacy() {
             </div>
             <div className={styles.float8}>
               <img className={styles.emoji14} src="/fireball.png" />
-              <img className={styles.floatImg} src="/float2.png" />
+              <img className={styles.floatImg} src="/float3.png" />
               <text className={styles.floatText8}>#Challenge</text>
             </div>
             Get ready for <br />

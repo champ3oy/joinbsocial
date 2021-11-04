@@ -62,9 +62,9 @@ export default function Leaderboard() {
       </main>
 
       <main className={styles.main}>
-        <strong> TERMS AND CONDITIONS</strong>
+        <strong>Last Updated on 10/02/2021</strong>
         <br />
-        Last Updated on 10/02/2021
+       
         <br />
         NOTICE: Please read the terms and conditions set forth below, which are
         legally binding. By visiting, viewing or using this website, app and/or
