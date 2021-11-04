@@ -383,9 +383,9 @@ export default function Home() {
             className={`${styles.content2Subtextm} ${styles.content1Subtext2}`}
           >
             Let your friends know you got them, <br />
-            by checking in with them. Follow your  <br />friendsupdates and do not
-            miss out on <br />your friends exciting life milestones  <br />&
-            celebration
+            by checking in with them. Follow your <br />
+            friendsupdates and do not miss out on <br />
+            your friends exciting life milestones <br />& celebration
           </text>
 
           <div
@@ -591,20 +591,21 @@ export default function Home() {
             </div>
             <div className={styles.floatm3}>
               <img className={styles.emoji13} src="/fire.png" />
-              <img className={styles.floatImg} src="/float2.png" />
+              <img className={styles.floatImg} src="/float3.png" />
               <text className={styles.floatText81}>Reaction</text>
             </div>
             <div className={styles.modalleft}>
               <text className={styles.modaltext}>
-                Lets be in <br />
+                Let&apos;s be in <br />
                 the moment <br />
                 together
               </text>
               <text className={styles.modaltext2}>
-                Get all updates on when B.Social is coming, <br />
-                what we up to in the news and how you can be apart
-                <br />
-                of the tester too
+                Sign up to be on the exclusive group of early access users. You
+                will receive frequent updates on the app’s progress. Use your
+                unique link to refer more friends to sign up as well and see
+                yourself rise on the leaderboard. You stand a chance of winning
+                souvenirs and other goodies from the BSocial team.
               </text>
             </div>
 
@@ -801,33 +802,36 @@ export default function Home() {
               Congratulations &#127881;
             </text>
             <text className={styles.modaltext2c}>
-              Thank you for joining the B.Social waitlist to the first people to
-              use an awesome app design and craft for you <br />
-              by you. To make it more fun we have created a unique for you to
-              help you invite more friends. The more <br />
-              you invite people
+              Thank you for joining the BSocial Waitlist and Referral program.
+              You are in an exclusive group of users who will be among the first
+              to be invited into this awesome app when ready. BSocial app is
+              more fun when you have your friends in the app and so we have
+              created a unique link for you to invite your friends into the
+              Waitlist and Referral program. The more users you bring into the
+              program the higher you rank on the leaderboard.{" "}
               <span style={{ color: "#939393" }}>
-                you stand a chance to B.Social swags, promoted in the app and on
-                our your socials, get verified <br />
-                in the app and potential gain equities in B.Social App company
+                You may earn many goodies from the BSocial team including swags,
+                souvenirs and getting promoted and verified in the BSocial app
+                and on BSocial’s social channels.
               </span>
             </text>
             <text className={styles.modaltext2cm}>
-              Thank you for joining the B.Social waitlist to the <br />
-              first people to use an awesome app design and craft for you
-              <br />
-              by you. To make it more fun we have created a unique <br />
-              for you to help you invite more friends. The more
-              <br />
-              you invite people{" "}
+               Thank you for joining the BSocial Waitlist and Referral program.
+              You are in an exclusive group of users who will be among the first
+              to be invited into this awesome app when ready. BSocial app is
+              more fun when you have your friends in the app and so we have
+              created a unique link for you to invite your friends into the
+              Waitlist and Referral program. The more users you bring into the
+              program the higher you rank on the leaderboard.{" "}
               <span style={{ color: "#939393" }}>
-                you stand a chance to B.Social swags, <br />
-                promoted in the app and on our your socials, get verified
-                <br />
-                in the app and potential gain equities in <br />
-                B.Social App company
+                You may earn many goodies from the BSocial team including swags,
+                souvenirs and getting promoted and verified in the BSocial app
+                and on BSocial’s social channels.
               </span>
             </text>
+
+
+
 
             <div className={styles.rlink}>
               <div className={styles.http}>https://</div>
@@ -836,15 +840,17 @@ export default function Home() {
             </div>
 
             <button
-               onClick={() => {
+              onClick={() => {
                 if (navigator.share) {
-                  navigator.share({
-                    title: 'B.Social',
-                    url: 'https://joinb.social/invite/'
-                  }).then(() => {
-                    console.log('Thanks for sharing!');
-                  })
-                  .catch(console.error);
+                  navigator
+                    .share({
+                      title: "B.Social",
+                      url: "https://joinb.social/invite/",
+                    })
+                    .then(() => {
+                      console.log("Thanks for sharing!");
+                    })
+                    .catch(console.error);
                 } else {
                   // fallback
                 }

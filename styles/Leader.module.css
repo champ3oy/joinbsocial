@@ -446,6 +446,7 @@
 }
 .tab text {
   padding: 11px;
+  padding-left: 0px;
   border-bottom: solid 2px #7f46ff;
 }
 .listitem {
@@ -670,6 +671,25 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
+}
+.rankcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.joinx2 {
+  font-weight: 600;
+  font-size: 11px;
+  width: 117px;
+  height: 26px;
+  border-radius: 30px;
+  color: #7f46ff;
+  background-color: #232833;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -1096,6 +1116,7 @@
   }
   .tab text {
     padding: 11px;
+    padding-left: 0;
     border-bottom: solid 2px #7f46ff;
   }
   .listitem {
@@ -1684,6 +1705,7 @@
   }
   .tab text {
     padding: 11px;
+    padding-left: 0;
     border-bottom: solid 2px #7f46ff;
   }
   .listitem {
@@ -2113,7 +2135,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding-top: 30px;
+    padding-top: 10px;
   }
   .input {
     width: 100%;
@@ -2192,7 +2214,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 80px;
+    top: 65px;
     left: 40px;
     transform: rotate(-15deg);
     z-index: 9999;
@@ -2214,7 +2236,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 200px;
+    top: 195px;
     left: 57%;
     transform: rotate(-5deg);
     z-index: 9999;
@@ -2235,7 +2257,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 75px;
+    top: 70px;
     right: 50px;
     transform: rotate(15deg);
     z-index: 9999;
@@ -2298,6 +2320,7 @@
   }
   .tab text {
     padding: 11px;
+    padding-left: 0;
     border-bottom: solid 2px #7f46ff;
   }
   .listitem {
@@ -2379,27 +2402,27 @@
     font-size: 12px;
   }
   .filter {
-    width: 160px;
-    height: 55px;
+    width: 90px;
+    height: 35px;
     border: 1px solid #747883;
-    border-radius: 20px;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 13px;
     color: #747883;
     font-weight: 300;
-    display: none;
   }
   .filter img {
-    width: 20px;
-    height: 22;
-    margin-right: 10px;
+    width: 13px;
+    height: 13;
+    margin-right: 3px;
   }
+  /* arow down */
   .ad {
-    height: 10px;
-    width: 20px;
-    margin-left: 5px;
+    height: 5px;
+    width: 6px;
+    margin-left: 2px;
   }
   .stick {
     width: 100%;
