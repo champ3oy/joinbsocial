@@ -11,7 +11,10 @@ export default function Leaderboard() {
   const [showModal3, setShowModal3] = useState(false);
   const [showModal4, setShowModal4] = useState(false);
   const [showModal5, setShowModal5] = useState(false);
+  const [showModal6, setShowModal6] = useState(false);
+  const [showModalfilter, setShowModalfilter] = useState(false);
   const [page, setpage] = useState(1);
+  const [filter, setfilter] = useState("Daily");
 
   useEffect(() => {
     AOS.init({
@@ -91,12 +94,16 @@ export default function Leaderboard() {
           >
             Join the waitlist &#127881;
           </div>
-
-          <Link href="/">
+          <div
+            style={{ marginTop: 20 }}
+            onClick={() => {
+              setShowModal5(true);
+            }}
+          >
             <a className={styles.textBtnw}>
               Check where you are on the waitlist &#127881;
             </a>
-          </Link>
+          </div>
         </main>
       ) : (
         <main className={styles.referral}>
@@ -113,16 +120,68 @@ export default function Leaderboard() {
             </div>
             <div className={styles.head}>
               <text className={styles.head1}>Top 10</text>
-              <div className={styles.filter}>
+              <div
+                onClick={() => {
+                  if (showModalfilter) {
+                    setShowModalfilter(false);
+                  } else {
+                    setShowModalfilter(true);
+                  }
+                }}
+                className={styles.filter}
+              >
                 <img src="/calender.png" />
-                <text>Weekly</text>
+                <text>{filter}</text>
                 <img src="/arrow-down.png" className={styles.ad} />
+                {showModalfilter ? (
+                  <div className={styles.filtepopup}>
+                    <text
+                      onClick={() => {
+                        setfilter("Daily");
+                        setShowModalfilter(false);
+                      }}
+                    >
+                      Daily
+                    </text>
+                    <text
+                      onClick={() => {
+                        setShowModalfilter(false);
+                        setfilter("Weekly");
+                      }}
+                    >
+                      Weekly
+                    </text>
+                    <text
+                      onClick={() => {
+                        setfilter("Monthly");
+                        setShowModalfilter(false);
+                      }}
+                    >
+                      Monthly
+                    </text>
+                  </div>
+                ) : null}
               </div>
             </div>
             <div className={styles.top5}>
-              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => {
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, index) => {
+                let colors = [
+                  styles.stick0,
+                  styles.stick1,
+                  styles.stick2,
+                  styles.stick3,
+                  styles.stick4,
+                  styles.stick5,
+                  styles.stick6,
+                  styles.stick7,
+                  styles.stick8,
+                  styles.stick9,
+                ];
                 return (
-                  <div className={styles.stick} key={item}>
+                  <div
+                    className={`${styles.stick} ${colors[index]}`}
+                    key={item}
+                  >
                     <div className={styles.stickleft}>
                       <text className={styles.position}>{item}</text>
                       <div className={styles.midtext1}>
@@ -145,18 +204,17 @@ export default function Leaderboard() {
             <div className={styles.rankcon}>
               <text className={styles.ranking}>Ranking</text>
               <div
-              onClick={() => {
-                setShowModal(true);
-              }}
-              className={styles.joinx2}
-            >
-              Join the waitlist
-            </div>
+                onClick={() => {
+                  setShowModal(true);
+                }}
+                className={styles.joinx2}
+              >
+                Join the waitlist
+              </div>
             </div>
 
             <div className={styles.tab}>
               <text>Everyone on ranking</text>
-
             </div>
             <div className={styles.ranklist}>
               {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => {
@@ -274,7 +332,10 @@ export default function Leaderboard() {
               <text className={styles.floatText61}>Update</text>
             </div> */}
 
-            <text className={styles.modaltextc}>Congratulations &#127881;</text>
+            <text className={styles.modaltextc}>
+              <img className={styles.emojicrown} src="/crown.png" />
+              Congratulations &#127881;
+            </text>
             <text className={styles.modaltext2c}>
               Thank you for joining the BSocial Waitlist and Referral program.
               You are in an exclusive group of users who will be among the first
@@ -362,65 +423,76 @@ export default function Leaderboard() {
           className={styles.modalcon}
         >
           <div className={styles.modalc}>
-            {/* <div className={styles.floatm1}>
-              <img className={styles.emoji122} src="/crown.png" />
-              <text className={styles.floatText61}>Update</text>
-            </div> */}
-
-            <text className={styles.modaltextc}>Congratulations &#127881;</text>
+            <text className={styles.modaltextc2}>
+              <img className={styles.emojicrown} src="/crown.png" />
+              Your place on the waitlist
+            </text>
             <text className={styles.modaltext2c}>
-              Thank you for joing the B.Social waitlist to the first people to
-              use an awesome app design and craft for you <br />
-              by you. To make it more funWe have created a unique for you to
-              help you invite more friends. The more <br />
-              you invite people you stand a chance to B.Social swags, promoted
-              in the app and on our your socials, get verified <br />
-              in the appAnd potential gain equities in B.Social App company
+              Enter your name or email in the text space to check your rank{" "}
+              <br />
+              in the wailist
             </text>
             <text className={styles.modaltext2cm}>
-              Thank you for joing the B.Social waitlist to the <br />
-              first people to use an awesome app design and craft for you
-              <br />
-              by you. To make it more funWe have created a unique <br />
-              for you to help you invite more friends. The more
-              <br />
-              you invite people you stand a chance to B.Social swags, <br />
-              promoted in the app and on our your socials, get verified
-              <br />
-              in the appAnd potential gain equities in <br />
-              B.Social App company
+              Enter your name or email in the text <br />
+              space to check your rank in <br />
+              the wailist
             </text>
 
-            <div className={styles.rlink}>
-              <div className={styles.http}>https://</div>
-              <text>join.social/invite/jeffery.afrane/other</text>
-              <img className={styles.copy} src="/copy.png" />
-            </div>
+            <form>
+              <input
+                className={styles.rankinput}
+                type="text"
+                placeholder="Enter your name or email here"
+              />
+            </form>
 
             <button
               onClick={() => {
-                if (navigator.share) {
-                  navigator
-                    .share({
-                      title: "B.Social",
-                      url: "https://joinb.social/invite/",
-                    })
-                    .then(() => {
-                      console.log("Thanks for sharing!");
-                    })
-                    .catch(console.error);
-                } else {
-                  // fallback
-                }
+                setShowModal5(false);
+                setShowModal6(true);
               }}
               className={styles.btn}
             >
-              Share
+              Done
             </button>
             <text
               onClick={() => {
-                setpage(1);
                 setShowModal5(false);
+              }}
+              className={styles.close}
+            >
+              close
+            </text>
+          </div>
+        </main>
+      ) : null}
+
+      {showModal6 ? (
+        <main
+          data-aos="zoom-in"
+          data-aos-offset="50"
+          data-aos-delay="10"
+          className={styles.modalcon}
+        >
+          <div className={styles.modalc}>
+            <text className={styles.modaltextc2r}>
+              <img className={styles.emojicrown2} src="/crown.png" />
+              You are <span style={{ color: "#7f46ff" }}>35th</span> on <br />
+              the waitlist
+            </text>
+            <text className={styles.modaltext2c}>
+              Invite 5 more people to move you up the waitlist!
+            </text>
+            <text className={styles.modaltext2cm}>
+              Invite 5 more people to move you up <br />
+              the waitlist!
+            </text>
+
+            <button className={styles.btn}>Share</button>
+            <text
+              onClick={() => {
+                setpage(1);
+                setShowModal6(false);
               }}
               className={styles.close}
             >
