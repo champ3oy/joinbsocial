@@ -101,6 +101,7 @@ export default function Home() {
           showDots={true}
           swipeable={true}
           arrows={false}
+          pauseOnHover={false}
           customDot={<CustomDot />}
         >
           <main id="herotext" className={styles.hero}>
@@ -115,10 +116,11 @@ export default function Home() {
                 your FRIENDS
               </text>
               <text className={`${styles.heroSubText}`}>
-                Not your typical app to post content just for fun. 
-                With B.Social you build close relationships <br />with your 
-                friends & followers through your interactions in the
-                app plus your participation in the <br />challenges.
+                Not your typical app to post content just for fun. With B.Social
+                you build close relationships <br />
+                with your friends & followers through your interactions in the
+                app plus your participation in the <br />
+                challenges.
               </text>
               <text className={`${styles.heroSubTextm}`}>
                 Not your typical app to post content just
@@ -164,21 +166,19 @@ export default function Home() {
               </text>
               <text className={`${styles.heroSubText}`}>
                 As a creator or influencer, you can make sustainable incomes
-                from promoting your products
+                from promoting your favorite products
                 <br />
-                and brands in the B.Social app & in other social app. The more
+                and brands in the B.Social app & in other social apps. The more
                 views your content receives the higher the
                 <br />
-                revenue you get
+                revenue you get.
               </text>
               <text className={`${styles.heroSubTextm}`}>
                 As a creator or influencer, you can make <br />
-                sustainable incomes from promoting your products
-                <br />
-                and brands in the B.Social app & in other social app. <br />
-                The more views your contact receives the higher the
-                <br />
-                revenue you get
+                sustainable incomes from promoting your favorite <br />
+                products and brands in the B.Social app & in other <br />
+                social apps. The more views your contact receives the <br />
+                higher the revenue you get.
               </text>
 
               <div
@@ -221,15 +221,15 @@ export default function Home() {
               <text className={`${styles.heroSubText}`}>
                 Get more engaged customers to your brand by setting up brand
                 challenges in <br />
-                B.Social. Influencers and superfans create to promote your
-                products & brand.
+                B.Social. Influencers and superfans create content to promote
+                your products & brand.
                 <br />
                 Your brand could go viral on social media, you know!
               </text>
               <text className={`${styles.heroSubTextm}`}>
                 Get more engaged customers to your brand by <br />
                 setting up brand challenges in B.Social. Influencers <br />
-                and superfans create to promote your products & <br />
+                and superfans create content to promote your products & <br />
                 brand. Your brand could go viral on social media, you know!
               </text>
 
@@ -373,13 +373,19 @@ export default function Home() {
             className={`${styles.content2Subtext} ${styles.content1Subtext2}`}
           >
             Let your friends know you got them, by checking <br />
-            in with them
+            in with them. Follow your friends updates and do not
+            <br />
+            miss out on your friends exciting life milestones &
+            <br />
+            celebration
           </text>
           <text
             className={`${styles.content2Subtextm} ${styles.content1Subtext2}`}
           >
             Let your friends know you got them, <br />
-            by checking in with them
+            by checking in with them. Follow your  <br />friendsupdates and do not
+            miss out on <br />your friends exciting life milestones  <br />&
+            celebration
           </text>
 
           <div
@@ -470,9 +476,10 @@ export default function Home() {
             views and watch your revenue skyrocket!
           </text>
           <text className={`${styles.content2Subtextm}`}>
-            Select your favorite brand, create a <br />#challenge 
-            for it, promote across your <br />social channels, amass 
-            views and <br />watch your revenue skyrocket!
+            Select your favorite brand, create a <br />
+            #challenge for it, promote across your <br />
+            social channels, amass views and <br />
+            watch your revenue skyrocket!
           </text>
           <div
             className={`${styles.joinBtn4} ${styles.joinPromoteb}`}
@@ -829,8 +836,18 @@ export default function Home() {
             </div>
 
             <button
-              onClick={() => {
-                setpage(2);
+               onClick={() => {
+                if (navigator.share) {
+                  navigator.share({
+                    title: 'B.Social',
+                    url: 'https://joinb.social/invite/'
+                  }).then(() => {
+                    console.log('Thanks for sharing!');
+                  })
+                  .catch(console.error);
+                } else {
+                  // fallback
+                }
               }}
               className={styles.btn}
             >

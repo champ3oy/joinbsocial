@@ -45,6 +45,15 @@
   margin-right: 30px;
   cursor: pointer;
 }
+.textBtnw {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 40px;
+}
 .joinBtn {
   width: 254.9px;
   height: 68.6px;
@@ -1844,6 +1853,15 @@
 }
 
 @media only screen and (max-width: 550px) {
+  .textBtnw {
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 40px;
+  }
   .container {
     min-height: 100vh;
     background-color: #000000;
@@ -2088,6 +2106,7 @@
     z-index: 999;
     margin-top: 10px;
     text-align: center;
+    display: flex;
   }
   .modalright {
     display: flex;
@@ -2554,5 +2573,45 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .modal, .modalc {
+    transform: scale(0.85);
+  }
+  .logo {
+    width: 150px;
+    height: 50px;
+  }
+  .back {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  .number {
+    font-size: 55px;
+    color: white;
+    letter-spacing: -4px;
+    margin-top: -70px;
+    background: linear-gradient(
+      to right,
+      #7f46ff 0%,
+      #7f46ff 40%,
+      #ff46b1 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .subText {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .textBtnw {
+    font-size: 11px;
+    margin-top: 20px;
   }
 }
