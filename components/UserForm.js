@@ -71,7 +71,7 @@ export default function UserForm(props) {
           className={styles.phonelist}
         >
           {CountryList.map((item) => {
-            return <option value={item.code}>{item.code}</option>;
+            return <option key={item.name} value={item.code}>{item.code}</option>;
           })}
         </select>
         <input
