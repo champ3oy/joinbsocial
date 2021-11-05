@@ -1472,7 +1472,73 @@
 }
 .more {
   color: #7f46ff;
-  cursor: pointer
+  cursor: pointer;
+}
+.phonelistcon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 9px;
+  width: 404px;
+  height: 78px;
+  border: none;
+  background-color: #eaeaea;
+  border-radius: 50px;
+  padding-left: 10px;
+  font-family: "Rubik";
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  outline: none;
+  color: black;
+  resize: none;
+}
+
+.phonelist {
+  height: 100%;
+  width: 100px;
+  background-color: white;
+  border-radius: 50px;
+  border: none;
+  font-family: "Rubik";
+  font-size: 15px;
+  font-weight: 600;
+  padding: 0 10px 0 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  background-image: url("https://cdn3.iconfinder.com/data/icons/user-interface-169/32/chevron-bottom-512.png");
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position-x: 80%;
+  background-position-y: 20px;
+}
+.phonelist option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+.inputx {
+  font-family: "Rubik";
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #eaeaea;
+  border: none;
+  outline: none;
+  margin-left: 20px;
+}
+.inputx::placeholder {
+  color: #b5b1b1;
 }
 
 /* 1600 screen */
@@ -5996,7 +6062,8 @@
     /* flex-direction: row; */
   }
 
-  .modalrightm,  .modalright {
+  .modalrightm,
+  .modalright {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6212,6 +6279,11 @@
     position: absolute;
     top: -20px;
     left: -22px;
+  }
+  .phonelistcon {
+    transform: scale(0.65);
+    margin-top: -13px;
+    margin-bottom: -15px;
   }
 }
 

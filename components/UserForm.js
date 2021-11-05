@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import styles from "../styles/Home.module.css";
 import modal from "../styles/Modal.module.css";
 import { useMutation } from "@apollo/client";
 import { REGISTER_USER } from "../GraphQL/mutations";
+import CountryList from "../components/Country";
 
 export default function UserForm(props) {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [code, setcode] = useState("");
   const [showmodal, setmodal] = useState(false);
   const [err, seterr] = useState("");
 
@@ -61,14 +63,26 @@ export default function UserForm(props) {
           setEmail(e.target.value);
         }}
       />
-      <input
-        type="text"
-        className={styles.input}
-        placeholder="Phone Number"
-        onChange={(e) => {
-          setPhoneNumber(e.target.value);
-        }}
-      />
+      <div className={`${styles.phonelistcon}`}>
+        <select
+          onChange={(e) => {
+            setcode(e.target.value);
+          }}
+          className={styles.phonelist}
+        >
+          {CountryList.map((item) => {
+            return <option value={item.code}>{item.code}</option>;
+          })}
+        </select>
+        <input
+          type="text"
+          className={styles.inputx}
+          placeholder="Phone Number"
+          onChange={(e) => {
+            setPhoneNumber(e.target.value);
+          }}
+        />
+      </div>
       <button
         onClick={() => {
           try {
@@ -76,7 +90,7 @@ export default function UserForm(props) {
               variables: {
                 name: fullName,
                 email: email,
-                phone: phoneNumber,
+                phone: code + phoneNumber,
                 referredByCode: props.refs ? props.refs : null,
               },
             }).catch(() => {
