@@ -9,7 +9,7 @@ export default function UserForm(props) {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [code, setcode] = useState("");
+  const [code, setcode] = useState("+1");
   const [showmodal, setmodal] = useState(false);
   const [err, seterr] = useState("");
 
@@ -64,24 +64,32 @@ export default function UserForm(props) {
         }}
       />
       <div className={`${styles.phonelistcon}`}>
-        <select
-          onChange={(e) => {
-            setcode(e.target.value);
-          }}
-          className={styles.phonelist}
-        >
-          {CountryList.map((item) => {
-            return <option key={item.name} value={item.code}>{item.code}</option>;
-          })}
-        </select>
-        <input
-          type="text"
-          className={styles.inputx}
-          placeholder="Phone Number"
-          onChange={(e) => {
-            setPhoneNumber(e.target.value);
-          }}
-        />
+        <div className={styles.phonelist}>
+          {code ? <span>{code}</span> : null}
+          <select
+            onChange={(e) => {
+              setcode(e.target.value);
+            }}
+            className={styles.phonelistx}
+          >
+            {CountryList.map((item) => {
+              return (
+                <option key={item.name} value={item.code}>
+                  {item.code + " - " + item.name}
+                </option>
+              );
+            })}
+          </select>
+          </div>
+          <input
+            type="text"
+            className={styles.inputx}
+            placeholder="Phone Number"
+            onChange={(e) => {
+              setPhoneNumber(e.target.value);
+            }}
+          />
+        
       </div>
       <button
         onClick={() => {

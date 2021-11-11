@@ -1504,7 +1504,7 @@
   font-family: "Rubik";
   font-size: 15px;
   font-weight: 600;
-  padding: 0 10px 0 15px;
+  padding: 0 10px 0 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1514,11 +1514,23 @@
   -webkit-appearance: none;
   appearance: none;
   outline: none;
-  background-image: url("https://cdn3.iconfinder.com/data/icons/user-interface-169/32/chevron-bottom-512.png");
+  /* background-image: url("https://cdn3.iconfinder.com/data/icons/user-interface-169/32/chevron-bottom-512.png"); */
   background-repeat: no-repeat;
   background-size: 20%;
   background-position-x: 80%;
   background-position-y: 20px;
+}
+.phonelistx {
+  width: 20%;
+  height: 80%;
+  outline: none;
+  background-image: url("https://cdn3.iconfinder.com/data/icons/user-interface-169/32/chevron-bottom-512.png");
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position-x: 80%;
+  background-position-y: 20px;
+  background-color: white;
+  border: none;
 }
 .phonelist option {
   display: flex;
