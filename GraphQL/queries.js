@@ -35,3 +35,25 @@ export const GET_WAITLIST_NUMBER = gql`
     }
   }
 `;
+
+export const GET_POST = gql`
+  query Post($postId: String!) {
+    Post(id: $postId) {
+      _id
+      hashtag
+      media_type
+      media_type
+      media_url
+      media_thumbnail
+      audio_text
+      audio_url
+      likeCount
+      commentCount
+      creator {
+        name
+        username
+        avatar
+      }
+    }
+  }
+`;
