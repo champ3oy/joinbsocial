@@ -137,7 +137,10 @@ export default function Posts({ data }) {
 
   return (
     <div className={styles.container}>
-      <Headd title={data?.Post.hashtag} image={data?.Post.media_thumbnail} />
+      <Headd
+        title={data?.Post.hashtag + " by @" + data?.Post.creator.username}
+        image={data?.Post.media_thumbnail}
+      />
 
       {/* <div className={styles.list}> */}
       <MyItem data={data?.Post} />
