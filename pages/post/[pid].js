@@ -4,13 +4,10 @@ import styles from "../../styles/Content.module.css";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  useQuery,
-} from "@apollo/client";
-import { GET_POST } from "../../GraphQL/queries";
+// import { gql } from "@apollo/client";
+// import { GET_POST } from "../../GraphQL/queries";
+import { request, gql } from "graphql-request";
+import Headd from "../../components/Head2";
 
 const MyItem = ({ data }) => (
   <div className={styles.video}>
@@ -98,18 +95,14 @@ const MyItem = ({ data }) => (
   </div>
 );
 
-export default function Posts() {
+export default function Posts({ data }) {
   const [index, setIndex] = useState(1);
   const router = useRouter();
   const { pid } = router.query;
 
   console.log(pid);
 
-  const { loading, error, data, refetch } = useQuery(GET_POST, {
-    variables: {
-      postId: pid,
-    },
-  });
+  // const { loading, error, data, refetch } = datas;
 
   useEffect(() => {
     const resizeOps = () => {
@@ -121,38 +114,30 @@ export default function Posts() {
 
     resizeOps();
     window.addEventListener("resize", resizeOps);
-    if (data) {
-      console.log(data);
-      if (data.Post.media_type != "video") {
-        setTimeout(() => {
-          window.open(
-            "https://apps.apple.com/us/app/bsocial-endless-entertainment/id1586761443",
-            "_self"
-          );
-        }, 5000);
-      }
-    }
+    // if (data) {
+    //   console.log(data);
+    //   if (data.Post.media_type != "video") {
+    //     setTimeout(() => {
+    //       window.open(
+    //         "https://apps.apple.com/us/app/bsocial-endless-entertainment/id1586761443",
+    //         "_self"
+    //       );
+    //     }, 5000);
+    //   }
+    // }
 
-    if (error) {
-      console.log(data);
-    }
+    // if (error) {
+    //   console.log(data);
+    // }
 
     // if (pid) {
     //   refetch();
     // }
-  }, [loading, data, error]);
+  }, []);
 
   return (
     <div className={styles.container}>
-      <Head>
-        <meta
-          name="viewport"
-          content="width=device-width, height=device-height, initial-scale=1"
-        />
-        <title>B.Social | Endless entertainment</title>
-        <meta name="description" content="Endless entertainment" />
-        <link rel="icon" href="/logo.png" />
-      </Head>
+      <Headd title={data?.Post.hashtag} image={data?.Post.media_thumbnail} />
 
       {/* <div className={styles.list}> */}
       <MyItem data={data?.Post} />
@@ -174,4 +159,47 @@ export default function Posts() {
       </div>
     </div>
   );
+}
+
+export async function getServerSideProps(context) {
+  const pid = context.params.pid;
+
+  console.log(pid);
+
+  const query = gql`
+    query Post($postId: String!) {
+      Post(id: $postId) {
+        _id
+        hashtag
+        media_type
+        media_type
+        media_url
+        media_thumbnail
+        audio_text
+        audio_url
+        likeCount
+        commentCount
+        creator {
+          name
+          username
+          avatar
+        }
+      }
+    }
+  `;
+
+  const variables = {
+    postId: pid,
+  };
+
+  const res = await request(
+    "https://api.joinb.social/graphql",
+    query,
+    variables
+  );
+
+  // console.log()
+  const data = res;
+
+  return { props: { data: data } };
 }

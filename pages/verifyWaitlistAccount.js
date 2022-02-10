@@ -117,7 +117,7 @@ export default function VerifyUser() {
 
               <div className={styles.modalleft}>
                 <text className={styles.modaltext}>
-                Sign up, <br />
+                  Sign up, <br />
                   Refer and <br />
                   Win
                 </text>
@@ -414,10 +414,10 @@ export default function VerifyUser() {
                   <img
                     alt="image"
                     onClick={() => {
-                      setcopied(true)
+                      setcopied(true);
                       setTimeout(() => {
-                        setcopied(false)
-                      }, 5000)
+                        setcopied(false);
+                      }, 5000);
                       navigator.clipboard.writeText(
                         "https://joinb.social/?referralCode=" + refCode
                       );
