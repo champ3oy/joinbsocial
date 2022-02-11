@@ -1,3 +1,6 @@
+.shorts {
+  width: 49%;
+}
 .floatm1b {
   width: 215px;
   height: 58px;
@@ -491,6 +494,15 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
+  padding-right: 20px;
+}
+.options2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 20px;
   padding-right: 20px;
 }
