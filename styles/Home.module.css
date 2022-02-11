@@ -1,3 +1,23 @@
+.logos{
+  width: 2vw;
+  height: 2vw;
+  margin: 0 7.8px 0 0;
+ 
+}
+.JoinforAndriod {
+  margin-top: 30px;
+  font-family: Rubik;
+  font-size: 0.9vw;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: -0.76px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+
 .container {
   min-height: 100vh;
   background-color: #7f46ff;
@@ -81,7 +101,7 @@
   cursor: pointer;
 }
 .joinBtn {
-  width: 243px;
+  width: fit-content;
   height: 75px;
   border-radius: 56px;
   background-color: #7f46ff;
@@ -137,7 +157,8 @@
   font-weight: 500;
 }
 .joinBtn2 {
-  width: 335px;
+  width: fit-content;
+  padding: 0 20px 0 20px;
   height: 90px;
   border-radius: 56px;
   background-color: white;
@@ -1722,7 +1743,8 @@
     margin-right: 15px;
   }
   .joinBtn {
-    width: 180px;
+    padding: 0 20px 0 20px;
+    width: fit-content;
     height: 55px;
     border-radius: 56px;
     background-color: #7f46ff;
@@ -1775,7 +1797,8 @@
     display: flex;
   }
   .joinBtn2 {
-    width: 240px;
+    width: fit-content;
+    padding: 0 20px 0 20px;
     height: 70px;
     border-radius: 56px;
     background-color: white;
@@ -2804,7 +2827,8 @@
     margin-right: 15px;
   }
   .joinBtn {
-    width: 160px;
+    padding: 0 20px 0 20px;
+    width: fit-content;
     height: 50px;
     border-radius: 56px;
     background-color: #7f46ff;
@@ -2858,7 +2882,8 @@
     display: flex;
   }
   .joinBtn2 {
-    width: 210px;
+    width: fit-content;
+    padding: 0 20px 0 20px;
     height: 60px;
     border-radius: 56px;
     background-color: white;
@@ -3957,7 +3982,8 @@
     margin-right: 15px;
   }
   .joinBtn {
-    width: 160px;
+    padding: 0 20px 0 20px;
+    width: fit-content;
     height: 50px;
     border-radius: 56px;
     background-color: #7f46ff;
@@ -4010,7 +4036,8 @@
     margin-top: 20px;
   }
   .joinBtn2 {
-    width: 210px;
+    width: fit-content;
+    padding: 0 20px 0 20px;
     height: 60px;
     border-radius: 56px;
     background-color: white;
@@ -5096,7 +5123,8 @@
     margin-right: 50px;
   }
   .joinBtn {
-    width: 243px;
+    padding: 0 20px 0 20px;
+    width: fit-content;
     height: 75px;
     border-radius: 56px;
     background-color: #7f46ff;
@@ -5155,7 +5183,8 @@
     margin-top: 20px;
   }
   .joinBtn2 {
-    width: 170px;
+    width: fit-content;
+    padding: 0 20px 0 20px;
     height: 55px;
     border-radius: 56px;
     background-color: white;
@@ -6754,7 +6783,8 @@
     margin-right: 50px;
   }
   .joinBtn {
-    width: 243px;
+    padding: 0 20px 0 20px;
+    width: fit-content;
     height: 75px;
     border-radius: 56px;
     background-color: #7f46ff;
@@ -6812,7 +6842,8 @@
     margin-top: 10px;
   }
   .joinBtn2 {
-    width: 149px;
+    width: fit-content;
+    padding: 0 20px 0 20px;
     height: 44px;
     border-radius: 56px;
     background-color: white;
