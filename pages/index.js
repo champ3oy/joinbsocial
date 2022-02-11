@@ -10,6 +10,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import Marquee from "react-fast-marquee";
 import Head from "../components/Head";
 import BrandModal from "../components/BrandModal";
+import Ambassador from "../components/Ambassador";
 import * as ga from "../lib/ga";
 import { useRouter } from "next/router";
 
@@ -22,6 +23,7 @@ export default function Home() {
   const [showModal, setShowModal] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
   const [showModal3, setShowModal3] = useState(false);
+  const [showModal4, setShowModal4] = useState(false);
   const [page, setpage] = useState(1);
   const [refCode, setrefCode] = useState("");
   const router = useRouter();
@@ -115,12 +117,12 @@ export default function Home() {
                 onClick={() => {
                   ga.event({
                     action: "open popup",
-                    params: "join waitlist",
+                    params: "sign up as ambassador",
                   });
-                  setShowModal(true);
+                  setShowModal4(true);
                 }}
               >
-                Join the Waitlist &#127881;
+                Sign up as an Ambassador &#127881;
               </div>
             </div>
           </nav>
@@ -167,19 +169,23 @@ export default function Home() {
                   <br />
                   your participation in the challenges.
                 </text>
+                <Link href="https://apps.apple.com/us/app/bsocial-endless-entertainment/id1586761443">
+                  <div
+                    className={styles.joinBtn2}
 
-                <div
-                  className={styles.joinBtn2}
-                  onClick={() => {
-                    setShowModal(true);
-                    ga.event({
-                      action: "open popup",
-                      params: "join waitlist",
-                    });
-                  }}
-                >
-                  Join the Waitlist &#127881;
-                </div>
+                  >
+                    <img className={styles.logos} src="/mac-os-logo.png"></img> Download On App Store
+                  </div>
+                </Link>
+                <span onClick={() => {
+                  setShowModal(true);
+                  ga.event({
+                    action: "open popup",
+                    params: "join waitlist",
+                  });
+                }} className={styles.JoinforAndriod}>
+                  Join the waitlist for Andriod🎉
+                </span>
 
                 <Link href="/leaderboard">
                   <a className={styles.lblink}>
@@ -219,18 +225,23 @@ export default function Home() {
                   higher the revenues you get.
                 </text>
 
-                <div
-                  className={styles.joinBtn2}
-                  onClick={() => {
-                    setShowModal(true);
-                    ga.event({
-                      action: "open popup",
-                      params: "join waitlist",
-                    });
-                  }}
-                >
-                  Join the Waitlist &#127881;
-                </div>
+                <Link href="https://apps.apple.com/us/app/bsocial-endless-entertainment/id1586761443">
+                  <div
+                    className={styles.joinBtn2}
+
+                  >
+                    <img className={styles.logos} src="/mac-os-logo.png"></img> Download On App Store
+                  </div>
+                </Link>
+                <span onClick={() => {
+                  setShowModal(true);
+                  ga.event({
+                    action: "open popup",
+                    params: "join waitlist",
+                  });
+                }} className={styles.JoinforAndriod}>
+                  Join the waitlist for Andriod🎉
+                </span>
                 <Link href="/leaderboard">
                   <a className={styles.lblink}>
                     Checkout the Waitlist Leaderboard
@@ -897,7 +908,7 @@ export default function Home() {
             </div>
             {/* <img alt="image" className={styles.fcenter} src="/california.png" /> */}
             <div className={styles.fcenter}>
-              &copy; 2021 BB.Social Inc. All rights reserved.
+              &copy; 2022 BB.Social Inc. All rights reserved.
               contactus@joinb.social
             </div>
             <div className={styles.fright}>
@@ -987,6 +998,25 @@ export default function Home() {
             onClose={() => {
               setpage(1);
               setShowModal2(false);
+            }}
+            onNext={() => {
+              setpage(page + 1);
+            }}
+            onBack={() => {
+              setpage(page - 1);
+            }}
+            onDone={() => {
+              setpage(1);
+            }}
+          />
+        ) : null}
+
+        {showModal4 ? (
+          <Ambassador
+            page={page}
+            onClose={() => {
+              setpage(1);
+              setShowModal4(false);
             }}
             onNext={() => {
               setpage(page + 1);
