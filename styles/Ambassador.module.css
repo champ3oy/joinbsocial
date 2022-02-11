@@ -1,0 +1,1860 @@
+.shorts {
+  width: 49%;
+}
+.floatm1b {
+  width: 215px;
+  height: 58px;
+  background-color: black;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 110px;
+  left: 20px;
+  transform: rotate(-15deg);
+  z-index: 9999;
+  color: white;
+}
+
+.floatImg {
+  width: 41px;
+  height: 41px;
+  margin-right: 6px;
+}
+.floatText {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.emoji13 {
+  width: 50px;
+  height: 60px;
+  position: absolute;
+  top: -35px;
+  right: -10px;
+  transform: rotate(5deg);
+  z-index: 9;
+}
+
+.modalcon {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.418);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 9999;
+  overflow: scroll;
+  padding-top: 0vh;
+}
+
+.modalb {
+  background-color: white;
+  width: 1131px;
+  height: fit-content;
+  border-radius: 70px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px 30px;
+  z-index: 9999;
+  transition: all 0.2s ease-in-out;
+  margin: 100px 0 100px 0;
+}
+.modalc {
+  background-color: white;
+  width: 1131px;
+  height: 713px;
+  border-radius: 70px;
+  position: relative;
+  display: flex;
+  flex: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 70px;
+  z-index: 9999;
+  transition: all 0.2s ease-in-out;
+  margin-top: 250px;
+}
+.modaltextc {
+  color: #7f46ff;
+  font-size: "Rubik";
+  font-weight: 900;
+  font-size: 77px;
+  text-align: center;
+  line-height: 74px;
+  letter-spacing: -2px;
+  z-index: 999;
+  margin-top: 20px;
+  position: relative;
+}
+.modaltext2c {
+  color: #b5b1b1;
+  font-weight: 600;
+  font-size: 17px;
+  text-align: center;
+  z-index: 999;
+  margin-top: 40px;
+}
+.modalleftb {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.p3 {
+  width: 200px;
+  height: 105px;
+  left: -70px;
+}
+.p3modal {
+  width: 165px;
+  height: 102px;
+  transform: scale(1);
+}
+.modaltext {
+  color: #7f46ff;
+  font-size: "Rubik";
+  font-weight: 900;
+  font-size: 60px;
+  text-align: center;
+  line-height: 65px;
+  letter-spacing: -2px;
+  z-index: 999;
+  margin-top: 20px;
+  width: 100%;
+}
+.modaltextm {
+  display: none;
+}
+.modaltext2 {
+  color: #b5b1b1;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  z-index: 999;
+  margin-top: 20px;
+  width: 83%;
+}
+.modalright {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 90%;
+  margin-top: 30px;
+  height: 70%;
+}
+.input {
+  width: 100%;
+  height: 80px;
+  border: none;
+  background-color: #eaeaead3;
+  border-radius: 20px;
+  padding: 0 30px;
+  font-family: "Rubik";
+  margin-bottom: 30px;
+  font-size: 15px;
+  font-weight: 800;
+  outline: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.input::placeholder {
+  color: #b5b1b1;
+}
+.label {
+  color: #b5b1b1;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.textarea {
+  width: 100%;
+  height: 260px;
+  border: none;
+  background-color: #eaeaea;
+  border-radius: 20px;
+  padding: 30px 30px;
+  font-family: "Rubik";
+  margin-bottom: 30px;
+  font-size: 15px;
+  font-weight: 800;
+  outline: none;
+  color: #b5b1b1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.textarea::placeholder {
+  color: #b5b1b1;
+}
+.input::-webkit-input-placeholder:after {
+  content: " *";
+  color: red;
+  z-index: 9999;
+}
+.input:-moz-placeholder:after {
+  content: " *";
+  color: red;
+  z-index: 9999;
+}
+.input:-ms-input-placeholder:after {
+  content: " *";
+  color: red;
+  z-index: 9999;
+}
+.btn {
+  width: 185px;
+  height: 77px;
+  border: 4px solid black;
+  border-radius: 50px;
+  background-color: #7f46ff;
+  color: white;
+  font-family: "Rubik";
+  font-weight: 900;
+  font-size: 23px;
+  box-shadow: black -5px 5px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+.btn:disabled {
+  opacity: 0.5;
+}
+.close {
+  color: #7f46ff;
+  font-size: 23px;
+  font-family: "Rubik";
+  font-weight: 900;
+  padding: 20px 10px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.close:hover {
+  transform: scale(1.05);
+}
+.floatm1 {
+  width: 141px;
+  height: 48px;
+  background-color: black;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 190px;
+  left: 30px;
+  transform: rotate(-15deg);
+  z-index: 9999;
+  color: white;
+}
+.floatText61 {
+  font-size: 21px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0px;
+}
+.floatm2 {
+  width: 199px;
+  height: 52px;
+  background-color: black;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -40px;
+  left: 44%;
+  transform: rotate(5deg);
+}
+.floatText71 {
+  font-size: 21px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0px;
+}
+.floatm3 {
+  width: 173px;
+  height: 52px;
+  background-color: black;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 15%;
+  right: -50px;
+  transform: rotate(15deg);
+}
+.floatText81 {
+  font-size: 21px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0px;
+}
+.line {
+  height: 330px;
+  /* width: 1px; */
+  margin-top: 100px;
+}
+.heroTextm,
+.heroSubTextm,
+.bannerFooterm {
+  display: none;
+}
+.brands {
+  width: 382px;
+  height: 79px;
+  border-radius: 56px;
+  font-size: 37px;
+  border: solid white 5px;
+  position: relative;
+}
+.brands::before {
+  content: "Brands & Products";
+  width: 370px;
+  height: 75px;
+  border-radius: 56px;
+  background-color: #ffcd00;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 27px;
+  border: solid white 5px;
+  font-weight: 800;
+  position: absolute;
+  top: -20px;
+  left: -12px;
+}
+.active,
+.inactive {
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  margin-bottom: 45px;
+  border: none;
+  margin-left: 3px;
+  margin-right: 3px;
+  cursor: pointer;
+  background-color: white;
+}
+.inactive {
+  background-color: rgba(225, 225, 225, 0.418);
+}
+.pagination {
+  position: absolute;
+  top: 50px;
+  right: 75px;
+  color: #b1b1b1;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.pagination img {
+  width: 16px;
+  height: 16px;
+  color: #b1b1bb;
+  margin-right: 5px;
+}
+.lblink {
+  display: none;
+}
+.infocon {
+  position: relative;
+  width: auto;
+}
+.info {
+  position: absolute;
+  right: 28px;
+  top: 28px;
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+}
+.info:hover + .tooltip1 {
+  display: flex;
+}
+.tooltip1 {
+  width: 118px;
+  height: 80px;
+  display: none;
+  position: absolute;
+  right: -22px;
+  top: 52px;
+  z-index: 999;
+}
+
+.info2 {
+  position: absolute;
+  right: 28px;
+  top: 28px;
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+}
+.info2:hover + .tooltip2 {
+  display: flex;
+}
+.tooltip2 {
+  width: 118px;
+  height: 104px;
+  display: none;
+  position: absolute;
+  right: -22px;
+  top: 52px;
+  z-index: 999;
+}
+.rlink {
+  width: 490px;
+  height: 57px;
+  border-radius: 50px;
+  background-color: black;
+  margin: 40px 0 10px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+.http {
+  color: white;
+  width: 109px;
+  height: 57px;
+  background-color: #7f46ff;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+}
+.copy {
+  width: 14px;
+  height: 17px;
+  margin-right: 15px;
+}
+.modaltext2cm {
+  display: none;
+}
+.emojicrown {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -50px;
+  left: -40px;
+}
+.content2Subtextm {
+  display: none;
+}
+.content1Textm {
+  display: none;
+}
+.modalrightm {
+  display: none;
+}
+.options {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding-right: 20px;
+}
+.options2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-right: 20px;
+}
+.optiontext {
+  color: #7f46ff;
+  font-size: 15px;
+  font-weight: 800;
+  width: 40%;
+  height: 40px;
+}
+.inputoption {
+  width: 60%;
+  height: 80px;
+  border: none;
+  background-color: #eaeaead3;
+  border-radius: 20px;
+  padding: 0 30px;
+  font-family: "Rubik";
+  font-size: 15px;
+  font-weight: 800;
+  outline: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.inputoption::placeholder {
+  color: #b5b1b1;
+}
+.modalleftm {
+  display: none;
+}
+.modalleftbm {
+  display: none;
+}
+
+/* 1600 screen */
+@media only screen and (max-width: 1600px) {
+  .modalcon {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.418);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 9999;
+    overflow: scroll;
+    padding-top: 0vh;
+  }
+  .modalc {
+    margin-top: 100px;
+    transform: scale(0.85);
+  }
+
+  .modalb {
+    background-color: white;
+    width: 1131px;
+    height: fit-content;
+    border-radius: 70px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 30px;
+    z-index: 9999;
+    transition: all 0.2s ease-in-out;
+    margin: 0px 0 100px 0;
+    transform: scale(0.85);
+  }
+  .modalleftb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .p3 {
+    width: 200px;
+    height: 105px;
+    left: -70px;
+  }
+  .p3modal {
+    width: 165px;
+    height: 102px;
+    transform: scale(1);
+  }
+  .modaltext {
+    color: #7f46ff;
+    font-size: "Rubik";
+    font-weight: 900;
+    font-size: 60px;
+    text-align: center;
+    line-height: 65px;
+    letter-spacing: -2px;
+    z-index: 999;
+    margin-top: 20px;
+  }
+  .modaltext2 {
+    color: #b5b1b1;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    z-index: 999;
+    margin-top: 20px;
+    width: 83%;
+  }
+
+  .modalright {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 90%;
+    margin-top: 30px;
+    height: 70%;
+  }
+  .input {
+    width: 100%;
+    height: 80px;
+    border: none;
+    background-color: #eaeaead3;
+    border-radius: 20px;
+    padding: 0 30px;
+    font-family: "Rubik";
+    margin-bottom: 30px;
+    font-size: 15px;
+    font-weight: 800;
+    outline: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .input::placeholder {
+    color: #b5b1b1;
+  }
+  .label {
+    color: #b5b1b1;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .textarea {
+    width: 100%;
+    height: 260px;
+    border: none;
+    background-color: #eaeaea;
+    border-radius: 20px;
+    padding: 30px 30px;
+    font-family: "Rubik";
+    margin-bottom: 30px;
+    font-size: 15px;
+    font-weight: 800;
+    outline: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .textarea::placeholder {
+    color: #b5b1b1;
+  }
+  .btn {
+    width: 185px;
+    height: 77px;
+    border: 4px solid black;
+    border-radius: 50px;
+    background-color: #7f46ff;
+    color: white;
+    font-family: "Rubik";
+    font-weight: 900;
+    font-size: 23px;
+    box-shadow: black -5px 5px;
+    cursor: pointer;
+    margin-top: 50px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  .btn:hover {
+    transform: scale(1.05);
+  }
+  .close {
+    color: #7f46ff;
+    font-size: 23px;
+    font-family: "Rubik";
+    font-weight: 900;
+    padding: 20px 10px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  .close:hover {
+    transform: scale(1.05);
+  }
+  .floatm1 {
+    width: 141px;
+    height: 48px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 190px;
+    left: 30px;
+    transform: rotate(-15deg);
+    z-index: 9999;
+    color: white;
+  }
+  .floatText61 {
+    font-size: 21px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0px;
+  }
+  .floatm2 {
+    width: 199px;
+    height: 52px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -40px;
+    left: 44%;
+    transform: rotate(5deg);
+  }
+  .floatText71 {
+    font-size: 21px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0px;
+  }
+  .floatm3 {
+    width: 173px;
+    height: 52px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15%;
+    right: -50px;
+    transform: rotate(15deg);
+  }
+  .floatText81 {
+    font-size: 21px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0px;
+  }
+  .line {
+    height: 330px;
+    /* width: 1px; */
+    margin-top: 100px;
+  }
+  .heroTextm,
+  .heroSubTextm,
+  .bannerFooterm {
+    display: none;
+  }
+  .brands {
+    width: 255px;
+    height: 50px;
+    border-radius: 56px;
+    font-size: 37px;
+    border: solid white 4px;
+    position: relative;
+  }
+  .brands::before {
+    content: "Brands & Products";
+    width: 250px;
+    height: 50px;
+    border-radius: 56px;
+    background-color: #ffcd00;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    border: solid white 4px;
+    font-weight: 800;
+    position: absolute;
+    top: -20px;
+    left: -12px;
+  }
+  .active,
+  .inactive {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    margin-bottom: 35px;
+    border: none;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    cursor: pointer;
+  }
+  .inactive {
+    background-color: rgba(225, 225, 225, 0.418);
+  }
+  .modaltext2cm {
+    display: none;
+  }
+}
+
+/* 1440 screen */
+@media only screen and (max-width: 1450px) {
+  .modalcon {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.418);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow: scroll;
+    padding-top: 30vh;
+  }
+  .modalc {
+    margin-top: -150px;
+    transform: scale(0.82);
+  }
+
+  .modalb {
+    background-color: white;
+    width: 1131px;
+    height: fit-content;
+    border-radius: 70px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 30px;
+    z-index: 9999;
+    transition: all 0.2s ease-in-out;
+    margin: 300px 0 100px 0;
+    transform: scale(0.82);
+  }
+  .modalleftb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .p3 {
+    width: 200px;
+    height: 105px;
+    left: -70px;
+  }
+  .p3modal {
+    width: 165px;
+    height: 102px;
+    transform: scale(1);
+  }
+  .modaltext {
+    color: #7f46ff;
+    font-size: "Rubik";
+    font-weight: 900;
+    font-size: 60px;
+    text-align: center;
+    line-height: 65px;
+    letter-spacing: -2px;
+    z-index: 999;
+    margin-top: 20px;
+  }
+  .modaltext2 {
+    color: #b5b1b1;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    z-index: 999;
+    margin-top: 20px;
+    width: 83%;
+  }
+  .modalright {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 90%;
+    margin-top: 30px;
+    height: 70%;
+  }
+  .input {
+    width: 100%;
+    height: 80px;
+    border: none;
+    background-color: #eaeaead3;
+    border-radius: 20px;
+    padding: 0 30px;
+    font-family: "Rubik";
+    margin-bottom: 30px;
+    font-size: 15px;
+    font-weight: 800;
+    outline: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .input::placeholder {
+    color: #b5b1b1;
+  }
+  .label {
+    color: #b5b1b1;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .textarea {
+    width: 100%;
+    height: 260px;
+    border: none;
+    background-color: #eaeaea;
+    border-radius: 20px;
+    padding: 30px 30px;
+    font-family: "Rubik";
+    margin-bottom: 30px;
+    font-size: 15px;
+    font-weight: 800;
+    outline: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .textarea::placeholder {
+    color: #b5b1b1;
+  }
+  .btn {
+    width: 185px;
+    height: 77px;
+    border: 4px solid black;
+    border-radius: 50px;
+    background-color: #7f46ff;
+    color: white;
+    font-family: "Rubik";
+    font-weight: 900;
+    font-size: 23px;
+    box-shadow: black -5px 5px;
+    cursor: pointer;
+    margin-top: 50px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  .btn:hover {
+    transform: scale(1.05);
+  }
+  .close {
+    color: #7f46ff;
+    font-size: 23px;
+    font-family: "Rubik";
+    font-weight: 900;
+    padding: 20px 10px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  .close:hover {
+    transform: scale(1.05);
+  }
+  .floatm1 {
+    width: 141px;
+    height: 48px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 190px;
+    left: 30px;
+    transform: rotate(-15deg);
+    z-index: 9999;
+    color: white;
+  }
+  .floatText61 {
+    font-size: 21px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0px;
+  }
+  .floatm2 {
+    width: 199px;
+    height: 52px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -40px;
+    left: 44%;
+    transform: rotate(5deg);
+  }
+  .floatText71 {
+    font-size: 21px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0px;
+  }
+  .floatm3 {
+    width: 173px;
+    height: 52px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15%;
+    right: -50px;
+    transform: rotate(15deg);
+  }
+  .floatText81 {
+    font-size: 21px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0px;
+  }
+  .line {
+    height: 330px;
+    /* width: 1px; */
+    margin-top: 100px;
+  }
+  .heroTextm,
+  .heroSubTextm,
+  .bannerFooterm {
+    display: none;
+  }
+  .brands {
+    width: 255px;
+    height: 50px;
+    border-radius: 56px;
+    font-size: 37px;
+    border: solid white 4px;
+    position: relative;
+  }
+  .brands::before {
+    content: "Brands & Products";
+    width: 250px;
+    height: 50px;
+    border-radius: 56px;
+    background-color: #ffcd00;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    border: solid white 4px;
+    font-weight: 800;
+    position: absolute;
+    top: -20px;
+    left: -12px;
+  }
+  .active,
+  .inactive {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    margin-bottom: 35px;
+    border: none;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    cursor: pointer;
+  }
+  .inactive {
+    background-color: rgba(225, 225, 225, 0.418);
+  }
+  .modaltext2cm {
+    display: none;
+  }
+}
+
+/* 1350 screen */
+@media only screen and (max-width: 1400px) {
+  .modalcon {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.418);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow: scroll;
+    padding-top: 30vh;
+  }
+
+  .modalb {
+    background-color: white;
+    width: 1131px;
+    height: fit-content;
+    border-radius: 70px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 30px;
+    z-index: 9999;
+    transition: all 0.2s ease-in-out;
+    margin: 300px 0 100px 0;
+    transform: scale(0.7);
+  }
+  .modalc {
+    background-color: white;
+    width: 1131px;
+    height: 713px;
+    border-radius: 70px;
+    position: relative;
+    display: flex;
+    flex: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 70px;
+    z-index: 9999;
+    transition: all 0.2s ease-in-out;
+    margin-top: -220px;
+    transform: scale(0.8);
+  }
+  .modalleftb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .p3 {
+    width: 200px;
+    height: 105px;
+    left: -70px;
+  }
+  .p3modal {
+    width: 165px;
+    height: 102px;
+    transform: scale(1);
+  }
+  .modaltext {
+    color: #7f46ff;
+    font-size: "Rubik";
+    font-weight: 900;
+    font-size: 60px;
+    text-align: center;
+    line-height: 65px;
+    letter-spacing: -2px;
+    z-index: 999;
+    margin-top: 20px;
+  }
+  .modaltext2 {
+    color: #b5b1b1;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    z-index: 999;
+    margin-top: 20px;
+    width: 83%;
+  }
+
+  .modalright {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 90%;
+    margin-top: 30px;
+    height: 70%;
+  }
+  .input {
+    width: 100%;
+    height: 80px;
+    border: none;
+    background-color: #eaeaead3;
+    border-radius: 20px;
+    padding: 0 30px;
+    font-family: "Rubik";
+    margin-bottom: 30px;
+    font-size: 15px;
+    font-weight: 800;
+    outline: none;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .input::placeholder {
+    color: #b5b1b1;
+  }
+  .label {
+    color: #b5b1b1;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .textarea {
+    width: 100%;
+    height: 260px;
+    border: none;
+    background-color: #eaeaea;
+    border-radius: 20px;
+    padding: 30px 30px;
+    font-family: "Rubik";
+    margin-bottom: 30px;
+    font-size: 15px;
+    font-weight: 800;
+    outline: none;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .textarea::placeholder {
+    color: #b5b1b1;
+  }
+  .btn {
+    width: 185px;
+    height: 77px;
+    border: 4px solid black;
+    border-radius: 50px;
+    background-color: #7f46ff;
+    color: white;
+    font-family: "Rubik";
+    font-weight: 900;
+    font-size: 23px;
+    box-shadow: black -5px 5px;
+    cursor: pointer;
+    margin-top: 50px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  .btn:hover {
+    transform: scale(1.05);
+  }
+  .close {
+    color: #7f46ff;
+    font-size: 23px;
+    font-family: "Rubik";
+    font-weight: 900;
+    padding: 20px 10px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  .close:hover {
+    transform: scale(1.05);
+  }
+  .floatm1 {
+    width: 141px;
+    height: 48px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 190px;
+    left: 30px;
+    transform: rotate(-15deg);
+    z-index: 9999;
+    color: white;
+  }
+  .floatText61 {
+    font-size: 21px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0px;
+  }
+  .floatm2 {
+    width: 199px;
+    height: 52px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -40px;
+    left: 44%;
+    transform: rotate(5deg);
+  }
+  .floatText71 {
+    font-size: 21px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0px;
+  }
+  .floatm3 {
+    width: 173px;
+    height: 52px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15%;
+    right: -50px;
+    transform: rotate(15deg);
+  }
+  .floatText81 {
+    font-size: 21px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0px;
+  }
+  .line {
+    height: 330px;
+    /* width: 1px; */
+    margin-top: 100px;
+  }
+  .heroTextm,
+  .heroSubTextm,
+  .bannerFooterm {
+    display: none;
+  }
+  .brands {
+    width: 235px;
+    height: 45px;
+    border-radius: 56px;
+    font-size: 37px;
+    border: solid white 3.5px;
+    position: relative;
+  }
+  .brands::before {
+    content: "Brands & Products";
+    width: 230px;
+    height: 45px;
+    border-radius: 56px;
+    background-color: #ffcd00;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    border: solid white 3.5px;
+    font-weight: 800;
+    position: absolute;
+    top: -17px;
+    left: -9px;
+  }
+  .active,
+  .inactive {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    margin-bottom: 35px;
+    border: none;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    cursor: pointer;
+  }
+  .inactive {
+    background-color: rgba(225, 225, 225, 0.418);
+  }
+  .modaltext2cm {
+    display: none;
+  }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 550px) {
+  .shorts {
+    width: 100%;
+  }
+  .options2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-right: 20px;
+  }
+  .modalcon {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.418);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding-top: 0px;
+  }
+  .modal {
+    background-color: white;
+    width: 328px;
+    height: 582px;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    z-index: 9999;
+    transform: scale(1);
+  }
+  .modalc {
+    background-color: white;
+    width: 328px;
+    height: 500px;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 75px;
+    margin-top: 0vh;
+    z-index: 9999;
+    transform: scale(1);
+  }
+  .modalb {
+    background-color: white;
+    width: 328px;
+    height: 640px;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+    z-index: 9999;
+    transform: scale(1);
+    overflow-y: scroll;
+    padding-top: 100px;
+    margin-top: 100px;
+  }
+  .modalleft {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .modalleftb {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 30px;
+  }
+  .p3 {
+    width: 100px;
+  }
+  .p3modal {
+    width: 135px;
+    height: 82px;
+    transform: scale(0.7);
+    position: absolute;
+  }
+  .modaltext {
+    color: #7f46ff;
+    font-size: "Rubik";
+    font-weight: 900;
+    font-size: 41px;
+    text-align: left;
+    line-height: 41px;
+    letter-spacing: -2px;
+    z-index: 999;
+    text-align: center;
+    margin-top: -60px;
+    margin-bottom: 30px;
+  }
+  .modaltextb {
+    color: #7f46ff;
+    font-size: "Rubik";
+    font-weight: 900;
+    font-size: 41px;
+    text-align: left;
+    line-height: 41px;
+    letter-spacing: -2px;
+    z-index: 999;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+  .modaltextc {
+    color: #7f46ff;
+    font-size: "Rubik";
+    font-weight: 900;
+    font-size: 30px;
+    text-align: left;
+    line-height: 41px;
+    letter-spacing: -2px;
+    z-index: 999;
+    text-align: center;
+    margin-top: 0px;
+    position: relative;
+  }
+  .line {
+    display: flex;
+  }
+  .modaltext2 {
+    color: #b5b1b1;
+    font-size: 11px;
+    font-weight: 700;
+    font-size: 10px;
+    text-align: left;
+    z-index: 999;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .modaltext2c {
+    display: flex;
+  }
+  .modaltext2cm {
+    color: #b5b1b1;
+    font-size: 11px;
+    font-weight: 700;
+    font-size: 10px;
+    text-align: left;
+    z-index: 999;
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .modalrightm,
+  .modalright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 10px;
+  }
+  .modalright {
+    display: flex;
+  }
+  .input {
+    width: 100%;
+    height: 45px;
+    border: none;
+    background-color: #eaeaea;
+    border-radius: 50px;
+    padding: 0 15px;
+    padding-left: 10px;
+    font-family: "Rubik";
+    margin-bottom: 10px;
+    font-size: 10px;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .input::placeholder {
+    color: #b5b1b1;
+  }
+  .textaream {
+    background: none;
+    width: 100%;
+    height: fit-content;
+    border: none;
+    font-family: "Rubik";
+    font-size: 10px;
+    font-weight: 600;
+    resize: none;
+    padding: 0px 0px;
+    display: flex;
+  }
+  .textaream::placeholder {
+    color: #b5b1b1;
+  }
+  .btn {
+    width: 108px;
+    height: 45px;
+    border: 4px solid black;
+    border-radius: 50px;
+    background-color: #7f46ff;
+    color: white;
+    font-family: "Rubik";
+    font-weight: 900;
+    font-size: 16px;
+    box-shadow: black -5px 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .close {
+    color: #7f46ff;
+    font-size: 16px;
+    font-family: "Rubik";
+    font-weight: 900;
+    padding: 20px 10px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .brands {
+    width: 128px;
+    height: 25px;
+    border-radius: 56px;
+    font-size: 30px;
+    border: solid white 3px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .brands::before {
+    content: "Brands & Products";
+    width: 125px;
+    height: 25px;
+    border-radius: 56px;
+    background-color: #ffcd00;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 10px;
+    border: solid white 3px;
+    font-weight: 800;
+    position: absolute;
+    top: -13px;
+    left: -9px;
+  }
+  .floatm1b {
+    width: 89px;
+    height: 23px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 90px;
+    left: 40px;
+    transform: rotate(-10deg);
+    z-index: 9999;
+    color: white;
+  }
+  .active,
+  .inactive {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    border: none;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    cursor: pointer;
+    background-color: white;
+  }
+  .inactive {
+    background-color: rgba(225, 225, 225, 0.418);
+  }
+  .lblink {
+    color: white;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .pagination {
+    top: 25px;
+    right: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pagination img {
+    width: 15px;
+    height: 15px;
+    margin-right: 6px;
+  }
+  .infocon {
+    position: relative;
+    width: 100%;
+  }
+  .info {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+  }
+  .info:hover + .tooltip1 {
+    display: flex;
+  }
+  .tooltip1 {
+    width: 118px;
+    height: 80px;
+    /* display: none; */
+    position: absolute;
+    right: -22px;
+    top: 52px;
+    z-index: 999;
+  }
+  .info2 {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+  }
+  .info2:hover + .tooltip2 {
+    display: flex;
+  }
+  .tooltip2 {
+    width: 118px;
+    height: 104px;
+    display: none;
+    position: absolute;
+    right: -22px;
+    top: 52px;
+    z-index: 999;
+  }
+  .rlink {
+    width: 490px;
+    height: 57px;
+    border-radius: 50px;
+    background-color: black;
+    margin: 40px 0 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    margin-bottom: 50px;
+    transform: scale(0.6);
+  }
+  .http {
+    color: white;
+    width: 109px;
+    height: 57px;
+    background-color: #7f46ff;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .copy {
+    width: 14px;
+    height: 17px;
+    margin-right: 15px;
+    visibility: hidden;
+  }
+  .hometext {
+    text-align: left;
+  }
+  .emojicrown {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -20px;
+    left: -22px;
+  }
+  .label {
+      font-size: 2.9vw
+  }
+  .modaltext {
+    color: #7f46ff;
+    font-size: "Rubik";
+    font-weight: 900;
+    font-size: 40px;
+    text-align: center;
+    line-height: 45px;
+    letter-spacing: -2px;
+    z-index: 999;
+    margin-top: 50px;
+    width: 100%;
+  }
+  .modaltextm {
+    display: none;
+  }
+  .modaltext2 {
+    color: #b5b1b1;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+    z-index: 999;
+    margin-top: 0px;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .modalb {
+    transform: scale(0.9);
+  }
+}
+@media only screen and (max-width: 320px) {
+  .modalb {
+    transform: scale(0.8);
+  }
+  .modalc {
+    transform: scale(0.9);
+  }
+}

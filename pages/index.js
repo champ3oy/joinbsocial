@@ -170,20 +170,35 @@ export default function Home() {
                   your participation in the challenges.
                 </text>
                 <Link href="https://apps.apple.com/us/app/bsocial-endless-entertainment/id1586761443">
-                  <div
-                    className={styles.joinBtn2}
-
-                  >
-                    <img className={styles.logos} src="/mac-os-logo.png"></img> Download On App Store
+                  <div className={styles.joinBtn2am}>
+                    <img className={styles.logos} src="/mac-os-logo.png"></img>{" "}
+                    Download On App Store
                   </div>
                 </Link>
-                <span onClick={() => {
-                  setShowModal(true);
-                  ga.event({
-                    action: "open popup",
-                    params: "join waitlist",
-                  });
-                }} className={styles.JoinforAndriod}>
+
+                <div
+                  onClick={() => {
+                    ga.event({
+                      action: "open popup",
+                      params: "sign up as ambassador",
+                    });
+                    setShowModal4(true);
+                  }}
+                  className={styles.joinBtn2am2}
+                >
+                  Sign up as an Ambassadors🎉
+                </div>
+
+                <span
+                  onClick={() => {
+                    setShowModal(true);
+                    ga.event({
+                      action: "open popup",
+                      params: "join waitlist",
+                    });
+                  }}
+                  className={styles.JoinforAndriod}
+                >
                   Join the waitlist for Andriod🎉
                 </span>
 
@@ -226,20 +241,35 @@ export default function Home() {
                 </text>
 
                 <Link href="https://apps.apple.com/us/app/bsocial-endless-entertainment/id1586761443">
-                  <div
-                    className={styles.joinBtn2}
-
-                  >
-                    <img className={styles.logos} src="/mac-os-logo.png"></img> Download On App Store
+                  <div className={styles.joinBtn2am}>
+                    <img className={styles.logos} src="/mac-os-logo.png"></img>{" "}
+                    Download On App Store
                   </div>
                 </Link>
-                <span onClick={() => {
-                  setShowModal(true);
-                  ga.event({
-                    action: "open popup",
-                    params: "join waitlist",
-                  });
-                }} className={styles.JoinforAndriod}>
+
+                <div
+                  onClick={() => {
+                    ga.event({
+                      action: "open popup",
+                      params: "sign up as ambassador",
+                    });
+                    setShowModal4(true);
+                  }}
+                  className={styles.joinBtn2am2}
+                >
+                  Sign up as an Ambassadors🎉
+                </div>
+
+                <span
+                  onClick={() => {
+                    setShowModal(true);
+                    ga.event({
+                      action: "open popup",
+                      params: "join waitlist",
+                    });
+                  }}
+                  className={styles.JoinforAndriod}
+                >
                   Join the waitlist for Andriod🎉
                 </span>
                 <Link href="/leaderboard">
@@ -1146,10 +1176,10 @@ export default function Home() {
                   <img
                     alt="image"
                     onClick={() => {
-                      setcopied(true)
+                      setcopied(true);
                       setTimeout(() => {
-                        setcopied(false)
-                      }, 5000)
+                        setcopied(false);
+                      }, 5000);
                       navigator.clipboard.writeText(
                         "https://joinb.social/?referralCode=" + refCode
                       );

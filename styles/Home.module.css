@@ -176,6 +176,28 @@
   cursor: pointer;
   transition: 0.5s ease;
 }
+.joinBtn2am {
+  width: fit-content;
+  padding: 0 20px 0 20px;
+  height: 90px;
+  border-radius: 56px;
+  background-color: white;
+  box-shadow: #7f46ff 9px 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 27px;
+  border: solid #7f46ff 3px;
+  margin-top: 60px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.joinBtn2am2 {
+  display: none;
+}
 .joinBtn2:hover {
   box-shadow: #7f46ff -7px 6px;
   transition: 0.5s ease;
@@ -1816,6 +1838,25 @@
     cursor: pointer;
     transition: 0.5s ease;
   }
+  .joinBtn2am {
+    width: fit-content;
+    padding: 0 20px 0 20px;
+    height: 70px;
+    border-radius: 56px;
+    background-color: white;
+    box-shadow: #7f46ff 7px 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 18px;
+    border: solid #7f46ff 3px;
+    margin-top: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
   .joinBtn2:hover {
     box-shadow: #7f46ff -7px 6px;
     transition: 0.5s ease;
@@ -2883,6 +2924,25 @@
     display: flex;
   }
   .joinBtn2 {
+    width: fit-content;
+    padding: 0 20px 0 20px;
+    height: 60px;
+    border-radius: 56px;
+    background-color: white;
+    box-shadow: #7f46ff 7px 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 15px;
+    border: solid #7f46ff 3px;
+    margin-top: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+  .joinBtn2am {
     width: fit-content;
     padding: 0 20px 0 20px;
     height: 60px;
@@ -4055,6 +4115,25 @@
     cursor: pointer;
     transition: 0.5s ease;
   }
+  .joinBtn2am {
+    width: fit-content;
+    padding: 0 20px 0 20px;
+    height: 60px;
+    border-radius: 56px;
+    background-color: white;
+    box-shadow: #7f46ff 7px 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 15px;
+    border: solid #7f46ff 3px;
+    margin-top: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
   .joinBtn2:hover {
     box-shadow: #7f46ff -7px 6px;
     transition: 0.5s ease;
@@ -5204,6 +5283,57 @@
     font-size: 13.5px;
     border: solid #7f46ff 3px;
     margin-top: 30px;
+    font-weight: 600;
+  }
+  .joinBtn2am {
+    width: fit-content;
+    padding: 0 20px 0 20px;
+    height: 55px;
+    border-radius: 56px;
+    background-color: white;
+    box-shadow: #7f46ff 4px 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 13.5px;
+    border: solid #7f46ff 3px;
+    margin-top: 30px;
+    font-weight: 600;
+  }
+  .joinBtn2am {
+    width: 234.3px;
+    /* padding: 0 20px 0 20px; */
+    height: 55px;
+    border-radius: 56px;
+    background-color: #7f46ff;
+    box-shadow: #fff 4px 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 13.5px;
+    border: solid #fff 3px;
+    margin-top: 30px;
+    font-weight: 600;
+  }
+    .joinBtn2am2 {
+    width: 234.3px;
+    /* padding: 0 20px 0 20px; */
+    height: 55px;
+    border-radius: 56px;
+    background-color: #7f46ff;
+    box-shadow: #fff 4px 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 13.5px;
+    border: solid #fff 3px;
+    margin-top: 16px;
     font-weight: 600;
   }
   .banner {
@@ -6849,6 +6979,23 @@
     margin-top: 10px;
   }
   .joinBtn2 {
+    width: fit-content;
+    padding: 0 20px 0 20px;
+    height: 44px;
+    border-radius: 56px;
+    background-color: white;
+    box-shadow: #7f46ff 4px 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 12px;
+    border: solid #7f46ff 3px;
+    margin-top: 30px;
+    font-weight: 600;
+  }
+  .joinBtn2am {
     width: fit-content;
     padding: 0 20px 0 20px;
     height: 44px;
