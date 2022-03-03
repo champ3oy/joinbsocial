@@ -1,4 +1,4 @@
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.scss";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import React, { useState, useEffect } from "react";
@@ -30,6 +30,7 @@ export default function Home() {
   const { referralCode, pid } = router.query;
   const [hide, setHide] = useState(false);
   const [copied, setcopied] = useState(false);
+  const [dropdown, setdropdown] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -115,14 +116,35 @@ export default function Home() {
               <div
                 className={styles.joinBtn}
                 onClick={() => {
-                  ga.event({
-                    action: "open popup",
-                    params: "sign up as ambassador",
-                  });
-                  setShowModal4(true);
+                  setdropdown(!dropdown);
                 }}
+                style={{ width: 150 }}
               >
-                Sign up as an Ambassador &#127881;
+                {"    "}Sign up🌟{"    "}
+                {dropdown ? (
+                  <div className={styles.signup}>
+                    <text
+                      onClick={() => {
+                        ga.event({
+                          action: "open popup",
+                          params: "sign up as ambassador",
+                        });
+                        setShowModal4(true);
+                      }}
+                      className={styles.signuptext}
+                    >
+                      Ambassador
+                    </text>
+
+                    <Link href="/creator">
+                      <text className={styles.signuptext}>Creator</text>
+                    </Link>
+
+                    <Link href="/celebrity">
+                      <text className={styles.signuptext}>Celebrity</text>
+                    </Link>
+                  </div>
+                ) : null}
               </div>
             </div>
           </nav>

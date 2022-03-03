@@ -18,7 +18,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-export default function Creator() {
+export default function Celebrity() {
   const [showModal, setShowModal] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
   const [showModal3, setShowModal3] = useState(false);
@@ -103,9 +103,18 @@ export default function Creator() {
                     <text className={styles.signuptext}>Creator</text>
                   </Link>
 
-                  <Link href="/celebrity">
-                    <text className={styles.signuptext}>Celebrity</text>
-                  </Link>
+                  <text
+                    // onClick={() => {
+                    //   ga.event({
+                    //     action: "open popup",
+                    //     params: "sign up as ambassador",
+                    //   });
+                    //   setShowModal4(true);
+                    // }}
+                    className={styles.signuptext}
+                  >
+                    Celebrity
+                  </text>
                 </div>
               ) : null}
             </div>
@@ -114,7 +123,10 @@ export default function Creator() {
         <div className={styles.cont}>
           <div className={styles.middle}>
             <div className={styles.Head}>
-              <text className={styles.sign}>Sign Up as creator</text>
+              <text className={styles.sign}>
+                Sign Up as a <br />
+                Celebrity or Influencer
+              </text>
             </div>
             <div className={styles.one}>
               <input placeholder="Your name"></input>

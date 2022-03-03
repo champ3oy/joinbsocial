@@ -1,8 +1,35 @@
-.logos{
+$vw-viewport: 1920;
+@function get-vw($font) {
+  $vw-context: $vw-viewport * 0.01 * 1px;
+  @return $font / $vw-context * 1vw;
+  @return $font;
+}
+
+.signup {
+  width: get-vw(203px);
+  height: get-vw(139px);
+  margin: get-vw(9px) 0 0 get-vw(16px);
+  padding: get-vw(26px) get-vw(56px) get-vw(26px) get-vw(47px);
+  border-radius: get-vw(34px);
+  background-color: #7f46ff;
+  position: absolute;
+  top: get-vw(120px);
+  right: get-vw(55px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.signuptext {
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+
+.logos {
   width: 2vw;
   height: 2vw;
   margin: 0 7.8px 0 0;
- 
 }
 .JoinforAndriod {
   margin-top: 30px;
@@ -5045,11 +5072,10 @@
 
 /* MOBILE IphoneX */
 @media only screen and (max-width: 550px) {
-  .logos{
+  .logos {
     width: 5vw;
     height: 5vw;
     margin: 0 7.8px 0 0;
-   
   }
   .Rcontainer {
     width: 100%;
@@ -5319,7 +5345,7 @@
     margin-top: 30px;
     font-weight: 600;
   }
-    .joinBtn2am2 {
+  .joinBtn2am2 {
     width: 234.3px;
     /* padding: 0 20px 0 20px; */
     height: 55px;

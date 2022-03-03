@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.scss";
 import modal from "../styles/Modal.module.css";
 import { useMutation } from "@apollo/client";
 import { REGISTER_USER } from "../GraphQL/mutations";

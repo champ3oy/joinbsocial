@@ -255,7 +255,7 @@ export default function Ambassador({
                   name: name,
                   email: email,
                   tiktok: tiktok,
-                  instagram: instagram,
+                  instagram: instagram,       
                   school: school,
                   country: country,
                 });
