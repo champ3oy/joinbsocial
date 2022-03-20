@@ -1,5 +1,5 @@
 import Head from "../components/Head";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.scss";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import React, { useState, useEffect } from "react";

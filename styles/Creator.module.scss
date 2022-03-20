@@ -215,7 +215,7 @@ $vw-viewport: 1920;
   font-stretch: normal;
   font-style: normal;
   letter-spacing: get-vw(-1.22px);
-  text-align: center;
+  text-align: left;
   color: #7f46ff;
   display: flex;
   flex-direction: column;
@@ -227,12 +227,14 @@ $vw-viewport: 1920;
   width: get-vw(140.3px);
   height: get-vw(101.1px);
   margin: 0 get-vw(31.8px) 0 0;
-  padding: get-vw(33.5px) get-vw(38.7px) get-vw(33.5px) get-vw(38.7px);
   border-radius: get-vw(28px);
   background-color: #fff;
   font-size: get-vw(29px);
   font-weight: 500;
   color: #632cde;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .couple {
   display: flex;
@@ -293,9 +295,10 @@ $vw-viewport: 1920;
   padding: get-vw(41.4px) get-vw(31.7px) get-vw(41.4px) get-vw(45.6px);
   border-radius: 28px;
   background-color: #632cde;
+  position: relative;
 }
 
-.six input {
+.six text {
   outline: none;
   background: transparent;
   border: none;
@@ -307,6 +310,28 @@ $vw-viewport: 1920;
   letter-spacing: get-vw(-1.22px);
   text-align: left;
   color: #7f46ff;
+}
+.follPop {
+  width: get-vw(491.1px);
+  height: auto;
+  background-color: white;
+  border-radius: get-vw(28px);
+  position: absolute;
+  top: get-vw(130px);
+  left: 0;
+  padding: get-vw(30px) get-vw(40px);
+}
+.follPop text {
+  text-align: center;
+  font-size: get-vw(22px);
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  color: #7f46ff;
+  width: 100%;
+  padding: get-vw(20px) 0;
+  cursor: pointer;
 }
 
 .middle input {

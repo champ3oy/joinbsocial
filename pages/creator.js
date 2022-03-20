@@ -1,4 +1,5 @@
 import styles from "../styles/Creator.module.scss";
+import home from "../styles/Home.module.scss";
 import "react-multi-carousel/lib/styles.css";
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
@@ -12,6 +13,7 @@ import BrandModal from "../components/BrandModal";
 import Ambassador from "../components/Ambassador";
 import * as ga from "../lib/ga";
 import { useRouter } from "next/router";
+import CountryList from "../components/Country";
 
 const client = new ApolloClient({
   uri: "https://api.joinb.social/graphql",
@@ -29,6 +31,15 @@ export default function Creator() {
   const { referralCode, pid } = router.query;
   const [hide, setHide] = useState(false);
   const [copied, setcopied] = useState(false);
+  const [name, setname] = useState("");
+  const [email, setemail] = useState("");
+  const [phone, setphone] = useState("");
+  const [following, setfollowing] = useState("");
+  const [showFol, setshowFol] = useState(false);
+  const [socials, setsocials] = useState([]);
+
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [code, setcode] = useState("+1");
 
   const [dropdown, setdropdown] = useState(false);
 
@@ -124,8 +135,25 @@ export default function Creator() {
                 <input placeholder="Your email"></input>
               </div>
               <div className={styles.three}>
-                <div className={styles.small}>
+                {/* <div className={styles.small}>
                   +1 <image></image>
+                </div> */}
+                <div className={styles.small}>
+                  {code ? <span>{code}</span> : null}
+                  <select
+                    onChange={(e) => {
+                      setcode(e.target.value);
+                    }}
+                    className={home.phonelistx}
+                  >
+                    {CountryList.map((item) => {
+                      return (
+                        <option key={item.name} value={item.code}>
+                          {item.code + " - " + item.name}
+                        </option>
+                      );
+                    })}
+                  </select>
                 </div>
                 <input placeholder="Your phone number"></input>
               </div>
@@ -139,7 +167,26 @@ export default function Creator() {
                 <input placeholder="Type your username"></input>
               </div>
               <div className={styles.six}>
-                <input placeholder="Social following"></input>
+                <text
+                  onClick={() => {
+                    setshowFol(!showFol);
+                  }}
+                >
+                  {following ? following : "Social following"}
+                </text>
+
+                {showFol ? (
+                  <div className={styles.follPop}>
+                    <text
+                      onClick={() => {
+                        setfollowing("0 - 100 followers");
+                        setshowFol(false);
+                      }}
+                    >
+                      0 - 100 followers
+                    </text>
+                  </div>
+                ) : null}
               </div>
             </div>
             <div className={styles.lowright}>
