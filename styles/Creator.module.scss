@@ -320,6 +320,8 @@ $vw-viewport: 1920;
   top: get-vw(130px);
   left: 0;
   padding: get-vw(30px) get-vw(40px);
+  display: flex;
+  flex-direction: column;
 }
 .follPop text {
   text-align: center;

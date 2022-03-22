@@ -34,9 +34,14 @@ export default function Celebrity() {
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
   const [phone, setphone] = useState("");
+  const [platform, setplatform] = useState("");
+  const [username, setusername] = useState("");
   const [following, setfollowing] = useState("");
   const [showFol, setshowFol] = useState(false);
   const [socials, setsocials] = useState([]);
+  const [numsocials, setnumsocials] = useState([]);
+
+  const [loading1, setloading] = useState(false);
 
   const [phoneNumber, setPhoneNumber] = useState("");
   const [code, setcode] = useState("+1");
@@ -140,14 +145,29 @@ export default function Celebrity() {
               </text>
             </div>
             <div className={styles.one}>
-              <input placeholder="Your name"></input>
+              <input
+                onChange={(text) => {
+                  setname(text.target.value);
+                }}
+                value={name}
+                placeholder="Your name"
+              ></input>
             </div>
             <div className={styles.couple}>
               <div className={styles.two}>
-                <input placeholder="Your email"></input>
+                <input
+                  onChange={(text) => {
+                    setemail(text.target.value);
+                  }}
+                  value={email}
+                  placeholder="Your email"
+                ></input>
               </div>
               <div className={styles.three}>
-              <div className={styles.small}>
+                {/* <div className={styles.small}>
+                  +1 <image></image>
+                </div> */}
+                <div className={styles.small}>
                   {code ? <span>{code}</span> : null}
                   <select
                     onChange={(e) => {
@@ -164,16 +184,62 @@ export default function Celebrity() {
                     })}
                   </select>
                 </div>
-                <input placeholder="Your phone number"></input>
+                <input
+                  onChange={(text) => {
+                    setphone(text.target.value);
+                  }}
+                  value={phone}
+                  placeholder="Your phone number"
+                ></input>
               </div>
             </div>
+
+            {numsocials.map((item) => {
+              return (
+                <div
+                  style={{ marginBottom: 20, opacity: 0.5 }}
+                  className={styles.couples}
+                >
+                  <div className={styles.four}>
+                    <input
+                      value={item.platform}
+                      disabled
+                      placeholder="Pick social media platform"
+                    ></input>
+                  </div>
+                  <div className={styles.five}>
+                    <input
+                      value={item.username}
+                      disabled
+                      placeholder="Type your username"
+                    ></input>
+                  </div>
+                  <div className={styles.six}>
+                    <text style={{ color: "white" }}>{item.following}</text>
+                  </div>
+                </div>
+              );
+            })}
+
             <div className={styles.couples}>
               <div className={styles.four}>
-                <input placeholder="Pick social media platform"></input>
+                <input
+                  onChange={(text) => {
+                    setplatform(text.target.value);
+                  }}
+                  value={platform}
+                  placeholder="Pick social media platform"
+                ></input>
                 <image></image>
               </div>
               <div className={styles.five}>
-                <input placeholder="Type your username"></input>
+                <input
+                  onChange={(text) => {
+                    setusername(text.target.value);
+                  }}
+                  value={username}
+                  placeholder="Type your username"
+                ></input>
               </div>
               <div className={styles.six}>
                 <text
@@ -188,22 +254,107 @@ export default function Celebrity() {
                   <div className={styles.follPop}>
                     <text
                       onClick={() => {
-                        setfollowing("0 - 100 followers");
+                        setfollowing("0 - 100K followers");
                         setshowFol(false);
                       }}
                     >
-                      0 - 100 followers
+                      0 - 100K followers
+                    </text>
+                    <text
+                      onClick={() => {
+                        setfollowing("100K - 300K followers");
+                        setshowFol(false);
+                      }}
+                    >
+                      100K - 300K followers
+                    </text>
+                    <text
+                      onClick={() => {
+                        setfollowing("300K - 600K followers");
+                        setshowFol(false);
+                      }}
+                    >
+                      300K - 600K followers
+                    </text>
+                    <text
+                      onClick={() => {
+                        setfollowing("600K - 800K followers");
+                        setshowFol(false);
+                      }}
+                    >
+                      600K - 800K followers
+                    </text>
+                    <text
+                      onClick={() => {
+                        setfollowing("1M+ followers");
+                        setshowFol(false);
+                      }}
+                    >
+                      1M+ followers
                     </text>
                   </div>
                 ) : null}
               </div>
             </div>
+
             <div className={styles.lowright}>
-              <div className={styles.handle}>
+              <div
+                onClick={() => {
+                  setnumsocials([
+                    {
+                      platform: platform,
+                      username: username,
+                      following: following,
+                    },
+                    ...numsocials,
+                  ]);
+
+                  setplatform("");
+                  setusername("");
+                  setfollowing("");
+                }}
+                className={styles.handle}
+              >
                 <text>+ Add more social handle</text>
               </div>
-              <div className={styles.done}>
-                <text>Done</text>
+              <div
+                onClick={() => {
+                  const data = {
+                    name: name,
+                    email: email,
+                    phone: code + phone,
+                    social: [numsocials],
+                  };
+
+                  setloading(true);
+                  fetch("https://purple-go.herokuapp.com/api/addCreator", {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
+                  })
+                    .then((response) => response.json())
+                    .then((data) => {
+                      if (data.status) {
+                        // onClose();
+
+                        setloading(false);
+                      } else {
+                        console.log(data);
+                        // onClose(data.message);
+                        setloading(false);
+                      }
+                    })
+                    .catch((error) => {
+                      setloading(false);
+                      // setemail1("");
+                      console.error("Error:", error);
+                    });
+                }}
+                className={styles.done}
+              >
+                <text>{loading1 ? "Loading..." : "Done"}</text>
               </div>
             </div>
           </div>
