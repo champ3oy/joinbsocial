@@ -11,27 +11,48 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    background-color: #7650ff;
+    background-color: #000;
     font-family: "Rubik";
     margin: 0;
     overflow: hidden;
   }
   .openapp {
     width: 100%;
-    height: 10vh;
+    height: 25vh;
     background-color: #ffffff;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    background: linear-gradient(119.66deg, #7650FF 6.68%, #EF258A 53.83%, #F13E76 61.25%, #FFCE00 104.31%);
+  }
+
+  .openapp2 {
+    width: 100%;
+    height: 25vh;
+    background-color: #ffffff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 0 10px;
     position: fixed;
-    inset: 0;
-  }
+    bottom: 0;
+     }
+
+     .openapp2 img {
+      margin-bottom: 10px;
+      width: 180px;
+      height: 60px;
+     }
+
   .user {
     display: flex;
     flex-direction: row;
@@ -44,42 +65,22 @@
     background-color: gray;
     border-radius: 50%;
   }
-  .names {
-    display: flex;
-    flex-direction: column;
-    margin-left: 5px;
-  }
-  .name {
-    font-size: 11px;
-    font-weight: 900;
-    font-style: normal;
-    line-height: 13px;
-    letter-spacing: 0;
-    text-align: "left";
-    color: "#000000";
-  }
-  .username {
-    font-size: 9px;
-    font-weight: 500;
-    font-style: normal;
-    line-height: 10px;
-    letter-spacing: 0;
-    text-align: left;
-    color: #585757;
-  }
+
   .open {
-    font-size: 11px;
-    width: 78px;
-    height: 34px;
-    border-radius: 17px;
-    background-color: #7650ff;
+    font-size: 14px;
+    width: 235px;
+    height: 47px;
+    border-radius: 30px;
+    background-color: #000;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-weight: 900;
+    color: #fff;
+    font-weight: 600;
     z-index: 99;
+    cursor: pointer;
+    margin-top: 10px;
   }
   .hashtag {
     width: fit-content;
@@ -182,7 +183,7 @@
   .btns {
     width: 50px;
     height: 50px;
-    background-color: rgba(0, 0, 0, 0.32);
+    /* background-color: rgba(0, 0, 0, 0.32); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,21 +216,73 @@
   }
   .video {
     width: 100vw;
-    height: calc(var(--vh, 1vh) * 100);
-    /* background-color: #eee; */
+    height: 75vh;
     display: flex;
     justify-content: center;
     position: relative;
-    /* background-image: url(/7.jpg); */
     background-size: cover;
   }
   .media {
-    position: absolute;
     width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.912);
-    z-index: 0;
-    bottom: 0;
-    left: 0;
+    height: 100%;
+    background-color: #7650FF;
+    object-fit: cover;
+  }
+  .overlay {
+    width: 100vw;
+    height: 75vh;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #00000022 6.68%, #000000a1 53.83%);
+ /* z-index: 9999999; */
+  }
+  .user {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+  }
+  .names {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+  }
+  .name {
+    font-size: 11px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 13px;
+    letter-spacing: 0;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 3px;
+  }
+  .namex {
+    font-size: 11px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 13px;
+    letter-spacing: 0;
+    text-align: center;
+    color: #909090;
+    margin-top: 10px;
+  }
+  .username {
+    font-size: 9px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 10px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #fbfbfb;
+  }
+  .sqr {
+    width: 143px;
+    height: 143px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
   }
 }

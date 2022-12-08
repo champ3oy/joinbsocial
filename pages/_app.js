@@ -6,10 +6,6 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  const client = new ApolloClient({
-    uri: "https://api.joinb.social/graphql",
-    cache: new InMemoryCache(),
-  });
 
   useEffect(() => {
     const handleRouteChange = (url) => {
@@ -21,11 +17,7 @@ function MyApp({ Component, pageProps }) {
     };
   }, [router.events]);
 
-  return (
-    <ApolloProvider client={client}>
-      <Component {...pageProps} />
-    </ApolloProvider>
-  );
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;
