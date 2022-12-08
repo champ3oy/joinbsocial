@@ -29,7 +29,7 @@ export default function Posts({}) {
         // image={data?.GetLol.media_thumbnail}
       />
 
-      <div className={styles.sqr}></div>
+      <img src="/icon.png" className={styles.sqr} />
       <text className={styles.namex}>
         BeSocial pays you to connect and <br />
         entertain the world with your creativity

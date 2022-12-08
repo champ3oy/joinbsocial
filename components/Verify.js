@@ -33,7 +33,7 @@ export default function Verify(props) {
       setmessage(data?.VerifyWaitListUserEmail?.message);
       setisloading(false);
     }
-  }, [0]);
+  }, []);
 
   return (
     <main className={styles.header}>
