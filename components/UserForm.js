@@ -26,7 +26,7 @@ export default function UserForm(props) {
     } else {
       setmodal(false);
     }
-  }, [data, error]);
+  }, [data, error, props]);
 
   return (
     <div className={styles.modalright}>
@@ -80,16 +80,15 @@ export default function UserForm(props) {
               );
             })}
           </select>
-          </div>
-          <input
-            type="text"
-            className={styles.inputx}
-            placeholder="Phone Number"
-            onChange={(e) => {
-              setPhoneNumber(e.target.value);
-            }}
-          />
-        
+        </div>
+        <input
+          type="text"
+          className={styles.inputx}
+          placeholder="Phone Number"
+          onChange={(e) => {
+            setPhoneNumber(e.target.value);
+          }}
+        />
       </div>
       <button
         onClick={() => {
