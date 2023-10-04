@@ -91,10 +91,10 @@ export default function Home() {
             <img alt="image" src="/logo2x.png" className={styles.logo} />
 
             <div className={styles.right}>
-              <Link href="/leaderboard">
+              <Link legacyBehavior href="/leaderboard">
                 <a className={styles.joinBtnl}>Leaderboard</a>
               </Link>
-              {/* <Link href="/">
+              {/* <Link legacyBehavior href="/">
             <a className={styles.textBtn}>About us</a>
           </Link> */}
               <text
@@ -180,7 +180,7 @@ export default function Home() {
                   Join the Waitlist &#127881;
                 </div>
 
-                <Link href="/leaderboard">
+                <Link legacyBehavior href="/leaderboard">
                   <a className={styles.lblink}>
                     Checkout the Waitlist Leaderboard
                   </a>
@@ -230,7 +230,7 @@ export default function Home() {
                 >
                   Join the Waitlist &#127881;
                 </div>
-                <Link href="/leaderboard">
+                <Link legacyBehavior href="/leaderboard">
                   <a className={styles.lblink}>
                     Checkout the Waitlist Leaderboard
                   </a>
@@ -503,7 +503,7 @@ export default function Home() {
                 >
                   Sign up as a brand &#127881;
                 </div>
-                <Link href="/leaderboard">
+                <Link legacyBehavior href="/leaderboard">
                   <a className={styles.lblink}>
                     Checkout the Waitlist Leaderboard
                   </a>
@@ -883,10 +883,10 @@ export default function Home() {
           </div>
           <div className={styles.foot}>
             <div className={styles.fleft}>
-              <Link href="/terms">
+              <Link legacyBehavior href="/terms">
                 <text>Terms</text>
               </Link>
-              <Link href="/privacy">
+              <Link legacyBehavior href="/privacy">
                 <text>Privacy</text>
               </Link>
             </div>

@@ -57,3 +57,62 @@ export const GET_POST = gql`
     }
   }
 `;
+
+export const GET_CONTENT_BY_ID = gql`
+  query GetContentById($contentId: String) {
+    GetContentById(content_id: $contentId) {
+      _id
+      caption
+      content_url
+      creator {
+        _id
+        profile_picture
+        username
+        name
+      }
+      hashtags {
+        _id
+        text
+      }
+      thumbnail_url
+    }
+  }
+`;
+
+export const GET_CONTENTS = gql`
+  query TrendingContents($limit: Int, $page: Int) {
+    TrendingContents(limit: $limit, page: $page) {
+      _id
+      caption
+      content_url
+      creator {
+        _id
+        profile_picture
+        username
+        name
+      }
+      hashtags {
+        _id
+        text
+      }
+      thumbnail_url
+    }
+  }
+`;
+
+export const GET_COMMENTS = gql`
+  query GetComments($contentId: String!, $limit: Int, $page: Int) {
+    GetComments(content_id: $contentId, limit: $limit, page: $page) {
+      _id
+      user {
+        _id
+        name
+        username
+        profile_picture
+      }
+      text
+      repliesCount
+      updated_at
+    }
+  }
+`;

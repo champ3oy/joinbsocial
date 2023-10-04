@@ -35,14 +35,14 @@ export default function Privacy() {
         <Head title="Privacy" />
 
         <nav className={styles.nav}>
-          <Link href="/">
+          <Link legacyBehavior href="/">
             <img alt="image" src="/logo2x.png" className={styles.logo} />
           </Link>
           <div className={styles.right}>
-            <Link href="/leaderboard">
+            <Link legacyBehavior href="/leaderboard">
               <a className={styles.joinBtnl}>Leaderboard</a>
             </Link>
-            {/* <Link href="/">
+            {/* <Link legacyBehavior href="/">
               <a className={styles.textBtn}>About us</a>
             </Link> */}
             <text
@@ -860,10 +860,10 @@ export default function Privacy() {
           </div>
           <div className={styles.foot}>
             <div className={styles.fleft}>
-              <Link href="/terms">
+              <Link legacyBehavior href="/terms">
                 <text>Terms</text>
               </Link>
-              <Link href="/privacy">
+              <Link legacyBehavior href="/privacy">
                 <text>Privacy</text>
               </Link>
             </div>
@@ -925,7 +925,7 @@ export default function Privacy() {
               </div>
               <div className={styles.modalleft}>
                 <text className={styles.modaltext}>
-                Sign up, <br />
+                  Sign up, <br />
                   Refer and <br />
                   Win
                 </text>
@@ -1087,10 +1087,10 @@ export default function Privacy() {
                   <img
                     alt="image"
                     onClick={() => {
-                      setcopied(true)
+                      setcopied(true);
                       setTimeout(() => {
-                        setcopied(false)
-                      }, 5000)
+                        setcopied(false);
+                      }, 5000);
                       navigator.clipboard.writeText(
                         "https://joinb.social/?referralCode=" + refCode
                       );

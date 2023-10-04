@@ -74,10 +74,10 @@ export default function Celebrity() {
           <img alt="image" src="/logo2x.png" className={styles.logo} />
 
           <div className={styles.right}>
-            <Link href="/leaderboard">
+            <Link legacyBehavior href="/leaderboard">
               <a className={styles.joinBtnl}>Leaderboard</a>
             </Link>
-            {/* <Link href="/">
+            {/* <Link legacyBehavior href="/">
               <a className={styles.textBtn}>About us</a>
             </Link> */}
             <text
@@ -115,7 +115,7 @@ export default function Celebrity() {
                     Ambassador
                   </text>
 
-                  <Link href="/creator">
+                  <Link legacyBehavior href="/creator">
                     <text className={styles.signuptext}>Creator</text>
                   </Link>
 
@@ -439,10 +439,10 @@ export default function Celebrity() {
           </div>
           <div className={styles.foot}>
             <div className={styles.fleft}>
-              <Link href="/terms">
+              <Link legacyBehavior href="/terms">
                 <text>Terms</text>
               </Link>
-              <Link href="/privacy">
+              <Link legacyBehavior href="/privacy">
                 <text>Privacy</text>
               </Link>
             </div>

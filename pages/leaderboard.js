@@ -45,7 +45,7 @@ export default function Leaderboard() {
 
         <nav className={styles.nav}>
           <div className={styles.brand}>
-            <Link href="/">
+            <Link legacyBehavior href="/">
               <img alt="image" src="/back.png" className={styles.back} />
             </Link>
             <div className={styles.brandcon}>
@@ -64,7 +64,7 @@ export default function Leaderboard() {
           />
 
           <div className={styles.right}>
-            {/* <Link href="/leaderboard">
+            {/* <Link legacyBehavior href="/leaderboard">
               <a className={styles.textBtn}>Checkout the record &#127881;</a>
             </Link> */}
             <div

@@ -2,7 +2,6 @@ import "../styles/globals.css";
 import { useRouter } from "next/router";
 import * as ga from "../lib/ga";
 import { useEffect } from "react";
-import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();

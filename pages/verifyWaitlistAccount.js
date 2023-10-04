@@ -40,15 +40,15 @@ export default function VerifyUser() {
         <Head title="Welcome" />
 
         <nav className={styles.nav}>
-          <Link href="/">
+          <Link legacyBehavior href="/">
             <img alt="image" src="/logo2x.png" className={styles.logo} />
           </Link>
 
           <div className={styles.right}>
-            <Link href="/leaderboard">
+            <Link legacyBehavior href="/leaderboard">
               <a className={styles.joinBtnl}>Leaderboard</a>
             </Link>
-            {/* <Link href="/">
+            {/* <Link legacyBehavior href="/">
               <a className={styles.textBtn}>About us</a>
             </Link> */}
             <text

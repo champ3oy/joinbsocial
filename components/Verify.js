@@ -47,7 +47,7 @@ export default function Verify(props) {
         data?.VerifyWaitListUserEmail?.message
       )}
 
-      <Link href="/leaderboard">
+      <Link legacyBehavior href="/leaderboard">
         <a className={styles.joinBtnl2}>Leaderboard</a>
       </Link>
     </main>
