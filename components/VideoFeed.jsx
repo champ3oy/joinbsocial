@@ -12,7 +12,6 @@ import ShopLink from "./ShopLink";
 import Like from "./Like";
 import Share from "./Share";
 import Comment from "./Comment";
-import { useParams, useSearchParams } from "next/navigation";
 import { Icons } from "./icons";
 import {
   GET_CONTENT_BY_ID,
